@@ -6,33 +6,26 @@ import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.LoaderManager.LoaderCallbacks;
 import android.content.Context;
-import android.content.CursorLoader;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.Loader;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.ContactsContract;
 import android.telephony.TelephonyManager;
 import android.text.TextUtils;
 import android.text.format.DateFormat;
 import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -51,9 +44,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.mi_covid.CONSTANTS;
@@ -63,7 +54,6 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivityLoginBinding;
 
-import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.LOGIN_SPLASH_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.MINIMUM_DISTANCE_CHANGE_FOR_UPDATES;
 import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.MINIMUM_TIME_BETWEEN_UPDATES;
 import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.MY_PERMISSIONS_REQUEST_READ_CONTACTS;
@@ -75,44 +65,60 @@ import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.PROJECT_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.UtilKt.getPermissionsList;
 import static java.lang.Thread.sleep;
 
-public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
+public class LoginActivity extends Activity {
 
     protected static LocationManager locationManager;
 
     // UI references.
-
+  /*  @BindView(R.id.bi.loginProgress)
+    ProgressBar bi.loginProgress;
+    @BindView(R.id.login_form)
+    ScrollView bi.loginForm;
+    @BindView(R.id.username)
+    EditText bi.username;
+    @BindView(R.id.password)
+    EditText bi.password;
+    @BindView(R.id.txtinstalldate)
+    TextView txtinstalldate;
+    @BindView(R.id.username_sign_in_button)
+    AppCompatButton bi.btnSignin;
+    @BindView(R.id.syncData)
+    Button syncData;
+    @BindView(R.id.spinnerProvince)
+    Spinner spinnerProvince;
+    @BindView(R.id.spinners)
+    LinearLayout spinners;
+    @BindView(R.id.spinnerDistrict)*/
+    ActivityLoginBinding bi;
     Spinner spinnerDistrict;
     SharedPreferences sharedPref;
     SharedPreferences.Editor editor;
     String DirectoryName;
     DatabaseHelper db;
     ArrayAdapter<String> provinceAdapter;
-    ActivityLoginBinding bi;
     private UserLoginTask mAuthTask = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         bi = DataBindingUtil.setContentView(this, R.layout.activity_login);
         bi.setCallback(this);
-
 
         MainApp.appInfo = new AppInfo(this);
         bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             if (checkAndRequestPermissions()) {
-                populateAutoComplete();
+                //   populateAutoComplete();
                 loadIMEI();
             }
         } else {
-            populateAutoComplete();
+            // populateAutoComplete();
             loadIMEI();
 
         }
 
-        populateAutoComplete();
+        // populateAutoComplete();
         gettingDeviceIMEI();
         Target viewTarget = new ViewTarget(bi.syncData.getId(), this);
 
@@ -124,6 +130,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                 .build();
 
 //        bi.password = findViewById(R.id.password);
+/*
         bi.password.setOnEditorActionListener((textView, id, keyEvent) -> {
             if (id == R.id.login || id == EditorInfo.IME_NULL) {
                 attemptLogin();
@@ -131,16 +138,52 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
             return false;
         });
+*/
 
-        bi.emailSignInButton.setOnClickListener(view -> attemptLogin());
+        bi.btnSignin.setOnClickListener(view -> attemptLogin());
 
+        //setListeners();
 
         db = new DatabaseHelper(this);
 //        DB backup
         dbBackup();
     }
 
+    /*private void setListeners() {
+        provinceAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, SplashscreenActivity.provinces);
+        spinnerProvince.setAdapter(provinceAdapter);
+        spinnerProvince.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                List<String> districts = new ArrayList<>(Collections.singletonList("...."));
+                for (Map.Entry<String, Pair<String, EnumBlockContract>> entry : SplashscreenActivity.districtsMap.entrySet()) {
+                    if (entry.getValue().getFirst().equals(spinnerProvince.getSelectedItem().toString()))
+                        districts.add(entry.getKey());
+                }
+                spinnerDistrict.setAdapter(new ArrayAdapter<>(LoginActivity.this, android.R.layout.simple_list_item_1
+                        , districts));
+            }
 
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        spinnerDistrict.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (position == 0) return;
+                MainApp.DIST_ID = Objects.requireNonNull(SplashscreenActivity.districtsMap.get(spinnerDistrict.getSelectedItem().toString())).getSecond().getDist_code();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    }
+*/
     private void gettingDeviceIMEI() {
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE) != PackageManager.PERMISSION_GRANTED) {
             return;
@@ -231,9 +274,9 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
     }
 
-    private void populateAutoComplete() {
+/*    private void populateAutoComplete() {
         getLoaderManager().initLoader(0, null, this);
-    }
+    }*/
 
     private void attemptLogin() {
         if (mAuthTask != null) {
@@ -241,11 +284,11 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         }
 
         // Reset errors.
-        bi.email.setError(null);
+        bi.username.setError(null);
         bi.password.setError(null);
 
         // Store values at the time of the login attempt.
-        String email = bi.email.getText().toString();
+        String username = bi.username.getText().toString();
         String password = bi.password.getText().toString();
 
         boolean cancel = false;
@@ -253,15 +296,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
         // Check for a valid password, if the user entered one.
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            bi.password.setError(getString(R.string.error_invalid_password));
+            bi.password.setError("Invalid Password");
             focusView = bi.password;
             cancel = true;
         }
 
-        // Check for a valid email address.
-        if (TextUtils.isEmpty(email)) {
-            bi.email.setError(getString(R.string.error_field_required));
-            focusView = bi.email;
+        // Check for a valid username address.
+        if (TextUtils.isEmpty(username)) {
+            bi.username.setError("Username is required.");
+            focusView = bi.username;
             cancel = true;
         }
 
@@ -272,10 +315,10 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         } else {
             // Show a progress spinner, and kick off a background task to
             // perform the user login attempt.
-           /* if (!Validator.emptyCheckingContainer(this, spinners))
+          /*  if (!Validator.emptyCheckingContainer(this, spinners))
                 return;*/
             showProgress(true);
-            mAuthTask = new UserLoginTask(this, email, password);
+            mAuthTask = new UserLoginTask(this, username, password);
             mAuthTask.execute((Void) null);
         }
     }
@@ -308,48 +351,15 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
         });
     }
 
-    @Override
-    public Loader<Cursor> onCreateLoader(int i, Bundle bundle) {
-        return new CursorLoader(this,
-                // Retrieve data rows for the device user's 'profile' contact.
-                Uri.withAppendedPath(ContactsContract.Profile.CONTENT_URI,
-                        ContactsContract.Contacts.Data.CONTENT_DIRECTORY), ProfileQuery.PROJECTION,
-
-                // Select only email addresses.
-                ContactsContract.Contacts.Data.MIMETYPE +
-                        " = ?", new String[]{ContactsContract.CommonDataKinds.Email
-                .CONTENT_ITEM_TYPE},
-
-                // Show primary email addresses first. Note that there won't be
-                // a primary email address if the user hasn't specified one.
-                ContactsContract.Contacts.Data.IS_PRIMARY + " DESC");
-    }
-
-    @Override
-    public void onLoadFinished(Loader<Cursor> cursorLoader, Cursor cursor) {
-        List<String> emails = new ArrayList<>();
-        cursor.moveToFirst();
-        while (!cursor.isAfterLast()) {
-            emails.add(cursor.getString(ProfileQuery.ADDRESS));
-            cursor.moveToNext();
-        }
-
-    }
-
-    @Override
-    public void onLoaderReset(Loader<Cursor> cursorLoader) {
-
-    }
-
 
     public void onShowPasswordClick(View view) {
         //TODO implement
         if (bi.password.getTransformationMethod() == null) {
             bi.password.setTransformationMethod(new PasswordTransformationMethod());
-            bi.password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_black_24dp, 0, 0, 0);
+            bi.password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_close, 0, 0, 0);
         } else {
             bi.password.setTransformationMethod(null);
-            bi.password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open_black_24dp, 0, 0, 0);
+            bi.password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_lock_open, 0, 0, 0);
         }
     }
 
@@ -405,7 +415,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                                            @NonNull int[] grantResults) {
         for (int i = 0; i < permissions.length; i++) {
             switch (permissions[i]) {
-                case Manifest.permission.READ_CONTACTS:
+              /*  case Manifest.permission.READ_CONTACTS:
                     if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
                         populateAutoComplete();
                     }
@@ -417,7 +427,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
                         doPermissionGrantedStuffs();
                         //loadIMEI();
                     }
-                    break;
+                    break;*/
                 case Manifest.permission.ACCESS_COARSE_LOCATION:
                     break;
                 case Manifest.permission.ACCESS_FINE_LOCATION:
@@ -541,31 +551,6 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
-        if (getIntent().getBooleanExtra(LOGIN_SPLASH_FLAG, false))
-            callingCoroutine();
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == CONSTANTS.LOGIN_RESULT_CODE) {
-            if (resultCode == RESULT_OK) {
-                callingCoroutine();
-            }
-        }
-    }
-
-    private interface ProfileQuery {
-        String[] PROJECTION = {
-                ContactsContract.CommonDataKinds.Email.ADDRESS,
-                ContactsContract.CommonDataKinds.Email.IS_PRIMARY,
-        };
-
-        int ADDRESS = 0;
-    }
 
     public class GPSLocationListener implements LocationListener {
         public void onLocationChanged(Location location) {
@@ -599,19 +584,39 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             }
         }
 
+        @Override
+        public void onStatusChanged(String s, int i, Bundle bundle) {
 
-        public void onStatusChanged(String s, int i, Bundle b) {
-            showCurrentLocation();
         }
 
+        @Override
+        public void onProviderEnabled(String s) {
+
+        }
+
+        @Override
         public void onProviderDisabled(String s) {
 
         }
 
-        public void onProviderEnabled(String s) {
-
-        }
     }
+
+/*    @Override
+    protected void onResume() {
+        super.onResume();
+        if (getIntent().getBooleanExtra(LOGIN_SPLASH_FLAG, false))
+            callingCoroutine();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == CONSTANTS.LOGIN_RESULT_CODE) {
+            if (resultCode == RESULT_OK) {
+                callingCoroutine();
+            }
+        }
+    }*/
 
 /*    private void callingCoroutine() {
         //To call coroutine here
@@ -640,12 +645,12 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
      */
     private class UserLoginTask extends AsyncTask<Void, Void, Boolean> {
 
-        private final String mEmail;
+        private final String musername;
         private final String mPassword;
         private final Context mContext;
 
-        UserLoginTask(Context context, String email, String password) {
-            mEmail = email;
+        UserLoginTask(Context context, String username, String password) {
+            musername = username;
             mPassword = password;
             mContext = context;
         }
@@ -668,7 +673,7 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
 
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
-                if (pieces[0].equals(mEmail)) {
+                if (pieces[0].equals(musername)) {
                     // Account exists, return true if the password matches.
                     return pieces[1].equals(mPassword);
                 }
@@ -686,18 +691,18 @@ public class LoginActivity extends Activity implements LoaderCallbacks<Cursor> {
             assert mlocManager != null;
             if (mlocManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 DatabaseHelper db = new DatabaseHelper(LoginActivity.this);
-                if ((mEmail.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
-                        (mEmail.equals("guest@aku") && mPassword.equals("aku1234")) || db.Login(mEmail, mPassword)
-                        || (mEmail.equals("test1234") && mPassword.equals("test1234"))) {
-                    MainApp.userName = mEmail;
-                    MainApp.admin = mEmail.contains("@");
+                if ((musername.equals("dmu@aku") && mPassword.equals("aku?dmu")) ||
+                        (musername.equals("guest@aku") && mPassword.equals("aku1234")) || db.Login(musername, mPassword)
+                        || (musername.equals("test1234") && mPassword.equals("test1234"))) {
+                    MainApp.userName = musername;
+                    MainApp.admin = musername.contains("@");
                     Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(iLogin);
 
                 } else {
-                    bi.password.setError(getString(R.string.error_incorrect_password));
+                    bi.password.setError("Incorrect Password");
                     bi.password.requestFocus();
-                    Toast.makeText(LoginActivity.this, mEmail + " " + mPassword, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, musername + " " + mPassword, Toast.LENGTH_SHORT).show();
                 }
 
 

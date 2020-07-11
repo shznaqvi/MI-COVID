@@ -25,6 +25,7 @@ import androidx.lifecycle.MutableLiveData;
 import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract;
+import edu.aku.hassannaqvi.mi_covid.location.LocationLiveData;
 import edu.aku.hassannaqvi.mi_covid.models.Child;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
@@ -50,6 +51,9 @@ public class MainApp extends Application {
     //public static final long MILLISECONDS_IN_5YEAR = (MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR + MILLISECONDS_IN_YEAR);
     private static final long MINIMUM_DISTANCE_CHANGE_FOR_UPDATES = 1; // in Meters
     private static final long MINIMUM_TIME_BETWEEN_UPDATES = 1000; // in Milliseconds
+    // Location settings
+    public static final int INTERVAL_BETWEEN_LOCATION_UPDATE = 200;
+    public static final int INTERVAL_FASTEST_BETWEEN_LOCATION_UPDATE = 1000;
     private static final int TWENTY_MINUTES = 1000 * 60 * 20;
     private static final int TWO_MINUTES = 1000 * 60 * 2;
     private static final long MILLIS_IN_SECOND = 1000;
@@ -84,6 +88,7 @@ public class MainApp extends Application {
     public static String DIST_ID;
     public static Pair<List<Integer>, List<String>> selectedChildren;
     protected static LocationManager locationManager;
+    private LocationLiveData locationlivedata;
 
     public static void setItemClick(OnItemClick itemClick) {
         MainApp.itemClick = itemClick;
@@ -164,7 +169,7 @@ public class MainApp extends Application {
         deviceId = Settings.Secure.getString(getApplicationContext().getContentResolver(),
                 Settings.Secure.ANDROID_ID);
 
-
+        locationlivedata = new LocationLiveData(this);
         // Requires Permission for GPS -- android.permission.ACCESS_FINE_LOCATION
         // Requires Additional permission for 5.0 -- android.hardware.location.gps
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
