@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeUrdu">
-        <activity android:name=".ui.other.sections.InfoSectionActivity"></activity>
+        <activity android:name=".ui.sections.SectionDActivity"></activity>
+        <activity android:name=".ui.other.sections.InfoSectionActivity" />
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
