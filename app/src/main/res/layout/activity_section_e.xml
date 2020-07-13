@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbarSize="10dip" tools:context=".ui.Myactivity">
-        <LinearLayout android:id="@+id/GrpName" android:layout_width="match_parent"  android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:id="@+id/fldGrpSectionE" android:layout_width="match_parent"  android:layout_height="wrap_content" android:orientation="vertical">
 
             <!--e01  Radio-->
             <androidx.cardview.widget.CardView
