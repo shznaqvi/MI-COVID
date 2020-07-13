@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -28,17 +29,11 @@ public class SectionEActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.ah1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ah1a.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecAH101);
+        bi.fldGrpCVe02.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.e0201.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVd03);
             }
-        }));*/
-
-        /*bi.ah2.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ah2b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVah3);
-            }
-        }));*/
+        }));
 
     }
 
