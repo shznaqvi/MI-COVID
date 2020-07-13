@@ -173,7 +173,7 @@ public class SectionEActivity extends AppCompatActivity {
 
     private boolean formValidation() {
 
-        return true;
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE);
     }
 
     @Override

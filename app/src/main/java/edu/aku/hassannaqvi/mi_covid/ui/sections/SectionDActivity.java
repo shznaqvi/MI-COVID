@@ -49,8 +49,7 @@ public class SectionDActivity extends AppCompatActivity {
     }
 
     private boolean formValidation() {
-        return true;
-
+        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionD);
     }
 
     @Override
