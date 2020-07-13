@@ -1,4 +1,4 @@
-package edu.aku.hassannaqvi.mi_covid.ui.other.sections;
+package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.os.Bundle;
 

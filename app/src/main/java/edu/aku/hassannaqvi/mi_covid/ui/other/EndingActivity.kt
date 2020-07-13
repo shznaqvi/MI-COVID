@@ -91,7 +91,7 @@ class EndingActivity : AppCompatActivity() {
             MainApp.form.istatus88x = bi.istatus96x.text.toString()
 
             val json = JSONObject()
-            json.put("ttChild", SectionSubInfoActivity.mainVModel.childU5.value.size ?: 0)
+//            json.put("ttChild", SectionSubInfoActivity.mainVModel.childU5.value.size ?: 0)
             try {
                 val json_merge = JSONUtils.mergeJSONObjects(JSONObject(MainApp.form.getsInfo()), json)
                 MainApp.form.setsInfo(json_merge.toString())
@@ -118,7 +118,8 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun formValidation(): Boolean {
-        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatus96, bi.istatus96x, getString(R.string.hh22h))
+//        return ValidatorClass.EmptyRadioButton(this, bi.istatus, bi.istatus96, bi.istatus96x, getString(R.string.hh22h))
+        return true
     }
 
     override fun onBackPressed() {
