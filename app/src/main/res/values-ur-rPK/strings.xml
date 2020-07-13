@@ -81,9 +81,11 @@
     <string name="a12">رہائشی علائقہ؟</string>
     <string name="a1201">شہری </string>
     <string name="a1202">دیہی</string>
+    <string name="a13">آپ کی تاریخ پیدائش کیا ہے؟</string>
     <string name="a13dd">دن</string>
     <string name="a13mm">مہینہ</string>
     <string name="a13yy">سال</string>
+    <string name="a14">آپ کی عمر کتنی ہے؟</string>
     <string name="a14mm">مہینہ</string>
     <string name="a14yy">سال</string>
     <string name="a15">آپ کی جنس کیا ہے؟</string>
@@ -118,9 +120,9 @@
     <string name="a1907">ہائی اسکول (11-12 سال) </string>
     <string name="a1908">بیچلر ڈگری (14 سال) </string>
     <string name="a1909">ماسٹرزڈگری (16 سال) </string>
-    <string name="a19096">دیگر(وضاحت کریں</string>
     <string name="a1910">پی ایچ ڈی </string>
     <string name="a1911">تکنیکی تعلیم </string>
+    <string name="a19096">دیگر(وضاحت کریں</string>
     <string name="a20">آپ کی ازدواجی حیثیت کیا ہے؟</string>
     <string name="a2001">غیرشادی شدہ </string>
     <string name="a2002">شادی شدہ </string>
@@ -137,19 +139,18 @@
     <string name="a2107">طالب علم </string>
     <string name="a2108">بے روزگار </string>
     <string name="a2109">گھریلو خاتون </string>
-    <string name="a21096">دیگر(وضاحت کریں</string>
     <string name="a2110">پری اسکول </string>
     <string name="a2111">چائلڈ لیبر(15 سال سے کم کام کرنے والا بچہ) </string>
-    <string name="a22org">ادارے کا نام </string>
+    <string name="a21096">دیگر(وضاحت کریں</string>
+    <string name="a22">آپ کا مخصوص پیشہ(پوزیشن، عہدہ اور تنظیم کے نام سمیت) کیا ہے؟</string>
     <string name="a22pos">عہدہ</string>
+    <string name="a22org">ادارے کا نام </string>
     <string name="a23">کیا آپ جنوری 2020 کے بعد جیل میں یا قانون نافذ کرنے والے اداروں کی تحویل میں رہے ہیں؟</string>
     <string name="a2301">ہاں</string>
     <string name="a2302">نہیں</string>
     <string name="b01">کیا پاکستان کے علاوہ آپ کے پاس کسی اور ملک کی  شہریت ہے یا بیرون ملک مقیم ہیں؟</string>
     <string name="b0101">ہاں</string>
     <string name="b0102">نہیں</string>
-    <string name="b011t01">ہاں</string>
-    <string name="b011t02">نہیں</string>
     <string name="b02">کون سا ملک؟</string>
     <string name="b03">پاکستان آنے کی وجہ؟</string>
     <string name="b0301">کام </string>
@@ -170,10 +171,12 @@
     <string name="b0504">جھوپڑی </string>
     <string name="b05096">دیگر(وضاحت کریں</string>
     <string name="b06">گھر کے رہائشی حصے کا رقبہ اندازً کتنا(مربع فٹ/گز) ہے؟</string>
-    <string name="b06a">زمین</string>
     <string name="b06ft">اسکوائر  فٹ</string>
     <string name="b06yrd">مربع گز</string>
+    <string name="b06a">زمین</string>
     <string name="b07">آپ کے گھرمیں  کل کتنے خاندان رہتے ہیں؟</string>
+    <string name="b08">آپ کے گھرمیں رہنے والے  افرادکی  مجموعئی تعداد کیا ہے ؟
+(جنوری 2020 سے مستقل رہائش پزیر افراد)</string>
     <string name="b0801">بزرگ مرد (70 سال اور اس سے اوپر) </string>
     <string name="b0802">بزرگ خواتین (70 سال اور اس سے اوپر) </string>
     <string name="b0803">بالغ مرد (18 سے 69 سال) </string>
@@ -181,37 +184,47 @@
     <string name="b0805">مرد (0-17 سال) </string>
     <string name="b0806">خواتین (0-17 سال) </string>
     <string name="b0807">کل افراد</string>
+    <string name="b9">گھر کے کتنے افراد معاوضے کے لئے کام کرتے ہیں/کماتے ہیں؟</string>
     <string name="b10">آپ کے گھرانے کی اندازاً سالانہ آمدنی کتنی ہے؟ روپے</string>
+    <string name="b11ws">آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے ؟</string>
+    <string name="b11mc">میونسپل کمیٹی کا پانی کاکنکشن </string>
+    <string name="b11">پینے کے پانی کا اہم ذریعہ</string>
+    <string name="b011t01">ہاں</string>
     <string name="b1101">گھر میں لگا نلکا </string>
     <string name="b1102">اپنى چارديوارى/پلاٹ میں لگا نلکا </string>
     <string name="b1103">پڑوسی کے گھر لگا نلکا </string>
     <string name="b1104">گلی/ محلے میں لگا نلکا </string>
     <string name="b1105">فلٹریشن پلانٹ </string>
+    <string name="b1106_t">زیر زمین پانی</string>
     <string name="b1106">ٹیوب ویل/ بورنگ کا پانی </string>
     <string name="b1107">ہاتھ والا نلکا </string>
+    <string name="b1108_t">کنواں</string>
     <string name="b1108">محفوظ کنواں </string>
     <string name="b1109">غیرمحفوظ کنواں </string>
-    <string name="b11096">دیگر(وضاحت کریں)</string>
     <string name="b1110">بارش کا پانی </string>
     <string name="b1111">پانی کا ٹینکر </string>
     <string name="b1112">ریڑھی کے ساتھ چھوٹی ٹنکی </string>
     <string name="b1113">سطح والا پانی (دریا، جھیل، ڈیم، تالاب/ندی/نہر کا پانی) </string>
     <string name="b1114">بوتل کا پانی </string>
-    <string name="b11mc">میونسپل کمیٹی کا پانی کاکنکشن </string>
-    <string name="b11ws">آپ کے گھر میں پینے کے پانی کا سب سے اہم ذریعہ کیا ہے ؟</string>
+    <string name="b11096">دیگر(وضاحت کریں)</string>
+    <string name="b011t02">نہیں</string>
     <string name="b12">آپ کے گھر انے کے افراد عام طور پر بیت الخلاء  کی کس قسم کی سہولت استعمال کرتے ہیں؟</string>
+    <string name="b1201_t">فلش یا انڈیل کر پانی ڈالنے والا</string>
     <string name="b1201"> فلش سیوریج کے نظام سے منسلک </string>
     <string name="b1202">فلش سپٹک ٹینک سے منسلک </string>
     <string name="b1203">فلش گڑھےواے لیٹرین سے منسلک  </string>
     <string name="b1204">فلش کہیں اور </string>
     <string name="b1205">نامعلوم جگہ پر فلش/یقین نہیں/پتہ نہیں </string>
+    <string name="b1206_t">گڑھے والا لیٹرین </string>
     <string name="b1206">بہتر ہوا دار گڑھے والا لیٹرین </string>
     <string name="b1207">گڑھے والا لیٹرین ڈھکا ہوا </string>
     <string name="b1208">گڑھے والا کھلا ہوا لیٹرین </string>
     <string name="b1209">کھادکے گڑہے والا ٹوائلٹ </string>
-    <string name="b12096">دیگر(وضاحت کریں</string>
     <string name="b1210">بالٹی والا ٹوائلٹ </string>
     <string name="b1211">کوئی سہولت نہیں/جھاڑیوں/کھیتوں/کھلے میں</string>
+    <string name="b12096">دیگر(وضاحت کریں</string>
+    <string name="b13">کیا آپ  کی ملکیت میں مندرجہ ذیل اشیاء  میں سے کوئی چیزہے؟
+(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="b1301">گھڑی </string>
     <string name="b130101">ہاں</string>
     <string name="b130102">نہیں</string>
@@ -243,6 +256,8 @@
     <string name="b14">کیا آپ کے گھر میں کوئی گھریلو ملازم یا ملازمہ   ہے؟</string>
     <string name="b1401">ہاں</string>
     <string name="b1402">نہیں</string>
+    <string name="b15">اگر ہاں توکس قسم کا/کی گھریلو ملازم/ملازمہ ہے؟
+(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="b1501">نوکر/نوکرانی </string>
     <string name="b150101">ہاں</string>
     <string name="b150102">نہیں</string>
@@ -263,7 +278,6 @@
     <string name="b1601">ہاں</string>
     <string name="b1602">نہیں</string>
     <string name="b17">گھریلو ملازم/ملازمہ ہفتے میں کتنے دن آپ کے گھرآتا/آتی ہے؟</string>
-    <string name="b9">گھر کے کتنے افراد معاوضے کے لئے کام کرتے ہیں/کماتے ہیں؟</string>
     <string name="c01">آپ کہاں کام کرتے ہیں؟</string>
     <string name="c0101">گھر </string>
     <string name="c0102">دفتر </string>
@@ -273,6 +287,7 @@
     <string name="c0106">صنعتی/فیکٹری مزدور/ملازم </string>
     <string name="c0107">ہسپتال/کلینک </string>
     <string name="c01096">دیگر(وضاحت کریں)</string>
+    <string name="c02">اگر آپ دفتر میں کام کرتے ہیں تو، اورکتنے افراد آپ کے ساتھ  کام کرتے ہیں اور کتنے افراد  آپ کے ساتھ کمرے میں ہوتے ہیں؟</string>
     <string name="c0201">کل عملہ تعداد</string>
     <string name="c0202">عملہ ایک ہی کمرے میں، تعداد</string>
     <string name="c03">آپ کے کام کی حیثیت کیا ہے؟</string>
@@ -317,6 +332,7 @@
     <string name="ch06a7">گھر میں مطلوبہ عمر کا کوئی فرد نہیں  </string>
     <string name="ch06a8">دیگر وضاحت کریں</string>
     <string name="ch06ax"></string>
+    <string name="d1">آپ کے اسکول/کالج/یونیورسٹی کا نام کیا ہے؟(شہر کا نام   ساتھ لکھیں)</string>
     <string name="d02">کیا آپ مارچ 2020 کے بعد اسکول/کالج/یونیورسٹی جاتے ہیں؟</string>
     <string name="d0201">ہاں</string>
     <string name="d0202">نہیں</string>
@@ -333,7 +349,6 @@
     <string name="d05">کیا آپ  اپنی کلاس  کے دوسرےطلباء کے ساتھ (جسمانی طور پر ساتھ) آن لائن کلاسیں لیتے ہیں؟</string>
     <string name="d0501">ہاں</string>
     <string name="d0502">نہیں</string>
-    <string name="d1">آپ کے اسکول/کالج/یونیورسٹی کا نام کیا ہے؟(شہر کا نام   ساتھ لکھیں)</string>
     <string name="e01">کیا آپ نے اپنی طبی انشورنس کروائی ہے؟</string>
     <string name="e0101">ہاں، عوامی </string>
     <string name="e0102">ہاں، نجی </string>
@@ -363,8 +378,8 @@
     <string name="e0701">ہاں</string>
     <string name="e0702">نہیں</string>
     <string name="e08">اگر ہاں تو، معذوری کی قسم؟</string>
-    <string name="e0801">اوپری اعضا </string>
     <string name="e0801_t">جسمانی معذوری</string>
+    <string name="e0801">اوپری اعضا </string>
     <string name="e0802">نچلےاعضاء </string>
     <string name="e0803">سماعت </string>
     <string name="e0804">بینائي </string>
@@ -397,15 +412,19 @@
     <string name="e1302">نجی سہولت </string>
     <string name="e1303">مقامی ڈسپنسری </string>
     <string name="e13096">دیگر(وضاحت کریں) </string>
+    <string name="e14">بیماری کی صورت میں آپ کون سی کلینک/سہولت پر جاتے ہیں؟
+(جگہ کے ساتھ سہولت کا نام)</string>
     <string name="e1401">نام </string>
     <string name="e1402">جگہ </string>
     <string name="e15">وہ سہولت کتنی دور ہے؟
 (محقق گوگل کے نقشے پر فاصلہ دیکھ سکتا ہے)</string>
+    <string name="e1501">کلومیٹر </string>
     <string name="f01">کیا آپ جنوری 2020 کو یا اس کے بعد حاملہ تھیں؟</string>
     <string name="f0101">ہاں</string>
     <string name="f0102">نہیں</string>
     <string name="f02">جنوری 2020 میں آپ  کے حمل کی مدت کیا تھی؟
 مکمل مہینے درج کریں اگر 1 ماہ سے کم ہو تو 0 درج کریں</string>
+    <string name="f0201">مہینے</string>
     <string name="f03">کیا آپ نے اپنے آخری حمل کے دوران حمل کا معائنہ کرایا؟</string>
     <string name="f0301">ہاں</string>
     <string name="f0302">نہیں</string>
@@ -421,8 +440,10 @@
     <string name="f0409">ڈسپنسر/کمپاؤنڈر </string>
     <string name="f04096">دیگر(وضاحت کریں) </string>
     <string name="f05"> گزشتہ حمل کے دوران جب آپ نے پہلی  بار حمل کا معائنہ کروایا اس وقت آپ کتنے ماہ کی حاملہ تھیں؟</string>
+    <string name="f0501">مہینے</string>
     <string name="f05098">معلوم نہیں</string>
     <string name="f06">آخری حمل کے دوران آپ نے کتنی بار حمل کا معائنہ کرایا؟</string>
+    <string name="f0601">حمل کا معائنہ کروانے کی تعداد</string>
     <string name="f06098">معلوم نہیں</string>
     <string name="f07">کیا آپ کو کووڈـ19 کی وجہ سے حمل کا طئے شدہ معائنہ کرانے سے محروم ہوئیں متوقع معائنہ چھوڑنا پڑا تھا؟</string>
     <string name="f0701">ہاں</string>
@@ -435,6 +456,7 @@
     <string name="f0805">پی پی ای (دستانے، ماسک) گھر پر دستیاب نہیں تھے </string>
     <string name="f0806">سہولت فراہم کنندہ ایس او پیز کی پیروی نہیں کر رہے تھے(دستانے اور ماسک نہیں پہنے ہوئے تھے) </string>
     <string name="f08096">دیگر(وضاحت کریں) </string>
+    <string name="f09">آپ نے آخری بار حمل کا معائنہ کس تاریخ کو کرایا؟</string>
     <string name="f09dd">دن</string>
     <string name="f09mm">مہینے</string>
     <string name="f09yy">سال</string>
@@ -442,6 +464,7 @@
     <string name="f1001">زندہ پیدائش </string>
     <string name="f1002">مردہ پیدائش </string>
     <string name="f1003">ابھی بھی حاملہ ہے</string>
+    <string name="f11">زچگی کی تاریخ؟</string>
     <string name="f11dd">دن</string>
     <string name="f11mm">مہینے</string>
     <string name="f11yy">سال</string>
@@ -450,17 +473,20 @@
     <string name="f1202">آلات کی مدد سے </string>
     <string name="f1203">سی سیکشن/آپرشن</string>
     <string name="f13">زچگی کہاں  پرہوئی؟ </string>
+    <string name="f1301_t">گھرمیں</string>
     <string name="f1301">اپنا گھر </string>
-    <string name="f130196">دیگرسرکاری/عوامی(وضاحت کریں) </string>
     <string name="f1302">کسی اورکا گھر </string>
-    <string name="f130296">دیگر(وضاحت کریں) </string>
+    <string name="f1303_t">سرکاری/عوامی شعبہ </string>
     <string name="f1303">بنیادی صحت مرکز </string>
     <string name="f1304">دیہی صحت مرکز </string>
     <string name="f1305">گورنمنٹ ہسپتال </string>
     <string name="f1306">ماں اور بچوں کا صحت مرکز </string>
+    <string name="f130196">دیگرسرکاری/عوامی(وضاحت کریں) </string>
+    <string name="f1308_t">نجی شعبہ</string>
     <string name="f1308">نجی ہسپتال/کلینک </string>
     <string name="f1309">نجی ڈاکٹر </string>
     <string name="f131096">دیگر نجی (وضاحت کریں) </string>
+    <string name="f130296">دیگر(وضاحت کریں) </string>
     <string name="f14">پیدائش میں کس نے مدد کی؟</string>
     <string name="f1401">ڈاکٹر </string>
     <string name="f1402">نرس/تربیت یافتہ دائی/ایل ایچ وی </string>
@@ -471,8 +497,8 @@
     <string name="f1407">ہومیوپیتھی </string>
     <string name="f1408">حکیم </string>
     <string name="f1409">ڈسپنسر/کمپاؤنڈر </string>
-    <string name="f14096">دیگر(وضاحت کریں) </string>
     <string name="f1410">دوست/رشتیدار </string>
+    <string name="f14096">دیگر(وضاحت کریں) </string>
     <string name="f15">پیدائش کے وقت بچہ دیکھنے میں  کیسا تھا؟</string>
     <string name="f1501">معمول کے مطابق صحتمند </string>
     <string name="f1502">معمول سے چھوٹا (کمزور) </string>
@@ -501,14 +527,20 @@
     <string name="g0406">پی پی ای (دستانے، ماسک) گھر پر دستیاب نہیں تھے </string>
     <string name="g0407">سہولت فراہم کنندہ ایس او پیز کی پیروی نہیں کر رہے تھے(دستانے اور ماسک نہیں پہنے ہوئے تھے) </string>
     <string name="g04096">دیگر(وضاحت کریں) </string>
+    <string name="g05">آپ کے بچے (بچوں) کو جنوری 2020 کے بعد کون سا ٹیکہ(ے) لگا(ے)؟
+(ایک سے زیادہ جوابات آسکتے ہیں)</string>
+    <string name="g0501_t">پیدائش کے فوراً بعد</string>
     <string name="g0501">بی سی جی</string>
     <string name="g0502">او پی وی</string>
+    <string name="g0503_t">۶ہفتوں پر</string>
     <string name="g0503">او پی وی۔۱</string>
     <string name="g0504">پینٹا۔۱</string>
     <string name="g0505">روٹاوائرس ۔۱</string>
+    <string name="g0506_t">۱۰ہفتوں پر</string>
     <string name="g0506">او پی وی۔۲</string>
     <string name="g0507">پینٹا۔۲</string>
     <string name="g0508">روٹاوائرس ۔۲</string>
+    <string name="g0509_t">۱۴ہفتوں پر</string>
     <string name="g0509">او پی وی۔۳</string>
     <string name="g0510">آئی پی وی۔۱</string>
     <string name="g0511">پینٹا۔۳</string>
@@ -517,6 +549,7 @@
     <string name="g06">کیا فروری 2020 کے بعد لیڈی ہیلتھ ورکر نے آپ کے گھر کا دورہ کیا؟</string>
     <string name="g0601">ہاں</string>
     <string name="g0602">نہیں</string>
+    <string name="g07">اگر نہیں تو کیوں؟ (ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="g0701">عام طور پردورہ نہیں کرتی </string>
     <string name="g0702">کورونا کی وجہ سے دورہ نہیں کیا </string>
     <string name="g0703">وہ آئی لیکن ہم نے اسے گھرمیں داخل ہونے کی اجازت نہیں دی </string>
@@ -524,6 +557,8 @@
     <string name="g0705">کورونا  میں مبتلا ہونے کا  ڈر </string>
     <string name="g0706">سماجی دوری </string>
     <string name="g0707">ذاتی حفاظتی سازوسامان گھر پر دستیاب نہیں تھا </string>
+    <string name="g08">اگر ہاں تو لیڈی ہیلتھ ورکر کے دورے کا مقصد کیا تھا؟
+(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="g0801">زچگی کی ممکنہ تاریخ کی معلومات </string>
     <string name="g0802">صحت، غذائیت اورحفظان صحت سے متعلق مشاورت </string>
     <string name="g0803">حمل کے معائنے کے لیے صحت کے سہولت کی تجویز </string>
@@ -556,12 +591,15 @@
     <string name="g1305">پی پی ای (دستانے، ماسک) گھر پر دستیاب نہیں تھے </string>
     <string name="g1306">سہولت فراہم کنندہ ایس او پیز کی پیروی نہیں کر رہے تھے(دستانے اور ماسک نہیں پہنے ہوئے تھے) </string>
     <string name="g13096">دیگر(وضاحت کریں) </string>
+    <string name="h01">آپ کورونا کی وجہ سے صحت کی سہولت/لیبارٹری/دیگرسہولت پر کب گئے؟</string>
     <string name="h01dd">دن</string>
     <string name="h01mm">مہینے</string>
     <string name="h01yy">سال</string>
+    <string name="h02">کورونا کی پہلی علامت کب ظاہر ہوئی؟</string>
     <string name="h02dd">دن</string>
     <string name="h02mm">مہینے</string>
     <string name="h02yy">سال</string>
+    <string name="h03">ہسپتال جانے کے موقع پر مریض نے جن علامات کی اطلاع دی تھی (ان سب پر نشان لگائیں)</string>
     <string name="h0301">بخار </string>
     <string name="h0302">خشک کھانسی </string>
     <string name="h0303">سانس لینے میں دشواری یا سانس کی قلت </string>
@@ -571,7 +609,6 @@
     <string name="h0307">تھکاوٹ (تھکا ن) </string>
     <string name="h0308">سردی </string>
     <string name="h0309">درد اور تکلیف </string>
-    <string name="h03096">دیگر(وضاحت کریں) </string>
     <string name="h0310">سر درد </string>
     <string name="h0311">متلی یا الٹی </string>
     <string name="h0312">اسہال </string>
@@ -579,15 +616,19 @@
     <string name="h0314">ذائقہ کی صلاحیت کم/ختم ہونا </string>
     <string name="h0315">جلدی سرخ باد/دھبے </string>
     <string name="h0316">کوئی علامت نہیں </string>
+    <string name="h03096">دیگر(وضاحت کریں) </string>
     <string name="h04">کیا آپ نے سال 2020 میں ملک سے باہر کا سفر کیا ہے؟</string>
     <string name="h0401">ہاں</string>
     <string name="h0402">نہیں</string>
     <string name="h05">اگر ہاں تو کہاں کا سفر کیا؟        (ملک کا نام)</string>
+    <string name="h0501">ملک </string>
     <string name="h06">کیا آپ نے جنوری 2020 کے بعد اندرون ملک سفر کیا ہے؟</string>
     <string name="h0601">ہاں</string>
     <string name="h0602">نہیں</string>
+    <string name="h07">آپ نے کس شہر/علاقے میں سفر کیا؟</string>
     <string name="h0701">شہر/قصبہ/گائوں </string>
     <string name="h0702">صوبہ  </string>
+    <string name="h08">اندرون ملک سفر کے لئے آپ نے سفر کے کون سے ذرائع استعمال  کئے تھے؟</string>
     <string name="h0801">پبلک ٹرانسپورٹ بس / کوچ / وین) </string>
     <string name="h0802">اپنی گاڑی </string>
     <string name="h0803">ٹرین </string>
@@ -631,6 +672,7 @@
     <string name="h17">کیا آپ کے گھر میں کسی اور کو کورونا ہوا ہے؟</string>
     <string name="h1701">ہاں</string>
     <string name="h1702">نہیں</string>
+    <string name="h18">کتنے افراد  کواور اور ان سے آپ کا رشتہ کیا ہے؟</string>
     <string name="h1801">افراد کی تعداد </string>
     <string name="h1802">رشتہ</string>
     <string name="i01">کووڈـ19 کے دوران کیا آپ نے  اس صورتحال سے پریشانی محسوس کی؟</string>
@@ -667,17 +709,10 @@
     <string name="i0701">ہاں</string>
     <string name="i0702">نہیں</string>
     <string name="j01">لاک ڈاؤن کی صورتحال میں آپ/آپ کے اہل خانہ عبادت کے لئے کہاں جاتے تھے؟</string>
-    <string name="j010">کیا آپ کورونا کی صورتحال کی وجہ سے اپنی ملازمت/آمدنی سے محروم ہوگئے؟</string>
-    <string name="j01001">ہاں</string>
-    <string name="j01002">نہیں</string>
     <string name="j0101">گھر میں </string>
     <string name="j0102">ہمسایہ (دوسرے لوگوں کے ساتھ) </string>
     <string name="j0103">مسجد/مندر / چرچ/ گردوارہ </string>
     <string name="j0104">عبادت نہیں کی </string>
-    <string name="j011">کیا آپ کی تنخواہ/کاروبار/آمدنی کم ہوئی؟</string>
-    <string name="j01101">ہاں</string>
-    <string name="j01102">نہیں</string>
-    <string name="j012">تنخواہ/کاروبار/آمدنی میں کتنے فیصد کمی ہوئی؟</string>
     <string name="j02">کیا عبادت کی جگہ ایس او پیز پرعمل ہورہا تھا؟</string>
     <string name="j0201">ہاں</string>
     <string name="j0202">نہیں</string>
@@ -688,6 +723,7 @@
     <string name="j0401">ہاں</string>
     <string name="j0402">نہیں</string>
     <string name="j05">لاک ڈاؤن کے دوران، آپ ایک ہفتے میں اوسطا کتنے دن گھر سے باہر گئے؟</string>
+    <string name="j0501">دن </string>
     <string name="j06">لاک ڈاؤن کے دوران کام پر جانے میں سہولت؟</string>
     <string name="j0601">ہر روز کام کی جگہ جاتا/جاتی ہوں </string>
     <string name="j0602">گھر سے/دور سے کام کرتا/کرتی ہوں </string>
@@ -709,6 +745,14 @@
     <string name="j0902">منسوخ ہوگیا </string>
     <string name="j0903">ملا/حاصل کیا </string>
     <string name="j09096">دیگر(وضاحت کریں) </string>
+    <string name="j010">کیا آپ کورونا کی صورتحال کی وجہ سے اپنی ملازمت/آمدنی سے محروم ہوگئے؟</string>
+    <string name="j01001">ہاں</string>
+    <string name="j01002">نہیں</string>
+    <string name="j011">کیا آپ کی تنخواہ/کاروبار/آمدنی کم ہوئی؟</string>
+    <string name="j01101">ہاں</string>
+    <string name="j01102">نہیں</string>
+    <string name="j012">تنخواہ/کاروبار/آمدنی میں کتنے فیصد کمی ہوئی؟</string>
+    <string name="j01201"></string>
     <string name="k01">لاک ڈاؤن میں نرمی کے بعد آپ/آپ کے اہل خانہ کہاں عبادت کرنے جاتے ہیں؟</string>
     <string name="k0101">گھر میں </string>
     <string name="k0102">ہمسایہ (دوسرے لوگوں کے ساتھ) </string>
@@ -776,10 +820,6 @@
     <string name="k1702">صرف بند جگہوں میں جاتے وقت </string>
     <string name="k1703">کبھی کبھی </string>
     <string name="l01">کیا آپ کسی ثقافتی، تفریحی، مذہبی، صنفی، نسلی یا لسانی، نسل/ذات/ قبیلے کے گروہوں یا تنظیم کے رکن ہیں؟</string>
-    <string name="l010">کتنی کثرت سے اکٹھے ہوئے/اجتماعات کیے؟</string>
-    <string name="l01001">معمول سے کم </string>
-    <string name="l01002">معمول کے مطابق </string>
-    <string name="l01003">معمول سے زیادہ </string>
     <string name="l0101">ہاں</string>
     <string name="l0102">نہیں</string>
     <string name="l02">اگر ہاں، تو کس قسم کا گروہ/تنظیم ہے؟</string>
@@ -817,5 +857,10 @@
     <string name="l09">کیا آپ فروری 2020 کے بعد اکٹھے ہوئے/اجتماعات کیے؟</string>
     <string name="l0901">ہاں</string>
     <string name="l0902">نہیں</string>
+    <string name="l010">کتنی کثرت سے اکٹھے ہوئے/اجتماعات کیے؟</string>
+    <string name="l01001">معمول سے کم </string>
+    <string name="l01002">معمول کے مطابق </string>
+    <string name="l01003">معمول سے زیادہ </string>
+
 
 </resources>
