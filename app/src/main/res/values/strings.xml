@@ -49,7 +49,7 @@
     <string name="newHHheadname"> Name of new head of the household </string>
     <string name="a01">Date of Interview</string>
     <string name="a02">Start Time of interview (In 24-hour format)</string>
-    <string name="a03">Interviewer's Code</string>
+    <string name="a03">Interviewer\'s Code</string>
     <string name="a04">Province?</string>
     <string name="a0401">KPK</string>
     <string name="a0402">Punjab</string>
@@ -690,7 +690,7 @@
     <string name="i0401">Have or could get COVID-19 </string>
     <string name="i0402">Die because of COVID-19 </string>
     <string name="i0403">Run out of food during the emergency/Lockdown </string>
-    <string name="i0404">Don't get enough medical support during the Emergency </string>
+    <string name="i0404">Don\'t get enough medical support during the Emergency </string>
     <string name="i0405">Left out of work or with a lower income </string>
     <string name="i0406">Behind in school/learning this semester </string>
     <string name="i0407">None</string>
