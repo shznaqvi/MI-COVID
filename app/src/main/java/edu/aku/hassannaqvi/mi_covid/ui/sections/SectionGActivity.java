@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -25,7 +26,7 @@ public class SectionGActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_g);
         bi.setCallback(this);
-
+        setupSkips();
     }
 
     private void SaveDraft() throws JSONException {
@@ -93,16 +94,23 @@ public class SectionGActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.ah1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ah1a.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecAH101);
+        bi.g01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g0102.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecG01);
             }
-        }));*/
+        }));
 
-        /*bi.ah2.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ah2b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVah3);
+      /*  bi.g02.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g0202.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecG02);
             }
+        }));
+        bi.g06.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g06.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecG060);
+            }
+
+
         }));*/
     }
 
