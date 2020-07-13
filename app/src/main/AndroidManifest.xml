@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeUrdu">
-        <activity android:name=".ui.sections.SectionFActivity"></activity>
+        <activity android:name=".ui.sections.SectionHActivity"></activity>
+        <activity android:name=".ui.sections.SectionFActivity" />
         <activity android:name=".ui.sections.SectionEActivity" />
         <activity android:name=".ui.sections.SectionDActivity" />
         <activity android:name=".ui.sections.SectionCActivity" />
