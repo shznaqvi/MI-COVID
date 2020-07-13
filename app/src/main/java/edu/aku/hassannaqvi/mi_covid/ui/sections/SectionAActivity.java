@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -35,30 +36,16 @@ public class SectionAActivity extends AppCompatActivity {
         //setupSkips();
     }
 
-
-    /*private void setupSkips() {
-        db = new DatabaseHelper(this);
-        populateSpinner(this);
-        *//*bi.s1q8.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == bi.s1q8b.getId()) {
-                bi.fldGrpCVs1q8r.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVs1q8r);
-                bi.fldGrpCVs1q8r.setVisibility(View.GONE);
-            }
-        });*//*
-    }*/
-
     private void setupSkip() {
-        //b01
-//        bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
-//            Clear.clearAllFields(bi.llb0203);
-//        });
+        //a06
+        bi.a06.setOnCheckedChangeListener((group, checkedId) -> {
+            Clear.clearAllFields(bi.lla07);
+        });
 
-        //b14
-//        bi.b14.setOnCheckedChangeListener((group, checkId) -> {
-//            Clear.clearAllFields(bi.llb1517);
-//        });
+        //a07
+        bi.a07.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.lla08);
+        });
     }
 
     public void BtnContinue() {
@@ -77,7 +64,6 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
-
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -92,7 +78,6 @@ public class SectionAActivity extends AppCompatActivity {
             return false;
         }
     }
-
 
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
@@ -215,12 +200,9 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
-
     private boolean formValidation(boolean flag) {
-        if (flag) return Validator.emptyCheckingContainer(this, bi.GrpName);
-        else return Validator.emptyCheckingContainer(this, bi.GrpName);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
-
 
     public void BtnEnd() {
         /*if (!formValidation(false)) return;
@@ -307,29 +289,5 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });*/
     }
-
-
-    /*long getHfCode(String hf_name) {
-
-     *//*DatabaseHelper db = new DatabaseHelper(this);
-        Cursor res = db.getHfCode("healthFacilities", hf_name);
-        res.moveToFirst();
-        return Long.parseLong(res.getString(res.getColumnIndex(HealthFacilitiesContract.SingleHealthFacilities.COLUMN_FACILITY_CODE)));*//*
-    }*/
-
-    /*@Override
-    public void endSecActivity(boolean flag) {
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", flag));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
-    }*/
 
 }

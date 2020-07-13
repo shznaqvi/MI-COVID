@@ -48,7 +48,7 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     public void BtnContinue() {
-        if (formValidation()) {
+        if (formValidation(true)) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -56,7 +56,7 @@ public class SectionBActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionCActivity.class));
+                startActivity(new Intent(this, SectionBActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -230,7 +230,7 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
 
-    private boolean formValidation() {
+    private boolean formValidation(boolean flag) {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 

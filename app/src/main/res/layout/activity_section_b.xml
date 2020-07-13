@@ -588,8 +588,6 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!--b1106_t  Title-->
-
             <!--b11  Radio-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVb11"
