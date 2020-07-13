@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -17,6 +19,24 @@ public class SectionDActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_d);
+        setupSkips();
+    }
+
+
+    private void setupSkips() {
+
+        bi.d02.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.d0202.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVd03);
+            }
+        }));
+
+        /*bi.ah2.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.ah2b.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVah3);
+            }
+        }));*/
+
     }
 
     private void SaveDraft() throws JSONException {
