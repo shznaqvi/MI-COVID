@@ -63,7 +63,8 @@ public class SectionFActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        //Util.openEndActivity(this);
+
+        Util.openEndActivity(this);
     }
 
     private boolean UpdateDB() {
