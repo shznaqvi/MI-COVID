@@ -16,6 +16,7 @@ import org.json.JSONObject;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionLBinding;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionLActivity extends AppCompatActivity {
 
@@ -54,7 +55,6 @@ public class SectionLActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                finish();
                 startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
@@ -63,7 +63,7 @@ public class SectionLActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        AppUtilsKt.openEndActivity(this);
     }
 
     private boolean UpdateDB() {

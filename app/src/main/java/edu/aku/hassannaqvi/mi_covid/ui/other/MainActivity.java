@@ -59,19 +59,14 @@ import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionKActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionLActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.CreateTable;
 
+import static edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo;
+
 public class MainActivity extends AppCompatActivity {
 
     static File file;
-    private final String TAG = "MainActivity";
     ActivityMainBinding bi;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
-    String dtToday1 = new SimpleDateFormat("dd-MMM-yyyy").format(new Date());
     String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
-    SharedPreferences sharedPref;
-    SharedPreferences.Editor editor;
-    AlertDialog.Builder builder;
-    String m_Text = "";
-    ProgressDialog mProgressDialog;
 
     SharedPreferences sharedPrefDownload;
     SharedPreferences.Editor editorDownload;
@@ -116,7 +111,6 @@ public class MainActivity extends AppCompatActivity {
     private Boolean exit = false;
     private String rSumText = "";
 
-
     void showDialog(String newVer, String preVer) {
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         Fragment prev = getFragmentManager().findFragmentByTag("dialog");
@@ -129,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
         newFragment.show(ft, "dialog");
 
     }
-
 
     public void openForm(View v) {
         OpenFormFunc(v.getId());
@@ -179,7 +172,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(oF);
     }
 
-
     public void openDB() {
         Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
         startActivity(dbmanager);
@@ -195,25 +187,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
         }
-
-    }
-
-    public void syncFamilyMembers() {
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
-
-            // Sync Random
-            SharedPreferences syncPref = getSharedPreferences("SyncInfo", Context.MODE_PRIVATE);
-            SharedPreferences.Editor editor = syncPref.edit();
-            editor.putString("LastDownSyncServer", dtToday);
-
-            editor.apply();
-        } else {
-            Toast.makeText(this, "No network connection available.", Toast.LENGTH_SHORT).show();
-        }
-
 
     }
 
@@ -265,41 +238,31 @@ public class MainActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bi.setCallback(this);
 
-        bi.recordSummary.setVisibility(View.GONE);
+        bi.txtinstalldate.setText(appInfo.getAppInfo());
+        Collection<Form> todaysForms = appInfo.getDbHelper().getTodayForms(sysdateToday);
+        Collection<Form> unsyncedForms = appInfo.getDbHelper().getUnsyncedForms();
+        Collection<Form> unclosedForms = appInfo.getDbHelper().getUnclosedForms();
 
-        bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
-        db = new DatabaseHelper(this);
-
-
-        Collection<Form> todaysForms = db.getTodayForms(sysdateToday);
-        Collection<Form> unsyncedForms = db.getUnsyncedForms();
-        Collection<Form> unclosedForms = db.getUnclosedForms();
-
-        rSumText += "TODAY'S RECORDS SUMMARY\r\n";
-
-        rSumText += "=======================\r\n";
-        rSumText += "\r\n";
-        rSumText += "Total Forms Today" + "(" + dtToday1 + "): " + todaysForms.size() + "\r\n";
+        StringBuilder rSumText = new StringBuilder()
+                .append("TODAY'S RECORDS SUMMARY\r\n")
+                .append("=======================\r\n")
+                .append("\r\n")
+                .append("Total Forms Today" + "(").append(dtToday).append("): ").append(todaysForms.size()).append("\r\n");
+        String TAG = "MainActivity";
         if (todaysForms.size() > 0) {
             String iStatus;
-            rSumText += "---------------------------------------------------------\r\n";
-            rSumText += "[Cluster][Household][Children][Form Status][Sync Status]\r\n";
-            rSumText += "---------------------------------------------------------\r\n";
+            rSumText.append("---------------------------------------------------------\r\n")
+                    .append("[Cluster][Household][Form Status][Sync Status]\r\n")
+                    .append("---------------------------------------------------------\r\n");
 
-            for (Form form : todaysForms) {
-                Log.d(TAG, "onCreate: '" + form.getIstatus() + "'");
-                switch (form.getIstatus()) {
+            for (Form fc : todaysForms) {
+                Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
+                switch (fc.getIstatus()) {
                     case "1":
                         iStatus = "Complete";
                         break;
@@ -325,56 +288,42 @@ public class MainActivity extends AppCompatActivity {
                         iStatus = "Open";
                         break;
                     default:
-                        iStatus = "\t\tN/A" + form.getIstatus();
+                        iStatus = "\t\tN/A" + fc.getIstatus();
                 }
 
-
-                rSumText += form.getClusterCode();
-                rSumText += "  ";
-
-                rSumText += form.getRefno();
-                rSumText += "  \t\t";
-
-                int childCount = db.getChildrenByUUID(form.get_UID());
-                rSumText += childCount;
-                rSumText += "\t\t\t\t";
-
-
-                rSumText += iStatus;
-                rSumText += "\t\t\t\t";
-
-                rSumText += (form.getSynced() == null ? "Not Synced" : "Synced");
-                rSumText += "\r\n";
-                rSumText += "---------------------------------------------------------\r\n";
+                rSumText
+                        /*.append(fc.getClusterCode())
+                        .append(fc.getHhno())*/
+                        .append("  \t\t")
+                        .append(iStatus)
+                        .append("\t\t\t\t")
+                        .append(fc.getSynced() == null ? "Not Synced" : "Synced")
+                        .append("\r\n")
+                        .append("---------------------------------------------------------\r\n");
             }
         }
         SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
-        rSumText += "\r\nDEVICE INFORMATION\r\n";
-        rSumText += "  ========================================================\r\n";
+        rSumText.append("\r\nDEVICE INFORMATION\r\n")
+                .append("  ========================================================\r\n")
+                .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format("%02d", unclosedForms.size()))
+                .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
+                .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format("%02d", unsyncedForms.size()))
+                .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
+                .append("\t|| Last Data Download: \t\t").append(syncPref.getString("LastDataDownload", "Never Downloaded   "))
+                .append("\t\t\t\t\t\t||\r\n")
+                .append("\t|| Last Data Upload: \t\t\t").append(syncPref.getString("LastDataUpload", "Never Uploaded     "))
+                .append("\t\t\t\t\t\t||\r\n")
+                .append("\t|| Last Photo Upload: \t\t").append(syncPref.getString("LastPhotoUpload", "Never Uploaded     "))
+                .append("\t\t\t\t\t\t||\r\n")
+                .append("\t========================================================\r\n");
+        bi.recordSummary.setText(rSumText);
 
-        rSumText += "\t|| Open Forms: \t\t\t\t\t\t" + String.format("%02d", unclosedForms.size());
-        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Unsynced Forms: \t\t\t\t" + String.format("%02d", unsyncedForms.size());
-        rSumText += "\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Last Data Download: \t\t" + syncPref.getString("LastDataDownload", "Never Downloaded   ");
-        rSumText += "\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Last Data Upload: \t\t\t" + syncPref.getString("LastDataUpload", "Never Uploaded     ");
-        rSumText += "\t\t\t\t\t\t||\r\n";
-        rSumText += "\t|| Last Photo Upload: \t\t" + syncPref.getString("LastPhotoUpload", "Never Uploaded     ");
-        rSumText += "\t\t\t\t\t\t||\r\n";
-        rSumText += "\t========================================================\r\n";
-
-
+        Log.d(TAG, "onCreate: " + rSumText);
         if (MainApp.admin) {
-            bi.adminsec.setVisibility(View.VISIBLE);
             bi.databaseBtn.setVisibility(View.VISIBLE);
-
         } else {
-            bi.adminsec.setVisibility(View.GONE);
             bi.databaseBtn.setVisibility(View.GONE);
         }
-        Log.d(TAG, "onCreate: " + rSumText);
-        bi.recordSummary.setText(rSumText);
 
         // Auto download app
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
@@ -382,10 +331,10 @@ public class MainActivity extends AppCompatActivity {
         versionApp = db.getVersionApp();
         if (versionApp.getVersioncode() != null) {
 
-            preVer = MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode();
+            preVer = appInfo.getVersionName() + "." + appInfo.getVersionCode();
             newVer = versionApp.getVersionname() + "." + versionApp.getVersioncode();
 
-            if (MainApp.appInfo.getVersionCode() < Integer.parseInt(versionApp.getVersioncode())) {
+            if (appInfo.getVersionCode() < Integer.parseInt(versionApp.getVersioncode())) {
                 bi.lblAppVersion.setVisibility(View.VISIBLE);
 
                 String fileName = CreateTable.DATABASE_NAME.replace(".db", "-New-Apps");
@@ -423,7 +372,7 @@ public class MainActivity extends AppCompatActivity {
         registerReceiver(broadcastReceiver, new IntentFilter(DownloadManager.ACTION_DOWNLOAD_COMPLETE));
 
 //        Testing visibility
-        if (Integer.parseInt(MainApp.appInfo.getVersionName().split("\\.")[0]) > 0) {
+        if (Integer.parseInt(appInfo.getVersionName().split("\\.")[0]) > 0) {
             bi.testing.setVisibility(View.GONE);
         } else {
             bi.testing.setVisibility(View.VISIBLE);
@@ -431,9 +380,6 @@ public class MainActivity extends AppCompatActivity {
 
         //loadTagDialog();
 
-    }
-
-    public void gotoC1(View view) {
     }
 
     public void toggleSummary(View view) {

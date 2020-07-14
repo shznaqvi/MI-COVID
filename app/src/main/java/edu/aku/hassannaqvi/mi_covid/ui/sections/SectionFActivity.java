@@ -1,21 +1,21 @@
 package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-import edu.aku.hassannaqvi.mi_covid.core.MainApp;
-import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
-import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionFBinding;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 import edu.aku.hassannaqvi.mi_covid.R;
+import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionFBinding;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionFActivity extends AppCompatActivity {
 
@@ -75,8 +75,7 @@ public class SectionFActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
-        Util.openEndActivity(this);
+        AppUtilsKt.openEndActivity(this);
     }
 
     private boolean UpdateDB() {

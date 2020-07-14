@@ -15,7 +15,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionJBinding;
-import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionJActivity extends AppCompatActivity {
 
@@ -74,7 +74,7 @@ public class SectionJActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        AppUtilsKt.openEndActivity(this);
     }
 
     private boolean UpdateDB() {

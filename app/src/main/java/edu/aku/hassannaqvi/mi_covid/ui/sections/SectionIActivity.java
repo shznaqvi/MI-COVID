@@ -15,6 +15,7 @@ import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionIBinding;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionIActivity extends AppCompatActivity {
 
@@ -55,8 +56,7 @@ public class SectionIActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
-        //    Util.openEndActivity(this);
+        AppUtilsKt.openEndActivity(this);
     }
 
     private boolean UpdateDB() {

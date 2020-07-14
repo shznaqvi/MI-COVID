@@ -63,6 +63,8 @@ class SectionDActivity : AppCompatActivity() {
             bi.d0502.isChecked -> "2"
             else -> "-1"
         })
+
+        MainApp.form.setsD(json.toString())
     }
 
     private fun formValidation(): Boolean {
@@ -71,7 +73,7 @@ class SectionDActivity : AppCompatActivity() {
 
     private fun updateDB(): Boolean {
         val db = MainApp.appInfo.dbHelper
-        val updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SM, MainApp.form.getsM())
+        val updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, MainApp.form.getsD())
         return if (updcount > 0) {
             true
         } else {
