@@ -14,7 +14,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
-import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionGBinding;
 
 public class SectionGActivity extends AppCompatActivity {
@@ -32,7 +31,6 @@ public class SectionGActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
         json.put("g01", bi.g0101.isChecked() ? "1"
                 : bi.g0102.isChecked() ? "2"
                 : "-1");
@@ -52,10 +50,10 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.g0405.isChecked() ? "5"
                 : bi.g0406.isChecked() ? "6"
                 : bi.g0407.isChecked() ? "7"
-                : bi.g04096.isChecked() ? "96"
+                //        : bi.g04096.isChecked() ? "96"
                 : "-1");
 
-        json.put("g04096x", bi.g04096x.getText().toString());
+        //    json.put("g04096x", bi.g04096x.getText().toString());
         json.put("g06", bi.g0601.isChecked() ? "1"
                 : bi.g0602.isChecked() ? "2"
                 : "-1");
@@ -88,7 +86,6 @@ public class SectionGActivity extends AppCompatActivity {
                 : "-1");
 
 
-        MainApp.adolscent.setsAH2(String.valueOf(json));
     }
 
 
@@ -100,18 +97,34 @@ public class SectionGActivity extends AppCompatActivity {
             }
         }));
 
-      /*  bi.g02.setOnCheckedChangeListener(((radioGroup, i) -> {
+        bi.g02.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g0202.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecG02);
+                Clear.clearAllFields(bi.fldGrpCVg02);
             }
         }));
+
+        bi.g03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVg04);
+            Clear.clearAllFields(bi.fldGrpCVg05);
+        }));
+
         bi.g06.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g06.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecG060);
+                Clear.clearAllFields(bi.fldGrpCVg06);
             }
+        }));
 
+        bi.g09.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g0902.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg09);
+            }
+        }));
 
-        }));*/
+        bi.g11.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g1102.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg11);
+            }
+        }));
     }
 
     public void BtnContinue() {
