@@ -92,7 +92,7 @@
                 android:id="@+id/fldGrpCVd03"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility='@{d0202.checked? View.GONE : View.VISIBLE}'>
+                android:visibility='@{d0201.checked? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -236,9 +236,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:onClick="@{() -> callback.BtnEnd()}"
                     android:background="@color/red_overlay"
                     android:textColor="@color/white"
+                    android:onClick="@{callback::btnEnd}"
                     android:text="Cancel" />
 
                 <Button
@@ -246,9 +246,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:onClick="@{() -> callback.BtnContinue()}"
                     android:background="@color/green_overlay"
                     android:textColor="@color/white"
+                    android:onClick="@{callback::btnContinue}"
                     android:text="Save" />
                 <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
             </LinearLayout>
