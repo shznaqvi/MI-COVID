@@ -13,13 +13,16 @@
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionEActivity" />
     </data>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+
         <LinearLayout
-            android:id="@+id/fldGrpSectionE"
+            android:id="@+id/GrpName"
             style="@style/vlinearlayout">
+
 
             <!-- e01  Radio   -->
             <androidx.cardview.widget.CardView
@@ -48,6 +51,7 @@
                             android:layout_alignTop="@id/qtxt_e01"
                             android:layout_alignBottom="@id/qtxt_e01"
                             android:text="@string/Q_e01" />
+
                     </RelativeLayout>
 
 
@@ -60,7 +64,7 @@
                             android:id="@+id/e0101"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:checked="@{form.e0101.equals('1')}"
+                            android:checked='@{form.e0101.equals("1")}'
                             android:text="@string/e0101" />
 
                         <RadioButton
@@ -86,6 +90,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- e02  Radio   -->
             <androidx.cardview.widget.CardView
@@ -138,6 +143,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- e03  Radio   -->
             <androidx.cardview.widget.CardView
@@ -226,6 +232,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e04  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe04"
@@ -278,6 +285,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e05  Input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe05"
@@ -307,15 +315,14 @@
                             android:text="@string/Q_e05" />
                     </RelativeLayout>
 
+
                     <EditText
                         android:id="@+id/e05"
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginBottom="12dp"
+                        style="@style/EditTextAlpha"
                         android:hint="@string/e05" />
-
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- e06  Radio   -->
             <androidx.cardview.widget.CardView
@@ -383,6 +390,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e07  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe07"
@@ -434,6 +442,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- e08  Radio   -->
             <androidx.cardview.widget.CardView
@@ -529,6 +538,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e09  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe09"
@@ -581,6 +591,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e10  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe10"
@@ -632,6 +643,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- e11  Radio   -->
             <androidx.cardview.widget.CardView
@@ -713,6 +725,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e12  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe12"
@@ -793,6 +806,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e13  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe13"
@@ -859,6 +873,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e14  Title   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe14"
@@ -891,6 +906,7 @@
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
 
             <!-- e1401  Input   -->
             <androidx.cardview.widget.CardView
@@ -931,6 +947,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e1402  Input   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe1402"
@@ -970,6 +987,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
             <!-- e15  Input-Numeric   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe15"
@@ -997,18 +1015,22 @@
                             android:layout_alignTop="@id/qtxt_e15"
                             android:layout_alignBottom="@id/qtxt_e15"
                             android:text="@string/Q_e15" />
+
                     </RelativeLayout>
 
-                    <EditText
-                        android:id="@+id/e15"
+
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
-                        android:layout_marginBottom="12dp"
-                        android:hint="@string/e15"
-                        android:inputType="number" />
+                        android:layout_marginTop="12dp"
+                        android:text="@string/e1501" />
 
                 </LinearLayout>
-            </androidx.cardview.widget.CardView><!--EndButton LinearLayout-->
+
+            </androidx.cardview.widget.CardView>
+
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1031,8 +1053,14 @@
                     android:layout_marginStart="12dp"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save" />
-                <!--EndButton LinearLayout-->
+
             </LinearLayout>
+            <!--EndButton LinearLayout-->
+
+
         </LinearLayout>
+
+
     </ScrollView>
+
 </layout>
