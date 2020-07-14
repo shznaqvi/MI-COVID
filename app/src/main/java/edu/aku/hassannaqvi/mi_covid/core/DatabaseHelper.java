@@ -13,29 +13,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
-import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.BLRandomContract.BLRandomTable;
-import edu.aku.hassannaqvi.mi_covid.contracts.ChildContract.ChildTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract.FormsTable;
-import edu.aku.hassannaqvi.mi_covid.contracts.UCsContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract.UsersTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract.VersionAppTable;
 import edu.aku.hassannaqvi.mi_covid.models.BLRandom;
-import edu.aku.hassannaqvi.mi_covid.models.Child;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.Users;
 import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_VERSION;
-import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_ALTER_CHILD_TABLE;
-import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_ALTER_FORMS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_BL_RANDOM;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_FORMS;
@@ -48,12 +41,7 @@ import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_VERSIONA
  */
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-
-
-    private static final String SQL_DELETE_UCS = "DROP TABLE IF EXISTS " + UCsContract.UCsTable.TABLE_NAME;
-
     private final String TAG = "DatabaseHelper";
-    private String spDateT = new SimpleDateFormat("dd-MM-yy").format(new Date().getTime());
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -64,23 +52,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-        db.execSQL(SQL_CREATE_PSU_TABLE);
+//        db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_BL_RANDOM);
         db.execSQL(SQL_CREATE_VERSIONAPP);
-        db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
+//        db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
         db.execSQL(SQL_CREATE_CHILD_TABLE);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        switch (oldVersion) {
-            case 1:
-                db.execSQL(SQL_ALTER_FORMS);
-                db.execSQL(SQL_ALTER_CHILD_TABLE);
-            default:
-                break;
 
-        }
     }
 
     public int syncBLRandom(JSONArray blList) {
@@ -272,45 +253,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         newRowId = db.insert(
                 FormsTable.TABLE_NAME,
                 FormsTable.COLUMN_NAME_NULLABLE,
-                values);
-        return newRowId;
-    }
-
-
-    public Long addChild(Child child) {
-
-        // Gets the data repository in write mode
-        SQLiteDatabase db = this.getWritableDatabase();
-
-        // Create a new map of values, where column names are the keys
-        ContentValues values = new ContentValues();
-//        values.put(MWRATable._ID, mwra.get_ID());
-        values.put(ChildTable.COLUMN_UUID, child.get_UUID());
-        values.put(ChildTable.COLUMN_DEVICEID, child.getDeviceId());
-        values.put(ChildTable.COLUMN_FORMDATE, child.getFormDate());
-        values.put(ChildTable.COLUMN_SYSDATE, child.getSysDate());
-        values.put(ChildTable.COLUMN_USER, child.getUser());
-        values.put(ChildTable.COLUMN_SCA, child.getsCA());
-        values.put(ChildTable.COLUMN_SCB, child.getsCB());
-        values.put(ChildTable.COLUMN_SCC, child.getsCC());
-        values.put(ChildTable.COLUMN_DEVICETAGID, child.getDevicetagID());
-
-        values.put(ChildTable.COLUMN_CHILDNAME, child.getChildName());
-        values.put(ChildTable.COLUMN_CHILDSERIAL, child.getChildSerial());
-        values.put(ChildTable.COLUMN_GENDER, child.getgender());
-        values.put(ChildTable.COLUMN_AGEY, child.getagey());
-        values.put(ChildTable.COLUMN_AGEM, child.getagem());
-        values.put(ChildTable.COLUMN_CLUSTERCODE, child.getcluster());
-        values.put(ChildTable.COLUMN_HHNO, child.gethhno());
-        values.put(ChildTable.COLUMN_CSTATUS, child.getCstatus());
-        values.put(ChildTable.COLUMN_CSTATUS88x, child.getCstatus88x());
-
-
-        // Insert the new row, returning the primary key value of the new row
-        long newRowId;
-        newRowId = db.insert(
-                ChildTable.TABLE_NAME,
-                null,
                 values);
         return newRowId;
     }
@@ -562,70 +504,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
-    public Collection<Child> getUnsyncedChildForms() {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                ChildTable._ID,
-                ChildTable.COLUMN_UID,
-                ChildTable.COLUMN_UUID,
-                ChildTable.COLUMN_DEVICEID,
-                ChildTable.COLUMN_FORMDATE,
-                ChildTable.COLUMN_SYSDATE,
-                ChildTable.COLUMN_USER,
-                ChildTable.COLUMN_SCA,
-                ChildTable.COLUMN_SCB,
-                ChildTable.COLUMN_SCC,
-                ChildTable.COLUMN_DEVICETAGID,
-                ChildTable.COLUMN_CHILDNAME,
-                ChildTable.COLUMN_CHILDSERIAL,
-                ChildTable.COLUMN_GENDER,
-                ChildTable.COLUMN_AGEY,
-                ChildTable.COLUMN_AGEM,
-                ChildTable.COLUMN_CLUSTERCODE,
-                ChildTable.COLUMN_HHNO,
-                ChildTable.COLUMN_CSTATUS,
-                ChildTable.COLUMN_CSTATUS88x,
-
-        };
-
-
-        String whereClause = ChildTable.COLUMN_SYNCED + " is null";
-
-        String[] whereArgs = null;
-
-        String groupBy = null;
-        String having = null;
-
-        String orderBy =
-                ChildTable._ID + " ASC";
-
-        Collection<Child> allChildren = new ArrayList<Child>();
-        try {
-            c = db.query(
-                    ChildTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                Child child = new Child();
-                allChildren.add(child.hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allChildren;
-    }
-
     public Collection<Form> getTodayForms(String sysdate) {
 
         // String sysdate =  spDateT.substring(0, 8).trim()
@@ -803,41 +681,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
-    public int getChildrenByUUID(String UUID) {
-        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME + " WHERE " + ChildTable.COLUMN_UUID + " = '" + UUID + "' AND " + ChildTable.COLUMN_CSTATUS + " = '1'";
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        int count = cursor.getCount();
-        cursor.close();
-        return count;
-    }
-
-    public int getChildrenPhotoCheck(String UID) {
-        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME +
-                " WHERE " + ChildTable.COLUMN_UUID + " = '" + UID +
-                "' AND " + ChildTable.COLUMN_CSTATUS + " = '1' " +
-                " AND (" + ChildTable.COLUMN_SCC + " NOT LIKE '%\"frontFileName\":\"\"%' " +
-                " OR " + ChildTable.COLUMN_SCC + " NOT LIKE '%\"backFileName\":\"\"%') ";
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        int count = cursor.getCount();
-        cursor.close();
-        return count;
-    }
-
-    public int getChildrenCardCheck(String UID) {
-        String countQuery = "SELECT  * FROM " + ChildTable.TABLE_NAME +
-                " WHERE " + ChildTable.COLUMN_UUID + " = '" + UID +
-                "' AND " + ChildTable.COLUMN_CSTATUS + " = '1' " +
-                " AND " + ChildTable.COLUMN_SCC + " LIKE '%\"im01\":\"1\"%' ";
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.rawQuery(countQuery, null);
-        int count = cursor.getCount();
-        cursor.close();
-        return count;
-    }
-
-
     public int updateEnding(boolean flag) {
         SQLiteDatabase db = this.getReadableDatabase();
 
@@ -858,25 +701,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String[] selectionArgs = {String.valueOf(MainApp.form.get_ID())};
 
         int count = db.update(FormsTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-        return count;
-    }
-
-    public int updateChildEnding() {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        // New value for one column
-        ContentValues values = new ContentValues();
-        values.put(ChildTable.COLUMN_CSTATUS, MainApp.child.getCstatus());
-        values.put(ChildTable.COLUMN_CSTATUS88x, MainApp.child.getCstatus88x());
-
-        // Which row to update, based on the ID
-        String selection = ChildTable.COLUMN_ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.child.get_ID())};
-
-        int count = db.update(ChildTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
@@ -934,64 +758,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allBL;
-    }
-
-
-    //Get All Child of HH
-    public List<Child> getFilledChildForms(String clusterCode, String hhNo, String uuid) {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor c = null;
-        String[] columns = {
-                ChildTable._ID,
-                ChildTable.COLUMN_UID,
-                ChildTable.COLUMN_UUID,
-                ChildTable.COLUMN_DEVICEID,
-                ChildTable.COLUMN_FORMDATE,
-                ChildTable.COLUMN_SYSDATE,
-                ChildTable.COLUMN_USER,
-                ChildTable.COLUMN_SCA,
-                ChildTable.COLUMN_SCB,
-                ChildTable.COLUMN_SCC,
-                ChildTable.COLUMN_DEVICETAGID,
-                ChildTable.COLUMN_CHILDNAME,
-                ChildTable.COLUMN_CHILDSERIAL,
-                ChildTable.COLUMN_GENDER,
-                ChildTable.COLUMN_AGEY,
-                ChildTable.COLUMN_AGEM,
-                ChildTable.COLUMN_CLUSTERCODE,
-                ChildTable.COLUMN_HHNO,
-                ChildTable.COLUMN_CSTATUS,
-                ChildTable.COLUMN_CSTATUS88x,
-        };
-
-        String whereClause = ChildTable.COLUMN_CLUSTERCODE + "=? AND " + ChildTable.COLUMN_HHNO + "=? AND " + ChildTable.COLUMN_UUID + "=? AND (" + ChildTable.COLUMN_CSTATUS + " is not null OR " + ChildTable.COLUMN_CSTATUS + " !='')";
-        String[] whereArgs = {clusterCode, hhNo, uuid};
-        String groupBy = null;
-        String having = null;
-        String orderBy = ChildTable.COLUMN_CHILDSERIAL + " ASC";
-        List<Child> allChildren = new ArrayList<>();
-        try {
-            c = db.query(
-                    ChildTable.TABLE_NAME,  // The table to query
-                    columns,                   // The columns to return
-                    whereClause,               // The columns for the WHERE clause
-                    whereArgs,                 // The values for the WHERE clause
-                    groupBy,                   // don't group the rows
-                    having,                    // don't filter by row groups
-                    orderBy                    // The sort order
-            );
-            while (c.moveToNext()) {
-                allChildren.add(new Child().hydrate(c));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allChildren;
     }
 
     //Get Form already exist
@@ -1075,22 +841,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    //Generic update ChildColumn
-    public int updatesChildColumn(String column, String value) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-        ContentValues values = new ContentValues();
-        values.put(column, value);
-
-        String selection = ChildTable._ID + " =? ";
-        String[] selectionArgs = {String.valueOf(MainApp.child.get_ID())};
-
-        return db.update(ChildTable.TABLE_NAME,
-                values,
-                selection,
-                selectionArgs);
-    }
-
     // ANDROID DATABASE MANAGER
     public ArrayList<Cursor> getData(String Query) {
         //get writable database
@@ -1135,26 +885,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             alc.set(1, Cursor2);
             return alc;
         }
-    }
-
-    //Generic Un-Synced Children
-    public void updateSyncedChildForms(String id) {
-        SQLiteDatabase db = this.getReadableDatabase();
-
-// New value for one column
-        ContentValues values = new ContentValues();
-        values.put(ChildTable.COLUMN_SYNCED, true);
-        values.put(ChildTable.COLUMN_SYNCED_DATE, new Date().toString());
-
-// Which row to update, based on the title
-        String where = ChildTable._ID + " = ?";
-        String[] whereArgs = {id};
-
-        int count = db.update(
-                ChildTable.TABLE_NAME,
-                values,
-                where,
-                whereArgs);
     }
 
     //Generic Un-Synced Forms
