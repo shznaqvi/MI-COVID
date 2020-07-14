@@ -325,25 +325,6 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                     }
                     new GetAllData(mContext, "VersionApp", syncListAdapter, list).execute();
 
-//                    Getting Enumblocks
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "EnumBlock", syncListAdapter, list).execute();
-                    bi.noItem.setVisibility(View.GONE);
-
-                } else {
-
-//                   getting BL Random
-                    if (listActivityCreated) {
-                        model = new SyncModel();
-                        model.setstatusID(0);
-                        list.add(model);
-                    }
-                    new GetAllData(mContext, "BLRandom", syncListAdapter, list).execute(distID);
-
                 }
 
                 listActivityCreated = false;

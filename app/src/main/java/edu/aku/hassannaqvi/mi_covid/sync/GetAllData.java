@@ -20,7 +20,6 @@ import java.net.URL;
 import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.adapter.SyncListAdapter;
-import edu.aku.hassannaqvi.mi_covid.contracts.BLRandomContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -37,11 +36,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
     private SyncListAdapter adapter;
     private List<SyncModel> list;
     private int position;
-    private String TAG = "";
+    private String TAG = "", syncClass;
     private Context mContext;
     private ProgressDialog pd;
-    private String syncClass;
-
 
     public GetAllData(Context context, String syncClass) {
         mContext = context;
@@ -62,12 +59,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "EnumBlock":
-                position = 2;
-                break;
-            case "BLRandom":
-                position = 0;
-                break;
         }
         list.get(position).settableName(syncClass);
     }
@@ -78,7 +69,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
         pd = new ProgressDialog(mContext);
         pd.setTitle("Syncing " + syncClass);
         pd.setMessage("Getting connected to server...");
-        // pd.show();
+//        pd.show();
         list.get(position).setstatus("Getting connected to server...");
         list.get(position).setstatusID(2);
         list.get(position).setmessage("");
@@ -96,40 +87,30 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
-            case "EnumBlock":
-                position = 2;
-                break;
-            case "BLRandom":
-                position = 0;
-                break;
         }
         list.get(position).setstatus("Syncing");
         list.get(position).setstatusID(2);
         list.get(position).setmessage("");
         adapter.updatesyncList(list);
-        pd.setMessage("Syncing");
-        // pd.show();
     }
 
     @Override
     protected String doInBackground(String... args) {
 
         StringBuilder result = new StringBuilder();
+        String tableName = "";
 
         URL url = null;
         try {
             switch (syncClass) {
                 case "User":
-                    url = new URL(MainApp._HOST_URL + UsersContract.UsersTable.SERVER_URI);
+                    url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
+                    tableName = UsersContract.UsersTable.TABLE_NAME;
                     position = 0;
                     break;
                 case "VersionApp":
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable.SERVER_URI);
                     position = 1;
-                    break;
-                case "BLRandom":
-                    url = new URL(MainApp._HOST_URL + BLRandomContract.BLRandomTable.SERVER_URI);
-                    position = 0;
                     break;
             }
 
@@ -138,36 +119,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
             switch (syncClass) {
-                case "BLRandom":
-
-                    if (args[0] != null && !args[0].equals("")) {
-                        if (Integer.parseInt(args[0]) > 0) {
-                            urlConnection.setRequestMethod("POST");
-                            urlConnection.setDoOutput(true);
-                            urlConnection.setDoInput(true);
-                            urlConnection.setRequestProperty("Content-Type", "application/json");
-                            urlConnection.setRequestProperty("charset", "utf-8");
-                            urlConnection.setUseCaches(false);
-
-                            // Starts the query
-                            urlConnection.connect();
-                            DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
-                            JSONObject json = new JSONObject();
-                            try {
-                                json.put("dist_id", args[0]);
-                                json.put("user", "test1234");
-                            } catch (JSONException e1) {
-                                e1.printStackTrace();
-                            }
-                            Log.d(TAG, "downloadUrl: " + json.toString());
-                            wr.writeBytes(json.toString());
-                            wr.flush();
-                            wr.close();
-                        }
-                    }
-                    break;
-
-                case "EnumBlock":
                 case "User":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
@@ -181,7 +132,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
                     JSONObject json = new JSONObject();
                     try {
-                        json.put("user", "test1234");
+                        json.put("table", tableName);
                     } catch (JSONException e1) {
                         e1.printStackTrace();
                     }
@@ -212,36 +163,29 @@ public class GetAllData extends AsyncTask<String, String, String> {
         } finally {
             urlConnection.disconnect();
         }
+
+
         return result.toString();
     }
 
     @Override
     protected void onPostExecute(String result) {
 
-
         //Do something with the JSON string
         if (result != null) {
             if (result.length() > 0) {
                 DatabaseHelper db = new DatabaseHelper(mContext);
                 try {
-                    JSONArray jsonArray = new JSONArray();
-                    Log.d(TAG, "onPostExecute: " + syncClass);
+                    JSONArray jsonArray = new JSONArray(result);
                     int insertCount = 0;
                     switch (syncClass) {
                         case "User":
-                            jsonArray = new JSONArray(result);
                             insertCount = db.syncUser(jsonArray);
                             position = 0;
                             break;
                         case "VersionApp":
                             insertCount = db.syncVersionApp(new JSONObject(result));
-                            if (insertCount == 1) jsonArray.put("1");
                             position = 1;
-                            break;
-                        case "BLRandom":
-                            jsonArray = new JSONArray(result);
-                            insertCount = db.syncBLRandom(jsonArray);
-                            position = 0;
                             break;
                     }
 
@@ -250,17 +194,17 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     list.get(position).setstatus(insertCount == 0 ? "Unsuccessful" : "Successful");
                     list.get(position).setstatusID(insertCount == 0 ? 2 : 3);
                     adapter.updatesyncList(list);
-                    // pd.show();
+//                    pd.show();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             } else {
                 pd.setMessage("Received: " + result.length() + "");
                 list.get(position).setmessage("Received: " + result.length() + "");
-                list.get(position).setstatus("Processed");
-                list.get(position).setstatusID(4);
+                list.get(position).setstatus("Successful");
+                list.get(position).setstatusID(3);
                 adapter.updatesyncList(list);
-                // pd.show();
+//                pd.show();
             }
         } else {
             pd.setTitle("Connection Error");
@@ -269,10 +213,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
             list.get(position).setstatusID(1);
             list.get(position).setmessage("Server not found!");
             adapter.updatesyncList(list);
-            // pd.show();
+//            pd.show();
         }
-
-
     }
 
 }

@@ -433,47 +433,55 @@
                             android:text="@string/Q_j08" />
                     </RelativeLayout>
 
-                    <CheckBox
-                        android:id="@+id/j0801"
+                    <LinearLayout
+                        android:id="@+id/j08check"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="@string/j0801" />
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                    <CheckBox
-                        android:id="@+id/j0802"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/j0802" />
+                        <CheckBox
+                            android:id="@+id/j0801"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j0801" />
 
-                    <CheckBox
-                        android:id="@+id/j0803"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/j0803" />
+                        <CheckBox
+                            android:id="@+id/j0802"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j0802" />
 
-                    <CheckBox
-                        android:id="@+id/j0804"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/j0804" />
+                        <CheckBox
+                            android:id="@+id/j0803"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j0803" />
 
-                    <CheckBox
-                        android:id="@+id/j0805"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/j0805" />
+                        <CheckBox
+                            android:id="@+id/j0804"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j0804" />
 
-                    <CheckBox
-                        android:id="@+id/j0806"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/j0806" />
+                        <CheckBox
+                            android:id="@+id/j0805"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j0805" />
 
-                    <CheckBox
-                        android:id="@+id/j08096"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/j08096" />
+                        <CheckBox
+                            android:id="@+id/j0806"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j0806" />
+
+                        <CheckBox
+                            android:id="@+id/j08096"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/j08096" />
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
