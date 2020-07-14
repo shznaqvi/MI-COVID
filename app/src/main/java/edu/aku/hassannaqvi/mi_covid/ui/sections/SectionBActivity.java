@@ -35,20 +35,6 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     private void setupSkip() {
-
-        //b01
-        bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == bi.b0101.getId()) {
-                bi.fldGrpCVb02.setVisibility(View.VISIBLE);
-                bi.fldGrpCVb03.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVb02);
-                bi.fldGrpCVb02.setVisibility(View.GONE);
-                Clear.clearAllFields(bi.fldGrpCVb03);
-                bi.fldGrpCVb03.setVisibility(View.GONE);
-            }
-        });
-
         //b01
         bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
             Clear.clearAllFields(bi.llb0203);
@@ -62,7 +48,7 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     public void BtnContinue() {
-        if (formValidation()) {
+        if (formValidation(true)) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -70,7 +56,7 @@ public class SectionBActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionCActivity.class));
+                startActivity(new Intent(this, SectionBActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -244,7 +230,7 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
 
-    private boolean formValidation() {
+    private boolean formValidation(boolean flag) {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 

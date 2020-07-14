@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -35,20 +36,17 @@ public class SectionAActivity extends AppCompatActivity {
         //setupSkips();
     }
 
+    private void setupSkip() {
+        //a06
+        bi.a06.setOnCheckedChangeListener((group, checkedId) -> {
+            Clear.clearAllFields(bi.lla07);
+        });
 
-    /*private void setupSkips() {
-        db = new DatabaseHelper(this);
-        populateSpinner(this);
-        *//*bi.s1q8.setOnCheckedChangeListener((group, checkedId) -> {
-            if (checkedId == bi.s1q8b.getId()) {
-                bi.fldGrpCVs1q8r.setVisibility(View.VISIBLE);
-            } else {
-                Clear.clearAllFields(bi.fldGrpCVs1q8r);
-                bi.fldGrpCVs1q8r.setVisibility(View.GONE);
-            }
-        });*//*
-    }*/
-
+        //a07
+        bi.a07.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.lla08);
+        });
+    }
 
     public void BtnContinue() {
         if (formValidation(true)) {
@@ -66,15 +64,14 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
-
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long updcount = db.addForm(MainApp.fc);
-        MainApp.fc.set_ID(String.valueOf(updcount));
+        long updcount = db.addForm(MainApp.form);
+        MainApp.form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
-            MainApp.fc.set_UID(MainApp.fc.getDeviceID() + MainApp.fc.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.fc.get_UID());
+            MainApp.form.set_UID(MainApp.form.getDeviceID() + MainApp.form.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.form.get_UID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -82,26 +79,8 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
-
     private void SaveDraft() throws JSONException {
-
-        /*MainApp.form = new FormsContract();
-        MainApp.fc.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        MainApp.fc.setFormType(CONSTANTS.CHILDRECRUITMENT);
-        MainApp.fc.setUser(MainApp.userName);
-        MainApp.fc.setUser2(MainApp.userName2);
-        MainApp.fc.setDeviceID(MainApp.appInfo.getDeviceID());
-        MainApp.fc.setDevicetagID(MainApp.appInfo.getTagName());
-        MainApp.fc.setAppversion(MainApp.appInfo.getAppVersion());
-        MainApp.setGPS(this); // Set GPS
-
-        NumberFormat f = new DecimalFormat("00");
-        String hf_name = bi.s1q1.getSelectedItem().toString();
-        long hf_code = getHfCode(hf_name);
-        MainApp.fc.setHfCode(f.format(hf_code));*/
-
-        JJSONObject json = new JSONObject();
-
+        JSONObject json = new JSONObject();
         json.put("a01", bi.a01.getText().toString());
 
         json.put("a02", bi.a02.getText().toString());
@@ -120,9 +99,19 @@ public class SectionAActivity extends AppCompatActivity {
 
         json.put("a05a", bi.a05a.getText().toString());
 
-        json.put("a06", "-1");
+        json.put("a06", bi.a0601.isChecked() ? "1"
+                : bi.a0602.isChecked() ? "2"
+                : bi.a0603.isChecked() ? "3"
+                : bi.a0604.isChecked() ? "4"
+                : bi.a0605.isChecked() ? "5"
+                : bi.a0606.isChecked() ? "6"
+                : bi.a0607.isChecked() ? "7"
+                : bi.a0696.isChecked() ? "96"
+                : "-1");
 
-        json.put("a07", bi.a07.getText().toString());
+        json.put("a07", bi.a0701.isChecked() ? "1"
+                : bi.a0702.isChecked() ? "2"
+                : "-1");
 
         json.put("a08", bi.a08.getText().toString());
 
@@ -130,8 +119,10 @@ public class SectionAActivity extends AppCompatActivity {
 
         json.put("a10", bi.a10.getText().toString());
 
-        json.put("a11", bi.a1101.isChecked() ? "1"
-                : bi.a1102.isChecked() ? "2"
+        json.put("a11", bi.a11.getText().toString());
+
+        json.put("a12", bi.a1201.isChecked() ? "1"
+                : bi.a1202.isChecked() ? "2"
                 : "-1");
 
         json.put("a13dd", bi.a13dd.getText().toString());
@@ -140,40 +131,56 @@ public class SectionAActivity extends AppCompatActivity {
 
         json.put("a13yy", bi.a13yy.getText().toString());
 
-        json.put("a15mm", bi.a15mm.getText().toString());
+        json.put("a14mm", bi.a14mm.getText().toString());
 
-        json.put("a15yy", bi.a15yy.getText().toString());
+        json.put("a14yy", bi.a14yy.getText().toString());
+
+        json.put("a15", bi.a1501.isChecked() ? "1"
+                : bi.a1502.isChecked() ? "2"
+                : bi.a1503.isChecked() ? "3"
+                : "-1");
 
         json.put("a16", bi.a1601.isChecked() ? "1"
                 : bi.a1602.isChecked() ? "2"
                 : bi.a1603.isChecked() ? "3"
+                : bi.a1604.isChecked() ? "4"
+                : bi.a1605.isChecked() ? "5"
+                : bi.a1606.isChecked() ? "6"
+                : bi.a1607.isChecked() ? "7"
+                : bi.a1608.isChecked() ? "8"
+                : bi.a1609.isChecked() ? "9"
+                : bi.a16096.isChecked() ? "96"
                 : "-1");
 
-        json.put("a17", bi.a1701.isChecked() ? "1"
-                : bi.a1702.isChecked() ? "2"
-                : bi.a1703.isChecked() ? "3"
-                : bi.a1704.isChecked() ? "4"
-                : bi.a1705.isChecked() ? "5"
-                : bi.a1706.isChecked() ? "6"
-                : bi.a1707.isChecked() ? "7"
-                : bi.a1708.isChecked() ? "8"
-                : bi.a1709.isChecked() ? "9"
-                : bi.a17096.isChecked() ? "96"
+        json.put("a17", bi.a17.getText().toString());
+
+        json.put("a18", bi.a1801.isChecked() ? "1"
+                : bi.a1802.isChecked() ? "2"
+                : bi.a1803.isChecked() ? "3"
+                : bi.a1804.isChecked() ? "4"
+                : bi.a18096.isChecked() ? "96"
                 : "-1");
 
-        json.put("a18", bi.a18.getText().toString());
+        json.put("a19", bi.a1901.isChecked() ? "1"
+                : bi.a1902.isChecked() ? "2"
+                : bi.a1903.isChecked() ? "3"
+                : bi.a1904.isChecked() ? "4"
+                : bi.a1905.isChecked() ? "5"
+                : bi.a1906.isChecked() ? "6"
+                : bi.a1907.isChecked() ? "7"
+                : bi.a1908.isChecked() ? "8"
+                : bi.a1909.isChecked() ? "9"
+                : bi.a1910.isChecked() ? "10"
+                : bi.a1911.isChecked() ? "11"
+                : bi.a19096.isChecked() ? "96"
+                : "-1");
 
-        json.put("a19", "-1");
-
-        json.put("a2001", "-1");
-
-        json.put("a2002", "-1");
-
-        json.put("a2003", "-1");
-
-        json.put("a2004", "-1");
-
-        json.put("a20096", "-1");
+        json.put("a20", bi.a2001.isChecked() ? "1"
+                : bi.a2002.isChecked() ? "2"
+                : bi.a2003.isChecked() ? "3"
+                : bi.a2004.isChecked() ? "4"
+                : bi.a2005.isChecked() ? "5"
+                : "-1");
 
         json.put("a21", bi.a2101.isChecked() ? "1"
                 : bi.a2102.isChecked() ? "2"
@@ -189,45 +196,20 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a21096.isChecked() ? "96"
                 : "-1");
 
-        json.put("a22", bi.a2201.isChecked() ? "1"
-                : bi.a2202.isChecked() ? "2"
-                : bi.a2203.isChecked() ? "3"
-                : bi.a2204.isChecked() ? "4"
-                : bi.a2205.isChecked() ? "5"
-                : "-1");
+        json.put("a22pos", bi.a22pos.getText().toString());
+
+        json.put("a22org", bi.a22org.getText().toString());
 
         json.put("a23", bi.a2301.isChecked() ? "1"
                 : bi.a2302.isChecked() ? "2"
-                : bi.a2303.isChecked() ? "3"
-                : bi.a2304.isChecked() ? "4"
-                : bi.a2305.isChecked() ? "5"
-                : bi.a2306.isChecked() ? "6"
-                : bi.a2307.isChecked() ? "7"
-                : bi.a2308.isChecked() ? "8"
-                : bi.a2309.isChecked() ? "9"
-                : bi.a2310.isChecked() ? "10"
-                : bi.a2311.isChecked() ? "11"
-                : bi.a23096.isChecked() ? "96"
-                : "-1");
-
-        json.put("a25pos", bi.a25pos.getText().toString());
-
-        json.put("a25org", bi.a25org.getText().toString());
-
-        json.put("a26", bi.a2601.isChecked() ? "1"
-                : bi.a2602.isChecked() ? "2"
                 : "-1");
 
 
-        MainApp.fc.setsA(String.valueOf(json));
     }
-
 
     private boolean formValidation(boolean flag) {
-        if (flag) return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA);
-        else return Validator.emptyCheckingContainer(this, bi.fldGrpSectionA01);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
-
 
     public void BtnEnd() {
         /*if (!formValidation(false)) return;
@@ -314,29 +296,5 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });*/
     }
-
-
-    /*long getHfCode(String hf_name) {
-
-     *//*DatabaseHelper db = new DatabaseHelper(this);
-        Cursor res = db.getHfCode("healthFacilities", hf_name);
-        res.moveToFirst();
-        return Long.parseLong(res.getString(res.getColumnIndex(HealthFacilitiesContract.SingleHealthFacilities.COLUMN_FACILITY_CODE)));*//*
-    }*/
-
-    /*@Override
-    public void endSecActivity(boolean flag) {
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            finish();
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", flag));
-        } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-        }
-    }*/
 
 }

@@ -239,213 +239,125 @@
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:id="@+id/a0702"
+                            android:id="@+id/a0601"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/a0702" />
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0601" />
+
+                        <RadioButton
+                            android:id="@+id/a0602"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0602" />
+
+                        <RadioButton
+                            android:id="@+id/a0603"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0603" />
+
+                        <RadioButton
+                            android:id="@+id/a0604"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0604" />
+
+                        <RadioButton
+                            android:id="@+id/a0605"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0605" />
+
+                        <RadioButton
+                            android:id="@+id/a0606"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0606" />
+
+                        <RadioButton
+                            android:id="@+id/a0607"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0607" />
+
+                        <RadioButton
+                            android:id="@+id/a0696"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a0696" />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!--a0601  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0601"
+            <LinearLayout
+                android:id="@+id/lla07"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{a0601.checked ? View.VISIBLE : View.GONE}'>
 
-                <LinearLayout
+                <!--a07  Radio-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fldGrpCVa07"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:layout_height="wrap_content">
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0601" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
 
-            <!--a0602  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0602"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginTop="12dp"
+                            android:text="@string/a07" />
+
+                        <RadioGroup
+                            android:id="@+id/a07"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/a0701"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/a0701" />
+
+                            <RadioButton
+                                android:id="@+id/a0702"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/a0702" />
+
+                        </RadioGroup>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
                 <LinearLayout
+                    android:id="@+id/lla08"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:visibility='@{a0701.checked ? View.VISIBLE : View.GONE}'>
 
-                    <TextView
+                    <!--a08  Input-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/fldGrpCVa08"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0602" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                        android:layout_height="wrap_content">
 
-            <!--a0603  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0603"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0603" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a0604  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0604"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0604" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a0605  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0605"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0605" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a0606  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0606"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0606" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a0607  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0607"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0607" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a0696  -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0696"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0696" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a07  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa07"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a07" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a0701  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa0701"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/a0701" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!--a08  Input-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVa08"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
                     android:orientation="vertical">
 
                     <TextView
@@ -1271,6 +1183,9 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

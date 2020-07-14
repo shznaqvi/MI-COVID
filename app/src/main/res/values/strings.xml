@@ -49,7 +49,7 @@
     <string name="newHHheadname"> Name of new head of the household </string>
     <string name="a01">Date of Interview</string>
     <string name="a02">Start Time of interview (In 24-hour format)</string>
-    <string name="a03">Interviewer's Code</string>
+    <string name="a03">Interviewer\'s Code</string>
     <string name="a04">Province?</string>
     <string name="a0401">KPK</string>
     <string name="a0402">Punjab</string>
@@ -60,14 +60,14 @@
     <string name="a05">District?</string>
     <string name="a05a">Individual Indentification ID</string>
     <string name="a06">Interview Status</string>
-    <string name="a0601"></string>
-    <string name="a0602"></string>
-    <string name="a0603"></string>
-    <string name="a0604"></string>
-    <string name="a0605"></string>
-    <string name="a0606"></string>
-    <string name="a0607"></string>
-    <string name="a0696"></string>
+    <string name="a0601">Household and Individual identified</string>
+    <string name="a0602">Individual not identified</string>
+    <string name="a0603">Household not identified</string>
+    <string name="a0604">Locked</string>
+    <string name="a0605">No competent respondent at home</string>
+    <string name="a0606">Entire household absent for extended period of time</string>
+    <string name="a0607">Refused</string>
+    <string name="a0696">Other</string>
     <string name="a07">May I start the interview now?</string>
     <string name="a0701">Yes</string>
     <string name="a0702">No</string>
@@ -78,9 +78,11 @@
     <string name="a12">Residence Setting?</string>
     <string name="a1201">Urban </string>
     <string name="a1202">Rural </string>
+    <string name="a13">What is your date of birth?</string>
     <string name="a13dd">Day</string>
     <string name="a13mm">Month</string>
     <string name="a13yy">Year</string>
+    <string name="a14">What is your age?</string>
     <string name="a14mm">Month</string>
     <string name="a14yy">Year</string>
     <string name="a15">What is your gender? </string>
@@ -115,9 +117,9 @@
     <string name="a1907">High school (11-12years) </string>
     <string name="a1908">Bachelor’s degree </string>
     <string name="a1909">Masters</string>
-    <string name="a19096">Others (specify) </string>
     <string name="a1910">PhD</string>
     <string name="a1911">Technical education</string>
+    <string name="a19096">Others (specify) </string>
     <string name="a20">What is your marital status?</string>
     <string name="a2001">Single</string>
     <string name="a2002">Married</string>
@@ -134,19 +136,18 @@
     <string name="a2107">Student</string>
     <string name="a2108">Unemployed</string>
     <string name="a2109">Housewife</string>
-    <string name="a21096">Others (specify)</string>
     <string name="a2110">Pre-school</string>
     <string name="a2111">Child labour (less than 15 years working child) </string>
-    <string name="a22org">Organization Name :</string>
+    <string name="a21096">Others (specify)</string>
+    <string name="a22">What is your specific Occupation with position, title and organization?</string>
     <string name="a22pos">Position :</string>
+    <string name="a22org">Organization Name :</string>
     <string name="a23">Are you now or have been in Jail or custody of Law enforcement agencies since January 2020?</string>
     <string name="a2301">Yes</string>
     <string name="a2302">No</string>
     <string name="b01">Do you have a nationality other than Pakistan or living abroad?</string>
     <string name="b0101">Yes</string>
     <string name="b0102">No</string>
-    <string name="b011t01">Yes</string>
-    <string name="b011t02">No</string>
     <string name="b02">Which Country?</string>
     <string name="b03">Reason for visiting Pakistan?</string>
     <string name="b0301">Work </string>
@@ -167,10 +168,11 @@
     <string name="b0504">Hutt </string>
     <string name="b05096">Others (specify) </string>
     <string name="b06">What is the approximate size of the house? (living area) (Sq Feet/Yard)?</string>
-    <string name="b06a">Land</string>
     <string name="b06ft">Sq Feet</string>
     <string name="b06yrd">Sq Yards </string>
+    <string name="b06a">Land</string>
     <string name="b07">Total number of families living in House?</string>
+    <string name="b08">What is total number of household members living in the house (physically living since Jan 2020)?</string>
     <string name="b0801">Elderly male (70 and above)</string>
     <string name="b0802">Elderly female (70 and above</string>
     <string name="b0803">Adult male (18 to 69 Years) </string>
@@ -178,37 +180,47 @@
     <string name="b0805">Male (0-17 Years) </string>
     <string name="b0806">Female (0-17 Years)</string>
     <string name="b0807">Total </string>
+    <string name="b9">How many of the individuals are working for income generation/earnings?</string>
     <string name="b10">What is your household’s approximate annual income? Rupess</string>
+    <string name="b11ws">What is the main source of drinking water for members of your household?</string>
+    <string name="b11mc">Piped water Municipal Community Water Connection</string>
+    <string name="b11">Main Source of Drinking Water</string>
+    <string name="b011t01">Yes</string>
     <string name="b1101">Piped into dwelling</string>
     <string name="b1102">Piped to yard/plot </string>
     <string name="b1103">Piped to neighbor</string>
     <string name="b1104">Public tap/standpipe </string>
     <string name="b1105">Filtration plant</string>
+    <string name="b1106_t">Underground Water </string>
     <string name="b1106">Tube well or borehole </string>
     <string name="b1107">Hand pump</string>
+    <string name="b1108_t">Dug well </string>
     <string name="b1108">Protected Well </string>
     <string name="b1109">Unprotected Well</string>
-    <string name="b11096">Others (specify) </string>
     <string name="b1110">Rainwater</string>
     <string name="b1111">Tanker truck</string>
     <string name="b1112">Cart with small tank</string>
     <string name="b1113">Surface water (river/dam/lake/pond/canal Irrigation</string>
     <string name="b1114">Bottled water</string>
-    <string name="b11mc">Piped water Municipal Community Water Connection</string>
-    <string name="b11ws">What is the main source of drinking water for members of your household?</string>
+    <string name="b11096">Others (specify) </string>
+    <string name="b011t02">No</string>
     <string name="b12">What kind of toilet facility do members of your household usually use?</string>
+    <string name="b1201_t">Flush or Pour Flush Toilet </string>
     <string name="b1201">Flush to piped sewer system</string>
     <string name="b1202">Flush to septic tank</string>
     <string name="b1203">Flush to soakage pit latrine</string>
     <string name="b1204">Flush to somewhere else</string>
     <string name="b1205">Flush to unknown place/Not sure/DK where</string>
+    <string name="b1206_t">PIT Latrine </string>
     <string name="b1206">Ventilated improved PIT latrine</string>
     <string name="b1207">PIT latrine with slab</string>
     <string name="b1208">PIT latrine without slab/open pit</string>
     <string name="b1209">Composting toilet</string>
-    <string name="b12096">Others (specify) </string>
     <string name="b1210">Bucket toilet</string>
     <string name="b1211">No facility/bush/field/OD</string>
+    <string name="b12096">Others (specify) </string>
+    <string name="b13">Do you own any of following items?
+(multiple options possible)</string>
     <string name="b1301">Watch</string>
     <string name="b130101">Yes</string>
     <string name="b130102">No</string>
@@ -240,6 +252,8 @@
     <string name="b14">Do you have a domestic help at your household?</string>
     <string name="b1401">Yes</string>
     <string name="b1402">No</string>
+    <string name="b15">If yes, what type of domestic help do you have?
+(Multiple options possible)</string>
     <string name="b1501">Maid</string>
     <string name="b150101">Yes</string>
     <string name="b150102">No</string>
@@ -260,7 +274,6 @@
     <string name="b1601">Yes</string>
     <string name="b1602">No</string>
     <string name="b17">How many days a week your domestic help is coming?</string>
-    <string name="b9">How many of the individuals are working for income generation/earnings?</string>
     <string name="c01">What is place of your work?  </string>
     <string name="c0101">Home </string>
     <string name="c0102">Office </string>
@@ -270,6 +283,7 @@
     <string name="c0106">Factory/Industry worker</string>
     <string name="c0107">Hospital/Clinic</string>
     <string name="c01096">Others (specify) </string>
+    <string name="c02">If work from office, how many total staff work with you in office and how many staff members share room with you?</string>
     <string name="c0201">Total staff Nos</string>
     <string name="c0202">Staff share same room Nos. </string>
     <string name="c03">What is the status of your work arrangement?</string>
@@ -314,6 +328,7 @@
     <string name="ch06a7">Dwelling not found</string>
     <string name="ch06a8">No any member of targeted age group  </string>
     <string name="ch06ax">Other</string>
+    <string name="d1">What is the name of your school/college/university with city</string>
     <string name="d02">Do you go to school/college/university after March 2020? </string>
     <string name="d0201">Yes</string>
     <string name="d0202">No</string>
@@ -330,7 +345,6 @@
     <string name="d05">Do you take online classes with other classmates (physically sit them them)? </string>
     <string name="d0501">Yes</string>
     <string name="d0502">No</string>
-    <string name="d1">What is the name of your school/college/university with city</string>
     <string name="e01">Do you have health insurance?</string>
     <string name="e0101">Yes, public </string>
     <string name="e0102">Yes, private </string>
@@ -360,8 +374,8 @@
     <string name="e0701">Yes</string>
     <string name="e0702">No</string>
     <string name="e08">If yes, type of disability?</string>
-    <string name="e0801">Upper limb </string>
     <string name="e0801_t">Physical Disability </string>
+    <string name="e0801">Upper limb </string>
     <string name="e0802">Lower limb </string>
     <string name="e0803">Hearing </string>
     <string name="e0804">Vision </string>
@@ -393,15 +407,18 @@
     <string name="e1302">Private facility</string>
     <string name="e1303">Local dispensary </string>
     <string name="e13096">Others (Specify) </string>
+    <string name="e14">Which clinic/facility you go to in case of illness? (Name of the facility with location)</string>
     <string name="e1401">Name </string>
     <string name="e1402">Location </string>
     <string name="e15">How far is that facility?
 (Researcher may check the distance on google map) </string>
+    <string name="e1501">KMs </string>
     <string name="f01">Are/were you pregnant on or after January 2020?</string>
     <string name="f0101">Yes</string>
     <string name="f0102">No</string>
     <string name="f02">How many months you were pregnant in January 2020?
 (Record number of completed months. If less than 1-month record 0).</string>
+    <string name="f0201">Months</string>
     <string name="f03">Did you receive antenatal care during your last pregnancy? </string>
     <string name="f0301">Yes</string>
     <string name="f0302">No</string>
@@ -418,8 +435,10 @@
     <string name="f0409">Dispenser/compounder </string>
     <string name="f04096">Other (specify) </string>
     <string name="f05">How many months were you pregnant when you first received antenatal care?</string>
+    <string name="f0501">Months</string>
     <string name="f05098">Don’t know</string>
     <string name="f06">How many times did you receive antenatal care during your last pregnancy?</string>
+    <string name="f0601">Times</string>
     <string name="f06098">Don’t know</string>
     <string name="f07">Did you miss any ANC appointments due to COVID?</string>
     <string name="f0701">Yes</string>
@@ -432,6 +451,7 @@
     <string name="f0805">PPE (gloves, mask) not available at home </string>
     <string name="f0806">Provider’s not following SOPS (Not wearing gloves and masks) </string>
     <string name="f08096">Other (specify) </string>
+    <string name="f09">When you last visited to health care provider for antenatal care?</string>
     <string name="f09dd">Day</string>
     <string name="f09mm">Months</string>
     <string name="f09yy">Year</string>
@@ -439,6 +459,7 @@
     <string name="f1001">Live birth </string>
     <string name="f1002">Stillbirth </string>
     <string name="f1003">Still pregnant </string>
+    <string name="f11">Date of Delivery</string>
     <string name="f11dd">Day</string>
     <string name="f11mm">Months</string>
     <string name="f11yy">Year</string>
@@ -447,17 +468,20 @@
     <string name="f1202">Instrumental/ forceps </string>
     <string name="f1203">C-Section </string>
     <string name="f13">Where did you give birth?</string>
+    <string name="f1301_t">Home</string>
     <string name="f1301">Your home </string>
-    <string name="f130196">Other public (specify) </string>
     <string name="f1302">Other home </string>
-    <string name="f130296">Other (specify) </string>
+    <string name="f1303_t">Govt./Public Sector</string>
     <string name="f1303">Basic Health Unit </string>
     <string name="f1304">Rural Health Centre </string>
     <string name="f1305">Government Hospital </string>
     <string name="f1306">Mother and Children Health Centre </string>
+    <string name="f130196">Other public (specify) </string>
+    <string name="f1308_t">Private Sector</string>
     <string name="f1308">Private hospital/clinic </string>
     <string name="f1309">Private doctor </string>
     <string name="f131096">Other private (specify) </string>
+    <string name="f130296">Other (specify) </string>
     <string name="f14">Who assisted with the birth?</string>
     <string name="f1401">Doctor </string>
     <string name="f1402">Nurse/Midwife/LHV </string>
@@ -468,8 +492,8 @@
     <string name="f1407">Homeopath </string>
     <string name="f1408">Hakim </string>
     <string name="f1409">Dispenser/compounder </string>
-    <string name="f14096">Other (specify) </string>
     <string name="f1410">Friend/relative </string>
+    <string name="f14096">Other (specify) </string>
     <string name="f15">How did child look like at the time of birth?</string>
     <string name="f1501">Normal </string>
     <string name="f1502">Smaller (weak) than normal </string>
@@ -498,14 +522,20 @@
     <string name="g0406"> PPE not available at home </string>
     <string name="g0407">Provider’s not following SOPS (Not wearing gloves and masks) </string>
     <string name="g04096">Other (specify) </string>
+    <string name="g05">Which vaccine your child(ren) receive after Jan 2020?
+[Multiple Options]</string>
+    <string name="g0501_t">Soon after birth</string>
     <string name="g0501">BCG</string>
     <string name="g0502">OPV-0 </string>
+    <string name="g0503_t">On 6 weeks</string>
     <string name="g0503">OPV-1</string>
     <string name="g0504">Penta-1 </string>
     <string name="g0505">Rota-1 </string>
+    <string name="g0506_t">On 10 weeks </string>
     <string name="g0506">OPV-2 </string>
     <string name="g0507">Penta-2 </string>
     <string name="g0508">Rota-2 </string>
+    <string name="g0509_t">On 14 weeks)</string>
     <string name="g0509">OPV-3 </string>
     <string name="g0510">IPV-I </string>
     <string name="g0511">Penta-3 </string>
@@ -514,6 +544,8 @@
     <string name="g06">Whether a LHW visited your HH after February 2020?</string>
     <string name="g0601">Yes</string>
     <string name="g0602">No</string>
+    <string name="g07">If no what was the reason of not visiting?
+[Multiple options]</string>
     <string name="g0701">LHW usually don’t visit </string>
     <string name="g0702">LHW didn’t visit in Lockdown due to Corona </string>
     <string name="g0703">LHW came but we didn’t allow her to enter in the home </string>
@@ -521,6 +553,8 @@
     <string name="g0705">Afraid to contact with Corona </string>
     <string name="g0706">Social distancing </string>
     <string name="g0707">PPE not available at home </string>
+    <string name="g08">If Yes What was the purpose of LHW’s visit?
+[Multiple options]</string>
     <string name="g0801">Informed expected Delivery date </string>
     <string name="g0802">Health, Nutrition, Hygiene counselling </string>
     <string name="g0803">Referred for ANC at HCF (Health Care Facility) </string>
@@ -553,12 +587,16 @@
     <string name="g1305">PPE (gloves, mask) not available at home </string>
     <string name="g1306">Provider’s not following SOPS (Not wearing gloves and masks) </string>
     <string name="g13096">Other (Specify) </string>
+    <string name="h01">When did you go to the health facility/laboratory/other facility?</string>
     <string name="h01dd">Day</string>
     <string name="h01mm">Months</string>
     <string name="h01yy">Year</string>
+    <string name="h02">When did the first symptom appear?</string>
     <string name="h02dd">Day</string>
     <string name="h02mm">Months</string>
     <string name="h02yy">Year</string>
+    <string name="h03">Symptoms that patient reported on the day of hospital visit
+(mark all that were reported)</string>
     <string name="h0301">Fever</string>
     <string name="h0302">Dry Cough </string>
     <string name="h0303">Difficulty Breathing or shortness of breath </string>
@@ -568,7 +606,6 @@
     <string name="h0307">Fatigue (tired) </string>
     <string name="h0308">Chills </string>
     <string name="h0309">Aches &amp; pains </string>
-    <string name="h03096">Other (Specify) </string>
     <string name="h0310">Headache </string>
     <string name="h0311">Nausea or vomiting </string>
     <string name="h0312">Diarrhea </string>
@@ -576,16 +613,21 @@
     <string name="h0314">Loss of taste </string>
     <string name="h0315">Rashes </string>
     <string name="h0316">No symptoms</string>
+    <string name="h03096">Other (Specify) </string>
     <string name="h04">Have you travelled out of the country in the year 2020?</string>
     <string name="h0401">Yes</string>
     <string name="h0402">No</string>
     <string name="h05">If yes where did you travel?
 (Name of Country)</string>
+    <string name="h0501">Country</string>
     <string name="h06">Have you travelled within the country after January 2020?</string>
     <string name="h0601">Yes</string>
     <string name="h0602">No</string>
+    <string name="h07">In which city/area did you travel?</string>
     <string name="h0701">City/Town/Village</string>
     <string name="h0702">Province</string>
+    <string name="h08">Which means of travel you used for domestic travel?
+[Multiple Options]</string>
     <string name="h0801">Public Transport bus/coach/van) </string>
     <string name="h0802">Car </string>
     <string name="h0803">Train </string>
@@ -629,6 +671,7 @@
     <string name="h17">Did anyone else in your house got Corona?</string>
     <string name="h1701">Yes</string>
     <string name="h1702">No</string>
+    <string name="h18">How many individuals and relation?</string>
     <string name="h1801">No ________  </string>
     <string name="h1802">Relation </string>
     <string name="i01">During the COVID-19 situation have you felt anxious?</string>
@@ -647,7 +690,7 @@
     <string name="i0401">Have or could get COVID-19 </string>
     <string name="i0402">Die because of COVID-19 </string>
     <string name="i0403">Run out of food during the emergency/Lockdown </string>
-    <string name="i0404">Don't get enough medical support during the Emergency </string>
+    <string name="i0404">Don\'t get enough medical support during the Emergency </string>
     <string name="i0405">Left out of work or with a lower income </string>
     <string name="i0406">Behind in school/learning this semester </string>
     <string name="i0407">None</string>
@@ -666,17 +709,10 @@
     <string name="i0701">Yes</string>
     <string name="i0702">No</string>
     <string name="j01">In Lockdown situation where did you/your family members went to pray?</string>
-    <string name="j010">Did you lose your job, income due to the COVID-19 situation?</string>
-    <string name="j01001">Yes</string>
-    <string name="j01002">No</string>
     <string name="j0101">Home </string>
     <string name="j0102">Neighborhood (with other people) </string>
     <string name="j0103">Mosque/Mandar/Church/Gurdwara </string>
     <string name="j0104">Not Praying </string>
-    <string name="j011">Was there an income cut in your salary/business?</string>
-    <string name="j01101">Yes</string>
-    <string name="j01102">No</string>
-    <string name="j012">By what percentage?</string>
     <string name="j02">Were the SOPs being followed in prayer area? </string>
     <string name="j0201">Yes</string>
     <string name="j0202">No</string>
@@ -687,6 +723,7 @@
     <string name="j0401">Yes</string>
     <string name="j0402">No</string>
     <string name="j05">During lockdown, how many days on average did you go outside home in a week. </string>
+    <string name="j0501">No. of Days </string>
     <string name="j06">Work flexibility during lockdown?</string>
     <string name="j0601">Go to work place every day</string>
     <string name="j0602">Work from home/remotely </string>
@@ -708,6 +745,14 @@
     <string name="j0902">Missed visit</string>
     <string name="j0903">Got visit </string>
     <string name="j09096">Other (Specify) </string>
+    <string name="j010">Did you lose your job, income due to the COVID-19 situation?</string>
+    <string name="j01001">Yes</string>
+    <string name="j01002">No</string>
+    <string name="j011">Was there an income cut in your salary/business?</string>
+    <string name="j01101">Yes</string>
+    <string name="j01102">No</string>
+    <string name="j012">By what percentage?</string>
+    <string name="j01201">______%</string>
     <string name="k01">After lockdown was relaxed - where do you/your family members go to pray?</string>
     <string name="k0101">Home </string>
     <string name="k0102">Neighborhood (with other people) </string>
@@ -775,10 +820,6 @@
     <string name="k1702">Only visiting closed spaces</string>
     <string name="k1703">Sometimes</string>
     <string name="l01">Are you part/member of any cultural, recreational, leisure, Religious, Gender or Ethnic or linguistic background/ race/caste/tribe groups or organization?</string>
-    <string name="l010">How frequently?</string>
-    <string name="l01001">Less than usual </string>
-    <string name="l01002">Same </string>
-    <string name="l01003">More than usual </string>
     <string name="l0101">Yes</string>
     <string name="l0102">No</string>
     <string name="l02">If yes, what type of group/organization?</string>
@@ -816,5 +857,10 @@
     <string name="l09">Did you have had gatherings after Feb 2020?</string>
     <string name="l0901">Yes</string>
     <string name="l0902">No</string>
+    <string name="l010">How frequently?</string>
+    <string name="l01001">Less than usual </string>
+    <string name="l01002">Same </string>
+    <string name="l01003">More than usual </string>
+
 
 </resources>

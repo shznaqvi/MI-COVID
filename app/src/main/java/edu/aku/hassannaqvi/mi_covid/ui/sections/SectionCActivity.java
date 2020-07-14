@@ -2,11 +2,9 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.widget.EditText;
 import android.widget.Toast;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -14,7 +12,12 @@ import org.json.JSONObject;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import edu.aku.hassannaqvi.mi_covid.R;
+import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
+import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
+import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionCBinding;
+import edu.aku.hassannaqvi.mi_covid.utils.UtilKt;
 
 public class SectionCActivity extends AppCompatActivity {
 
@@ -25,74 +28,23 @@ public class SectionCActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_c);
         bi.setCallback(this);
-        totalTextWatcher();
+        setupSkip();
     }
 
-    public void totalTextWatcher() {
+    private void setupSkip() {
+        //c01
+        bi.c01.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.llc02);
+        });
 
-        EditText[] txtListener = new EditText[]{bi.s3qa, bi.s3qb, bi.s3qc, bi.s3qd, bi.s3qe};
-        for (EditText txtItem : txtListener) {
-            txtItem.addTextChangedListener(new TextWatcher() {
-                @Override
-                public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-                    if (bi.s3qa.getText().toString().equals("") || bi.s3qb.getText().toString().equals("") || bi.s3qc.getText().toString().equals("")
-                            || bi.s3qd.getText().toString().equals("") || bi.s3qe.getText().toString().equals("")) {
-                        return;
-                    }
-
-                    int a3, b3, c3, d3, e3, total;
-                    a3 = Integer.parseInt(bi.s3qa.getText().toString().trim());
-                    b3 = Integer.parseInt(bi.s3qb.getText().toString().trim());
-                    c3 = Integer.parseInt(bi.s3qc.getText().toString().trim());
-                    d3 = Integer.parseInt(bi.s3qd.getText().toString().trim());
-                    e3 = Integer.parseInt(bi.s3qe.getText().toString().trim());
-                    total = a3 + b3 + c3 + d3 + e3;
-                    bi.s3qf.setText(String.valueOf(total));
-                }
-
-                @Override
-                public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-                    if (bi.s3qa.getText().toString().equals("") || bi.s3qb.getText().toString().equals("") || bi.s3qc.getText().toString().equals("")
-                            || bi.s3qd.getText().toString().equals("") || bi.s3qe.getText().toString().equals("")) {
-                        return;
-                    }
-
-                    int a3, b3, c3, d3, e3, total;
-                    a3 = Integer.parseInt(bi.s3qa.getText().toString().trim());
-                    b3 = Integer.parseInt(bi.s3qb.getText().toString().trim());
-                    c3 = Integer.parseInt(bi.s3qc.getText().toString().trim());
-                    d3 = Integer.parseInt(bi.s3qd.getText().toString().trim());
-                    e3 = Integer.parseInt(bi.s3qe.getText().toString().trim());
-                    total = a3 + b3 + c3 + d3 + e3;
-                    bi.s3qf.setText(String.valueOf(total));
-                }
-
-                @Override
-                public void afterTextChanged(Editable s) {
-
-                    if (bi.s3qa.getText().toString().equals("") || bi.s3qb.getText().toString().equals("") || bi.s3qc.getText().toString().equals("")
-                            || bi.s3qd.getText().toString().equals("") || bi.s3qe.getText().toString().equals("")) {
-                        return;
-                    }
-
-                    int a3, b3, c3, d3, e3, total;
-                    a3 = Integer.parseInt(bi.s3qa.getText().toString().trim());
-                    b3 = Integer.parseInt(bi.s3qb.getText().toString().trim());
-                    c3 = Integer.parseInt(bi.s3qc.getText().toString().trim());
-                    d3 = Integer.parseInt(bi.s3qd.getText().toString().trim());
-                    e3 = Integer.parseInt(bi.s3qe.getText().toString().trim());
-                    total = a3 + b3 + c3 + d3 + e3;
-                    bi.s3qf.setText(String.valueOf(total));
-                }
-            });
-        }
+        //c07
+        bi.c07.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.llc08);
+        });
     }
 
     public void BtnContinue() {
-
-        if (formValidation()) {
+        if (formValidation(true)) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -100,18 +52,17 @@ public class SectionCActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionDActivity.class));
+                startActivity(new Intent(this, SectionBActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, MainApp.fc.getsC());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SM, MainApp.form.getsM());
         if (updcount > 0) {
             return true;
         } else {
@@ -120,40 +71,87 @@ public class SectionCActivity extends AppCompatActivity {
         }
     }
 
-
     private void SaveDraft() throws JSONException {
-
         JSONObject json = new JSONObject();
+        json.put("c01", bi.c0101.isChecked() ? "1"
+                : bi.c0102.isChecked() ? "2"
+                : bi.c0103.isChecked() ? "3"
+                : bi.c0104.isChecked() ? "4"
+                : bi.c0105.isChecked() ? "5"
+                : bi.c0106.isChecked() ? "6"
+                : bi.c0107.isChecked() ? "7"
+                : bi.c01096.isChecked() ? "96"
+                : "-1");
 
-        json.put("s3qa", bi.s3qa.getText().toString().trim().isEmpty() ? "-1" : bi.s3qa.getText().toString());
-        json.put("s3qb", bi.s3qb.getText().toString().trim().isEmpty() ? "-1" : bi.s3qb.getText().toString());
-        json.put("s3qc", bi.s3qc.getText().toString().trim().isEmpty() ? "-1" : bi.s3qc.getText().toString());
-        json.put("s3qd", bi.s3qd.getText().toString().trim().isEmpty() ? "-1" : bi.s3qd.getText().toString());
-        json.put("s3qe", bi.s3qe.getText().toString().trim().isEmpty() ? "-1" : bi.s3qe.getText().toString());
-        json.put("s3qf", bi.s3qf.getText().toString().trim().isEmpty() ? "-1" : bi.s3qf.getText().toString());
+        json.put("c0201", bi.c0201.getText().toString());
 
-        MainApp.fc.setsC(String.valueOf(json));
+        json.put("c0202", bi.c0202.getText().toString());
+
+        json.put("c03", bi.c0301.isChecked() ? "1"
+                : bi.c0302.isChecked() ? "2"
+                : bi.c0303.isChecked() ? "3"
+                : bi.c0304.isChecked() ? "4"
+                : bi.c03096.isChecked() ? "96"
+                : "-1");
+
+        json.put("c04", bi.c0401.isChecked() ? "1"
+                : bi.c0402.isChecked() ? "2"
+                : bi.c0403.isChecked() ? "3"
+                : bi.c0404.isChecked() ? "4"
+                : bi.c0405.isChecked() ? "5"
+                : bi.c0406.isChecked() ? "6"
+                : bi.c0407.isChecked() ? "96"
+                : "-1");
+
+        json.put("c05", bi.c0501.isChecked() ? "1"
+                : bi.c0502.isChecked() ? "2"
+                : bi.c0503.isChecked() ? "3"
+                : bi.c05096.isChecked() ? "96"
+                : "-1");
+
+        json.put("c06", bi.c0601.isChecked() ? "1"
+                : bi.c0602.isChecked() ? "2"
+                : bi.c0603.isChecked() ? "3"
+                : bi.c0604.isChecked() ? "4"
+                : bi.c0605.isChecked() ? "5"
+                : bi.c06096.isChecked() ? "96"
+                : "-1");
+
+        json.put("c07", bi.c0701.isChecked() ? "1"
+                : bi.c0702.isChecked() ? "2"
+                : "-1");
+
+        json.put("c08", bi.c0801.isChecked() ? "1"
+                : bi.c0802.isChecked() ? "2"
+                : "-1");
+
+        json.put("ch06a", "-1");
+
+        json.put("ch06a1", "-1");
+
+        json.put("ch06a2", "-1");
+
+        json.put("ch06a3", "-1");
+
+        json.put("ch06a4", "-1");
+
+        json.put("ch06a5", "-1");
+
+        json.put("ch06a6", "-1");
+
+        json.put("ch06a7", "-1");
+
+        json.put("ch06a8", "-1");
+
+        json.put("ch06ax", "-1");
+
+
     }
 
-    private boolean formValidation() {
-
-        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSectionC)) {
-            return false;
-        }
-
-        int a3, b3, c3, children;
-        a3 = Integer.parseInt(bi.s3qa.getText().toString().trim());
-        b3 = Integer.parseInt(bi.s3qb.getText().toString().trim());
-        c3 = Integer.parseInt(bi.s3qc.getText().toString().trim());
-        children = a3 + b3 + c3;
-        if (children == 0) {
-            Toast.makeText(this, "No child 06-59-month age entered, please re-check", Toast.LENGTH_LONG).show();
-            return false;
-        }
-
-        return true;
+    private boolean formValidation(boolean flag) {
+        if (flag) return Validator.emptyCheckingContainer(this, bi.GrpName);
+        else return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
-
 
     public void BtnEnd() {
         UtilKt.openEndActivity(this);
