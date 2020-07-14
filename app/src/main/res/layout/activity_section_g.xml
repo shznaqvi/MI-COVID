@@ -51,9 +51,7 @@
                             android:id="@+id/g0101"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/g0101"
-
-                            />
+                            android:text="@string/g0101" />
 
                         <RadioButton
                             android:id="@+id/g0102"
