@@ -99,12 +99,19 @@ public class SectionAActivity extends AppCompatActivity {
 
         json.put("a05a", bi.a05a.getText().toString());
 
-        json.put("a06", bi.a0702.isChecked() ? "2"
+        json.put("a06", bi.a0601.isChecked() ? "1"
+                : bi.a0602.isChecked() ? "2"
+                : bi.a0603.isChecked() ? "3"
+                : bi.a0604.isChecked() ? "4"
+                : bi.a0605.isChecked() ? "5"
+                : bi.a0606.isChecked() ? "6"
+                : bi.a0607.isChecked() ? "7"
+                : bi.a0696.isChecked() ? "96"
                 : "-1");
 
-        json.put("a07", "-1");
-
-        json.put("a0701", "-1");
+        json.put("a07", bi.a0701.isChecked() ? "1"
+                : bi.a0702.isChecked() ? "2"
+                : "-1");
 
         json.put("a08", bi.a08.getText().toString());
 
