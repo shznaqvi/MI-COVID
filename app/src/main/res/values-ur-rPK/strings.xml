@@ -60,9 +60,8 @@
     <string name="a0406">گلگت بلتستان </string>
     <string name="a05">ضلع؟</string>
     <string name="a05a">فرد کی شناختی  آئی ڈی</string>
-    <string name="a06">گھرانے کے انٹرویوکا نتیجہ:
- نوٹ:  انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں۔
-</string>
+    <string name="a06"> گھرانے کے انٹرویو کا نتیجہ: </string>
+    <string name="a06_info"> انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں ۔ </string>
     <string name="a0601">گھر اور فرد کی شناخت ہو گئی</string>
     <string name="a0602">فرد کی شناخت نہیں ہو سکی</string>
     <string name="a0603">گھر کی شناخت نہیں ہو سکی </string>

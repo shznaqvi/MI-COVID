@@ -54,7 +54,8 @@ public class SectionLActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, EndingActivity.class));
+                finish();
+                startActivity(new Intent(this, EndingActivity.class).putExtra("complete", true));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
@@ -62,8 +63,7 @@ public class SectionLActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-
-        //    Util.openEndActivity(this);
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
     }
 
     private boolean UpdateDB() {
