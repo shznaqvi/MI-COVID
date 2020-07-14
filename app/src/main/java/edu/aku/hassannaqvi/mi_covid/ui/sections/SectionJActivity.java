@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -29,9 +30,27 @@ public class SectionJActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.i02.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.i0202.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecI01);
+        bi.j01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.j0104.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVj02);
+            }
+        }));
+
+        bi.j03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.j0302.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVj04);
+            }
+        }));
+
+        bi.j06.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.j0601.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVj07);
+            }
+        }));
+
+        /*bi.j011.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.j01102.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecJ01);
             }
         }));*/
 
