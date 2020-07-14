@@ -172,10 +172,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.delete(UsersTable.TABLE_NAME, null, null);
         int insertCount = 0;
         try {
-            JSONArray jsonArray = userList;
-            for (int i = 0; i < jsonArray.length(); i++) {
+            for (int i = 0; i < userList.length(); i++) {
 
-                JSONObject jsonObjectUser = jsonArray.getJSONObject(i);
+                JSONObject jsonObjectUser = userList.getJSONObject(i);
 
                 Users user = new Users();
                 user.Sync(jsonObjectUser);
