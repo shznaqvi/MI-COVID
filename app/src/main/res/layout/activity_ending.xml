@@ -18,15 +18,20 @@
 
         <LinearLayout
             android:id="@+id/fldGrpEnd"
-            style="@style/linearlayout_view">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
 
             <!-- hh22  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVhh22"
-                style="@style/cardView">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                <LinearLayout style="@style/vlinearlayout">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -118,9 +123,11 @@
 
             </androidx.cardview.widget.CardView>
 
+
             <!--ENDBUTTON linearlayout-->
             <LinearLayout
-                style="@style/hlinearlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="start"
                 android:layout_marginTop="24dp">
 
