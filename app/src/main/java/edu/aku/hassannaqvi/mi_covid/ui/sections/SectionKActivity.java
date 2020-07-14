@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -29,11 +30,41 @@ public class SectionKActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.i02.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.i0202.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecI01);
+        bi.k01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.k0104.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk02);
             }
-        }));*/
+        }));
+
+        bi.k03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.k0304.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecK01);
+            }
+        }));
+
+        bi.k06.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.k0602.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk07);
+            }
+        }));
+
+        bi.k08.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.k0802.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk09);
+            }
+        }));
+
+        bi.k10.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.k1002.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk11);
+            }
+        }));
+
+        bi.k12.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.k1202.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVk13);
+            }
+        }));
 
     }
 
