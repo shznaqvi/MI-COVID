@@ -119,7 +119,7 @@ public class SectionEActivity extends AppCompatActivity {
 
         json.put("e07", "-1");
 
-        json.put("e08", bi.e0801t.isChecked() ? ""
+        json.put("e08", bi.e0801.isChecked() ? ""
                 : bi.e0801.isChecked() ? "1"
                 : bi.e0802.isChecked() ? "2"
                 : bi.e0803.isChecked() ? "3"
@@ -163,7 +163,7 @@ public class SectionEActivity extends AppCompatActivity {
 
         json.put("e1402", bi.e1402.getText().toString());
 
-        json.put("e15", bi.e15.getText().toString());
+        //json.put("e15", bi.e15.getText().toString());
 
         MainApp.form.setsE(json.toString());
 
@@ -171,9 +171,9 @@ public class SectionEActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-
-        return Validator.emptyCheckingContainer(this, bi.fldGrpSectionE);
+        return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
+
 
     @Override
     public void onBackPressed() {
