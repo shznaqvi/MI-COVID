@@ -32,11 +32,23 @@ public class SectionFActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.ah1.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ah1a.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecAH101);
+        bi.f01.setOnCheckedChangeListener(((radioGroup, i) -> {
+                if (i == bi.f0102.getId()) {
+                    Clear.clearAllFields(bi.fldGrpSecf01);
+                }
+        }));
+
+        bi.f07.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.f0702.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVf08);
             }
-        }));*/
+        }));
+
+        bi.f10.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.f1003.getId()) {
+                Clear.clearAllFields(bi.fldGrpTVf11);
+            }
+        }));
 
         /*bi.ah2.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.ah2b.getId()) {
@@ -112,9 +124,9 @@ public class SectionFActivity extends AppCompatActivity {
                 : bi.f04096.isChecked() ? "96"
                 :  "-1");
 
-        json.put("f05", bi.f05.getText().toString());
+    //    json.put("f05", bi.f05.getText().toString());
 
-        json.put("f06", bi.f06.getText().toString());
+    //    json.put("f06", bi.f06.getText().toString());
 
         json.put("f07", bi.f0701.isChecked() ? "1"
                 : bi.f0702.isChecked() ? "2"
