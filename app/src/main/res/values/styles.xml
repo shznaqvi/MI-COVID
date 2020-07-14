@@ -171,7 +171,62 @@
         <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
     </style>
 
+
+    <!--Card View Start-->
+    <style name="cardView">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+
+        <!--<item name="android:layout_marginRight">10dp</item>-->
+        <!--<item name="android:layout_marginLeft">10dp</item>-->
+        <item name="cardCornerRadius">7dp</item>
+        <item name="cardElevation">1dp</item>
+    </style>
+
+    <style name="vlinearlayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
     <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
         <item name="android:background">@color/black_overlay</item>
+    </style>
+
+    <style name="cardView">
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="cardCornerRadius">8dp</item>
+        <item name="cardElevation">1dp</item>
+    </style>
+
+    <style name="quesNum">
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Subhead</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="info">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:background">#FFEB9C</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:padding">16dp</item>
+
     </style>
 </resources>

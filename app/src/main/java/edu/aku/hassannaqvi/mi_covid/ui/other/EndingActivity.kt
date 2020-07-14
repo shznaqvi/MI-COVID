@@ -10,7 +10,6 @@ import edu.aku.hassannaqvi.mi_covid.R
 import edu.aku.hassannaqvi.mi_covid.core.MainApp
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivityEndingBinding
 import edu.aku.hassannaqvi.mi_covid.utils.JSONUtils
-import edu.aku.hassannaqvi.mi_covid.validator.ValidatorClass
 import org.json.JSONException
 import org.json.JSONObject
 import java.text.SimpleDateFormat
@@ -29,44 +28,47 @@ class EndingActivity : AppCompatActivity() {
         val fStatus = intent.getStringExtra(CONSTANTS.FSTATUS_END_FLAG)
         val fStatusEndActivityFlag = fStatus != null
         if (check) {
-            bi.istatusa.isEnabled = true
-            bi.istatusb.isEnabled = fStatusEndActivityFlag
-            bi.istatusc.isEnabled = fStatusEndActivityFlag
-            bi.istatusd.isEnabled = fStatusEndActivityFlag
-            bi.istatuse.isEnabled = fStatusEndActivityFlag
-            bi.istatusf.isEnabled = fStatusEndActivityFlag
-            bi.istatus96.isEnabled = fStatusEndActivityFlag
+            bi.a0601.isEnabled = true
+            bi.a0602.isEnabled = fStatusEndActivityFlag
+            bi.a0603.isEnabled = fStatusEndActivityFlag
+            bi.a0604.isEnabled = fStatusEndActivityFlag
+            bi.a0605.isEnabled = fStatusEndActivityFlag
+            bi.a0606.isEnabled = fStatusEndActivityFlag
+            bi.a0607.isEnabled = fStatusEndActivityFlag
         } else {
-            bi.istatusa.isEnabled = false
+            bi.a0601.isEnabled = false
             if (fStatus == null) {
-                bi.istatusb.isEnabled = true
-                bi.istatusc.isEnabled = true
-                bi.istatusd.isEnabled = true
-                bi.istatuse.isEnabled = true
-                bi.istatusf.isEnabled = true
-                bi.istatus96.isEnabled = true
+                bi.a0602.isEnabled = true
+                bi.a0603.isEnabled = true
+                bi.a0604.isEnabled = true
+                bi.a0605.isEnabled = true
+                bi.a0606.isEnabled = true
+                bi.a0696.isEnabled = true
             } else {
-                bi.istatusb.isEnabled = false
-                bi.istatusc.isEnabled = false
-                bi.istatusd.isEnabled = false
-                bi.istatuse.isEnabled = false
-                bi.istatusf.isEnabled = false
-                bi.istatus96.isEnabled = false
+                bi.a0602.isEnabled = false
+                bi.a0603.isEnabled = false
+                bi.a0604.isEnabled = false
+                bi.a0605.isEnabled = false
+                bi.a0606.isEnabled = false
+                bi.a0607.isEnabled = false
+                bi.a0696.isEnabled = false
                 when (fStatus.toInt()) {
                     1 -> {
-                        bi.istatusb.isEnabled = true
-                        bi.istatusc.isEnabled = true
-                        bi.istatusd.isEnabled = true
-                        bi.istatuse.isEnabled = true
-                        bi.istatusf.isEnabled = true
-                        bi.istatus96.isEnabled = true
+                        bi.a0602.isEnabled = true
+                        bi.a0603.isEnabled = true
+                        bi.a0604.isEnabled = true
+                        bi.a0605.isEnabled = true
+                        bi.a0606.isEnabled = true
+                        bi.a0607.isEnabled = true
+                        bi.a0696.isEnabled = true
                     }
-                    2 -> bi.istatusb.isEnabled = true
-                    3 -> bi.istatusc.isEnabled = true
-                    4 -> bi.istatusd.isEnabled = true
-                    5 -> bi.istatuse.isEnabled = true
-                    6 -> bi.istatusf.isEnabled = true
-                    96 -> bi.istatus96.isEnabled = true
+                    2 -> bi.a0602.isEnabled = true
+                    3 -> bi.a0603.isEnabled = true
+                    4 -> bi.a0604.isEnabled = true
+                    5 -> bi.a0605.isEnabled = true
+                    6 -> bi.a0606.isEnabled = true
+                    6 -> bi.a0607.isEnabled = true
+                    96 -> bi.a0696.isEnabled = true
                 }
             }
         }
@@ -85,10 +87,10 @@ class EndingActivity : AppCompatActivity() {
     }
 
     private fun saveDraft() {
-        val statusValue = if (bi.istatusa.isChecked) "1" else if (bi.istatusb.isChecked) "2" else if (bi.istatusc.isChecked) "3" else if (bi.istatusd.isChecked) "4" else if (bi.istatuse.isChecked) "5" else if (bi.istatusf.isChecked) "6" else if (bi.istatus96.isChecked) "96" else "0"
+        val statusValue = if (bi.a0601.isChecked) "1" else if (bi.a0602.isChecked) "2" else if (bi.a0603.isChecked) "3" else if (bi.a0604.isChecked) "4" else if (bi.a0605.isChecked) "5" else if (bi.a0606.isChecked) "6" else if (bi.a0607.isChecked) "96" else "0"
         if (subInfoEndActivityFlag) {
             MainApp.form.istatus = statusValue
-            MainApp.form.istatus88x = bi.istatus96x.text.toString()
+            MainApp.form.istatus96x = bi.a0696x.text.toString()
 
             val json = JSONObject()
 //            json.put("ttChild", SectionSubInfoActivity.mainVModel.childU5.value.size ?: 0)
@@ -101,8 +103,6 @@ class EndingActivity : AppCompatActivity() {
 
         } else {
             MainApp.form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)
-            MainApp.form.setfStatus(statusValue)
-            MainApp.form.fstatus88x = bi.istatus96x.text.toString()
         }
     }
 

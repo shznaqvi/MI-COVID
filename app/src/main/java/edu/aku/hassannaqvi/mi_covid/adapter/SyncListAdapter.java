@@ -13,7 +13,7 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.databinding.SyncListAdapterBinding;
-import edu.aku.hassannaqvi.mi_covid.otherClasses.SyncModel;
+import edu.aku.hassannaqvi.mi_covid.models.SyncModel;
 
 public class SyncListAdapter extends RecyclerView.Adapter<SyncListAdapter.SyncListViewHolder> {
     List<SyncModel> synclist;

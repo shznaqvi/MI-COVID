@@ -4,20 +4,21 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionBBinding;
-import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 
 public class SectionBActivity extends AppCompatActivity {
 
@@ -31,6 +32,7 @@ public class SectionBActivity extends AppCompatActivity {
         setupSkip();
     }
 
+
     private void setupSkip() {
         //b01
         bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
@@ -43,6 +45,7 @@ public class SectionBActivity extends AppCompatActivity {
         });
     }
 
+
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -52,17 +55,17 @@ public class SectionBActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionBActivity.class));
+                startActivity(new Intent(this, SectionCActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private boolean UpdateDB() {
 
+    private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SM, MainApp.form.getsM());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SB, MainApp.form.getsB());
         if (updcount > 0) {
             return true;
         } else {
@@ -70,6 +73,7 @@ public class SectionBActivity extends AppCompatActivity {
             return false;
         }
     }
+
 
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
@@ -220,16 +224,20 @@ public class SectionBActivity extends AppCompatActivity {
 
         json.put("b17", bi.b17.getText().toString());
 
+        MainApp.form.setsB(json.toString());
 
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
+
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
     }
+
 
     @Override
     public void onBackPressed() {

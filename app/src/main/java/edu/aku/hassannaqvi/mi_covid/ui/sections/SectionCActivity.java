@@ -18,7 +18,7 @@ import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionCBinding;
-import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 
 public class SectionCActivity extends AppCompatActivity {
 
@@ -32,6 +32,7 @@ public class SectionCActivity extends AppCompatActivity {
         setupSkip();
     }
 
+
     private void setupSkip() {
         //c01
         bi.c01.setOnCheckedChangeListener((group, checkId) -> {
@@ -44,6 +45,7 @@ public class SectionCActivity extends AppCompatActivity {
         });
     }
 
+
     public void BtnContinue() {
         if (formValidation()) {
             try {
@@ -53,17 +55,17 @@ public class SectionCActivity extends AppCompatActivity {
             }
             if (UpdateDB()) {
                 finish();
-                startActivity(new Intent(this, SectionBActivity.class));
+                startActivity(new Intent(this, SectionDActivity.class));
             } else {
                 Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private boolean UpdateDB() {
 
+    private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SM, MainApp.form.getsM());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SC, MainApp.form.getsC());
         if (updcount > 0) {
             return true;
         } else {
@@ -72,8 +74,11 @@ public class SectionCActivity extends AppCompatActivity {
         }
     }
 
+
     private void SaveDraft() throws JSONException {
+
         JSONObject json = new JSONObject();
+
         json.put("c01", bi.c0101.isChecked() ? "1"
                 : bi.c0102.isChecked() ? "2"
                 : bi.c0103.isChecked() ? "3"
@@ -146,16 +151,21 @@ public class SectionCActivity extends AppCompatActivity {
 
         json.put("ch06ax", "-1");
 
+        MainApp.form.setsC(json.toString());
+
 
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
+
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
     }
+
 
     @Override
     public void onBackPressed() {

@@ -98,7 +98,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
 
         }
 
-        holder.hhno.setText(form.get(position).getHhno() + " \t\t(" + form.get(position).getSysDate() + ")");
+        holder.hhno.setText(form.get(position).getRefno() + " \t\t(" + form.get(position).getA03() + ")");
         holder.cluster.setText(form.get(position).getClusterCode());
         holder.istatus.setText(iStatus);
         holder.sysdate.setText("  Child Count: " + childCount + " \t\t\t Card Seen: " + cardChild + " \t\t\t Photo Child: " + photoChild);
