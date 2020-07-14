@@ -42,14 +42,13 @@ class EndingActivity : AppCompatActivity() {
     }
 
     fun BtnEnd() {
-        if (formValidation()) {
-            saveDraft()
-            if (updateDB()) {
-                finish()
-                startActivity(Intent(this, MainActivity::class.java))
-            } else {
-                Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show()
-            }
+        if (!formValidation()) return
+        saveDraft()
+        if (updateDB()) {
+            finish()
+            startActivity(Intent(this, MainActivity::class.java))
+        } else {
+            Toast.makeText(this, "Error in updating db!!", Toast.LENGTH_SHORT).show()
         }
     }
 
@@ -59,6 +58,7 @@ class EndingActivity : AppCompatActivity() {
         MainApp.form.istatus96x = bi.a0696x.text.toString()
         MainApp.form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)
     }
+
 
     private fun updateDB(): Boolean {
         val db = MainApp.appInfo.dbHelper
