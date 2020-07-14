@@ -26,7 +26,6 @@ import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract;
 import edu.aku.hassannaqvi.mi_covid.location.LocationLiveData;
-import edu.aku.hassannaqvi.mi_covid.models.Child;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 import kotlin.Pair;

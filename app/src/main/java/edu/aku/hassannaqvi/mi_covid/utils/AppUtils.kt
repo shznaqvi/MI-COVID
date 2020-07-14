@@ -62,24 +62,6 @@ fun openEndActivity(activity: Activity) {
     dialog.findViewById<View>(R.id.btnNo).setOnClickListener { view: View? -> dialog.dismiss() }
 }
 
-fun openChildEndActivity(activity: Activity) {
-    val dialog = Dialog(activity)
-    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-    dialog.setContentView(R.layout.item_dialog)
-    dialog.setCancelable(false)
-    val params = WindowManager.LayoutParams()
-    params.copyFrom(dialog.window!!.attributes)
-    params.width = WindowManager.LayoutParams.WRAP_CONTENT
-    params.height = WindowManager.LayoutParams.WRAP_CONTENT
-    dialog.show()
-    dialog.window!!.attributes = params
-    dialog.findViewById<View>(R.id.btnOk).setOnClickListener {
-        activity.finish()
-        activity.startActivity(Intent(activity, ChildEndingActivity::class.java).putExtra("complete", false))
-    }
-    dialog.findViewById<View>(R.id.btnNo).setOnClickListener { dialog.dismiss() }
-}
-
 @JvmOverloads
 fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)

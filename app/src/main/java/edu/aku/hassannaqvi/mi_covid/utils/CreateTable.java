@@ -1,7 +1,6 @@
 package edu.aku.hassannaqvi.mi_covid.utils;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.BLRandomContract.BLRandomTable;
-import edu.aku.hassannaqvi.mi_covid.contracts.ChildContract.ChildTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract.UsersTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract.VersionAppTable;
@@ -75,36 +74,10 @@ public final class CreateTable {
             + BLRandomTable.COLUMN_SNO_HH + " TEXT );";
 
 
-    public static final String SQL_CREATE_CHILD_TABLE = "CREATE TABLE " + ChildTable.TABLE_NAME + "("
-            + ChildTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
-            + ChildTable.COLUMN_DEVICEID + " TEXT,"
-            + ChildTable.COLUMN_DEVICETAGID + " TEXT,"
-            + ChildTable.COLUMN_USER + " TEXT,"
-            + ChildTable.COLUMN_UID + " TEXT,"
-            + ChildTable.COLUMN_UUID + " TEXT,"
-            + ChildTable.COLUMN_FORMDATE + " TEXT,"
-            + ChildTable.COLUMN_SYSDATE + " TEXT,"
-            + ChildTable.COLUMN_SCA + " TEXT,"
-            + ChildTable.COLUMN_SCB + " TEXT,"
-            + ChildTable.COLUMN_SCC + " TEXT,"
-            + ChildTable.COLUMN_SYNCED + " TEXT,"
-            + ChildTable.COLUMN_SYNCED_DATE + " TEXT,"
-
-            + ChildTable.COLUMN_CHILDNAME + " TEXT,"
-            + ChildTable.COLUMN_CHILDSERIAL + " TEXT,"
-            + ChildTable.COLUMN_GENDER + " TEXT,"
-            + ChildTable.COLUMN_AGEY + " TEXT,"
-            + ChildTable.COLUMN_AGEM + " TEXT,"
-            + ChildTable.COLUMN_CLUSTERCODE + " TEXT,"
-            + ChildTable.COLUMN_HHNO + " TEXT,"
-            + ChildTable.COLUMN_CSTATUS + " TEXT,"
-            + ChildTable.COLUMN_CSTATUS88x + " TEXT );";
-
-
-    public static final String SQL_ALTER_FORMS = "ALTER TABLE " +
+/*    public static final String SQL_ALTER_FORMS = "ALTER TABLE " +
             FormsTable.TABLE_NAME + " ADD COLUMN " +
             FormsTable.COLUMN_SYSDATE + " TEXT";
     public static final String SQL_ALTER_CHILD_TABLE = "ALTER TABLE " +
             ChildTable.TABLE_NAME + " ADD COLUMN " +
-            ChildTable.COLUMN_SYSDATE + " TEXT";
+            ChildTable.COLUMN_SYSDATE + " TEXT";*/
 }

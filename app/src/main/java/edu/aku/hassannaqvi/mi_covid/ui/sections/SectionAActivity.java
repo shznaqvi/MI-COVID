@@ -11,6 +11,9 @@ import com.validatorcrawler.aliazaz.Validator;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
@@ -18,6 +21,10 @@ import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.mi_covid.models.Form;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+
+import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class SectionAActivity extends AppCompatActivity {
 
@@ -49,7 +56,7 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        if (formValidation(true)) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -67,11 +74,11 @@ public class SectionAActivity extends AppCompatActivity {
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long updcount = db.addForm(MainApp.form);
-        MainApp.form.set_ID(String.valueOf(updcount));
+        long updcount = db.addForm(form);
+        form.set_ID(String.valueOf(updcount));
         if (updcount > 0) {
-            MainApp.form.set_UID(MainApp.form.getDeviceID() + MainApp.form.get_ID());
-            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, MainApp.form.get_UID());
+            form.set_UID(form.getDeviceID() + form.get_ID());
+            db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
@@ -80,7 +87,17 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     private void SaveDraft() throws JSONException {
+
+        form = new Form();
+
+        form.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
+        form.setUser(MainApp.userName);
+        form.setDeviceID(MainApp.appInfo.getDeviceID());
+        form.setDevicetagID(MainApp.appInfo.getTagName());
+        form.setAppversion(MainApp.appInfo.getAppVersion());
+
         JSONObject json = new JSONObject();
+
         json.put("a01", bi.a01.getText().toString());
 
         json.put("a02", bi.a02.getText().toString());
@@ -204,16 +221,17 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a2302.isChecked() ? "2"
                 : "-1");
 
+        form.setsInfo(json.toString());
+
 
     }
 
-    private boolean formValidation(boolean flag) {
+    private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
     public void BtnEnd() {
-        /*if (!formValidation(false)) return;
-        UtilKt.contextEndActivity(this, false);*/
+        AppUtilsKt.contextEndActivity(this, false);
     }
 
     public void populateSpinner(final Context context) {
