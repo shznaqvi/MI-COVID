@@ -37,6 +37,7 @@ public class BLRandomContract {
         public static String getMovieKeyFromUri(Uri uri) {
             return uri.getPathSegments().get(1);
         }
+        public static String SERVER_URI = "bl_random.php";
 
         public static Uri buildUriWithId(long id) {
             return ContentUris.withAppendedId(CONTENT_URI, id);

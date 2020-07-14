@@ -30,7 +30,6 @@ import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_VERSION;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_BL_RANDOM;
-import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_CHILD_TABLE;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_FORMS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_VERSIONAPP;
@@ -52,11 +51,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
-//        db.execSQL(SQL_CREATE_PSU_TABLE);
         db.execSQL(SQL_CREATE_BL_RANDOM);
         db.execSQL(SQL_CREATE_VERSIONAPP);
-//        db.execSQL(SQL_CREATE_FAMILY_MEMBERS);
-        db.execSQL(SQL_CREATE_CHILD_TABLE);
     }
 
     @Override
@@ -228,9 +224,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_LUID, form.getLuid());
         values.put(FormsTable.COLUMN_USER, form.getUser());
         values.put(FormsTable.COLUMN_ISTATUS, form.getIstatus());
-        values.put(FormsTable.COLUMN_ISTATUS88x, form.getIstatus88x());
+        values.put(FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
         values.put(FormsTable.COLUMN_FSTATUS, form.getfStatus());
-        values.put(FormsTable.COLUMN_FSTATUS88x, form.getFstatus88x());
+        values.put(FormsTable.COLUMN_FSTATUS96x, form.getFstatus96x());
         values.put(FormsTable.COLUMN_ENDINGDATETIME, form.getEndingdatetime());
         values.put(FormsTable.COLUMN_SINFO, form.getsInfo());
         values.put(FormsTable.COLUMN_SE, form.getsE());
@@ -444,9 +440,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SYSDATE,
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_ISTATUS96x,
                 FormsTable.COLUMN_FSTATUS,
-                FormsTable.COLUMN_FSTATUS88x,
+                FormsTable.COLUMN_FSTATUS96x,
                 FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,
@@ -688,11 +684,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         if (flag) {
             values.put(FormsTable.COLUMN_ISTATUS, MainApp.form.getIstatus());
-            values.put(FormsTable.COLUMN_ISTATUS88x, MainApp.form.getIstatus88x());
+            values.put(FormsTable.COLUMN_ISTATUS96x, MainApp.form.getIstatus96x());
             values.put(FormsTable.COLUMN_SINFO, MainApp.form.getsInfo());
         } else {
             values.put(FormsTable.COLUMN_FSTATUS, MainApp.form.getfStatus());
-            values.put(FormsTable.COLUMN_FSTATUS88x, MainApp.form.getFstatus88x());
+            values.put(FormsTable.COLUMN_FSTATUS96x, MainApp.form.getFstatus96x());
             values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.form.getEndingdatetime());
         }
 
@@ -771,9 +767,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SYSDATE,
                 FormsTable.COLUMN_USER,
                 FormsTable.COLUMN_ISTATUS,
-                FormsTable.COLUMN_ISTATUS88x,
+                FormsTable.COLUMN_ISTATUS96x,
                 FormsTable.COLUMN_FSTATUS,
-                FormsTable.COLUMN_FSTATUS88x,
+                FormsTable.COLUMN_FSTATUS96x,
                 FormsTable.COLUMN_LUID,
                 FormsTable.COLUMN_ENDINGDATETIME,
                 FormsTable.COLUMN_SINFO,

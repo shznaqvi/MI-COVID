@@ -25,7 +25,7 @@ public class Form extends LiveData<Form> {
     private String sysDate = ""; // Date
     private String user = ""; // Interviewer
     private String istatus = ""; // Interview Status
-    private String istatus88x = ""; // Interview Status
+    private String istatus96x = ""; // Interview Status
     private String luid = "";
     private String endingdatetime = "";
     private String gpsLat = "";
@@ -41,7 +41,7 @@ public class Form extends LiveData<Form> {
     private String hhno = "";
     private String sInfo = "";
     private String fStatus = "";
-    private String fstatus88x = ""; // Interview Status
+    private String fstatus96x = ""; // Interview Status
     private String sE = "";
     private String sM = "";
     private String sN = "";
@@ -106,12 +106,12 @@ public class Form extends LiveData<Form> {
         this.appversion = appversion;
     }
 
-    public String getFstatus88x() {
-        return fstatus88x;
+    public String getFstatus96x() {
+        return fstatus96x;
     }
 
-    public void setFstatus88x(String fstatus88x) {
-        this.fstatus88x = fstatus88x;
+    public void setFstatus96x(String fstatus96x) {
+        this.fstatus96x = fstatus96x;
     }
 
     public Form Sync(JSONObject jsonObject) throws JSONException {
@@ -121,8 +121,8 @@ public class Form extends LiveData<Form> {
         this.sysDate = jsonObject.getString(FormsTable.COLUMN_SYSDATE);
         this.user = jsonObject.getString(FormsTable.COLUMN_USER);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
-        this.istatus88x = jsonObject.getString(FormsTable.COLUMN_ISTATUS88x);
-        this.fstatus88x = jsonObject.getString(FormsTable.COLUMN_FSTATUS88x);
+        this.istatus96x = jsonObject.getString(FormsTable.COLUMN_ISTATUS96x);
+        this.fstatus96x = jsonObject.getString(FormsTable.COLUMN_FSTATUS96x);
         this.luid = jsonObject.getString(FormsTable.COLUMN_LUID);
         this.endingdatetime = jsonObject.getString(FormsTable.COLUMN_ENDINGDATETIME);
         this.gpsLat = jsonObject.getString(FormsTable.COLUMN_GPSLAT);
@@ -156,8 +156,8 @@ public class Form extends LiveData<Form> {
         this.sysDate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SYSDATE));
         this.user = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_USER));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
-        this.istatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS88x));
-        this.fstatus88x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FSTATUS88x));
+        this.istatus96x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS96x));
+        this.fstatus96x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_FSTATUS96x));
         this.luid = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_LUID));
         this.endingdatetime = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ENDINGDATETIME));
         this.gpsLat = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_GPSLAT));
@@ -199,8 +199,8 @@ public class Form extends LiveData<Form> {
             json.put(FormsTable.COLUMN_USER, this.user == null ? JSONObject.NULL : this.user);
             json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
             json.put(FormsTable.COLUMN_FSTATUS, this.fStatus == null ? JSONObject.NULL : this.fStatus);
-            json.put(FormsTable.COLUMN_ISTATUS88x, this.istatus88x == null ? JSONObject.NULL : this.istatus88x);
-            json.put(FormsTable.COLUMN_FSTATUS88x, this.fstatus88x == null ? JSONObject.NULL : this.fstatus88x);
+            json.put(FormsTable.COLUMN_ISTATUS96x, this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
+            json.put(FormsTable.COLUMN_FSTATUS96x, this.fstatus96x == null ? JSONObject.NULL : this.fstatus96x);
             json.put(FormsTable.COLUMN_LUID, this.luid == null ? JSONObject.NULL : this.luid);
             json.put(FormsTable.COLUMN_ENDINGDATETIME, this.endingdatetime == null ? JSONObject.NULL : this.endingdatetime);
 
@@ -303,12 +303,12 @@ public class Form extends LiveData<Form> {
         this.istatus = istatus;
     }
 
-    public String getIstatus88x() {
-        return istatus88x;
+    public String getIstatus96x() {
+        return istatus96x;
     }
 
-    public void setIstatus88x(String istatus88x) {
-        this.istatus88x = istatus88x;
+    public void setIstatus96x(String istatus96x) {
+        this.istatus96x = istatus96x;
     }
 
     public String getLuid() {

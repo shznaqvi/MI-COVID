@@ -12,8 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.R;
-import edu.aku.hassannaqvi.mi_covid.databinding.UploadListAdapterBinding;
-import edu.aku.hassannaqvi.mi_covid.otherClasses.SyncModel;
+import edu.aku.hassannaqvi.mi_covid.databinding.SyncListAdapterBinding;
+import edu.aku.hassannaqvi.mi_covid.models.SyncModel;
+
 
 public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.UploadListViewHolder> {
     List<SyncModel> uploadlist;
@@ -48,7 +49,7 @@ public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.Up
     @Override
     public UploadListViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.upload_list_adapter, parent, false);
+                .inflate(R.layout.sync_list_adapter, parent, false);
         return new UploadListViewHolder(itemView);
     }
 
@@ -64,7 +65,7 @@ public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.Up
     }
 
     public class UploadListViewHolder extends RecyclerView.ViewHolder {
-        UploadListAdapterBinding binding;
+        SyncListAdapterBinding binding;
 
         public UploadListViewHolder(View itemView) {
             super(itemView);
@@ -72,14 +73,14 @@ public class UploadListAdapter extends RecyclerView.Adapter<UploadListAdapter.Up
         }
 
         public void bindUser(SyncModel model) {
-            binding.ustatusColor.setBackgroundColor(checkStatus(model.getstatusID()));
-            binding.utvTableName.setText(model.gettableName());
-            binding.utvStatus.setText(model.getstatus());
-            binding.utvMsg.setText(model.getmessage());
+            binding.statusColor.setBackgroundColor(checkStatus(model.getstatusID()));
+            binding.tvTableName.setText(model.gettableName());
+            binding.tvStatus.setText(model.getstatus());
+            binding.tvMsg.setText(model.getmessage());
             if (model.getstatusID() == 1 || model.getstatusID() == 3 || model.getstatusID() == 4) {
-                binding.upb.setVisibility(View.GONE);
+                binding.pb.setVisibility(View.GONE);
             } else {
-                binding.upb.setVisibility(View.VISIBLE);
+                binding.pb.setVisibility(View.VISIBLE);
             }
         }
     }

@@ -6,10 +6,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import edu.aku.hassannaqvi.mi_covid.R
-import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract
 import edu.aku.hassannaqvi.mi_covid.databinding.PendingformLayoutBinding
+import edu.aku.hassannaqvi.mi_covid.models.Form
 
-class PendingListAdapter(private val mContext: Context, private var mList: List<FormsContract>) : RecyclerView.Adapter<PendingListAdapter.ViewHolder>() {
+class PendingListAdapter(private val mContext: Context, private var mList: List<Form>) : RecyclerView.Adapter<PendingListAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val bi: PendingformLayoutBinding = DataBindingUtil.inflate(LayoutInflater.from(mContext), R.layout.forms_list_item, viewGroup, false)
@@ -26,7 +26,7 @@ class PendingListAdapter(private val mContext: Context, private var mList: List<
         return mList.size
     }
 
-    fun setMList(members: List<FormsContract>) {
+    fun setMList(members: List<Form>) {
         mList = members
         notifyDataSetChanged()
     }

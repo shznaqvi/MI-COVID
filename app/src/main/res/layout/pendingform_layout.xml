@@ -2,16 +2,6 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <data>
-
-        <import type="android.view.View" />
-
-        <variable
-            name="callback"
-            type="edu.aku.hassannaqvi.mi_covid.adapter.FormsAdapter" />
-    </data>
-
-
     <androidx.cardview.widget.CardView
         android:id="@+id/parentLayout"
         android:layout_width="match_parent"
