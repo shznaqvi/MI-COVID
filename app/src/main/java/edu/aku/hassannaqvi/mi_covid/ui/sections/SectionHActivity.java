@@ -120,8 +120,8 @@ public class SectionHActivity extends AppCompatActivity {
         json.put("h11", bi.h1101.isChecked() ? "1"
                 : bi.h1102.isChecked() ? "2"
                 : bi.h1103.isChecked() ? "3"
-                //            : bi.h11096.isChecked() ? "96"
-                //            : bi.h11098.isChecked() ? "98"
+                : bi.h11096.isChecked() ? "96"
+                : bi.h11098.isChecked() ? "98"
                 : "-1");
 
         //    json.put("h11096x", bi.h11096x.getText().toString());
