@@ -98,27 +98,30 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return insertCount;
     }
 
-    public void syncVersionApp(JSONArray VersionList) {
+    public Integer syncVersionApp(JSONObject VersionList) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(VersionAppContract.VersionAppTable.TABLE_NAME, null, null);
+        long count = 0;
         try {
-            JSONArray jsonArray = VersionList;
-            JSONObject jsonObjectCC = jsonArray.getJSONObject(0);
-
+            JSONObject jsonObjectCC = ((JSONArray) VersionList.get(VersionAppContract.VersionAppTable.COLUMN_VERSION_PATH)).getJSONObject(0);
             VersionApp Vc = new VersionApp();
             Vc.Sync(jsonObjectCC);
 
             ContentValues values = new ContentValues();
 
-            values.put(VersionAppTable.COLUMN_PATH_NAME, Vc.getPathname());
+            values.put(VersionAppContract.VersionAppTable.COLUMN_PATH_NAME, Vc.getPathname());
             values.put(VersionAppContract.VersionAppTable.COLUMN_VERSION_CODE, Vc.getVersioncode());
             values.put(VersionAppContract.VersionAppTable.COLUMN_VERSION_NAME, Vc.getVersionname());
 
-            db.insert(VersionAppContract.VersionAppTable.TABLE_NAME, null, values);
-        } catch (Exception e) {
+            count = db.insert(VersionAppContract.VersionAppTable.TABLE_NAME, null, values);
+            if (count > 0) count = 1;
+
+        } catch (Exception ignored) {
         } finally {
             db.close();
         }
+
+        return (int) count;
     }
 
     public VersionApp getVersionApp() {
@@ -255,49 +258,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_NAME_NULLABLE,
                 values);
         return newRowId;
-    }
-
-    public Form isDataExists(String studyId) {
-        SQLiteDatabase db = getReadableDatabase();
-        Cursor c = null;
-
-// New value for one column
-        String[] columns = {
-                FormsTable.COLUMN_UID,
-                FormsTable.COLUMN_ISTATUS,
-
-        };
-
-// Which row to update, based on the ID
-        String selection = FormsTable.COLUMN_UID + " = ? AND "
-                + FormsTable.COLUMN_ISTATUS + " = ?";
-        String[] selectionArgs = new String[]{studyId, "1"};
-
-        Form allForms = new Form();
-        try {
-            c = db.query(FormsTable.TABLE_NAME, //Table to query
-                    columns,                    //columns to return
-                    selection,                  //columns for the WHERE clause
-                    selectionArgs,              //The values for the WHERE clause
-                    null,                       //group the rows
-                    null,                       //filter by row groups
-                    null);                   // The sort order
-
-            while (c.moveToNext()) {
-                allForms.set_UID(c.getString(c.getColumnIndex(FormsTable.COLUMN_UID)));
-                allForms.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
-            }
-        } finally {
-            if (c != null) {
-                c.close();
-            }
-            if (db != null) {
-                db.close();
-            }
-        }
-        return allForms;
-
-
     }
 
     public int updateFormID() {
