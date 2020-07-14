@@ -49,7 +49,7 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        if (formValidation(true)) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -207,7 +207,7 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
-    private boolean formValidation(boolean flag) {
+    private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
