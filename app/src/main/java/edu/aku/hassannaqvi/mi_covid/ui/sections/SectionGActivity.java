@@ -103,6 +103,7 @@ public class SectionGActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
+
         json.put("g01", bi.g0101.isChecked() ? "1"
                 : bi.g0102.isChecked() ? "2"
                 : "-1");
@@ -169,7 +170,6 @@ public class SectionGActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
-
     }
 
 

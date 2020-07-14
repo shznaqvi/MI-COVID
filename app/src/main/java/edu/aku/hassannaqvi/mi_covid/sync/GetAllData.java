@@ -127,7 +127,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable.SERVER_URI);
                     position = 1;
                     break;
-
                 case "BLRandom":
                     url = new URL(MainApp._HOST_URL + BLRandomContract.BLRandomTable.SERVER_URI);
                     position = 0;
@@ -244,7 +243,6 @@ public class GetAllData extends AsyncTask<String, String, String> {
                             insertCount = db.syncBLRandom(jsonArray);
                             position = 0;
                             break;
-
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());
@@ -254,15 +252,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     adapter.updatesyncList(list);
                     // pd.show();
                 } catch (JSONException e) {
-
                     e.printStackTrace();
-
-                    pd.setTitle("Error");
-                    pd.setMessage(e.getMessage());
-                    list.get(position).setstatus("Failed");
-                    list.get(position).setstatusID(1);
-                    list.get(position).setmessage(e.getMessage());
-                    adapter.updatesyncList(list);
                 }
             } else {
                 pd.setMessage("Received: " + result.length() + "");
