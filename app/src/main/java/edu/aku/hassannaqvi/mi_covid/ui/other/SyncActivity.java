@@ -35,9 +35,9 @@ import edu.aku.hassannaqvi.mi_covid.adapter.SyncListAdapter;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
-import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySync2Binding;
-import edu.aku.hassannaqvi.mi_covid.get.GetAllData;
-import edu.aku.hassannaqvi.mi_covid.otherClasses.SyncModel;
+import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySyncBinding;
+import edu.aku.hassannaqvi.mi_covid.models.SyncModel;
+import edu.aku.hassannaqvi.mi_covid.sync.GetAllData;
 import edu.aku.hassannaqvi.mi_covid.sync.SyncAllData;
 import edu.aku.hassannaqvi.mi_covid.sync.SyncAllPhotos;
 import edu.aku.hassannaqvi.mi_covid.sync.SyncDevice;
@@ -53,7 +53,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
     DatabaseHelper db;
     SyncListAdapter syncListAdapter;
     //UploadListAdapter uploadListAdapter;
-    ActivitySync2Binding bi;
+    ActivitySyncBinding bi;
     SyncModel model;
     SyncModel uploadmodel;
     List<SyncModel> list;
@@ -66,7 +66,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        bi = DataBindingUtil.setContentView(this, R.layout.activity_sync2);
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_sync);
         bi.setCallback(this);
         list = new ArrayList<>();
         uploadlist = new ArrayList<>();

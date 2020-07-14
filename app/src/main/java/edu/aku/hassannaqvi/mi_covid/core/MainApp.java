@@ -75,7 +75,6 @@ public class MainApp extends Application {
     public static Boolean admin = false;
     public static Form form;
     public static LiveData<Form> liveForms = new MutableLiveData<>();
-    public static Child child;
 
     public static String userName = "0000";
     public static UsersContract user;

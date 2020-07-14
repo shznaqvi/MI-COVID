@@ -37,10 +37,10 @@ public final class CreateTable {
             + FormsTable.COLUMN_SN + " TEXT,"
             + FormsTable.COLUMN_SO + " TEXT,"
             + FormsTable.COLUMN_FSTATUS + " TEXT,"
-            + FormsTable.COLUMN_FSTATUS88x + " TEXT,"
+            + FormsTable.COLUMN_FSTATUS96x + " TEXT,"
             + FormsTable.COLUMN_ENDINGDATETIME + " TEXT,"
             + FormsTable.COLUMN_ISTATUS + " TEXT,"
-            + FormsTable.COLUMN_ISTATUS88x + " TEXT,"
+            + FormsTable.COLUMN_ISTATUS96x + " TEXT,"
             + FormsTable.COLUMN_SYNCED + " TEXT,"
             + FormsTable.COLUMN_SYNCED_DATE + " TEXT"
             + " );";

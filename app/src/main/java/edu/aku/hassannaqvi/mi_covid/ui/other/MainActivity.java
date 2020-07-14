@@ -37,16 +37,26 @@ import java.util.List;
 import java.util.Objects;
 
 import edu.aku.hassannaqvi.mi_covid.R;
-import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
-import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.mi_covid.core.AndroidDatabaseManager;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivityMainBinding;
+import edu.aku.hassannaqvi.mi_covid.models.Form;
+import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 import edu.aku.hassannaqvi.mi_covid.ui.list_activity.FormsReportCluster;
 import edu.aku.hassannaqvi.mi_covid.ui.list_activity.FormsReportDate;
 import edu.aku.hassannaqvi.mi_covid.ui.list_activity.PendingFormsActivity;
-import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionInfoActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionAActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionBActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionCActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionDActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionEActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionFActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionHActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionIActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionJActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionKActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionLActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.CreateTable;
 
 public class MainActivity extends AppCompatActivity {
@@ -67,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     SharedPreferences.Editor editorDownload;
     DownloadManager downloadManager;
     String preVer = "", newVer = "";
-    VersionAppContract versionAppContract;
+    VersionApp versionApp;
     DatabaseHelper db;
     Long refID;
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -129,35 +139,42 @@ public class MainActivity extends AppCompatActivity {
         Intent oF = null;
         switch (id) {
             case R.id.formA:
-                oF = new Intent(this, SectionInfoActivity.class);
+                oF = new Intent(this, SectionAActivity.class);
                 break;
-            case R.id.pendingForms:
-                oF = new Intent(this, PendingFormsActivity.class);
-                break;
-            /*case R.id.formB:
+            case R.id.formB:
                 oF = new Intent(this, SectionBActivity.class);
                 break;
-            case R.id.formC1:
-                oF = new Intent(this, SectionSS1Activity.class);
+            case R.id.formC:
+                oF = new Intent(this, SectionCActivity.class);
                 break;
-            case R.id.formC2:
-                oF = new Intent(this, SectionSS2Activity.class);
+            case R.id.formD:
+                oF = new Intent(this, SectionDActivity.class);
                 break;
-            case R.id.formCHA:
-                oF = new Intent(this, SectionCHAActivity.class);
+            case R.id.formE:
+                oF = new Intent(this, SectionEActivity.class);
                 break;
-            case R.id.formCHB:
-                oF = new Intent(this, SectionCHBActivity.class);
+            case R.id.formF:
+                oF = new Intent(this, SectionFActivity.class);
                 break;
-            case R.id.formCHC:
-                oF = new Intent(this, SectionCHCActivity.class);
-                break;
-            case R.id.formCHD:
-                oF = new Intent(this, SectionCHDActivity.class);
-                break;
-            case R.id.formCHE:
-                oF = new Intent(this, SectionCHEActivity.class);
+ /*           case R.id.formG:
+                oF = new Intent(this, SectionGActivity.class);
                 break;*/
+            case R.id.formH:
+                oF = new Intent(this, SectionHActivity.class);
+                break;
+            case R.id.formI:
+                oF = new Intent(this, SectionIActivity.class);
+                break;
+            case R.id.formJ:
+                oF = new Intent(this, SectionJActivity.class);
+                break;
+            case R.id.formK:
+                oF = new Intent(this, SectionKActivity.class);
+                break;
+            case R.id.formL:
+                oF = new Intent(this, SectionLActivity.class);
+                break;
+
         }
         startActivity(oF);
     }
@@ -264,14 +281,10 @@ public class MainActivity extends AppCompatActivity {
         bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
         db = new DatabaseHelper(this);
 
-        WorkRequest uploadWorkRequest =
-                new OneTimeWorkRequest.Builder(UploadWorker.class)
-                        .build();
 
-
-        Collection<FormsContract> todaysForms = db.getTodayForms(sysdateToday);
-        Collection<FormsContract> unsyncedForms = db.getUnsyncedForms();
-        Collection<FormsContract> unclosedForms = db.getUnclosedForms();
+        Collection<Form> todaysForms = db.getTodayForms(sysdateToday);
+        Collection<Form> unsyncedForms = db.getUnsyncedForms();
+        Collection<Form> unclosedForms = db.getUnclosedForms();
 
         rSumText += "TODAY'S RECORDS SUMMARY\r\n";
 
@@ -284,9 +297,9 @@ public class MainActivity extends AppCompatActivity {
             rSumText += "[Cluster][Household][Children][Form Status][Sync Status]\r\n";
             rSumText += "---------------------------------------------------------\r\n";
 
-            for (FormsContract fc : todaysForms) {
-                Log.d(TAG, "onCreate: '" + fc.getIstatus() + "'");
-                switch (fc.getIstatus()) {
+            for (Form form : todaysForms) {
+                Log.d(TAG, "onCreate: '" + form.getIstatus() + "'");
+                switch (form.getIstatus()) {
                     case "1":
                         iStatus = "Complete";
                         break;
@@ -312,17 +325,17 @@ public class MainActivity extends AppCompatActivity {
                         iStatus = "Open";
                         break;
                     default:
-                        iStatus = "\t\tN/A" + fc.getIstatus();
+                        iStatus = "\t\tN/A" + form.getIstatus();
                 }
 
 
-                rSumText += fc.getClusterCode();
+                rSumText += form.getClusterCode();
                 rSumText += "  ";
 
-                rSumText += fc.getHhno();
+                rSumText += form.getHhno();
                 rSumText += "  \t\t";
 
-                int childCount = db.getChildrenByUUID(fc.get_UID());
+                int childCount = db.getChildrenByUUID(form.get_UID());
                 rSumText += childCount;
                 rSumText += "\t\t\t\t";
 
@@ -330,7 +343,7 @@ public class MainActivity extends AppCompatActivity {
                 rSumText += iStatus;
                 rSumText += "\t\t\t\t";
 
-                rSumText += (fc.getSynced() == null ? "Not Synced" : "Synced");
+                rSumText += (form.getSynced() == null ? "Not Synced" : "Synced");
                 rSumText += "\r\n";
                 rSumText += "---------------------------------------------------------\r\n";
             }
@@ -366,17 +379,17 @@ public class MainActivity extends AppCompatActivity {
         // Auto download app
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
-        versionAppContract = db.getVersionApp();
-        if (versionAppContract.getVersioncode() != null) {
+        versionApp = db.getVersionApp();
+        if (versionApp.getVersioncode() != null) {
 
             preVer = MainApp.appInfo.getVersionName() + "." + MainApp.appInfo.getVersionCode();
-            newVer = versionAppContract.getVersionname() + "." + versionAppContract.getVersioncode();
+            newVer = versionApp.getVersionname() + "." + versionApp.getVersioncode();
 
-            if (MainApp.appInfo.getVersionCode() < Integer.parseInt(versionAppContract.getVersioncode())) {
+            if (MainApp.appInfo.getVersionCode() < Integer.parseInt(versionApp.getVersioncode())) {
                 bi.lblAppVersion.setVisibility(View.VISIBLE);
 
                 String fileName = CreateTable.DATABASE_NAME.replace(".db", "-New-Apps");
-                file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionAppContract.getPathname());
+                file = new File(Environment.getExternalStorageDirectory() + File.separator + fileName, versionApp.getPathname());
 
                 if (file.exists()) {
                     bi.lblAppVersion.setText(new StringBuilder(R.string.app_name + " New Version ").append(newVer).append("  Downloaded"));
@@ -386,9 +399,9 @@ public class MainActivity extends AppCompatActivity {
                     if (networkInfo != null && networkInfo.isConnected()) {
                         bi.lblAppVersion.setText(new StringBuilder(R.string.app_name + " App New Version ").append(newVer).append("  Downloading.."));
                         downloadManager = (DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
-                        Uri uri = Uri.parse(MainApp._UPDATE_URL + versionAppContract.getPathname());
+                        Uri uri = Uri.parse(MainApp._UPDATE_URL + versionApp.getPathname());
                         DownloadManager.Request request = new DownloadManager.Request(uri);
-                        request.setDestinationInExternalPublicDir(fileName, versionAppContract.getPathname())
+                        request.setDestinationInExternalPublicDir(fileName, versionApp.getPathname())
                                 .setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED)
                                 .setTitle("Downloading " + R.string.app_name + " App new App ver." + newVer);
                         refID = downloadManager.enqueue(request);
@@ -454,7 +467,7 @@ public class MainActivity extends AppCompatActivity {
             preVer = getArguments().getString("preVer");
 
             return new AlertDialog.Builder(getActivity())
-                    .setIcon(R.drawable.exclamation)
+                    .setIcon(R.drawable.ic_exclamation)
                     .setTitle(R.string.app_name + " APP is available!")
                     .setCancelable(false)
                     .setMessage(R.string.app_name + " App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")

@@ -24,9 +24,9 @@ public class FormsContract {
         public static final String COLUMN_FORMTYPE = "formtype";
         public static final String COLUMN_USER = "username";
         public static final String COLUMN_ISTATUS = "istatus";
-        public static final String COLUMN_ISTATUS88x = "istatus88x";
+        public static final String COLUMN_ISTATUS96x = "istatus96x";
         public static final String COLUMN_FSTATUS = "fStatus";
-        public static final String COLUMN_FSTATUS88x = "fstatus88x";
+        public static final String COLUMN_FSTATUS96x = "fstatus96x";
         public static final String COLUMN_LUID = "_luid";
         public static final String COLUMN_ENDINGDATETIME = "endingdatetime";
         public static final String COLUMN_GPSLAT = "gpslat";
