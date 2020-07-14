@@ -10,10 +10,10 @@ public class VersionAppContract {
 
     public static abstract class VersionAppTable implements BaseColumns {
         public static final String TABLE_NAME = "versionApp";
-        public static final String COLUMN_VERSION_PATH = "apkData";
+        public static final String COLUMN_VERSION_PATH = "elements";
         public static final String COLUMN_VERSION_CODE = "versionCode";
         public static final String COLUMN_VERSION_NAME = "versionName";
-        public static final String COLUMN_PATH_NAME = "path";
+        public static final String COLUMN_PATH_NAME = "outputFile";
         public static final String SERVER_URI = "output.json";
         public static String PATH = "versionapp";
         public static final String CONTENT_TYPE =

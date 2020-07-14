@@ -19,9 +19,9 @@ public class VersionApp {
     }
 
     public VersionApp Sync(JSONObject jsonObject) throws JSONException {
-        this.versioncode = jsonObject.getJSONObject(VersionAppTable.COLUMN_VERSION_PATH).getString(VersionAppTable.COLUMN_VERSION_CODE);
+        this.versioncode = jsonObject.getString(VersionAppTable.COLUMN_VERSION_CODE);
         this.pathname = jsonObject.getString(VersionAppTable.COLUMN_PATH_NAME);
-        this.versionname = jsonObject.getJSONObject(VersionAppTable.COLUMN_VERSION_PATH).getString(VersionAppTable.COLUMN_VERSION_NAME);
+        this.versionname = jsonObject.getString(VersionAppTable.COLUMN_VERSION_NAME);
         return this;
     }
 
