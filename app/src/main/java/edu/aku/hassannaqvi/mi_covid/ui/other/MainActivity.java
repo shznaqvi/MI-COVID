@@ -32,7 +32,6 @@ import java.util.Objects;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.core.AndroidDatabaseManager;
-import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivityMainBinding;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
@@ -70,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
     DownloadManager downloadManager;
     String preVer = "", newVer = "";
     VersionApp versionApp;
-    DatabaseHelper db;
     Long refID;
     private Boolean exit = false;
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
@@ -197,7 +195,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         // Auto download app
         sharedPrefDownload = getSharedPreferences("appDownload", MODE_PRIVATE);
         editorDownload = sharedPrefDownload.edit();
-        versionApp = db.getVersionApp();
+        versionApp = appInfo.getDbHelper().getVersionApp();
         if (versionApp.getVersioncode() != null) {
 
             preVer = appInfo.getVersionName() + "." + appInfo.getVersionCode();
@@ -360,7 +358,7 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
                     Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                startActivity(new Intent(this, SyncActivity.class));
+                oF = new Intent(this, SyncActivity.class);
                 break;
         }
         startActivity(oF);

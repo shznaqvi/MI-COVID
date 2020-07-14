@@ -130,25 +130,25 @@ public class SectionCActivity extends AppCompatActivity {
                 : bi.c0802.isChecked() ? "2"
                 : "-1");
 
-        json.put("ch06a", "-1");
+    //    json.put("ch06a", "-1");
 
-        json.put("ch06a1", "-1");
+        //    json.put("ch06a1", "-1");
 
-        json.put("ch06a2", "-1");
+        //    json.put("ch06a2", "-1");
 
-        json.put("ch06a3", "-1");
+        //    json.put("ch06a3", "-1");
 
-        json.put("ch06a4", "-1");
+        //    json.put("ch06a4", "-1");
 
-        json.put("ch06a5", "-1");
+        //    json.put("ch06a5", "-1");
 
-        json.put("ch06a6", "-1");
+        //    json.put("ch06a6", "-1");
 
-        json.put("ch06a7", "-1");
+        //    json.put("ch06a7", "-1");
 
-        json.put("ch06a8", "-1");
+        //    json.put("ch06a8", "-1");
 
-        json.put("ch06ax", "-1");
+        //    json.put("ch06ax", "-1");
 
         MainApp.form.setsC(json.toString());
 

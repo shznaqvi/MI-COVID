@@ -53,11 +53,11 @@ public class SectionJActivity extends AppCompatActivity {
             }
         }));
 
-        /*bi.j011.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.j01102.getId()) {
+        bi.j010.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.j01002.getId()) {
                 Clear.clearAllFields(bi.fldGrpSecJ01);
             }
-        }));*/
+        }));
 
     }
 

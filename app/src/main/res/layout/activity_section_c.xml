@@ -489,7 +489,7 @@
                 </androidx.cardview.widget.CardView>
             </LinearLayout>
 
-            <!--ch06a  Radio-->
+            <!--&lt;!&ndash;ch06a  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a"
                 android:layout_width="match_parent"
@@ -506,9 +506,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a1  Radio-->
+            <!--&lt;!&ndash;ch06a1  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a1"
                 android:layout_width="match_parent"
@@ -525,9 +525,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a1" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a2  Radio-->
+            <!--&lt;!&ndash;ch06a2  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a2"
                 android:layout_width="match_parent"
@@ -544,9 +544,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a2" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a3  Radio-->
+            <!--&lt;!&ndash;ch06a3  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a3"
                 android:layout_width="match_parent"
@@ -563,9 +563,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a3" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a4  Radio-->
+            <!--&lt;!&ndash;ch06a4  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a4"
                 android:layout_width="match_parent"
@@ -582,9 +582,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a4" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a5  Radio-->
+            <!--&lt;!&ndash;ch06a5  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a5"
                 android:layout_width="match_parent"
@@ -601,9 +601,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a5" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a6  Radio-->
+            <!--&lt;!&ndash;ch06a6  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a6"
                 android:layout_width="match_parent"
@@ -620,9 +620,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a6" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a7  Radio-->
+            <!--&lt;!&ndash;ch06a7  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a7"
                 android:layout_width="match_parent"
@@ -639,9 +639,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a7" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06a8  Radio-->
+            <!--&lt;!&ndash;ch06a8  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06a8"
                 android:layout_width="match_parent"
@@ -658,9 +658,9 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06a8" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
-            <!--ch06ax  Radio-->
+            <!--&lt;!&ndash;ch06ax  Radio&ndash;&gt;
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVch06ax"
                 android:layout_width="match_parent"
@@ -677,7 +677,7 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/ch06ax" />
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
+            </androidx.cardview.widget.CardView>-->
 
             <LinearLayout
                 android:layout_width="match_parent"

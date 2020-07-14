@@ -1,5 +1,6 @@
 package edu.aku.hassannaqvi.mi_covid.sync;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
@@ -38,6 +39,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
     private List<SyncModel> list;
     private int position;
     private String TAG = "";
+    @SuppressLint("StaticFieldLeak")
     private Context mContext;
     private ProgressDialog pd;
     private String syncClass;
@@ -127,47 +129,19 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable.SERVER_URI);
                     position = 1;
                     break;
-
                 case "BLRandom":
                     url = new URL(MainApp._HOST_URL + BLRandomContract.BLRandomTable.SERVER_URI);
-                    position = 0;
+                    position = 2;
                     break;
             }
 
+            assert url != null;
             urlConnection = (HttpURLConnection) url.openConnection();
             urlConnection.setReadTimeout(100000 /* milliseconds */);
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
             switch (syncClass) {
                 case "BLRandom":
-
-                    if (args[0] != null && !args[0].equals("")) {
-                        if (Integer.parseInt(args[0]) > 0) {
-                            urlConnection.setRequestMethod("POST");
-                            urlConnection.setDoOutput(true);
-                            urlConnection.setDoInput(true);
-                            urlConnection.setRequestProperty("Content-Type", "application/json");
-                            urlConnection.setRequestProperty("charset", "utf-8");
-                            urlConnection.setUseCaches(false);
-
-                            // Starts the query
-                            urlConnection.connect();
-                            DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
-                            JSONObject json = new JSONObject();
-                            try {
-                                json.put("dist_id", args[0]);
-                                json.put("user", "test1234");
-                            } catch (JSONException e1) {
-                                e1.printStackTrace();
-                            }
-                            Log.d(TAG, "downloadUrl: " + json.toString());
-                            wr.writeBytes(json.toString());
-                            wr.flush();
-                            wr.close();
-                        }
-                    }
-                    break;
-
                 case "EnumBlock":
                 case "User":
                     urlConnection.setRequestMethod("POST");
@@ -242,9 +216,8 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "BLRandom":
                             jsonArray = new JSONArray(result);
                             insertCount = db.syncBLRandom(jsonArray);
-                            position = 0;
+                            position = 2;
                             break;
-
                     }
 
                     pd.setMessage("Received: " + jsonArray.length());
@@ -254,15 +227,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     adapter.updatesyncList(list);
                     // pd.show();
                 } catch (JSONException e) {
-
                     e.printStackTrace();
-
-                    pd.setTitle("Error");
-                    pd.setMessage(e.getMessage());
-                    list.get(position).setstatus("Failed");
-                    list.get(position).setstatusID(1);
-                    list.get(position).setmessage(e.getMessage());
-                    adapter.updatesyncList(list);
                 }
             } else {
                 pd.setMessage("Received: " + result.length() + "");
