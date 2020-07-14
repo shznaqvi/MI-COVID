@@ -1,15 +1,12 @@
 package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
-import org.jetbrains.annotations.NotNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,6 +17,7 @@ import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionBBinding;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionBActivity extends AppCompatActivity {
 
@@ -33,7 +31,6 @@ public class SectionBActivity extends AppCompatActivity {
         setupSkip();
     }
 
-
     private void setupSkip() {
         //b01
         bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
@@ -46,9 +43,8 @@ public class SectionBActivity extends AppCompatActivity {
         });
     }
 
-
     public void BtnContinue() {
-        if (formValidation(true)) {
+        if (formValidation()) {
             try {
                 SaveDraft();
             } catch (JSONException e) {
@@ -63,7 +59,6 @@ public class SectionBActivity extends AppCompatActivity {
         }
     }
 
-
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -75,7 +70,6 @@ public class SectionBActivity extends AppCompatActivity {
             return false;
         }
     }
-
 
     private void SaveDraft() throws JSONException {
         JSONObject json = new JSONObject();
@@ -229,44 +223,16 @@ public class SectionBActivity extends AppCompatActivity {
 
     }
 
-
-    private boolean formValidation(boolean flag) {
+    private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
-
     public void BtnEnd() {
-        //UtilKt.openEndActivity(this);
+        AppUtilsKt.openEndActivity(this);
     }
 
     @Override
     public void onBackPressed() {
         Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
-    }
-
-    public void showTooltip(@NotNull View view) {
-        if (view.getId() != View.NO_ID) {
-            String package_name = getApplicationContext().getPackageName();
-            // Question Number Textview ID must be prefixed with q_ e.g.: 'q_aa12a'
-            String infoid = view.getResources().getResourceName(view.getId()).replace(package_name + ":id/q_", "");
-            // Question info text must be suffixed with _info e.g.: aa12a_info
-            int stringRes = this.getResources().getIdentifier(infoid + "_info", "string", getApplicationContext().getPackageName());
-            // Fetch info text from strings.xml
-            //String infoText = (String) getResources().getText(stringRes);
-            // Check if string resource exists to avoid crash on missing info string
-            if (stringRes != 0) {
-                // Fetch info text from strings.xml
-                String infoText = (String) getResources().getText(stringRes);
-                new AlertDialog.Builder(this)
-                        .setTitle("Info: " + infoid.toUpperCase())
-                        .setMessage(infoText)
-                        .setIcon(android.R.drawable.ic_dialog_info)
-                        .show();
-            } else {
-                Toast.makeText(this, "No information available on this question.", Toast.LENGTH_SHORT).show();
-            }
-        } else {
-            Toast.makeText(this, "No ID Associated with this question.", Toast.LENGTH_SHORT).show();
-        }
     }
 }

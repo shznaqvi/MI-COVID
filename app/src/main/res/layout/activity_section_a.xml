@@ -2,14 +2,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
 
+    <data>
         <import type="android.view.View" />
 
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionAActivity" />
     </data>
+
 
     <ScrollView
         android:layout_width="match_parent"
