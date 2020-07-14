@@ -1,20 +1,21 @@
 package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
-
+import edu.aku.hassannaqvi.mi_covid.core.MainApp;
+import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
-
+import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionEBinding;
 import org.json.JSONException;
 import org.json.JSONObject;
-import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionEBinding;
+
 
 import edu.aku.hassannaqvi.mi_covid.R;
-import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionFBinding;
 
 public class SectionEActivity extends AppCompatActivity {
 
@@ -25,14 +26,18 @@ public class SectionEActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_section_e);
+        setupSkips();
     }
 
     private void setupSkips() {
 
-        bi.fldGrpCVe02.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e0201.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVd03);
-            }
+        /*bi.e02.setOnCheckedChangeListener(((radioGroup, i) -> {
+                Clear.clearAllFields(bi.fldGrpCVe03);
+        }));*/
+
+
+        bi.e09.setOnCheckedChangeListener(((radioGroup, i) -> {
+                Clear.clearAllFields(bi.fldGrpCVe10);
         }));
 
     }
@@ -115,7 +120,7 @@ public class SectionEActivity extends AppCompatActivity {
 
         json.put("e07",  "-1");
 
-        json.put("e08", bi.e0801_t.isChecked() ? ""
+        json.put("e08", bi.e0801t.isChecked() ? ""
                 : bi.e0801.isChecked() ? "1"
                 : bi.e0802.isChecked() ? "2"
                 : bi.e0803.isChecked() ? "3"

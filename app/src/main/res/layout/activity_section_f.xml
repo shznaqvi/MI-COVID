@@ -61,7 +61,12 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/fldGrpSecf01"
+            android:visibility='@{f0102.checked? View.GONE : View.VISIBLE}'>
             <!--f02  Input-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVf02"
@@ -334,7 +339,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVf08"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility='@{f0702.checked? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -551,7 +557,12 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/fldGrpTVf11"
+            android:visibility='@{f1003.checked? View.GONE : View.VISIBLE}'>
             <!--f11  Title-->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVf11"
@@ -1186,7 +1197,8 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
-
+        </LinearLayout>
+        </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
