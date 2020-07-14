@@ -32,7 +32,6 @@ import java.util.List;
 import edu.aku.hassannaqvi.mi_covid.CONSTANTS;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.adapter.SyncListAdapter;
-import edu.aku.hassannaqvi.mi_covid.contracts.ChildContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
