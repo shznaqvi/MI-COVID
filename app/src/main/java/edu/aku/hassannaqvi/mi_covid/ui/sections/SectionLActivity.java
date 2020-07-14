@@ -19,6 +19,7 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionLBinding;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionLActivity extends AppCompatActivity {
 
@@ -68,7 +69,7 @@ public class SectionLActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        AppUtilsKt.openEndActivity(this);
     }
 
 
