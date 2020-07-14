@@ -58,18 +58,17 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     public void BtnContinue() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, SectionBActivity.class));
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+        if (!formValidation()) return;
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, SectionBActivity.class));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -101,15 +100,7 @@ public class SectionAActivity extends AppCompatActivity {
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
 
-        JSONObject json = new JSONObject();
-
-        json.put("a01", bi.a01.getText().toString());
-
-        json.put("a02", bi.a02.getText().toString());
-
-        json.put("a03", bi.a03.getText().toString());
-
-        json.put("a04", bi.a0401.isChecked() ? "1"
+        form.setA04(bi.a0401.isChecked() ? "1"
                 : bi.a0402.isChecked() ? "2"
                 : bi.a0403.isChecked() ? "3"
                 : bi.a0404.isChecked() ? "4"
@@ -117,9 +108,17 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a0406.isChecked() ? "6"
                 : "-1");
 
-        json.put("a05", bi.a05.getText().toString());
+        form.setA05(bi.a05.getText().toString().trim().isEmpty() ? "-1" : bi.a05.getText().toString());
 
-        json.put("a05a", bi.a05a.getText().toString());
+        form.setRefno(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
+
+        JSONObject json = new JSONObject();
+
+        json.put("a01", bi.a01.getText().toString());
+
+        json.put("a02", bi.a02.getText().toString());
+
+        json.put("a03", bi.a03.getText().toString());
 
         json.put("a06", bi.a0601.isChecked() ? "1"
                 : bi.a0602.isChecked() ? "2"

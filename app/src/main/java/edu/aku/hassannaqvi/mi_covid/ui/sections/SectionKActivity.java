@@ -14,6 +14,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
+import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
+import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
+import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionKBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
@@ -28,6 +31,7 @@ public class SectionKActivity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
     }
+
 
     private void setupSkips() {
 
@@ -69,40 +73,39 @@ public class SectionKActivity extends AppCompatActivity {
 
     }
 
+
     public void BtnContinue() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, SectionLActivity.class));
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+        if (!formValidation()) return;
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, SectionLActivity.class));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
+
 
     public void BtnEnd() {
         AppUtilsKt.openEndActivity(this);
     }
 
+
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long rowID = db.addChild(MainApp.adolscent);
-        if (rowID > 0) {
-            MainApp.adolscent.set_ID(String.valueOf(rowID));
-            MainApp.adolscent.setUID(MainApp.adolscent.getDeviceId() + MainApp.adolscent.get_ID());
-            db.updatesAdolsColumn(AdolscentContract.SingleAdolscent.COLUMN_UID, MainApp.adolscent.getUID());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SK, MainApp.form.getsK());
+        if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
+
 
     private void SaveDraft() throws JSONException {
 
@@ -191,15 +194,16 @@ public class SectionKActivity extends AppCompatActivity {
                 : bi.k1703.isChecked() ? "3"
                 : "-1");
 
-
-        //    MainApp.adolscent.setsAH1(String.valueOf(json));
+        MainApp.form.setsK(json.toString());
 
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionK);
 
     }
+
 
     @Override
     public void onBackPressed() {

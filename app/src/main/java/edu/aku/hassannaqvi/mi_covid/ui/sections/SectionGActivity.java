@@ -14,8 +14,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
+import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
+import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
+import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionGBinding;
-import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 
 public class SectionGActivity extends AppCompatActivity {
 
@@ -28,6 +31,74 @@ public class SectionGActivity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
     }
+
+
+    private void setupSkips() {
+
+        bi.g01.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g0102.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg01);
+            }
+        }));
+
+        bi.g02.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g0202.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg02);
+            }
+        }));
+
+        bi.g03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            Clear.clearAllFields(bi.fldGrpCVg04);
+            Clear.clearAllFields(bi.fldGrpCVg05);
+        }));
+
+        bi.g06.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g06.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg06);
+            }
+        }));
+
+        bi.g09.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g0902.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg09);
+            }
+        }));
+
+        bi.g11.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.g1102.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg11);
+            }
+        }));
+    }
+
+
+    private boolean UpdateDB() {
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SG, MainApp.form.getsG());
+        if (updcount > 0) {
+            return true;
+        } else {
+            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
+
+    public void BtnContinue() {
+        if (!formValidation()) return;
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, SectionHActivity.class));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     private void SaveDraft() throws JSONException {
 
@@ -86,89 +157,21 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.g13096.isChecked() ? "96"
                 : "-1");
 
+        MainApp.form.setsG(json.toString());
 
     }
 
-
-    private void setupSkips() {
-
-        bi.g01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g0102.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecG03);
-            }
-        }));
-
-        bi.g02.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g0202.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecG02);
-            }
-        }));
-
-        bi.g03.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g0301.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg04);
-            }
-        }));
-
-        bi.g06.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g0601.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg07);
-            }
-        }));
-
-        bi.g09.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g0902.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecG01);
-            }
-        }));
-
-        bi.g11.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g1102.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg12);
-            }
-        }));
-
-    }
-
-    public void BtnContinue() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, SectionHActivity.class));
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
-        }
-    }
 
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
     }
 
-    private boolean UpdateDB() {
-//        DatabaseHelper db = MainApp.appInfo.getDbHelper();
-//        long rowID = db.addChild(MainApp.adolscent);
-//        if (rowID > 0) {
-//            MainApp.adolscent.set_ID(String.valueOf(rowID));
-//            MainApp.adolscent.setUID(MainApp.adolscent.getDeviceId() + MainApp.adolscent.get_ID());
-//            db.updatesAdolsColumn(AdolscentContract.SingleAdolscent.COLUMN_UID, MainApp.adolscent.getUID());
-//            return true;
-//        } else {
-//            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
-//            return false;
-//        }
-        return true;
-    }
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
 
     }
+
 
     @Override
     public void onBackPressed() {
