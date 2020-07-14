@@ -130,7 +130,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
                 case "BLRandom":
                     url = new URL(MainApp._HOST_URL + BLRandomContract.BLRandomTable.SERVER_URI);
-                    position = 0;
+                    position = 2;
                     break;
             }
 
@@ -242,7 +242,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                         case "BLRandom":
                             jsonArray = new JSONArray(result);
                             insertCount = db.syncBLRandom(jsonArray);
-                            position = 0;
+                            position = 2;
                             break;
 
                     }
