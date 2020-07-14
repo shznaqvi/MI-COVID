@@ -59,7 +59,8 @@
     <string name="a0406">GB</string>
     <string name="a05">District?</string>
     <string name="a05a">Individual Indentification ID</string>
-    <string name="a06">Interview Status</string>
+    <string name="a06"> Interview Status </string>
+    <string name="a06_info"> If interview is not getting complete please contact supervisor </string>
     <string name="a0601">Household and Individual identified</string>
     <string name="a0602">Individual not identified</string>
     <string name="a0603">Household not identified</string>

@@ -332,7 +332,7 @@ public class MainActivity extends AppCompatActivity {
                 rSumText += form.getClusterCode();
                 rSumText += "  ";
 
-                rSumText += form.getHhno();
+                rSumText += form.getRefno();
                 rSumText += "  \t\t";
 
                 int childCount = db.getChildrenByUUID(form.get_UID());

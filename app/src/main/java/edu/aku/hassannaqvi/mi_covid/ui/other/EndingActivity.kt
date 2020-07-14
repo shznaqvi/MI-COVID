@@ -103,8 +103,6 @@ class EndingActivity : AppCompatActivity() {
 
         } else {
             MainApp.form.endingdatetime = SimpleDateFormat("dd-MM-yy HH:mm").format(Date().time)
-            MainApp.form.setfStatus(statusValue)
-            MainApp.form.fstatus96x = bi.a0696x.text.toString()
         }
     }
 

@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -14,8 +17,6 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -40,20 +41,21 @@ public class SectionAActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
         bi.setCallback(this);
-        //setupSkips();
+        setupSkip();
     }
 
+
     private void setupSkip() {
-        //a06
+
         bi.a06.setOnCheckedChangeListener((group, checkedId) -> {
             Clear.clearAllFields(bi.lla07);
         });
 
-        //a07
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.lla08);
         });
     }
+
 
     public void BtnContinue() {
         if (formValidation()) {
@@ -71,6 +73,7 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
+
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -86,12 +89,14 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
+
     private void SaveDraft() throws JSONException {
 
         form = new Form();
 
-        form.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        form.setUser(MainApp.userName);
+        form.setA01(new SimpleDateFormat("dd-MM-yy").format(new Date().getTime()));
+        form.setA02(new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        form.setA03(MainApp.userName);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
@@ -223,16 +228,18 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setsInfo(json.toString());
 
-
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
 
+
     public void BtnEnd() {
         AppUtilsKt.contextEndActivity(this, false);
     }
+
 
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
