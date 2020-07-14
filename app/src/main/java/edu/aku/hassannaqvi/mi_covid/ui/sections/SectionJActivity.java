@@ -74,7 +74,7 @@ public class SectionJActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        startActivity(new Intent(this, EndingActivity.class).putExtra("complete" false))
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
     }
 
     private boolean UpdateDB() {

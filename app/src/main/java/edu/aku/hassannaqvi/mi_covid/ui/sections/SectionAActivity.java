@@ -44,6 +44,7 @@ public class SectionAActivity extends AppCompatActivity {
         setupSkip();
     }
 
+
     private void setupSkip() {
 
         bi.a06.setOnCheckedChangeListener((group, checkedId) -> {
@@ -72,6 +73,7 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
+
     private boolean UpdateDB() {
 
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -87,12 +89,14 @@ public class SectionAActivity extends AppCompatActivity {
         }
     }
 
+
     private void SaveDraft() throws JSONException {
 
         form = new Form();
 
-        form.setFormDate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
-        form.setUser(MainApp.userName);
+        form.setA01(new SimpleDateFormat("dd-MM-yy").format(new Date().getTime()));
+        form.setA02(new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        form.setA03(MainApp.userName);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
         form.setAppversion(MainApp.appInfo.getAppVersion());
@@ -224,12 +228,13 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setsInfo(json.toString());
 
-
     }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
+
 
     public void BtnEnd() {
         AppUtilsKt.contextEndActivity(this, false);
