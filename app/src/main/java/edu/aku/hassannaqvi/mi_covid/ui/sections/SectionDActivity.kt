@@ -85,7 +85,7 @@ class SectionDActivity : AppCompatActivity() {
     }
 
 
-    fun btnContinue(v: View) {
+    fun BtnContinue(v: View) {
         if (!formValidation()) return
         try {
             saveDraft()
@@ -101,7 +101,7 @@ class SectionDActivity : AppCompatActivity() {
     }
 
 
-    fun btnEnd(v: View) {
+    fun BtnEnd(v: View) {
         openEndActivity(this)
     }
 

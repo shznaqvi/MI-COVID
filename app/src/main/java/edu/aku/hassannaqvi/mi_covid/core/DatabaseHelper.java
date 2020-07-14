@@ -653,30 +653,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         return allForms;
     }
 
-    public int updateEnding(boolean flag) {
+    public int updateEnding() {
         SQLiteDatabase db = this.getReadableDatabase();
 
         // New value for one column
         ContentValues values = new ContentValues();
-        if (flag) {
-            values.put(FormsTable.COLUMN_ISTATUS, MainApp.form.getIstatus());
-            values.put(FormsTable.COLUMN_ISTATUS96x, MainApp.form.getIstatus96x());
-            values.put(FormsTable.COLUMN_SINFO, MainApp.form.getsInfo());
-        } else {
-            /*values.put(FormsTable.COLUMN_FSTATUS, MainApp.form.getfStatus());
-            values.put(FormsTable.COLUMN_FSTATUS96x, MainApp.form.getFstatus96x());*/
-            values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.form.getEndingdatetime());
-        }
+        values.put(FormsTable.COLUMN_ISTATUS, MainApp.form.getIstatus());
+        values.put(FormsTable.COLUMN_ISTATUS96x, MainApp.form.getIstatus96x());
+        values.put(FormsTable.COLUMN_ENDINGDATETIME, MainApp.form.getEndingdatetime());
 
         // Which row to update, based on the ID
         String selection = FormsTable.COLUMN_ID + " =? ";
         String[] selectionArgs = {String.valueOf(MainApp.form.get_ID())};
 
-        int count = db.update(FormsTable.TABLE_NAME,
+        return db.update(FormsTable.TABLE_NAME,
                 values,
                 selection,
                 selectionArgs);
-        return count;
     }
 
     //Get BLRandom data
