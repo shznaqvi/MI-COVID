@@ -139,7 +139,7 @@
                     android:clickable="true"
                     android:elevation="@dimen/cardview_default_elevation"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:onClick='openForm'
+                    android:onClick="@{callback::openSpecificActivity}"
                     app:cardCornerRadius="@dimen/cardview_default_radius">
 
                     <RelativeLayout
@@ -179,7 +179,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="B"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -191,7 +191,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="C"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -203,7 +203,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="D"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -215,7 +215,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="E"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -227,7 +227,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="F"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -239,7 +239,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="G"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -263,6 +263,7 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="H"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -274,7 +275,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="I"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -286,7 +287,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="J"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -298,7 +299,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="K"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -310,7 +311,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="2dp"
                         android:background="@color/white_overlay"
-
+                        android:onClick="@{callback::openSpecificActivity}"
                         android:text="L"
                         android:textAppearance="@style/TextAppearance.AppCompat.Large"
                         android:textColor="@color/colorPrimaryDark"
@@ -336,7 +337,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{() -> callback.syncServer()}">
+                        android:onClick='@{callback::openSpecificActivity}'>
 
                         <RelativeLayout
                             android:layout_width="match_parent"
@@ -370,7 +371,7 @@
                         android:layout_weight="1"
                         android:clickable="true"
                         android:foreground="?android:attr/selectableItemBackground"
-                        android:onClick="@{() -> callback.openDB()}">
+                        android:onClick="@{callback::openSpecificActivity}">
 
                         <RelativeLayout
                             android:layout_width="match_parent"

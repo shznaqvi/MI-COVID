@@ -61,24 +61,6 @@ fun openEndActivity(activity: Activity) {
     dialog.findViewById<View>(R.id.btnNo).setOnClickListener { view: View? -> dialog.dismiss() }
 }
 
-/*fun openChildEndActivity(activity: Activity) {
-    val dialog = Dialog(activity)
-    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-    dialog.setContentView(R.layout.item_dialog)
-    dialog.setCancelable(false)
-    val params = WindowManager.LayoutParams()
-    params.copyFrom(dialog.window!!.attributes)
-    params.width = WindowManager.LayoutParams.WRAP_CONTENT
-    params.height = WindowManager.LayoutParams.WRAP_CONTENT
-    dialog.show()
-    dialog.window!!.attributes = params
-    dialog.findViewById<View>(R.id.btnOk).setOnClickListener {
-        activity.finish()
-        activity.startActivity(Intent(activity, ChildEndingActivity::class.java).putExtra("complete", false))
-    }
-    dialog.findViewById<View>(R.id.btnNo).setOnClickListener { dialog.dismiss() }
-}*/
-
 @JvmOverloads
 fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)
@@ -119,15 +101,39 @@ fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
     dialog.findViewById<View>(R.id.btnNo).setOnClickListener { dialog.dismiss() }
 }
 
-/*fun getMemberIcon(gender: Int, age: String): Int {
-    val memAge = age.toInt()
-    return if (memAge == -1) R.drawable.boy else if (memAge > 10) if (gender == 1) R.drawable.ctr_male else R.drawable.ctr_female else if (gender == 1) R.drawable.ctr_childboy else R.drawable.ctr_childgirl
+@JvmOverloads
+fun openWarningActivity(activity: Activity, title: String, message: String, btnYesTxt: String = "YES", btnNoTxt: String = "NO") {
+    val dialog = Dialog(activity)
+    dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
+    val bi: ItemDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.item_dialog, null, false)
+    dialog.setContentView(bi.root)
+    bi.alertTitle.text = title
+    bi.alertTitle.setTextColor(ContextCompat.getColor(activity, R.color.green))
+    bi.content.text = message
+    bi.btnOk.text = btnYesTxt
+    bi.btnOk.setBackgroundColor(ContextCompat.getColor(activity, R.color.green))
+    bi.btnNo.text = btnNoTxt
+    bi.btnNo.setBackgroundColor(ContextCompat.getColor(activity, R.color.gray))
+    dialog.setCancelable(false)
+    val params = WindowManager.LayoutParams()
+    params.copyFrom(dialog.window!!.attributes)
+    params.width = WindowManager.LayoutParams.WRAP_CONTENT
+    params.height = WindowManager.LayoutParams.WRAP_CONTENT
+    dialog.window!!.attributes = params
+    dialog.show()
+    bi.btnOk.setOnClickListener {
+        val warningActivity = activity as WarningActivityInterface
+        warningActivity.callWarningActivity()
+    }
+    bi.btnNo.setOnClickListener {
+        dialog.dismiss()
+    }
 }
-
-fun getMemberIcon(gender: Int): Int {
-    return if (gender == 1) R.drawable.ctr_childboy else R.drawable.ctr_childgirl
-}*/
 
 interface EndSectionActivity {
     fun endSecActivity(flag: Boolean)
+}
+
+interface WarningActivityInterface {
+    fun callWarningActivity()
 }

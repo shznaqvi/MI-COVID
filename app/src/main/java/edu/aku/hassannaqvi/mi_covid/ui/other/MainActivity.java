@@ -1,13 +1,7 @@
 package edu.aku.hassannaqvi.mi_covid.ui.other;
 
 import android.app.ActivityManager;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.app.DialogFragment;
 import android.app.DownloadManager;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
-import android.app.ProgressDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
@@ -52,22 +46,25 @@ import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionCActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionDActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionEActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionFActivity;
+import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionGActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionHActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionIActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionJActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionKActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionLActivity;
+import edu.aku.hassannaqvi.mi_covid.utils.AndroidUtilityKt;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.mi_covid.utils.CreateTable;
+import edu.aku.hassannaqvi.mi_covid.utils.WarningActivityInterface;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements WarningActivityInterface {
 
     static File file;
     ActivityMainBinding bi;
     String dtToday = new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime());
     String sysdateToday = new SimpleDateFormat("dd-MM-yy").format(new Date());
-
     SharedPreferences sharedPrefDownload;
     SharedPreferences.Editor editorDownload;
     DownloadManager downloadManager;
@@ -75,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
     VersionApp versionApp;
     DatabaseHelper db;
     Long refID;
+    private Boolean exit = false;
     BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
         @Override
         public void onReceive(Context context, Intent intent) {
@@ -107,135 +105,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     };
-    private ProgressDialog pd;
-    private Boolean exit = false;
-    private String rSumText = "";
-
-    void showDialog(String newVer, String preVer) {
-        FragmentTransaction ft = getFragmentManager().beginTransaction();
-        Fragment prev = getFragmentManager().findFragmentByTag("dialog");
-        if (prev != null) {
-            ft.remove(prev);
-        }
-        ft.addToBackStack(null);
-
-        DialogFragment newFragment = MyDialogFragment.newInstance(newVer, preVer);
-        newFragment.show(ft, "dialog");
-
-    }
-
-    public void openForm(View v) {
-        OpenFormFunc(v.getId());
-    }
-
-    public void OpenFormFunc(int id) {
-        Intent oF = null;
-        switch (id) {
-            case R.id.formA:
-                oF = new Intent(this, SectionAActivity.class);
-                break;
-            case R.id.formB:
-                oF = new Intent(this, SectionBActivity.class);
-                break;
-            case R.id.formC:
-                oF = new Intent(this, SectionCActivity.class);
-                break;
-            case R.id.formD:
-                oF = new Intent(this, SectionDActivity.class);
-                break;
-            case R.id.formE:
-                oF = new Intent(this, SectionEActivity.class);
-                break;
-            case R.id.formF:
-                oF = new Intent(this, SectionFActivity.class);
-                break;
- /*           case R.id.formG:
-                oF = new Intent(this, SectionGActivity.class);
-                break;*/
-            case R.id.formH:
-                oF = new Intent(this, SectionHActivity.class);
-                break;
-            case R.id.formI:
-                oF = new Intent(this, SectionIActivity.class);
-                break;
-            case R.id.formJ:
-                oF = new Intent(this, SectionJActivity.class);
-                break;
-            case R.id.formK:
-                oF = new Intent(this, SectionKActivity.class);
-                break;
-            case R.id.formL:
-                oF = new Intent(this, SectionLActivity.class);
-                break;
-
-        }
-        startActivity(oF);
-    }
-
-    public void openDB() {
-        Intent dbmanager = new Intent(getApplicationContext(), AndroidDatabaseManager.class);
-        startActivity(dbmanager);
-    }
-
-    public void syncServer() {
-        // Require permissions INTERNET & ACCESS_NETWORK_STATE
-        ConnectivityManager connMgr = (ConnectivityManager)
-                getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
-        if (networkInfo != null && networkInfo.isConnected()) {
-            startActivity(new Intent(this, SyncActivity.class));
-        } else {
-            Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
-        }
-
-    }
-
-    @Override
-    public void onBackPressed() {
-        if (exit) {
-            finish(); // finish activity
-
-            startActivity(new Intent(this, LoginActivity.class));
-
-        } else {
-            Toast.makeText(this, "Press Back again to Exit.",
-                    Toast.LENGTH_SHORT).show();
-            exit = true;
-            new Handler().postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    exit = false;
-                }
-            }, 3 * 1000);
-
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        if (item.getItemId() == R.id.onSync) {
-            startActivity(new Intent(MainActivity.this, SyncActivity.class));
-        }
-
-        if (item.getItemId() == R.id.checkOpenForms) {
-            startActivity(new Intent(MainActivity.this, PendingFormsActivity.class));
-        }
-        if (item.getItemId() == R.id.formsReportDate) {
-            startActivity(new Intent(MainActivity.this, FormsReportDate.class));
-        }
-        if (item.getItemId() == R.id.formsReportCluster) {
-            startActivity(new Intent(MainActivity.this, FormsReportCluster.class));
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.item_menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -378,8 +247,123 @@ public class MainActivity extends AppCompatActivity {
             bi.testing.setVisibility(View.VISIBLE);
         }
 
-        //loadTagDialog();
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent = null;
+        switch (item.getItemId()) {
+            case R.id.onSync:
+                intent = new Intent(MainActivity.this, SyncActivity.class);
+                break;
+            case R.id.checkOpenForms:
+                intent = new Intent(MainActivity.this, PendingFormsActivity.class);
+                break;
+            case R.id.formsReportDate:
+                intent = new Intent(MainActivity.this, FormsReportDate.class);
+                break;
+            case R.id.formsReportCluster:
+                intent = new Intent(MainActivity.this, FormsReportCluster.class);
+                break;
+        }
+        startActivity(intent);
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.item_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public void callWarningActivity() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (exit) {
+            finish(); // finish activity
+            startActivity(new Intent(this, LoginActivity.class));
+        } else {
+            Toast.makeText(this, "Press Back again to Exit.",
+                    Toast.LENGTH_SHORT).show();
+            exit = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    exit = false;
+                }
+            }, 3 * 1000);
+
+        }
+    }
+
+    private void showDialog(String newVer, String preVer) {
+        AppUtilsKt.openWarningActivity(
+                this,
+                getString(R.string.app_name) + " APP is available!",
+                getString(R.string.app_name) + " App Ver." + newVer + " is now available. Your are currently using older Ver." + preVer + ".\nInstall new version to use this app.",
+                "Install",
+                "Cancel"
+        );
+    }
+
+    public void openSpecificActivity(View v) {
+        Intent oF = null;
+        switch (v.getId()) {
+            case R.id.formA:
+                oF = new Intent(this, SectionAActivity.class);
+                break;
+            case R.id.formB:
+                oF = new Intent(this, SectionBActivity.class);
+                break;
+            case R.id.formC:
+                oF = new Intent(this, SectionCActivity.class);
+                break;
+            case R.id.formD:
+                oF = new Intent(this, SectionDActivity.class);
+                break;
+            case R.id.formE:
+                oF = new Intent(this, SectionEActivity.class);
+                break;
+            case R.id.formF:
+                oF = new Intent(this, SectionFActivity.class);
+                break;
+            case R.id.formG:
+                oF = new Intent(this, SectionGActivity.class);
+                break;
+            case R.id.formH:
+                oF = new Intent(this, SectionHActivity.class);
+                break;
+            case R.id.formI:
+                oF = new Intent(this, SectionIActivity.class);
+                break;
+            case R.id.formJ:
+                oF = new Intent(this, SectionJActivity.class);
+                break;
+            case R.id.formK:
+                oF = new Intent(this, SectionKActivity.class);
+                break;
+            case R.id.formL:
+                oF = new Intent(this, SectionLActivity.class);
+                break;
+            case R.id.databaseBtn:
+                oF = new Intent(this, AndroidDatabaseManager.class);
+                break;
+            case R.id.uploadData:
+                if (!AndroidUtilityKt.isNetworkConnected(this)) {
+                    Toast.makeText(this, "No network connection available!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                startActivity(new Intent(this, SyncActivity.class));
+                break;
+        }
+        startActivity(oF);
     }
 
     public void toggleSummary(View view) {
@@ -390,44 +374,4 @@ public class MainActivity extends AppCompatActivity {
             bi.recordSummary.setVisibility(View.VISIBLE);
         }
     }
-
-
-    public static class MyDialogFragment extends DialogFragment {
-
-        String newVer, preVer;
-
-        static MyDialogFragment newInstance(String newVer, String preVer) {
-            MyDialogFragment f = new MyDialogFragment();
-
-            Bundle args = new Bundle();
-            args.putString("newVer", newVer);
-            args.putString("preVer", preVer);
-            f.setArguments(args);
-
-            return f;
-        }
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            newVer = getArguments().getString("newVer");
-            preVer = getArguments().getString("preVer");
-
-            return new AlertDialog.Builder(getActivity())
-                    .setIcon(R.drawable.ic_exclamation)
-                    .setTitle(R.string.app_name + " APP is available!")
-                    .setCancelable(false)
-                    .setMessage(R.string.app_name + " App " + newVer + " is now available. Your are currently using older version " + preVer + ".\nInstall new version to use this app.")
-                    .setPositiveButton("INSTALL!!",
-                            (dialog, whichButton) -> {
-                                Intent intent = new Intent(Intent.ACTION_VIEW);
-                                intent.setDataAndType(Uri.fromFile(file), "application/vnd.android.package-archive");
-                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                                startActivity(intent);
-                            }
-                    )
-                    .create();
-        }
-
-    }
-
 }
