@@ -157,11 +157,15 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     Log.i(TAG, syncClass + " In: " + line);
                     result.append(line);
                 }
+            } else {
+                return String.valueOf(urlConnection.getResponseCode());
             }
         } catch (IOException e) {
-            return null;
+            result.append(e.getMessage());
         } finally {
-            urlConnection.disconnect();
+            if (urlConnection != null) {
+                urlConnection.disconnect();
+            }
         }
 
 

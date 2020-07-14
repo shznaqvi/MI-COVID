@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">MI_COVID</string>
+    <string name="app_name">COVID19 Inequity Survey - Urdu</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -48,6 +48,20 @@
     <string name="contactnum"> رابطہ نمبر </string>
     <string name="checkHHpresent"> گھر کے سربراہ کا نام لائن لسٹنگ ڈیٹا سے مطابقت رکھتا ہے۔ </string>
     <string name="newHHheadname"> نیا سربراہ کا نام </string>
+
+    <string name="sectiona_mainheading">سیکشن ـ اے: ذاتی معلومات</string>
+    <string name="sectionb_mainheading">سیکشن ـ بی:  سماجی آبادیاتی خصوصیات</string>
+    <string name="sectionc_mainheading">سیکشن سی: سے پہلے پیشہ ورانہ / کام کی خصوصیاتCOVID-19 </string>
+    <string name="sectiond_mainheading">سیکشن ڈی:  اسکول کی خصوصیات (اسکول / کالج / یونیورسٹی کا مقام</string>
+    <string name="sectione_mainheading">سیکشن ای: صحت کی عمومی خصوصیات</string>
+    <string name="sectionf_mainheading">سیکشن ایف: حمل</string>
+    <string name="sectiong_mainheading">سیکشن جی: دس سال سے کم عمربچے</string>
+    <string name="sectionh_mainheading">سیکشن ایچ: کووڈـ19 کی مخصوص معلومات</string>
+    <string name="sectioni_mainheading">سیکشن آئی: صحت اور جذباتی رویوں سے متعلق معلومات</string>
+    <string name="sectionj_mainheading">سیکشن جے:  کوویڈ 19 کے لاک ڈاؤن کے دوران (مارچ کے وسط سے مئی 2020 کے وسط تک) کی صورتحال</string>
+    <string name="sectionk_mainheading">سیکشن کے: کوویڈ 19 کے لاک ڈاؤن میں نرمی (مئی 2020 کے وسط اور آگے تک) کی صورتحال</string>
+    <string name="sectionl_mainheading">سیکشن ایل:  سماجی سرمایہ</string>
+
     <string name="a01">انٹرویو کی تاریخ</string>
     <string name="a02">انٹرویو شروع کرنے کا وقت(24 گھنٹوں میں)</string>
     <string name="a03">انٹرویو لینے والے کا کوڈ</string>
@@ -330,7 +344,7 @@
     <string name="ch06a6">گھر نہیں ملا </string>
     <string name="ch06a7">گھر میں مطلوبہ عمر کا کوئی فرد نہیں  </string>
     <string name="ch06a8">دیگر وضاحت کریں</string>
-    <string name="ch06ax"></string>
+    <string name="ch06ax">دیگر وضاحت کریں</string>
     <string name="d1">آپ کے اسکول/کالج/یونیورسٹی کا نام کیا ہے؟(شہر کا نام   ساتھ لکھیں)</string>
     <string name="d02">کیا آپ مارچ 2020 کے بعد اسکول/کالج/یونیورسٹی جاتے ہیں؟</string>
     <string name="d0201">ہاں</string>

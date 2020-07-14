@@ -17,7 +17,7 @@
         android:fadeScrollbars="false"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
-        tools:context=".ui.Myactivity">
+        tools:context=".ui.sections.SectionGActivity">
 
         <LinearLayout
             android:id="@+id/GrpName"

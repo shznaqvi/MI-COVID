@@ -309,7 +309,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
+                    android:id="@+id/btnEnd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -319,7 +319,7 @@
                     android:textColor="@color/white" />
 
                 <Button
-                    android:id="@+id/btn_Continue"
+                    android:id="@+id/btnContinue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"

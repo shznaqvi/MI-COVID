@@ -70,7 +70,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         bi.setCallback(this);
         list = new ArrayList<>();
         uploadlist = new ArrayList<>();
-        bi.noItem.setVisibility(View.VISIBLE);
+        //bi.noItem.setVisibility(View.VISIBLE);
         bi.noDataItem.setVisibility(View.VISIBLE);
         listActivityCreated = true;
         uploadlistActivityCreated = true;
@@ -83,13 +83,13 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
 
         bi.btnSync.setOnClickListener(v -> onSyncDataClick());
         bi.btnUpload.setOnClickListener(v -> syncServer());
-        setAdapter();
+        // setAdapter();
         setUploadAdapter();
     }
 
     public void onSyncDataClick() {
 
-
+        bi.activityTitle.setText("Download Data");
         // Require permissions INTERNET & ACCESS_NETWORK_STATE
         ConnectivityManager connMgr = (ConnectivityManager)
                 getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -102,7 +102,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         }
     }
 
-    void setAdapter() {
+/*    void setAdapter() {
         syncListAdapter = new SyncListAdapter(list);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         bi.rvSyncList.setLayoutManager(mLayoutManager);
@@ -114,7 +114,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
         } else {
             bi.noItem.setVisibility(View.VISIBLE);
         }
-    }
+    }*/
 
     void setUploadAdapter() {
         syncListAdapter = new SyncListAdapter(uploadlist);
@@ -131,6 +131,8 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
     }
 
     public void syncServer() {
+        bi.activityTitle.setText("Upload Data");
+
 //        if(true) return;
 
         // Require permissions INTERNET & ACCESS_NETWORK_STATE

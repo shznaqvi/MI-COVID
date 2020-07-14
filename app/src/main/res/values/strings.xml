@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MI_COVID</string>
+    <string name="app_name">COVID19 Inequity Survey - English</string>
     <string name="title_activity_fullscreen">FullscreenActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
@@ -47,6 +47,19 @@
     <string name="contactnum">Contact Number </string>
     <string name="checkHHpresent"> The name of head of the household corresponds to the line listing data.</string>
     <string name="newHHheadname"> Name of new head of the household </string>
+
+    <string name="sectiona_mainheading">Section A: Personal Details</string>
+    <string name="sectionb_mainheading">Section B: Socio-Demographic characteristics </string>
+    <string name="sectionc_mainheading">Section C:  Professional/work characteristics before COVID-19</string>
+    <string name="sectiond_mainheading">Section D: School characteristics (Place of school/college/university)</string>
+    <string name="sectione_mainheading">Section E: General Health Characteristics</string>
+    <string name="sectionf_mainheading">Section F: Pregnancy </string>
+    <string name="sectiong_mainheading">Section G: Child under 10</string>
+    <string name="sectionh_mainheading">Section H: COVID-19 specific information</string>
+    <string name="sectioni_mainheading">Section I: Emotional health and behavioral information</string>
+    <string name="sectionj_mainheading">Section J:  Status, During Lockdown of COVID-19 (mid-March to mid-May 2020) </string>
+    <string name="sectionk_mainheading">Section K: Status, After Lockdown of COVID-19 was relaxed (mid-May onwards)</string>
+    <string name="sectionl_mainheading">Section L: Social Capital</string>
     <string name="a01">Date of Interview</string>
     <string name="a02">Start Time of interview (In 24-hour format)</string>
     <string name="a03">Interviewer\'s Code</string>

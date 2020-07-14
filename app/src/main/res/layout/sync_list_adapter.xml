@@ -56,7 +56,6 @@
 
                     <TextView
                         android:id="@+id/tv_table_name"
-                        style="@style/TextAppearance.AppCompat.Medium"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -93,6 +92,7 @@
                     android:layout_marginLeft="17.50dp"
                     android:layout_marginRight="17.50dp"
                     android:layout_marginBottom="17.50dp"
+                    style="@style/TextAppearance.AppCompat.Medium"
 
                     tools:text="Results:    " />
             </LinearLayout>
