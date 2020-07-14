@@ -14,7 +14,11 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
+import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
+import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
+import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionHBinding;
+import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 
 public class SectionHActivity extends AppCompatActivity {
 
@@ -27,6 +31,7 @@ public class SectionHActivity extends AppCompatActivity {
         bi.setCallback(this);
         setupSkips();
     }
+
 
     private void setupSkips() {
 
@@ -44,41 +49,34 @@ public class SectionHActivity extends AppCompatActivity {
 
     }
 
+
     public void BtnContinue() {
-        if (formValidation()) {
-            try {
-                SaveDraft();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            if (UpdateDB()) {
-                finish();
-                startActivity(new Intent(this, SectionIActivity.class));
-            } else {
-                Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
-            }
+        if (!formValidation()) return;
+        try {
+            SaveDraft();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            finish();
+            startActivity(new Intent(this, SectionIActivity.class));
+        } else {
+            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
     }
 
-    public void BtnEnd() {
-
-        //    Util.openEndActivity(this);
-    }
 
     private boolean UpdateDB() {
-        /*DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        long rowID = db.addChild(MainApp.adolscent);
-        if (rowID > 0) {
-            MainApp.adolscent.set_ID(String.valueOf(rowID));
-            MainApp.adolscent.setUID(MainApp.adolscent.getDeviceId() + MainApp.adolscent.get_ID());
-            db.updatesAdolsColumn(AdolscentContract.SingleAdolscent.COLUMN_UID, MainApp.adolscent.getUID());
+        DatabaseHelper db = MainApp.appInfo.getDbHelper();
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, MainApp.form.getsH());
+        if (updcount > 0) {
             return true;
         } else {
             Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
             return false;
-        }*/
-        return true;
+        }
     }
+
 
     private void SaveDraft() throws JSONException {
 
@@ -166,15 +164,21 @@ public class SectionHActivity extends AppCompatActivity {
 
         json.put("h1802", bi.h1802.getText().toString());
 
-
-        //    MainApp.adolscent.setsAH1(String.valueOf(json));
+        MainApp.form.setsH(json.toString());
 
     }
+
+
+    public void BtnEnd() {
+        startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+    }
+
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionH);
 
     }
+
 
     @Override
     public void onBackPressed() {

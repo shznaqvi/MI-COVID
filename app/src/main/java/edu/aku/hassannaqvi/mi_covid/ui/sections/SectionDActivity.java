@@ -102,6 +102,7 @@ public class SectionDActivity extends AppCompatActivity {
                 : bi.d0502.isChecked() ? "2"
                 : "-1");
 
+        MainApp.form.setsD(json.toString());
 
     }
 
