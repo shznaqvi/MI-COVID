@@ -67,9 +67,11 @@ class SectionDActivity : AppCompatActivity() {
         MainApp.form.setsD(json.toString())
     }
 
+
     private fun formValidation(): Boolean {
         return emptyCheckingContainer(this, bi.fldGrpSectionD)
     }
+
 
     private fun updateDB(): Boolean {
         val db = MainApp.appInfo.dbHelper
@@ -81,6 +83,7 @@ class SectionDActivity : AppCompatActivity() {
             false
         }
     }
+
 
     fun btnContinue(v: View) {
         if (!formValidation()) return
@@ -97,11 +100,14 @@ class SectionDActivity : AppCompatActivity() {
         }
     }
 
+
     fun btnEnd(v: View) {
         openEndActivity(this)
     }
 
+
     override fun onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show()
     }
+
 }

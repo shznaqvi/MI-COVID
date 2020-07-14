@@ -43,7 +43,7 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/a01" />
 
-                    <EditText
+                    <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
                         android:id="@+id/a01"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
@@ -71,7 +71,7 @@
                         android:layout_marginTop="12dp"
                         android:text="@string/a02" />
 
-                    <EditText
+                    <io.blackbox_vision.datetimepickeredittext.view.TimePickerEditText
                         android:id="@+id/a02"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
@@ -84,7 +84,8 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVa03"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:visibility="invisible">
 
                 <LinearLayout
                     android:layout_width="match_parent"
