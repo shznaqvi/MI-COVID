@@ -18,9 +18,9 @@
 
         <LinearLayout
             android:id="@+id/fldGrpEnd"
-
             android:layout_height="wrap_content"
-            android:layout_width="match_parent">
+            android:layout_width="match_parent"
+            android:orientation="vertical">
 
 
             <!-- a06  Radio   -->
@@ -55,10 +55,6 @@
 
                     </RelativeLayout>
 
-                    <!--Status-->
-                    <TextView
-                        style="@style/info"
-                        android:text="@string/a0601" />
 
                     <RadioGroup
                         android:id="@+id/a06"
@@ -120,14 +116,16 @@
                             android:layout_height="wrap_content"
                             android:hint="@string/a0696"
                             android:maxLength="40"
-                            android:text='@{a0696.checked? a0696x.getText().toString(): ""}'
-                            android:visibility='@{a0696.checked? View.VISIBLE : View.GONE}' />
+                            android:tag="a0696"
+                            android:text='@{a0696.checked ? a0696x.getText().toString(): ""}'
+                            android:visibility='@{a0696.checked ? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
+
 
             <!--ENDBUTTON linearlayout-->
             <LinearLayout
