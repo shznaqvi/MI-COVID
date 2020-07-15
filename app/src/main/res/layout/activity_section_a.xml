@@ -901,7 +901,7 @@
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/a14yy"
                                 android:inputType="number"
-                                app:mask="##"
+                                app:mask="####"
                                 app:maxValue="99"
                                 app:minValue="15"
                                 app:type="range" />

@@ -22,5 +22,7 @@
     <color name="black_overlay">#7f000000</color>
     <color name="white_overlay">#7fffffff</color>
     <color name="gray_overlay">#7f7f7f7f</color>
+    <color name="ltgray">#f7f7f7f7</color>
+    <color name="ltgray_overlay">#f7f7f7</color>
 
 </resources>

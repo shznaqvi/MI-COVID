@@ -481,6 +481,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j08096" />
+
+                        <EditText
+                            android:id="@+id/j08096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="12dp"
+                            android:hint="@string/j08096"
+                            android:tag="j08096"
+                            android:text='@{j08096.checked ? j08096x.getText().toString() : ""}'
+                            android:visibility='@{j08096.checked? View.VISIBLE : View.GONE}' />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -545,6 +555,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j09096" />
+
+                        <EditText
+                            android:id="@+id/j09096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="56dp"
+                            android:layout_marginBottom="12dp"
+                            android:hint="@string/j09096"
+                            android:tag="j09096"
+                            android:text='@{j09096.checked ? j09096x.getText().toString() : ""}'
+                            android:visibility='@{j09096.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

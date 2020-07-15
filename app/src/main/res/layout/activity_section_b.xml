@@ -1,4 +1,5 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -11,7 +12,11 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:scrollbarSize="10dip"
+        tools:context=".ui.sections.SectionBActivity">
 
         <LinearLayout
             android:id="@+id/GrpName"
@@ -955,7 +960,7 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/b11096"
                             android:tag="b11096"
-                            android:text='@{b11096.checked ? b11096x.getText().toString() : ""}'
+                            android:text='@{b11096.checked ? form.b11096x.toString() : ""}'
                             android:visibility='@{b11096.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
