@@ -195,36 +195,46 @@
                             android:id="@+id/a0401"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:elevation="2dp"
                             android:text="@string/a0401" />
 
                         <RadioButton
                             android:id="@+id/a0402"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
                             android:text="@string/a0402" />
 
                         <RadioButton
                             android:id="@+id/a0403"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+
                             android:text="@string/a0403" />
 
                         <RadioButton
                             android:id="@+id/a0404"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+
                             android:text="@string/a0404" />
 
                         <RadioButton
                             android:id="@+id/a0405"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+
                             android:text="@string/a0405" />
 
                         <RadioButton
                             android:id="@+id/a0406"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
                             android:text="@string/a0406" />
                     </RadioGroup>
                 </LinearLayout>

@@ -97,12 +97,14 @@ public class LoginActivity extends Activity {
     DatabaseHelper db;
     ArrayAdapter<String> provinceAdapter;
     private UserLoginTask mAuthTask = null;
+    int attemptCounter = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_login);
         bi.setCallback(this);
+
 
         MainApp.appInfo = new AppInfo(this);
         bi.txtinstalldate.setText(MainApp.appInfo.getAppInfo());
@@ -279,47 +281,56 @@ public class LoginActivity extends Activity {
     }*/
 
     private void attemptLogin() {
+
+
         if (mAuthTask != null) {
             return;
         }
 
+        attemptCounter++;
         // Reset errors.
         bi.username.setError(null);
         bi.password.setError(null);
+        Toast.makeText(this, attemptCounter, Toast.LENGTH_SHORT).show();
+        if (attemptCounter == 7) {
+            Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
+            startActivity(iLogin);
 
-        // Store values at the time of the login attempt.
-        String username = bi.username.getText().toString();
-        String password = bi.password.getText().toString();
-
-        boolean cancel = false;
-        View focusView = null;
-
-        // Check for a valid password, if the user entered one.
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            bi.password.setError("Invalid Password");
-            focusView = bi.password;
-            cancel = true;
-        }
-
-        // Check for a valid username address.
-        if (TextUtils.isEmpty(username)) {
-            bi.username.setError("Username is required.");
-            focusView = bi.username;
-            cancel = true;
-        }
-
-        if (cancel) {
-            // There was an error; don't attempt login and focus the first
-            // form field with an error.
-            focusView.requestFocus();
         } else {
-            // Show a progress spinner, and kick off a background task to
-            // perform the user login attempt.
+            // Store values at the time of the login attempt.
+            String username = bi.username.getText().toString();
+            String password = bi.password.getText().toString();
+
+            boolean cancel = false;
+            View focusView = null;
+
+            // Check for a valid password, if the user entered one.
+            if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+                bi.password.setError("Invalid Password");
+                focusView = bi.password;
+                cancel = true;
+            }
+
+            // Check for a valid username address.
+            if (TextUtils.isEmpty(username)) {
+                bi.username.setError("Username is required.");
+                focusView = bi.username;
+                cancel = true;
+            }
+
+            if (cancel) {
+                // There was an error; don't attempt login and focus the first
+                // form field with an error.
+                focusView.requestFocus();
+            } else {
+                // Show a progress spinner, and kick off a background task to
+                // perform the user login attempt.
           /*  if (!Validator.emptyCheckingContainer(this, spinners))
                 return;*/
-            showProgress(true);
-            mAuthTask = new UserLoginTask(this, username, password);
-            mAuthTask.execute((Void) null);
+                showProgress(true);
+                mAuthTask = new UserLoginTask(this, username, password);
+                mAuthTask.execute((Void) null);
+            }
         }
     }
 
