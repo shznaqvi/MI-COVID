@@ -996,21 +996,7 @@
     <string name='Q_f11mm'>f11mm</string>
     <string name='Q_f11yy'>f11yy</string>
     <string name='Q_f12'>f12</string>
-    <string name='Q_f07'>Q_f07</string>
-    <string name='Q_f1301_t'>Q_f1301_t</string>
-    <string name='Q_f1301'>Q_f1301</string>
-    <string name='Q_f1302'>Q_f1302</string>
-    <string name='Q_f1303_t'>Q_f1303_t</string>
-    <string name='Q_f1303'>f1303</string>
-    <string name='Q_f1304'>f1304</string>
-    <string name='Q_f1305'>f1305</string>
-    <string name='Q_f1306'>f1306</string>
-    <string name='Q_f130196'>f130196</string>
-    <string name='Q_f1308_t'>f1308_t</string>
-    <string name='Q_f1308'>f1308</string>
-    <string name='Q_f1309'>f1309</string>
-    <string name='Q_f131096'>f131096</string>
-    <string name='Q_f130296'>f130296</string>
+    <string name='Q_f1301_t'>f1301_t</string>
     <string name='Q_f14'>f14</string>
     <string name='Q_f15'>f15</string>
     <string name='Q_f16'>f16</string>
@@ -1106,5 +1092,18 @@
     <string name='Q_l08'>l08</string>
     <string name='Q_l09'>l09</string>
 
+    <string name='Q_f1301'>f1301</string>
+    <string name='Q_f1302'>f1302</string>
+    <string name='Q_f1303_t'>f1303_t</string>
+    <string name='Q_f1303'>f1303</string>
+    <string name='Q_f1304'>f1304</string>
+    <string name='Q_f1305'>f1305</string>
+    <string name='Q_f1306'>f1306</string>
+    <string name='Q_f130196'>f130196</string>
+    <string name='Q_f1308_t'>f1308_t</string>
+    <string name='Q_f1308'>f1308</string>
+    <string name='Q_f1309'>f1309</string>
+    <string name='Q_f131096'>f131096</string>
+    <string name='Q_f130296'>f130296</string>
 
 </resources>

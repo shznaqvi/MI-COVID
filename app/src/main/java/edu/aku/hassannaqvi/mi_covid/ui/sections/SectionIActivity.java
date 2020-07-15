@@ -107,6 +107,7 @@ public class SectionIActivity extends AppCompatActivity {
                 : bi.i0407.isChecked() ? "7"
                 : bi.i04096.isChecked() ? "96"
                 : "-1");
+        json.put("i04096x", bi.i04096x.getText().toString());
 
         json.put("i05", bi.i0501.isChecked() ? "1"
                 : bi.i0502.isChecked() ? "2"
