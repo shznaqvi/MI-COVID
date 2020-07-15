@@ -720,8 +720,8 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/b11096"
                             android:tag="b11096"
-                            android:text='@{b11096.checked? b11096x.getText().toString() : ""}'
-                            android:visibility='@{b11096.checked? View.VISIBLE : View.GONE}' />
+                            android:text='@{b11096.checked ? b11096x.getText().toString() : ""}'
+                            android:visibility='@{b11096.checked ? View.VISIBLE : View.GONE}' />
 
                     </RadioGroup>
 
@@ -1594,6 +1594,8 @@
 
             </LinearLayout>
 
+
+            <!--EndButton LinearLayout-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -1603,21 +1605,26 @@
 
                 <Button
                     android:id="@+id/btn_End"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:background="@color/red_overlay"
                     android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel" />
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
 
                 <Button
                     android:id="@+id/btn_Continue"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
+                    android:background="@color/green_overlay"
                     android:onClick="@{() -> callback.BtnContinue()}"
-                    android:text="Save" />
-                <!--'onClick' for btn_End will NOT change and always call 'endInterview'-->
+                    android:text="Save"
+                    android:textColor="@color/white" />
             </LinearLayout>
+            <!--EndButton LinearLayout-->
+
 
         </LinearLayout>
 

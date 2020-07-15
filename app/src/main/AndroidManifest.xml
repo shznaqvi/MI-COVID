@@ -28,82 +28,82 @@
             android:name=".ui.list_activity.FormsReportCluster"
             android:label="Forms Report"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.list_activity.FormsReportDate"
             android:label="Forms Report"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.list_activity.PendingFormsActivity"
             android:label="Unfinished Forms"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionLActivity"
             android:label="@string/sectionl_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionKActivity"
             android:label="@string/sectionk_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionJActivity"
             android:label="@string/sectionj_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionIActivity"
             android:label="@string/sectioni_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionHActivity"
             android:label="@string/sectionh_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionGActivity"
             android:label="@string/sectiong_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionFActivity"
             android:label="@string/sectionf_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionEActivity"
             android:label="@string/sectione_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionDActivity"
             android:label="@string/sectiond_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionCActivity"
             android:label="@string/sectionc_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionBActivity"
             android:label="@string/sectionb_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".ui.sections.SectionAActivity"
             android:label="@string/sectiona_mainheading"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.other.SplashscreenActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -114,11 +114,11 @@
         <activity
             android:name=".ui.other.LoginActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.other.MainActivity"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.other.EndingActivity"
@@ -128,13 +128,13 @@
             android:name=".core.AndroidDatabaseManager"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
 
         <activity
             android:name=".ui.other.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppThemeEnglish" />
+            android:theme="@style/AppTheme" />
 
         <service android:name=".utils.DownloadFileService" />
         <!--        <service
