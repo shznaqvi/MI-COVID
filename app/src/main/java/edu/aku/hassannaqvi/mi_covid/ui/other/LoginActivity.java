@@ -291,7 +291,7 @@ public class LoginActivity extends Activity {
         // Reset errors.
         bi.username.setError(null);
         bi.password.setError(null);
-        Toast.makeText(this, attemptCounter, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, String.valueOf(attemptCounter), Toast.LENGTH_SHORT).show();
         if (attemptCounter == 7) {
             Intent iLogin = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(iLogin);

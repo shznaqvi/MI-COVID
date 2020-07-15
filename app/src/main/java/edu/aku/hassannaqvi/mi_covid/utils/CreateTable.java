@@ -20,7 +20,6 @@ public final class CreateTable {
             + FormsTable.COLUMN_DEVICETAGID + " TEXT,"
             + FormsTable.COLUMN_SYSDATE + " TEXT,"
             + FormsTable.COLUMN_UID + " TEXT,"
-            + FormsTable.COLUMN_SYSDATE + " TEXT,"
             + FormsTable.COLUMN_A01 + " TEXT,"
             + FormsTable.COLUMN_A02 + " TEXT,"
             + FormsTable.COLUMN_A03 + " TEXT,"
