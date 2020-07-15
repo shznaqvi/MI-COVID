@@ -450,18 +450,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
 
-        String whereClause = FormsTable.COLUMN_SYNCED + " is null AND " + FormsTable.COLUMN_ISTATUS + " != '' ";
-        //String whereClause = FormsTable.COLUMN_ISTATUS +" != '' ";
-
+        String whereClause = FormsTable.COLUMN_SYNCED + " is null AND " + FormsTable.COLUMN_SYNCED + " == '' ";
         String[] whereArgs = null;
-
         String groupBy = null;
         String having = null;
+        String orderBy = FormsTable.COLUMN_ID + " ASC";
 
-        String orderBy =
-                FormsTable.COLUMN_ID + " ASC";
-
-        Collection<Form> allForms = new ArrayList<Form>();
+        Collection<Form> allForms = new ArrayList<>();
         try {
             c = db.query(
                     FormsTable.TABLE_NAME,  // The table to query
