@@ -41,10 +41,22 @@ public class SectionEActivity extends AppCompatActivity {
         }));*/
 
         bi.e02.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.e0102.getId()) {
+            if (i != bi.e0101.getId()) {
                 Clear.clearAllFields(bi.fldGrpE1);
             }
         }));
+
+        bi.e07.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.e0701.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVe08);
+            }
+        }));
+        bi.e09.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i != bi.e0901.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVe10);
+            }
+        }));
+
 
         //e09
         /*bi.e09.setOnCheckedChangeListener((group, checkId) -> {
