@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -26,16 +28,23 @@ public class SectionEActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_section_e);
-        setupSkips();
+        bi = DataBindingUtil.setContentView(this, R.layout.activity_section_e);
+        bi.setCallback(this);
+        setupSkip();
     }
 
 
-    private void setupSkips() {
+    private void setupSkip() {
 
         /*bi.e02.setOnCheckedChangeListener((group, checkId) -> {
                 Clear.clearAllFields(bi.fldGrpCVe03);
         }));*/
+
+        bi.e02.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.e0102.getId()) {
+                Clear.clearAllFields(bi.fldGrpE1);
+            }
+        }));
 
         //e09
         /*bi.e09.setOnCheckedChangeListener((group, checkId) -> {
