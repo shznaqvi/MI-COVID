@@ -23,6 +23,7 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
+import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
@@ -54,6 +55,8 @@ public class SectionAActivity extends AppCompatActivity {
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.lla08);
         });
+
+
     }
 
 
@@ -66,7 +69,7 @@ public class SectionAActivity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionBActivity.class));
+            startActivity(new Intent(this, bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
