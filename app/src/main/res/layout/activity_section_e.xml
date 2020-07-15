@@ -134,6 +134,12 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+            <LinearLayout
+                android:id="@+id/fldGrpE1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility='@{e0201.checked? View.GONE : View.VISIBLE}'>
             <!-- e03  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe03"
@@ -372,6 +378,7 @@
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+            </LinearLayout>
 
             <!-- e07  Radio   -->
             <androidx.cardview.widget.CardView
