@@ -6,7 +6,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
@@ -34,14 +33,14 @@ public class SectionEActivity extends AppCompatActivity {
 
     private void setupSkips() {
 
-        /*bi.e02.setOnCheckedChangeListener(((radioGroup, i) -> {
+        /*bi.e02.setOnCheckedChangeListener((group, checkId) -> {
                 Clear.clearAllFields(bi.fldGrpCVe03);
         }));*/
 
-
-        bi.e09.setOnCheckedChangeListener(((radioGroup, i) -> {
+        //e09
+        /*bi.e09.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.fldGrpCVe10);
-        }));
+        });*/
 
     }
 
@@ -179,4 +178,5 @@ public class SectionEActivity extends AppCompatActivity {
     public void onBackPressed() {
         Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
     }
+
 }
