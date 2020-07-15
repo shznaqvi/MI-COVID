@@ -13,7 +13,7 @@ import android.view.WindowManager
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import edu.aku.hassannaqvi.mi_covid.R
-import edu.aku.hassannaqvi.mi_covid.databinding.ItemDialogBinding
+import edu.aku.hassannaqvi.mi_covid.databinding.ChildEndDialogBinding
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity
 import java.util.*
 
@@ -45,7 +45,7 @@ fun getPermissionsList(context: Context): List<String> {
 fun openEndActivity(activity: Activity) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-    dialog.setContentView(R.layout.item_dialog_2)
+    dialog.setContentView(R.layout.general_end_dialog)
     dialog.setCancelable(false)
     val params = WindowManager.LayoutParams()
     params.copyFrom(dialog.window!!.attributes)
@@ -65,7 +65,7 @@ fun openEndActivity(activity: Activity) {
 fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-    val bi: ItemDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.item_dialog, null, false)
+    val bi: ChildEndDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.child_end_dialog, null, false)
     dialog.setContentView(bi.root)
     bi.content.text = message
     dialog.setCancelable(false)
@@ -88,7 +88,7 @@ fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolea
 fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-    dialog.setContentView(R.layout.item_dialog_2)
+    dialog.setContentView(R.layout.general_end_dialog)
     dialog.setCancelable(false)
     val params = WindowManager.LayoutParams()
     params.copyFrom(dialog.window!!.attributes)
@@ -105,7 +105,7 @@ fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true) {
 fun openWarningActivity(activity: Activity, title: String, message: String, btnYesTxt: String = "YES", btnNoTxt: String = "NO") {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-    val bi: ItemDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.item_dialog, null, false)
+    val bi: ChildEndDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.child_end_dialog, null, false)
     dialog.setContentView(bi.root)
     bi.alertTitle.text = title
     bi.alertTitle.setTextColor(ContextCompat.getColor(activity, R.color.green))
