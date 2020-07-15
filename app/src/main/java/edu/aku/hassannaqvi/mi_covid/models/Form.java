@@ -20,6 +20,7 @@ public class Form extends LiveData<Form> {
     private final String projectName = "mi_covid";
     private String _ID = "";
     private String _UID = "";
+    private String sysdate = "";
     private String a01 = ""; // Date
     private String a02 = ""; // Time
     private String a03 = ""; // Interviewer
@@ -64,6 +65,13 @@ public class Form extends LiveData<Form> {
         this.sInfo = sInfo;
     }
 
+    public String getSysdate() {
+        return sysdate;
+    }
+
+    public void setSysdate(String sysdate) {
+        this.sysdate = sysdate;
+    }
 
     public String getA04() {
         return a04;
@@ -194,6 +202,7 @@ public class Form extends LiveData<Form> {
     public Form Sync(JSONObject jsonObject) throws JSONException {
         this._ID = jsonObject.getString(FormsTable.COLUMN_ID);
         this._UID = jsonObject.getString(FormsTable.COLUMN_UID);
+        this.sysdate = jsonObject.getString(FormsTable.COLUMN_SYSDATE);
         this.a01 = jsonObject.getString(FormsTable.COLUMN_A01);
         this.a02 = jsonObject.getString(FormsTable.COLUMN_A02);
         this.a03 = jsonObject.getString(FormsTable.COLUMN_A03);
@@ -232,6 +241,7 @@ public class Form extends LiveData<Form> {
     public Form Hydrate(Cursor cursor) {
         this._ID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ID));
         this._UID = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_UID));
+        this.sysdate = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SYSDATE));
         this.a01 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A01));
         this.a02 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A02));
         this.a03 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A03));
@@ -278,6 +288,7 @@ public class Form extends LiveData<Form> {
             json.put(FormsTable.COLUMN_ID, this._ID == null ? JSONObject.NULL : this._ID);
 
             json.put(FormsTable.COLUMN_UID, this._UID == null ? JSONObject.NULL : this._UID);
+            json.put(FormsTable.COLUMN_SYSDATE, this.sysdate == null ? JSONObject.NULL : this.sysdate);
             json.put(FormsTable.COLUMN_A01, this.a01 == null ? JSONObject.NULL : this.a01);
             json.put(FormsTable.COLUMN_A02, this.a02 == null ? JSONObject.NULL : this.a02);
             json.put(FormsTable.COLUMN_A03, this.a03 == null ? JSONObject.NULL : this.a03);

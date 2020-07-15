@@ -5,6 +5,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
@@ -14,8 +17,6 @@ import org.json.JSONObject;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -91,9 +92,7 @@ public class SectionAActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         form = new Form();
-
-        form.setA01(new SimpleDateFormat("dd-MM-yy").format(new Date().getTime()));
-        form.setA02(new SimpleDateFormat("HH:mm").format(new Date().getTime()));
+        form.setSysdate(new SimpleDateFormat("dd-MM-yy HH:mm").format(new Date().getTime()));
         form.setA03(MainApp.userName);
         form.setDeviceID(MainApp.appInfo.getDeviceID());
         form.setDevicetagID(MainApp.appInfo.getTagName());
@@ -116,8 +115,6 @@ public class SectionAActivity extends AppCompatActivity {
         json.put("a01", bi.a01.getText().toString());
 
         json.put("a02", bi.a02.getText().toString());
-
-        json.put("a03", bi.a03.getText().toString());
 
         json.put("a06", bi.a0601.isChecked() ? "1"
                 : bi.a0602.isChecked() ? "2"
