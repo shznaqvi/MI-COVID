@@ -74,6 +74,9 @@
     <string name="a0406">گلگت بلتستان </string>
     <string name="a05">ضلع؟</string>
     <string name="a05a">فرد کی شناختی  آئی ڈی</string>
+    <string name="a05b">کیا گھر اور فرد کی شناخت ہو گئی</string>
+    <string name="a05b1">ہاں</string>
+    <string name="a05b2">نہیں</string>
     <string name="a06"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="a06_info"> انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں ۔ </string>
     <string name="a0601">گھر اور فرد کی شناخت ہو گئی</string>
@@ -880,6 +883,7 @@
     <string name='Q_a04'>a04</string>
     <string name='Q_a05'>a05</string>
     <string name='Q_a05a'>a05a</string>
+    <string name='Q_a05b'>a05a</string>
     <string name='Q_a06'>a06</string>
     <string name='Q_a07'>a07</string>
     <string name='Q_a08'>a08</string>
