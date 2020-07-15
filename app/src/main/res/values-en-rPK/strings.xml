@@ -72,6 +72,9 @@
     <string name="a0406">GB</string>
     <string name="a05">District?</string>
     <string name="a05a">Individual Indentification ID</string>
+    <string name="a05b">Did Household and Individual Identified</string>
+    <string name="a05b1">Yes</string>
+    <string name="a05b2">No</string>
     <string name="a06"> Interview Status </string>
     <string name="a06_info"> If interview is not getting complete please contact supervisor </string>
     <string name="a0601">Household and Individual identified</string>
@@ -993,11 +996,11 @@
     <string name='Q_f11mm'>f11mm</string>
     <string name='Q_f11yy'>f11yy</string>
     <string name='Q_f12'>f12</string>
-    <string name='Q_f07'></string>
-    <string name='Q_f1301_t'></string>
-    <string name='Q_f1301'></string>
-    <string name='Q_f1302'></string>
-    <string name='Q_f1303_t'></string>
+    <string name='Q_f07'>Q_f07</string>
+    <string name='Q_f1301_t'>Q_f1301_t</string>
+    <string name='Q_f1301'>Q_f1301</string>
+    <string name='Q_f1302'>Q_f1302</string>
+    <string name='Q_f1303_t'>Q_f1303_t</string>
     <string name='Q_f1303'>f1303</string>
     <string name='Q_f1304'>f1304</string>
     <string name='Q_f1305'>f1305</string>

@@ -996,8 +996,8 @@
     <string name='Q_f11mm'>f11mm</string>
     <string name='Q_f11yy'>f11yy</string>
     <string name='Q_f12'>f12</string>
-    <string name='Q_f07'></string>
-    <string name='Q_f1301_t'></string>
+    <string name='Q_f07'>Q_f07</string>
+    <string name='Q_f1301_t'>Q_f1301_t</string>
     <string name='Q_f1301'></string>
     <string name='Q_f1302'></string>
     <string name='Q_f1303_t'></string>

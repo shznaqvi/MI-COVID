@@ -24,19 +24,20 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionBBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionBActivity extends AppCompatActivity {
-
     ActivitySectionBBinding bi;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_b);
-        bi.setCallback(this);
+        //bi.setCallback(this);
         setupSkip();
     }
 
     private void setupSkip() {
         //b01
+
         bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
             Clear.clearAllFields(bi.llb0203);
         });
