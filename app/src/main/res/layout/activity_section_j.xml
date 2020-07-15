@@ -623,7 +623,7 @@
 
 
             <LinearLayout
-                android:id="@+id/fldGrpSecJ01"
+                android:id="@+id/fldGrpSecj01"
                 style="@style/vlinearlayout"
                 android:visibility='@{j01002.checked? View.GONE : View.VISIBLE}'>
 
@@ -659,17 +659,23 @@
                                 android:text="@string/Q_j011" />
                         </RelativeLayout>
 
-                        <RadioButton
-                            android:id="@+id/j01101"
+                        <RadioGroup
+                            android:id="@+id/j011"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/j01101" />
+                            android:layout_height="wrap_content">
 
-                        <RadioButton
-                            android:id="@+id/j01102"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/j01102" />
+                            <RadioButton
+                                android:id="@+id/j01101"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/j01101" />
+
+                            <RadioButton
+                                android:id="@+id/j01102"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/j01102" />
+                        </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -711,7 +717,8 @@
                             android:layout_height="56dp"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/j012"
-                            app:mask="##"
+                            android:inputType="number"
+                            app:mask="###"
                             app:maxValue="100"
                             app:minValue="1"
                             app:type="range" />

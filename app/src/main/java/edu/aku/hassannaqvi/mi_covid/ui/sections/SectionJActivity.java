@@ -58,7 +58,7 @@ public class SectionJActivity extends AppCompatActivity {
 
         bi.j010.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.j01002.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecJ01);
+                Clear.clearAllFields(bi.fldGrpSecj01);
             }
         }));
 
@@ -143,6 +143,10 @@ public class SectionJActivity extends AppCompatActivity {
                 : bi.j01002.isChecked() ? "2"
                 : "-1");
 
+        json.put("j011", bi.j01101.isChecked() ? "1"
+                : bi.j01102.isChecked() ? "2"
+                : "-1");
+
         json.put("j012", bi.j012.getText().toString());
 
 
@@ -153,7 +157,6 @@ public class SectionJActivity extends AppCompatActivity {
 
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionJ);
-
     }
 
 
