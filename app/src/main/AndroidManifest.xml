@@ -135,7 +135,7 @@
             android:name=".ui.other.SyncActivity"
             android:parentActivityName=".ui.other.MainActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme" />
+            android:theme="@style/AppThemeEnglish" />
 
         <service android:name=".utils.DownloadFileService" />
         <!--        <service
