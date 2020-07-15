@@ -556,19 +556,24 @@
                             android:layout_height="wrap_content"
                             android:text="@string/e0901" />
 
+
                         <RadioButton
                             android:id="@+id/e0902"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e0902" />
+
                     </RadioGroup>
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- e10  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe10"
-                style="@style/cardView">
+                style="@style/cardView"
+                android:visibility='@{e0901.checked ? View.VISIBLE : View.GONE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
