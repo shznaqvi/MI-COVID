@@ -279,6 +279,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i04096" />
+
+                            <EditText
+                                android:id="@+id/i04096x"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:layout_marginBottom="12dp"
+                                android:hint="@string/i04096"
+                                android:tag="i04096"
+                                android:text='@{i04096.checked ? i04096x.getText().toString() : ""}'
+                                android:visibility='@{i04096.checked? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

@@ -120,7 +120,7 @@ public class SectionJActivity extends AppCompatActivity {
                 : bi.j0402.isChecked() ? "2"
                 : "-1");
 
-        //    json.put("j05", bi.j05.getText().toString());
+       // json.put("j05", bi.j05.getText().toString());
 
         json.put("j06", bi.j0601.isChecked() ? "1"
                 : bi.j0602.isChecked() ? "2"
@@ -137,6 +137,7 @@ public class SectionJActivity extends AppCompatActivity {
                 : bi.j0903.isChecked() ? "3"
                 : bi.j09096.isChecked() ? "96"
                 : "-1");
+        json.put("j09096x", bi.j09096x.getText().toString());
 
         json.put("j010", bi.j01001.isChecked() ? "1"
                 : bi.j01002.isChecked() ? "2"

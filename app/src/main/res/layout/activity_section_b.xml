@@ -960,7 +960,7 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/b11096"
                             android:tag="b11096"
-                            android:text='@{b11096.checked ? form.b11096x.toString() : ""}'
+                            android:text='@{b11096.checked ? b11096x.getText().toString() : ""}'
                             android:visibility='@{b11096.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
