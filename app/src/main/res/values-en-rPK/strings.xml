@@ -72,6 +72,9 @@
     <string name="a0406">GB</string>
     <string name="a05">District?</string>
     <string name="a05a">Individual Indentification ID</string>
+    <string name="a05b">Did Household and Individual Identified</string>
+    <string name="a05b1">Yes</string>
+    <string name="a05b2">No</string>
     <string name="a06"> Interview Status </string>
     <string name="a06_info"> If interview is not getting complete please contact supervisor </string>
     <string name="a0601">Household and Individual identified</string>
@@ -881,6 +884,7 @@
     <string name='Q_a04'>a04</string>
     <string name='Q_a05'>a05</string>
     <string name='Q_a05a'>a05a</string>
+    <string name='Q_a05b'>a05b</string>
     <string name='Q_a06'>a06</string>
     <string name='Q_a07'>a07</string>
     <string name='Q_a08'>a08</string>
