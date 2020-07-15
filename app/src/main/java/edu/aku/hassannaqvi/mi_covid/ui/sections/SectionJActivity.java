@@ -2,8 +2,11 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -117,7 +120,7 @@ public class SectionJActivity extends AppCompatActivity {
                 : bi.j0402.isChecked() ? "2"
                 : "-1");
 
-        //    json.put("j05", bi.j05.getText().toString());
+       // json.put("j05", bi.j05.getText().toString());
 
         json.put("j06", bi.j0601.isChecked() ? "1"
                 : bi.j0602.isChecked() ? "2"
@@ -134,6 +137,7 @@ public class SectionJActivity extends AppCompatActivity {
                 : bi.j0903.isChecked() ? "3"
                 : bi.j09096.isChecked() ? "96"
                 : "-1");
+        json.put("j09096x", bi.j09096x.getText().toString());
 
         json.put("j010", bi.j01001.isChecked() ? "1"
                 : bi.j01002.isChecked() ? "2"
@@ -155,7 +159,29 @@ public class SectionJActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //ViewGroup viewGroup = findViewById(android.R.id.content);
+        View backDialogView = LayoutInflater.from(this).inflate(R.layout.back_dialog, null, false);
+        builder.setView(backDialogView);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        backDialogView.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SectionJActivity.super.onBackPressed();
+            }
+        });
+        backDialogView.findViewById(R.id.btnNo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
+        // Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
+        //backDialogView.findViewById<View>(R.id.btnOk).setOnClickListener
+
+
     }
 
 }

@@ -2,9 +2,11 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.view.View
 import android.widget.RadioGroup
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.validatorcrawler.aliazaz.Clear
@@ -107,7 +109,16 @@ class SectionDActivity : AppCompatActivity() {
 
 
     override fun onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show()
+        val builder = AlertDialog.Builder(this)
+        //ViewGroup viewGroup = findViewById(android.R.id.content);
+        val backDialogView = LayoutInflater.from(this).inflate(R.layout.back_dialog, null, false)
+        builder.setView(backDialogView)
+        val alertDialog = builder.create()
+        alertDialog.show()
+        backDialogView.findViewById<View>(R.id.btnOk).setOnClickListener { super@SectionDActivity.onBackPressed() }
+        backDialogView.findViewById<View>(R.id.btnNo).setOnClickListener { alertDialog.dismiss() }
+        // Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
+        //backDialogView.findViewById<View>(R.id.btnOk).setOnClickListener
     }
 
 }

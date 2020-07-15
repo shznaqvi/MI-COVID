@@ -2,8 +2,11 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -37,36 +40,37 @@ public class SectionGActivity extends AppCompatActivity {
 
         bi.g01.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g0102.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg01);
+                Clear.clearAllFields(bi.fldGrpCVllg01);
             }
         }));
 
         bi.g02.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g0202.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg02);
+                Clear.clearAllFields(bi.fldGrpCVllg02);
             }
         }));
 
         bi.g03.setOnCheckedChangeListener(((radioGroup, i) -> {
-            Clear.clearAllFields(bi.fldGrpCVg04);
-            Clear.clearAllFields(bi.fldGrpCVg05);
+            if (i == bi.g0301.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg04);
+            }
         }));
 
         bi.g06.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.g06.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg06);
+            if (i == bi.g0601.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg07);
             }
         }));
 
         bi.g09.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g0902.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg09);
+                Clear.clearAllFields(bi.fldGrpCVllg03);
             }
         }));
 
         bi.g11.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g1102.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVg11);
+                Clear.clearAllFields(bi.fldGrpCVg12);
             }
         }));
     }
@@ -175,7 +179,29 @@ public class SectionGActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Toast.makeText(this, "You can't go back", Toast.LENGTH_SHORT).show();
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        //ViewGroup viewGroup = findViewById(android.R.id.content);
+        View backDialogView = LayoutInflater.from(this).inflate(R.layout.back_dialog, null, false);
+        builder.setView(backDialogView);
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+
+        backDialogView.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                SectionGActivity.super.onBackPressed();
+            }
+        });
+        backDialogView.findViewById(R.id.btnNo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                alertDialog.dismiss();
+            }
+        });
+        // Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
+        //backDialogView.findViewById<View>(R.id.btnOk).setOnClickListener
+
+
     }
 
 }

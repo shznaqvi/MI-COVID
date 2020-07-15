@@ -74,9 +74,9 @@
     <string name="a0406">گلگت بلتستان </string>
     <string name="a05">ضلع؟</string>
     <string name="a05a">فرد کی شناختی  آئی ڈی</string>
-    <string name="a05b">Did Household and Individual Identified</string>
-    <string name="a05b1">Yes</string>
-    <string name="a05b2">No</string>
+    <string name="a05b">کیا گھر اور فرد کی شناخت ہو گئی</string>
+    <string name="a05b1">ہاں</string>
+    <string name="a05b2">نہیں</string>
     <string name="a06"> گھرانے کے انٹرویو کا نتیجہ: </string>
     <string name="a06_info"> انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں ۔ </string>
     <string name="a0601">گھر اور فرد کی شناخت ہو گئی</string>
@@ -877,15 +877,13 @@
     <string name="l01001">معمول سے کم </string>
     <string name="l01002">معمول کے مطابق </string>
     <string name="l01003">معمول سے زیادہ </string>
-
-
     <string name='Q_a01'>a01</string>
     <string name='Q_a02'>a02</string>
     <string name='Q_a03'>a03</string>
     <string name='Q_a04'>a04</string>
     <string name='Q_a05'>a05</string>
     <string name='Q_a05a'>a05a</string>
-    <string name='Q_a05b'>a05b</string>
+    <string name='Q_a05b'>a05a</string>
     <string name='Q_a06'>a06</string>
     <string name='Q_a07'>a07</string>
     <string name='Q_a08'>a08</string>
@@ -954,6 +952,9 @@
     <string name='Q_c06'>c06</string>
     <string name='Q_c07'>c07</string>
     <string name='Q_c08'>c08</string>
+    <string name='Q_ch06a7'>ch06a7</string>
+    <string name='Q_ch06a8'>ch06a8</string>
+    <string name='Q_ch06ax'>ch06ax</string>
     <string name='Q_d02'>d02</string>
     <string name='Q_d03'>d03</string>
     <string name='Q_d04'>d04</string>
@@ -976,6 +977,7 @@
     <string name='Q_e1401'>e1401</string>
     <string name='Q_e1402'>e1402</string>
     <string name='Q_e15'>e15</string>
+    <string name='Q_e1501'>e1501</string>
     <string name='Q_f01'>f01</string>
     <string name='Q_f02'>f02</string>
     <string name='Q_f0201'>f0201</string>
@@ -983,13 +985,32 @@
     <string name='Q_f04'>f04</string>
     <string name='Q_f05'>f05</string>
     <string name='Q_f06'>f06</string>
-    <string name='Q_f07'>f07</string>
     <string name='Q_f08'>f08</string>
     <string name='Q_f09'>f09</string>
+    <string name='Q_f09dd'>f09dd</string>
+    <string name='Q_f09mm'>f09mm</string>
+    <string name='Q_f09yy'>f09yy</string>
     <string name='Q_f10'>f10</string>
     <string name='Q_f11'>f11</string>
+    <string name='Q_f11dd'>f11dd</string>
+    <string name='Q_f11mm'>f11mm</string>
+    <string name='Q_f11yy'>f11yy</string>
     <string name='Q_f12'>f12</string>
-    <string name='Q_f1301_t'>f1301_t</string>
+    <string name='Q_f07'></string>
+    <string name='Q_f1301_t'></string>
+    <string name='Q_f1301'></string>
+    <string name='Q_f1302'></string>
+    <string name='Q_f1303_t'></string>
+    <string name='Q_f1303'>f1303</string>
+    <string name='Q_f1304'>f1304</string>
+    <string name='Q_f1305'>f1305</string>
+    <string name='Q_f1306'>f1306</string>
+    <string name='Q_f130196'>f130196</string>
+    <string name='Q_f1308_t'>f1308_t</string>
+    <string name='Q_f1308'>f1308</string>
+    <string name='Q_f1309'>f1309</string>
+    <string name='Q_f131096'>f131096</string>
+    <string name='Q_f130296'>f130296</string>
     <string name='Q_f14'>f14</string>
     <string name='Q_f15'>f15</string>
     <string name='Q_f16'>f16</string>
@@ -1004,21 +1025,33 @@
     <string name='Q_g08'>g08</string>
     <string name='Q_g09'>g09</string>
     <string name='Q_g10'>g10</string>
+    <string name='Q_g11'>g11</string>
     <string name='Q_g12'>g12</string>
     <string name='Q_g13'>g13</string>
     <string name='Q_h01'>h01</string>
+    <string name='Q_h01dd'>h01dd</string>
+    <string name='Q_h01mm'>h01mm</string>
+    <string name='Q_h01yy'>h01yy</string>
     <string name='Q_h02'>h02</string>
+    <string name='Q_h02dd'>h02dd</string>
+    <string name='Q_h02mm'>h02mm</string>
+    <string name='Q_h02yy'>h02yy</string>
     <string name='Q_h03'>h03</string>
     <string name='Q_h04'>h04</string>
     <string name='Q_h05'>h05</string>
     <string name='Q_h0501'>h0501</string>
     <string name='Q_h06'>h06</string>
     <string name='Q_h07'>h07</string>
+    <string name='Q_h0701'>h0701</string>
+    <string name='Q_h0702'>h0702</string>
     <string name='Q_h08'>h08</string>
     <string name='Q_h09'>h09</string>
     <string name='Q_h10'>h10</string>
     <string name='Q_h11'>h11</string>
     <string name='Q_h12'>h12</string>
+    <string name='Q_h12dd'>h12dd</string>
+    <string name='Q_h12mm'>h12mm</string>
+    <string name='Q_h12yy'>h12yy</string>
     <string name='Q_h13'>h13</string>
     <string name='Q_h14'>h14</string>
     <string name='Q_h15'>h15</string>
@@ -1072,26 +1105,6 @@
     <string name='Q_l07'>l07</string>
     <string name='Q_l08'>l08</string>
     <string name='Q_l09'>l09</string>
-
-   <string name='Q_f1301'>f1301</string>
-   <string name='Q_f1302'>f1302</string>
-   <string name='Q_f1303_t'>f1303_t</string>
-   <string name='Q_f1303'>f1303</string>
-   <string name='Q_f1304'>f1304</string>
-   <string name='Q_f1305'>f1305</string>
-   <string name='Q_f1306'>f1306</string>
-   <string name='Q_f130196'>f130196</string>
-   <string name='Q_f1308_t'>f1308_t</string>
-   <string name='Q_f1308'>f1308</string>
-   <string name='Q_f1309'>f1309</string>
-   <string name='Q_f131096'>f131096</string>
-   <string name='Q_f130296'>f130296</string>
-
-    <string name='Q_g11'>g11</string>
-
-
-
-
 
 
 </resources>
