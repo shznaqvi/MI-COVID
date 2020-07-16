@@ -6,15 +6,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -78,7 +79,10 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
+
         JSONObject json = new JSONObject();
+
+
         json.put("b01", bi.b0101.isChecked() ? "1"
                 : bi.b0102.isChecked() ? "2"
                 : "-1");
@@ -106,14 +110,12 @@ public class SectionBActivity extends AppCompatActivity {
                 : bi.b05096.isChecked() ? "96"
                 : "-1");
 
-        json.put("b06", "-1");
+        json.put("b06", bi.b06ft.isChecked() ? "1"
+                : bi.b06yrd.isChecked() ? "2"
+                : bi.b06a.isChecked() ? ""
+                : "-1");
 
-        json.put("b06ft", "-1");
-
-        json.put("b06yrd", "-1");
-
-        json.put("b06a", bi.b06a.getText().toString());
-
+        json.put("b06ax", bi.b06ax.getText().toString());
         json.put("b07", bi.b07.getText().toString());
 
         json.put("b0801", bi.b0801.getText().toString());
@@ -134,14 +136,28 @@ public class SectionBActivity extends AppCompatActivity {
 
         json.put("b10", bi.b10.getText().toString());
 
-        json.put("b11096", bi.b11096.getText().toString());
-
         json.put("b11mc", bi.b011t01.isChecked() ? "1"
                 : bi.b011t02.isChecked() ? "2"
                 : "-1");
 
-        json.put("b11ws", "-1");
+        json.put("b11", bi.b1101.isChecked() ? "1"
+                : bi.b1102.isChecked() ? "2"
+                : bi.b1103.isChecked() ? "3"
+                : bi.b1104.isChecked() ? "4"
+                : bi.b1105.isChecked() ? "5"
+                : bi.b1106.isChecked() ? "6"
+                : bi.b1107.isChecked() ? "7"
+                : bi.b1108.isChecked() ? "8"
+                : bi.b1109.isChecked() ? "9"
+                : bi.b1110.isChecked() ? "10"
+                : bi.b1111.isChecked() ? "11"
+                : bi.b1112.isChecked() ? "12"
+                : bi.b1113.isChecked() ? "13"
+                : bi.b1114.isChecked() ? "14"
+                : bi.b11096.isChecked() ? "96"
+                : "-1");
 
+        json.put("b11096x", bi.b11096x.getText().toString());
         json.put("b12", bi.b1201.isChecked() ? "1"
                 : bi.b1202.isChecked() ? "2"
                 : bi.b1203.isChecked() ? "3"
