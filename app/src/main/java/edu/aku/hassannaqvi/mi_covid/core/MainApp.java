@@ -22,6 +22,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import com.jakewharton.threetenabp.AndroidThreeTen;
+
 import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract;
@@ -188,6 +190,8 @@ public class MainApp extends Application {
 //        deadMembers = new ArrayList<String>();
         sharedPref = getSharedPreferences("PSUCodes", Context.MODE_PRIVATE);
 
+        //Initiate DateTime
+        AndroidThreeTen.init(this);
     }
 
     protected void showCurrentLocation() {

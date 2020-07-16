@@ -21,6 +21,7 @@ import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionEBinding;
+import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 public class SectionEActivity extends AppCompatActivity {
@@ -78,7 +79,11 @@ public class SectionEActivity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionFActivity.class));
+
+            //This section needs to fill: If A15 selected option is 2 AND A20 selected option is 2 AND A13 age criteria is 15-49 Years
+            SectionSelection routeSection = MainApp.form.getSecSelection();
+            boolean routeFlag = (Integer.parseInt(routeSection.getA14()) >= 15 && Integer.parseInt(routeSection.getA14()) <= 49) && routeSection.getA15() && routeSection.getA20();
+            startActivity(new Intent(this, routeFlag ? SectionFActivity.class : Integer.parseInt(routeSection.getA14()) < 10 ? SectionGActivity.class : SectionHActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }

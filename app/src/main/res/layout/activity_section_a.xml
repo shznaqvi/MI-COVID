@@ -60,11 +60,12 @@
                     </RelativeLayout>
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
-                        android:hint="@string/a01"
                         android:id="@+id/a01"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:layout_marginBottom="12dp"
+                        android:hint="@string/a01"
+                        android:onTextChanged="@{callback.a01OnTextChanged}"
                         app:maxDate="CR_DATE" />
 
                 </LinearLayout>
@@ -811,6 +812,7 @@
                                     android:layout_weight="1"
                                     android:hint="@string/a13dd"
                                     android:inputType="number"
+                                    app:defaultValue="98"
                                     app:mask="##"
                                     app:maxValue="31"
                                     app:minValue="1"
@@ -837,6 +839,7 @@
                                     android:layout_weight="1"
                                     android:hint="@string/a13mm"
                                     android:inputType="number"
+                                    app:defaultValue="98"
                                     app:mask="##"
                                     app:maxValue="11"
                                     app:minValue="1"
@@ -863,6 +866,8 @@
                                     android:layout_weight="1"
                                     android:hint="@string/a13yy"
                                     android:inputType="number"
+                                    android:onTextChanged="@{callback.a13yyOnTextChanged}"
+                                    app:defaultValue="9998"
                                     app:mask="####"
                                     app:maxValue="2020"
                                     app:minValue="1930"
@@ -1699,22 +1704,24 @@
                 android:layout_gravity="end"
                 android:layout_marginTop="24dp"
                 android:orientation="horizontal">
+
                 <Button
                     android:id="@+id/btn_End"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:onClick="@{() -> callback.BtnEnd()}"
                     android:background="@color/red_overlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="Cancel"
                     android:textColor="@color/white" />
+
                 <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
-                    android:onClick="@{() -> callback.BtnContinue()}"
                     android:background="@color/green_overlay"
+                    android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
             </LinearLayout>
