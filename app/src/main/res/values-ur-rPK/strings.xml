@@ -996,11 +996,11 @@
     <string name='Q_f11mm'>f11mm</string>
     <string name='Q_f11yy'>f11yy</string>
     <string name='Q_f12'>f12</string>
-    <string name='Q_f07'>Q_f07</string>
-    <string name='Q_f1301_t'>Q_f1301_t</string>
-    <string name='Q_f1301'></string>
-    <string name='Q_f1302'></string>
-    <string name='Q_f1303_t'></string>
+    <string name='Q_f07'>f07</string>
+    <string name='Q_f1301_t'>1301_t</string>
+    <string name='Q_f1301'>f1301</string>
+    <string name='Q_f1302'>f1302</string>
+    <string name='Q_f1303_t'>f1303_t</string>
     <string name='Q_f1303'>f1303</string>
     <string name='Q_f1304'>f1304</string>
     <string name='Q_f1305'>f1305</string>
