@@ -46,6 +46,12 @@ public class SectionBActivity extends AppCompatActivity {
         bi.b14.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.llb1517);
         });
+
+        //b17
+        bi.b16.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.llb17);
+        });
+
     }
 
 
