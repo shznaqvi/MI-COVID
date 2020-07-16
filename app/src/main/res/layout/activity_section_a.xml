@@ -60,11 +60,12 @@
                     </RelativeLayout>
 
                     <io.blackbox_vision.datetimepickeredittext.view.DatePickerEditText
-                        android:hint="@string/a01"
                         android:id="@+id/a01"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:layout_marginBottom="12dp"
+                        android:hint="@string/a01"
+                        android:onTextChanged="@{callback.a01OnTextChanged}"
                         app:minDate="07/07/2020"
                         app:maxDate="CR_DATE" />
 
@@ -570,6 +571,8 @@
 
                             <EditText
                                 android:id="@+id/a08"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                                android:inputType="text"
                                 android:layout_width="match_parent"
                                 android:layout_height="56dp"
                                 android:layout_marginBottom="12dp"
@@ -611,6 +614,8 @@
 
                             <EditText
                                 android:id="@+id/a09"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                                android:inputType="text"
                                 android:layout_width="match_parent"
                                 android:layout_height="56dp"
                                 android:layout_marginBottom="12dp"
@@ -811,6 +816,7 @@
                                         android:layout_marginBottom="12dp"
                                         android:hint="@string/a13dd"
                                         android:inputType="number"
+                                        app:defaultValue="98"
                                         app:mask="##"
                                         app:maxValue="31"
                                         app:minValue="1"
@@ -837,6 +843,7 @@
                                         android:hint="@string/a13mm"
                                         android:inputType="number"
                                         app:mask="##"
+                                        app:defaultValue="98"
                                         app:maxValue="11"
                                         app:minValue="1"
                                         app:type="range" />
@@ -862,6 +869,8 @@
                                         android:hint="@string/a13yy"
                                         android:inputType="number"
                                         app:mask="####"
+                                        android:onTextChanged="@{callback.a13yyOnTextChanged}"
+                                        app:defaultValue="9998"
                                         app:maxValue="2020"
                                         app:minValue="1930"
                                         app:type="range" />

@@ -52,10 +52,20 @@ public class Form extends LiveData<Form> {
     private String sK = "";
     private String sL = "";
 
+    //For section selection
+    private SectionSelection secSelection;
+
 
     public Form() {
     }
 
+    public SectionSelection getSecSelection() {
+        return secSelection;
+    }
+
+    public void setSecSelection(SectionSelection secSelection) {
+        this.secSelection = secSelection;
+    }
 
     public String getsInfo() {
         return sInfo;

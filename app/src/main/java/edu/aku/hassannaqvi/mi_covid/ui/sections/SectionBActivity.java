@@ -47,6 +47,12 @@ public class SectionBActivity extends AppCompatActivity {
         bi.b14.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.llb1517);
         });
+
+        //b17
+        bi.b16.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.llb17);
+        });
+
     }
 
 
@@ -59,7 +65,8 @@ public class SectionBActivity extends AppCompatActivity {
         }
         if (UpdateDB()) {
             finish();
-            startActivity(new Intent(this, SectionCActivity.class));
+            int a16 = Integer.parseInt(MainApp.form.getSecSelection().getA16());
+            startActivity(new Intent(this, a16 > 6 ? SectionDActivity.class : SectionCActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
