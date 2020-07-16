@@ -719,7 +719,7 @@
     <string name="i0505">ہاں، خوراک کی قیمتیں زیادہ ہونے کی وجہ سے </string>
     <string name="i06">آپ اپنے نیند کی موجودہ عادات کا معمول کے نیند کی عادات سے کیسے موازنہ کریں گے؟</string>
     <string name="i0601">بدتر </string>
-    <string name="i0602">وہی </string>
+    <string name="i0602">کوئی فرق نہیں </string>
     <string name="i0603">بہتر </string>
     <string name="i07">کیا آپ کو اپنے خاندان/معاشرے کی طرف سے کسی بدنامی یا رسوائی کا سامنا کرنا پڑا؟</string>
     <string name="i0701">ہاں</string>
@@ -996,11 +996,12 @@
     <string name='Q_f11mm'>f11mm</string>
     <string name='Q_f11yy'>f11yy</string>
     <string name='Q_f12'>f12</string>
-    <string name='Q_f07'>Q_f07</string>
-    <string name='Q_f1301_t'>Q_f1301_t</string>
-    <string name='Q_f1301'>Q_f1301</string>
-    <string name='Q_f1302'>Q_f1302</string>
-    <string name='Q_f1303_t'>Q_f1303_t</string>
+    <string name='Q_f13'>f13</string>
+    <string name='Q_f07'>f07</string>
+    <string name='Q_f1301_t'>f1301_t</string>
+    <string name='Q_f1301'>f1301</string>
+    <string name='Q_f1302'>f1302</string>
+    <string name='Q_f1303_t'>f1303_t</string>
     <string name='Q_f1303'>f1303</string>
     <string name='Q_f1304'>f1304</string>
     <string name='Q_f1305'>f1305</string>
@@ -1105,6 +1106,7 @@
     <string name='Q_l07'>l07</string>
     <string name='Q_l08'>l08</string>
     <string name='Q_l09'>l09</string>
+    <string name="numeric">0123456789</string>
 
 
 </resources>

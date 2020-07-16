@@ -3,6 +3,7 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,7 +14,12 @@ import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.threeten.bp.Instant;
+import org.threeten.bp.LocalDate;
+import org.threeten.bp.LocalDateTime;
+import org.threeten.bp.ZoneId;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -22,7 +28,10 @@ import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionABinding;
+import edu.aku.hassannaqvi.mi_covid.datecollection.AgeModel;
+import edu.aku.hassannaqvi.mi_covid.datecollection.DateRepository;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
+import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
@@ -35,7 +44,9 @@ public class SectionAActivity extends AppCompatActivity {
     public List<String> talukaName, ucName, villageName, usersName, teamLeadName, healthFacilityCode;
     public List<String> talukaCode, ucCode, villageCode, usersCode, teamLeadCode, healthFacilityName;*/
     ActivitySectionABinding bi;
-    //private DatabaseHelper db;
+    boolean dtFlag = false;
+    LocalDate localDate = null;
+    LocalDate calculatedDOB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -160,7 +171,7 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a1503.isChecked() ? "3"
                 : "-1");
 
-        json.put("a16", bi.a1601.isChecked() ? "1"
+        String a16 = bi.a1601.isChecked() ? "1"
                 : bi.a1602.isChecked() ? "2"
                 : bi.a1603.isChecked() ? "3"
                 : bi.a1604.isChecked() ? "4"
@@ -170,7 +181,8 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a1608.isChecked() ? "8"
                 : bi.a1609.isChecked() ? "9"
                 : bi.a16096.isChecked() ? "96"
-                : "-1");
+                : "-1";
+        json.put("a16", a16);
 
         json.put("a17", bi.a17.getText().toString());
 
@@ -226,11 +238,19 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setsInfo(json.toString());
 
+        form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), a16, bi.a2002.isChecked()));
+
     }
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
+        if (!dtFlag) {
+//            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
+            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
+        }
+        if (bi.a0702.isChecked()) return true;
+        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;
     }
 
 
@@ -318,6 +338,64 @@ public class SectionAActivity extends AppCompatActivity {
 
             }
         });*/
+    }
+
+
+    public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
+        //Setting Date
+        try {
+            Instant instant = org.threeten.bp.Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.a01.getText().toString())) + "T06:24:01Z");
+            localDate = org.threeten.bp.LocalDateTime.ofInstant(instant, org.threeten.bp.ZoneId.systemDefault()).toLocalDate();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
+        bi.a14mm.setEnabled(false);
+        bi.a14mm.setText(null);
+        bi.a14yy.setEnabled(false);
+        bi.a14yy.setText(null);
+        calculatedDOB = null;
+        dtFlag = false;
+        if (TextUtils.isEmpty(bi.a13dd.getText()) || TextUtils.isEmpty(bi.a13mm.getText()) || TextUtils.isEmpty(bi.a13yy.getText()))
+            return;
+        if (!bi.a13dd.isRangeTextValidate() || !bi.a13mm.isRangeTextValidate() || !bi.a13yy.isRangeTextValidate())
+            return;
+        if (bi.a13dd.getText().toString().equals("98") && bi.a13mm.getText().toString().equals("98") && bi.a13yy.getText().toString().equals("9998")) {
+            bi.a14mm.setEnabled(true);
+            bi.a14yy.setEnabled(true);
+            dtFlag = true;
+            return;
+        }
+        int day = bi.a13dd.getText().toString().equals("98") ? 15 : Integer.parseInt(bi.a13dd.getText().toString());
+        int month = Integer.parseInt(bi.a13mm.getText().toString());
+        int year = Integer.parseInt(bi.a13yy.getText().toString());
+
+        AgeModel age;
+        if (localDate != null)
+            age = DateRepository.Companion.getCalculatedAge(localDate, year, month, day);
+        else
+            age = DateRepository.Companion.getCalculatedAge(year, month, day);
+        if (age == null) {
+            bi.a13yy.setError("Invalid date!!");
+            dtFlag = false;
+            return;
+        }
+        dtFlag = true;
+        bi.a14mm.setText(String.valueOf(age.getMonth()));
+        bi.a14yy.setText(String.valueOf(age.getYear()));
+
+        //Setting Date
+        try {
+            Instant instant = Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(
+                    bi.a13dd.getText().toString() + "-" + bi.a13mm.getText().toString() + "-" + bi.a13yy.getText().toString()
+            )) + "T06:24:01Z");
+            calculatedDOB = LocalDateTime.ofInstant(instant, ZoneId.systemDefault()).toLocalDate();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
