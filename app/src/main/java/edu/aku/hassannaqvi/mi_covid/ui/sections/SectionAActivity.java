@@ -244,7 +244,13 @@ public class SectionAActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
+        if (!dtFlag) {
+//            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
+            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
+        }
+        if (bi.a0702.isChecked()) return true;
+        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;
     }
 
 
@@ -351,6 +357,7 @@ public class SectionAActivity extends AppCompatActivity {
         bi.a14yy.setEnabled(false);
         bi.a14yy.setText(null);
         calculatedDOB = null;
+        dtFlag = false;
         if (TextUtils.isEmpty(bi.a13dd.getText()) || TextUtils.isEmpty(bi.a13mm.getText()) || TextUtils.isEmpty(bi.a13yy.getText()))
             return;
         if (!bi.a13dd.isRangeTextValidate() || !bi.a13mm.isRangeTextValidate() || !bi.a13yy.isRangeTextValidate())

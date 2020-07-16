@@ -961,7 +961,7 @@
                                         android:inputType="number"
                                         app:mask="##"
                                         app:maxValue="99"
-                                        app:minValue="15"
+                                        app:minValue="0"
                                         app:type="range" />
                                 </LinearLayout>
                             </LinearLayout>
