@@ -120,7 +120,7 @@
                         <EditText
                             android:id="@+id/b02"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/b02" />
                     </LinearLayout>
@@ -475,7 +475,7 @@
                     <EditText
                         android:id="@+id/b06a"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b06a" />
                 </LinearLayout>
@@ -516,7 +516,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b07"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b07"
                         android:inputType="number"
@@ -561,14 +561,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0801" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0801"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0801"
                         android:inputType="number"
@@ -579,14 +579,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0802" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0802"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0802"
                         android:inputType="number"
@@ -597,14 +597,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0803" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0803"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0803"
                         android:inputType="number"
@@ -615,14 +615,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0804" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0804"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0804"
                         android:inputType="number"
@@ -633,14 +633,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0805" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0805"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0805"
                         android:inputType="number"
@@ -651,14 +651,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0806" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0806"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0806"
                         android:inputType="number"
@@ -669,14 +669,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/b0807" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b0807"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0807"
                         android:inputType="number"
@@ -722,7 +722,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b9"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b9"
                         android:inputType="number"
@@ -768,7 +768,7 @@
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b10"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b10"
                         android:inputType="number"
@@ -934,7 +934,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/b1106_t" />
 
@@ -952,7 +952,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/b1108_t" />
 
@@ -1007,7 +1007,7 @@
                         <EditText
                             android:id="@+id/b11096x"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/b11096"
                             android:tag="b11096"
@@ -1055,7 +1055,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/b1201_t" />
 
@@ -1091,7 +1091,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/b1206_t" />
 
@@ -1171,14 +1171,8 @@
                             android:layout_alignBottom="@id/qtxt_b13"
                             android:text="@string/Q_b13" />
                     </RelativeLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1301  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1301"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1187,8 +1181,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/b1301" />
 
@@ -1214,13 +1207,7 @@
                             android:text="@string/b130102" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1302  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1302"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1229,8 +1216,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/b1302" />
 
@@ -1256,13 +1242,7 @@
                             android:text="@string/b130202" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1303  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1303"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1271,8 +1251,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/b1303" />
 
@@ -1298,13 +1277,7 @@
                             android:text="@string/b130302" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1304  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1304"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1313,8 +1286,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/b1304" />
 
@@ -1340,13 +1312,7 @@
                             android:text="@string/b130402" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1305  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1305"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1355,9 +1321,8 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
                         android:layout_weight="1"
+                        android:layout_height="wrap_content"
                         android:text="@string/b1305" />
 
                     <RadioGroup
@@ -1382,13 +1347,7 @@
                             android:text="@string/b130502" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1306  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1306"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1397,8 +1356,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
-                        android:layout_marginTop="12dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/b1306" />
 
@@ -1424,13 +1382,7 @@
                             android:text="@string/b130602" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1307  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1307"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1439,7 +1391,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:layout_weight="1"
                         android:text="@string/b1307" />
@@ -1466,13 +1418,7 @@
                             android:text="@string/b130702" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1308  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1308"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1481,7 +1427,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:layout_weight="1"
                         android:text="@string/b1308" />
@@ -1508,13 +1454,7 @@
                             android:text="@string/b130802" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b1309  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb1309"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1523,7 +1463,7 @@
 
                     <TextView
                         android:layout_width="0dp"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:layout_weight="1"
                         android:text="@string/b1309" />
@@ -1550,12 +1490,7 @@
                             android:text="@string/b130902" />
                     </RadioGroup>
                 </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
-            <!--b13096  Radio-->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/fldGrpCVb13096"
-                style="@style/cardView">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -1584,6 +1519,8 @@
                             android:text="@string/Q_b13096" />
                     </RelativeLayout>
                 </LinearLayout>
+                </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!--b14  Radio-->
@@ -1676,14 +1613,7 @@
                                 android:layout_alignBottom="@id/qtxt_b15"
                                 android:text="@string/Q_b15" />
                         </RelativeLayout>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <!--b1501  Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVb1501"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1692,7 +1622,7 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:layout_weight="1"
                             android:text="@string/b1501" />
@@ -1720,13 +1650,7 @@
                         </RadioGroup>
                     </LinearLayout>
 
-                </androidx.cardview.widget.CardView>
 
-                <!--b1502  Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVb1502"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1735,7 +1659,7 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:layout_weight="1"
                             android:text="@string/b1502" />
@@ -1762,13 +1686,7 @@
                                 android:text="@string/b150202" />
                         </RadioGroup>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <!--b1503  Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVb1503"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1777,7 +1695,7 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:layout_weight="1"
                             android:text="@string/b1503" />
@@ -1804,13 +1722,6 @@
                                 android:text="@string/b150302" />
                         </RadioGroup>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!--b1504  Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVb1504"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1819,7 +1730,7 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:layout_weight="1"
                             android:text="@string/b1504" />
@@ -1846,13 +1757,7 @@
                                 android:text="@string/b150402" />
                         </RadioGroup>
                     </LinearLayout>
-                </androidx.cardview.widget.CardView>
 
-                <!--b1505  Radio-->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVb1505"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -1861,7 +1766,7 @@
 
                         <TextView
                             android:layout_width="0dp"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:layout_weight="1"
                             android:text="@string/b1505" />
@@ -1887,6 +1792,7 @@
                                 android:layout_weight="1"
                                 android:text="@string/b150502" />
                         </RadioGroup>
+                    </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1977,7 +1883,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/b17"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/b17"
                             android:inputType="number"
