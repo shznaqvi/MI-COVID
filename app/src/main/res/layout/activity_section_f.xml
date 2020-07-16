@@ -580,7 +580,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f09dd" />
 
@@ -606,7 +606,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f09mm" />
 
@@ -632,7 +632,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f09yy" />
 
@@ -762,7 +762,7 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginTop="12dp"
                                         android:text="@string/f11dd" />
 
@@ -788,7 +788,7 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginTop="12dp"
                                         android:text="@string/f11mm" />
 
@@ -814,7 +814,7 @@
 
                                     <TextView
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginTop="12dp"
                                         android:text="@string/f11yy" />
 
