@@ -66,6 +66,7 @@
                         android:layout_marginBottom="12dp"
                         android:hint="@string/a01"
                         android:onTextChanged="@{callback.a01OnTextChanged}"
+                        app:minDate="07/07/2020"
                         app:maxDate="CR_DATE" />
 
                 </LinearLayout>

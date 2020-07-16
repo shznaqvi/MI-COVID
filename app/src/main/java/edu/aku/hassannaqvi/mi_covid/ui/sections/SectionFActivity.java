@@ -97,7 +97,6 @@ public class SectionFActivity extends AppCompatActivity {
     private void SaveDraft() throws JSONException {
 
         JSONObject json = new JSONObject();
-
         json.put("f01", bi.f0101.isChecked() ? "1"
                 : bi.f0102.isChecked() ? "2"
                 : "-1");
@@ -157,30 +156,20 @@ public class SectionFActivity extends AppCompatActivity {
         json.put("f12", bi.f1201.isChecked() ? "1"
                 : bi.f1202.isChecked() ? "2"
                 : bi.f1203.isChecked() ? "3"
-                : bi.f13.isChecked() ? "2"
                 : "-1");
 
-        json.put("f1301", "-1");
-
-        json.put("f1302", "-1");
-
-        json.put("f1303", "-1");
-
-        json.put("f1304", "-1");
-
-        json.put("f1305", "-1");
-
-        json.put("f1306", "-1");
-
-        json.put("f130196", "-1");
-
-        json.put("f1308", "-1");
-
-        json.put("f1309", "-1");
-
-        json.put("f131096", "-1");
-
-        json.put("f130296", "-1");
+        json.put("f13", bi.f1301.isChecked() ? "1"
+                : bi.f1302.isChecked() ? "2"
+                : bi.f1303.isChecked() ? "3"
+                : bi.f1304.isChecked() ? "4"
+                : bi.f1305.isChecked() ? "5"
+                : bi.f1306.isChecked() ? "6"
+                : bi.f130196.isChecked() ? "7"
+                : bi.f1308.isChecked() ? "8"
+                : bi.f1309.isChecked() ? "9"
+                : bi.f131096.isChecked() ? "10"
+                : bi.f130296.isChecked() ? "96"
+                : "-1");
 
         json.put("f14", bi.f1401.isChecked() ? "1"
                 : bi.f1402.isChecked() ? "2"
