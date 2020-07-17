@@ -58,6 +58,8 @@ public class SectionGActivity extends AppCompatActivity {
         bi.g06.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g0601.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVg07);
+            } else if (i == bi.g0602.getId()) {
+                Clear.clearAllFields(bi.fldGrpCVg08);
             }
         }));
 
