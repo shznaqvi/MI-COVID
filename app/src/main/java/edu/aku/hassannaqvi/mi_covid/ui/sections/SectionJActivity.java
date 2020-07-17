@@ -50,14 +50,14 @@ public class SectionJActivity extends AppCompatActivity {
         }));
 
         bi.j06.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.j0601.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVj07);
+            if (i == bi.j0602.getId() || i == bi.j0604.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecj01);
             }
         }));
 
         bi.j010.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.j01002.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecj01);
+                Clear.clearAllFields(bi.fldGrpSecj02);
             }
         }));
 
