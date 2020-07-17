@@ -9,6 +9,11 @@
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionCActivity" />
+
+        <variable
+            name="form"
+            type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
     </data>
 
     <ScrollView

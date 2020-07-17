@@ -14,7 +14,6 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -22,6 +21,8 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionKBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+
+import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class SectionKActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class SectionKActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_k);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -100,7 +102,7 @@ public class SectionKActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SK, MainApp.form.getsK());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SK, form.sKtoString());
         if (updcount > 0) {
             return true;
         } else {
@@ -112,7 +114,90 @@ public class SectionKActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        form.setK01(bi.k0101.isChecked() ? "1"
+                : bi.k0102.isChecked() ? "2"
+                : bi.k0103.isChecked() ? "3"
+                : bi.k0104.isChecked() ? "4"
+                : "-1");
+
+        form.setK02(bi.k0201.isChecked() ? "1"
+                : bi.k0202.isChecked() ? "2"
+                : "-1");
+
+        form.setK03(bi.k0301.isChecked() ? "1"
+                : bi.k0302.isChecked() ? "2"
+                : bi.k0303.isChecked() ? "3"
+                : bi.k0304.isChecked() ? "4"
+                : "-1");
+
+        form.setK04(bi.k0401.isChecked() ? "1"
+                : bi.k0402.isChecked() ? "2"
+                : "-1");
+
+        form.setK05(bi.k0501.isChecked() ? "1"
+                : bi.k0502.isChecked() ? "2"
+                : bi.k0503.isChecked() ? "3"
+                : bi.k0504.isChecked() ? "4"
+                : bi.k0505.isChecked() ? "5"
+                : bi.k0506.isChecked() ? "6"
+                : bi.k05096.isChecked() ? "96"
+                : "-1");
+
+        form.setK06(bi.k0601.isChecked() ? "1"
+                : bi.k0602.isChecked() ? "2"
+                : "-1");
+
+        form.setK07(bi.k0701.isChecked() ? "1"
+                : bi.k0702.isChecked() ? "2"
+                : bi.k0703.isChecked() ? "3"
+                : bi.k0704.isChecked() ? "4"
+                : "-1");
+
+        form.setK08(bi.k0801.isChecked() ? "1"
+                : bi.k0802.isChecked() ? "2"
+                : "-1");
+
+        form.setK09(bi.k0901.isChecked() ? "1"
+                : bi.k0902.isChecked() ? "2"
+                : "-1");
+
+        form.setK10(bi.k1001.isChecked() ? "1"
+                : bi.k1002.isChecked() ? "2"
+                : "-1");
+
+        form.setK11(bi.k1101.isChecked() ? "1"
+                : bi.k1102.isChecked() ? "2"
+                : "-1");
+
+        form.setK12(bi.k1201.isChecked() ? "1"
+                : bi.k1202.isChecked() ? "2"
+                : "-1");
+
+        form.setK13(bi.k1301.isChecked() ? "1"
+                : bi.k1302.isChecked() ? "2"
+                : "-1");
+
+        form.setK14(bi.k1401.isChecked() ? "1"
+                : bi.k1402.isChecked() ? "2"
+                : bi.k1403.isChecked() ? "3"
+                : bi.k14096.isChecked() ? "96"
+                : "-1");
+
+        form.setK15(bi.k1501.isChecked() ? "1"
+                : bi.k1502.isChecked() ? "2"
+                : "-1");
+
+        form.setK16(bi.k1601.isChecked() ? "1"
+                : bi.k1602.isChecked() ? "2"
+                : bi.k16096.isChecked() ? "96"
+                : "-1");
+
+        form.setK17(bi.k1701.isChecked() ? "1"
+                : bi.k1702.isChecked() ? "2"
+                : bi.k1703.isChecked() ? "3"
+                : "-1");
+
+       /* JSONObject json = new JSONObject();
 
         json.put("k01", bi.k0101.isChecked() ? "1"
                 : bi.k0102.isChecked() ? "2"
@@ -197,7 +282,7 @@ public class SectionKActivity extends AppCompatActivity {
                 : bi.k1703.isChecked() ? "3"
                 : "-1");
 
-        MainApp.form.setsK(json.toString());
+        MainApp.form.setsK(json.toString());*/
 
     }
 

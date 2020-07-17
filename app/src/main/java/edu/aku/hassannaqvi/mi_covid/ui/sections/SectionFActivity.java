@@ -14,7 +14,6 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -22,6 +21,9 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionFBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+
+import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
+
 
 public class SectionFActivity extends AppCompatActivity {
 
@@ -33,6 +35,7 @@ public class SectionFActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_f);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -84,7 +87,7 @@ public class SectionFActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, MainApp.form.getsF());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SF, form.sFtoString());
         if (updcount > 0) {
             return true;
         } else {
@@ -96,7 +99,107 @@ public class SectionFActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        form.setF01(bi.f0101.isChecked() ? "1"
+                : bi.f0102.isChecked() ? "2"
+                : "-1");
+
+        form.setF02(bi.f02.getText().toString());
+
+        form.setF03(bi.f0301.isChecked() ? "1"
+                : bi.f0302.isChecked() ? "2"
+                : "-1");
+
+        form.setF04(bi.f0401.isChecked() ? "1"
+                : bi.f0402.isChecked() ? "2"
+                : bi.f0403.isChecked() ? "3"
+                : bi.f0404.isChecked() ? "4"
+                : bi.f0405.isChecked() ? "5"
+                : bi.f0406.isChecked() ? "6"
+                : bi.f0407.isChecked() ? "7"
+                : bi.f0408.isChecked() ? "8"
+                : bi.f0409.isChecked() ? "9"
+                : bi.f04096.isChecked() ? "96"
+                : "-1");
+
+        //    form.setF05(bi.f05.getText().toString());
+
+        //    form.setF06(bi.f06.getText().toString());
+
+        form.setF07(bi.f0701.isChecked() ? "1"
+                : bi.f0702.isChecked() ? "2"
+                : "-1");
+
+        form.setF08(bi.f0801.isChecked() ? "1"
+                : bi.f0802.isChecked() ? "2"
+                : bi.f0803.isChecked() ? "3"
+                : bi.f0804.isChecked() ? "4"
+                : bi.f0805.isChecked() ? "5"
+                : bi.f0806.isChecked() ? "6"
+                : bi.f08096.isChecked() ? "96"
+                : "-1");
+
+        form.setF09dd(bi.f09dd.getText().toString());
+
+        form.setF09mm(bi.f09mm.getText().toString());
+
+        form.setF09yy(bi.f09yy.getText().toString());
+
+        form.setF10(bi.f1001.isChecked() ? "1"
+                : bi.f1002.isChecked() ? "2"
+                : bi.f1003.isChecked() ? "3"
+                : "-1");
+
+        form.setF11dd(bi.f11dd.getText().toString());
+
+        form.setF11mm(bi.f11mm.getText().toString());
+
+        form.setF11yy(bi.f11yy.getText().toString());
+
+        form.setF12(bi.f1201.isChecked() ? "1"
+                : bi.f1202.isChecked() ? "2"
+                : bi.f1203.isChecked() ? "3"
+                : "-1");
+
+        form.setF13(bi.f1301.isChecked() ? "1"
+                : bi.f1302.isChecked() ? "2"
+                : bi.f1303.isChecked() ? "3"
+                : bi.f1304.isChecked() ? "4"
+                : bi.f1305.isChecked() ? "5"
+                : bi.f1306.isChecked() ? "6"
+                : bi.f130196.isChecked() ? "7"
+                : bi.f1308.isChecked() ? "8"
+                : bi.f1309.isChecked() ? "9"
+                : bi.f131096.isChecked() ? "10"
+                : bi.f130296.isChecked() ? "96"
+                : "-1");
+
+        form.setF14(bi.f1401.isChecked() ? "1"
+                : bi.f1402.isChecked() ? "2"
+                : bi.f1403.isChecked() ? "3"
+                : bi.f1404.isChecked() ? "4"
+                : bi.f1405.isChecked() ? "5"
+                : bi.f1406.isChecked() ? "6"
+                : bi.f1407.isChecked() ? "7"
+                : bi.f1408.isChecked() ? "8"
+                : bi.f1409.isChecked() ? "9"
+                : bi.f1410.isChecked() ? "10"
+                : bi.f14096.isChecked() ? "96"
+                : "-1");
+
+        form.setF15(bi.f1501.isChecked() ? "1"
+                : bi.f1502.isChecked() ? "2"
+                : bi.f1503.isChecked() ? "3"
+                : "-1");
+
+        form.setF16(bi.f1601.isChecked() ? "1"
+                : bi.f1602.isChecked() ? "2"
+                : "-1");
+
+        form.setF17(bi.f1701.isChecked() ? "1"
+                : bi.f1702.isChecked() ? "2"
+                : "-1");
+
+/*        JSONObject json = new JSONObject();
         json.put("f01", bi.f0101.isChecked() ? "1"
                 : bi.f0102.isChecked() ? "2"
                 : "-1");
@@ -197,7 +300,7 @@ public class SectionFActivity extends AppCompatActivity {
                 : bi.f1702.isChecked() ? "2"
                 : "-1");
 
-        MainApp.form.setsF(json.toString());
+        MainApp.form.setsF(json.toString());*/
 
     }
 

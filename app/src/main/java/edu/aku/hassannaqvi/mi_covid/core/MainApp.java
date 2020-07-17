@@ -76,11 +76,11 @@ public class MainApp extends Application {
     public static OnItemClick countItemClick;
     public static AppInfo appInfo;
     public static Boolean admin = false;
-    public static Form form;
     public static LiveData<Form> liveForms = new MutableLiveData<>();
 
     public static String userName = "0000";
     public static UsersContract user;
+    public static Form form;
     public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;

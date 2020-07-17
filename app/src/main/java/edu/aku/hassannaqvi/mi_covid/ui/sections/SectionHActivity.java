@@ -14,7 +14,6 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -22,6 +21,8 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionHBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+
+import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class SectionHActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class SectionHActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_h);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -71,7 +73,7 @@ public class SectionHActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, MainApp.form.getsH());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SH, form.sHtoString());
         if (updcount > 0) {
             return true;
         } else {
@@ -83,7 +85,85 @@ public class SectionHActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        form.setH01dd(bi.h01dd.getText().toString());
+
+        form.setH01mm(bi.h01mm.getText().toString());
+
+        form.setH01yy(bi.h01yy.getText().toString());
+
+        form.setH02dd(bi.h02dd.getText().toString());
+
+        form.setH02mm(bi.h02mm.getText().toString());
+
+        form.setH02yy(bi.h02yy.getText().toString());
+
+        form.setH04(bi.h0401.isChecked() ? "1"
+                : bi.h0402.isChecked() ? "2"
+                : "-1");
+
+        form.setH05(bi.h05.getText().toString());
+
+        form.setH06(bi.h0601.isChecked() ? "1"
+                : bi.h0602.isChecked() ? "2"
+                : "-1");
+
+        form.setH0701(bi.h0701.getText().toString());
+
+        form.setH0702(bi.h0702.getText().toString());
+
+        form.setH09(bi.h0901.isChecked() ? "1"
+                : bi.h0902.isChecked() ? "2"
+                : bi.h0903.isChecked() ? "3"
+                : "-1");
+
+        form.setH10(bi.h1001.isChecked() ? "1"
+                : bi.h1002.isChecked() ? "2"
+                : "-1");
+
+        form.setH11(bi.h1101.isChecked() ? "1"
+                : bi.h1102.isChecked() ? "2"
+                : bi.h1103.isChecked() ? "3"
+                : bi.h11096.isChecked() ? "96"
+                : bi.h11098.isChecked() ? "98"
+                : "-1");
+
+        form.setH12dd(bi.h12dd.getText().toString());
+
+        form.setH12mm(bi.h12mm.getText().toString());
+
+        form.setH12yy(bi.h12yy.getText().toString());
+
+        form.setH13(bi.h1301.isChecked() ? "1"
+                : bi.h1302.isChecked() ? "2"
+                : bi.h1303.isChecked() ? "3"
+                : bi.h13096.isChecked() ? "96"
+                : "-1");
+
+        form.setH14(bi.h1401.isChecked() ? "1"
+                : bi.h1402.isChecked() ? "2"
+                : bi.h1403.isChecked() ? "3"
+                : bi.h14096.isChecked() ? "96"
+                : "-1");
+
+        form.setH15(bi.h1501.isChecked() ? "1"
+                : bi.h1502.isChecked() ? "2"
+                : bi.h1503.isChecked() ? "3"
+                : bi.h1504.isChecked() ? "4"
+                : bi.h1505.isChecked() ? "5"
+                : bi.h1506.isChecked() ? "6"
+                : "-1");
+
+        form.setH16(bi.h16.getText().toString());
+
+        form.setH17(bi.h1701.isChecked() ? "1"
+                : bi.h1702.isChecked() ? "2"
+                : "-1");
+
+        form.setH1801(bi.h1801.getText().toString());
+
+        form.setH1802(bi.h1802.getText().toString());
+
+        /*JSONObject json = new JSONObject();
 
         json.put("h01dd", bi.h01dd.getText().toString());
 
@@ -164,7 +244,7 @@ public class SectionHActivity extends AppCompatActivity {
         json.put("h1802", bi.h1802.getText().toString());
 
         MainApp.form.setsH(json.toString());
-
+*/
     }
 
 

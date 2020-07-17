@@ -14,7 +14,6 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -22,6 +21,8 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+
+import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class SectionJActivity extends AppCompatActivity {
 
@@ -32,6 +33,7 @@ public class SectionJActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_j);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkips();
     }
 
@@ -88,7 +90,7 @@ public class SectionJActivity extends AppCompatActivity {
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
-        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SJ, MainApp.form.getsJ());
+        int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SJ, form.sJtoString());
         if (updcount > 0) {
             return true;
         } else {
@@ -100,7 +102,54 @@ public class SectionJActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
-        JSONObject json = new JSONObject();
+        form.setJ01(bi.j0101.isChecked() ? "1"
+                : bi.j0102.isChecked() ? "2"
+                : bi.j0103.isChecked() ? "3"
+                : bi.j0104.isChecked() ? "4"
+                : "-1");
+
+        form.setJ02(bi.j0201.isChecked() ? "1"
+                : bi.j0202.isChecked() ? "2"
+                : "-1");
+
+        form.setJ03(bi.j0301.isChecked() ? "1"
+                : bi.j0302.isChecked() ? "2"
+                : "-1");
+
+        form.setJ04(bi.j0401.isChecked() ? "1"
+                : bi.j0402.isChecked() ? "2"
+                : "-1");
+
+        // form.setJ05(bi.j05.getText().toString());
+
+        form.setJ06(bi.j0601.isChecked() ? "1"
+                : bi.j0602.isChecked() ? "2"
+                : bi.j0603.isChecked() ? "3"
+                : bi.j0604.isChecked() ? "4"
+                : "-1");
+
+        form.setJ07(bi.j0701.isChecked() ? "1"
+                : bi.j0702.isChecked() ? "2"
+                : "-1");
+
+        form.setJ09(bi.j0901.isChecked() ? "1"
+                : bi.j0902.isChecked() ? "2"
+                : bi.j0903.isChecked() ? "3"
+                : bi.j09096.isChecked() ? "96"
+                : "-1");
+        form.setJ09096x(bi.j09096x.getText().toString());
+
+        form.setJ010(bi.j01001.isChecked() ? "1"
+                : bi.j01002.isChecked() ? "2"
+                : "-1");
+
+        form.setJ011(bi.j01101.isChecked() ? "1"
+                : bi.j01102.isChecked() ? "2"
+                : "-1");
+
+        form.setJ012(bi.j012.getText().toString());
+        
+    /*    JSONObject json = new JSONObject();
 
         json.put("j01", bi.j0101.isChecked() ? "1"
                 : bi.j0102.isChecked() ? "2"
@@ -150,7 +199,7 @@ public class SectionJActivity extends AppCompatActivity {
         json.put("j012", bi.j012.getText().toString());
 
 
-        MainApp.form.setsJ(json.toString());
+        MainApp.form.setsJ(json.toString());*/
 
     }
 

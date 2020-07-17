@@ -8,6 +8,10 @@
         <import type="android.view.View" />
 
         <variable
+            name="form"
+            type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
+        <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionAActivity" />
     </data>
@@ -65,7 +69,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/a01"
-                        android:onTextChanged="@{callback.a01OnTextChanged}"
+                        android:onTextChanged="@{callback::a01OnTextChanged}"
                         app:maxDate="CR_DATE"
                         app:minDate="07/07/2020" />
 
@@ -868,7 +872,7 @@
                                         android:layout_marginBottom="12dp"
                                         android:hint="@string/a13yy"
                                         android:inputType="number"
-                                        android:onTextChanged="@{callback.a13yyOnTextChanged}"
+                                        android:onTextChanged="@{callback::a13yyOnTextChanged}"
                                         app:defaultValue="9998"
                                         app:mask="####"
                                         app:maxValue="2020"

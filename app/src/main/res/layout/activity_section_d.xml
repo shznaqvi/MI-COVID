@@ -8,6 +8,10 @@
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionDActivity" />
+
+        <variable
+            name="form"
+            type="edu.aku.hassannaqvi.mi_covid.models.Form" />
     </data>
 
 

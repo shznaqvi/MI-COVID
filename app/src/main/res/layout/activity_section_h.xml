@@ -4,12 +4,14 @@
     <data>
 
         <import type="android.view.View" />
-        <!--<variable
-            name="form"
-            type="edu.aku.hassannaqvi.micovid19.models.Form" />-->
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionHActivity" />
+
+        <variable
+            name="form"
+            type="edu.aku.hassannaqvi.mi_covid.models.Form" />
     </data>
 
     <ScrollView
@@ -952,7 +954,7 @@
                         android:layout_height="56dp"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h12yy"
-                        app:mask="##"
+                        app:mask="####"
                         app:maxValue="2020"
                         app:minValue="2020"
                         app:type="range" />

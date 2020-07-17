@@ -13,11 +13,11 @@ import com.validatorcrawler.aliazaz.Clear
 import com.validatorcrawler.aliazaz.Validator.Companion.emptyCheckingContainer
 import edu.aku.hassannaqvi.mi_covid.R
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract
-import edu.aku.hassannaqvi.mi_covid.core.MainApp
+import edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo
+import edu.aku.hassannaqvi.mi_covid.core.MainApp.form
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionDBinding
 import edu.aku.hassannaqvi.mi_covid.utils.openEndActivity
 import org.json.JSONException
-import org.json.JSONObject
 
 class SectionDActivity : AppCompatActivity() {
     lateinit var bi: ActivitySectionDBinding
@@ -26,6 +26,7 @@ class SectionDActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_d)
         bi.callback = this
+        bi.form = form
         setupSkips()
     }
 
@@ -39,14 +40,14 @@ class SectionDActivity : AppCompatActivity() {
 
     @Throws(JSONException::class)
     private fun saveDraft() {
-        val json = JSONObject()
-        json.put("d1", bi.d1.text.toString())
-        json.put("d02", when {
+
+        form.d1 = bi.d1.text.toString()
+        form.d02 = when {
             bi.d0201.isChecked -> "1"
             bi.d0202.isChecked -> "2"
             else -> "-1"
-        })
-        json.put("d03", when {
+        }
+        form.d03 = when {
             bi.d0301.isChecked -> "1"
             bi.d0302.isChecked -> "2"
             bi.d0303.isChecked -> "3"
@@ -54,19 +55,46 @@ class SectionDActivity : AppCompatActivity() {
             bi.d0305.isChecked -> "5"
             bi.d03096.isChecked -> "96"
             else -> "-1"
-        })
-        json.put("d04", when {
+        }
+        form.d04 = when {
             bi.d0401.isChecked -> "1"
             bi.d0402.isChecked -> "2"
             else -> "-1"
-        })
-        json.put("d05", when {
+        }
+        form.d05 = when {
             bi.d0501.isChecked -> "1"
             bi.d0502.isChecked -> "2"
             else -> "-1"
-        })
+        }
 
-        MainApp.form.setsD(json.toString())
+        /*  val json = JSONObject()
+          json.put("d1", bi.d1.text.toString())
+          json.put("d02", when {
+              bi.d0201.isChecked -> "1"
+              bi.d0202.isChecked -> "2"
+              else -> "-1"
+          })
+          json.put("d03", when {
+              bi.d0301.isChecked -> "1"
+              bi.d0302.isChecked -> "2"
+              bi.d0303.isChecked -> "3"
+              bi.d0304.isChecked -> "4"
+              bi.d0305.isChecked -> "5"
+              bi.d03096.isChecked -> "96"
+              else -> "-1"
+          })
+          json.put("d04", when {
+              bi.d0401.isChecked -> "1"
+              bi.d0402.isChecked -> "2"
+              else -> "-1"
+          })
+          json.put("d05", when {
+              bi.d0501.isChecked -> "1"
+              bi.d0502.isChecked -> "2"
+              else -> "-1"
+          })
+
+          MainApp.form.setsD(json.toString())*/
     }
 
 
@@ -76,8 +104,8 @@ class SectionDActivity : AppCompatActivity() {
 
 
     private fun updateDB(): Boolean {
-        val db = MainApp.appInfo.dbHelper
-        val updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, MainApp.form.getsD())
+        val db = appInfo.dbHelper
+        val updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, form.sBtoString())
         return if (updcount > 0) {
             true
         } else {

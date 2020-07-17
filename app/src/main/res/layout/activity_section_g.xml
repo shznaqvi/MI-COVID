@@ -3,9 +3,9 @@
     <data>
 
         <import type="android.view.View" />
-        <!--<variable
+        <variable
             name="form"
-            type="edu.aku.hassannaqvi.micovid19.models.Form" />-->
+            type="edu.aku.hassannaqvi.mi_covid.models.Form" />
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionGActivity" />

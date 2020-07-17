@@ -52,6 +52,7 @@ public class SectionAActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         bi = DataBindingUtil.setContentView(this, R.layout.activity_section_a);
         bi.setCallback(this);
+        bi.setForm(form);
         setupSkip();
     }
 

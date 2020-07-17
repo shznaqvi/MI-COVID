@@ -7,6 +7,10 @@
         <import type="android.view.View" />
 
         <variable
+            name="form"
+            type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
+        <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionBActivity" />
     </data>

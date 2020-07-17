@@ -461,6 +461,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     orderBy                    // The sort order
             );
             while (c.moveToNext()) {
+                Log.d(TAG, "getUnsyncedForms: " + c.getCount());
                 Form form = new Form();
                 allForms.add(form.Hydrate(c));
             }

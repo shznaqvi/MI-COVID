@@ -29,7 +29,7 @@ public class TypefaceUtil {
 
         } catch (Exception e) {
 
-            Log.e("TypeFace", "Can not set custom font " + customFontFileNameInAssets + " instead of " + defaultFontNameToOverride + "\r\n" + e);
+            Log.d("TypeFace", "Can not set custom font " + customFontFileNameInAssets + " instead of " + defaultFontNameToOverride + "\r\n" + e);
         }
     }
 }
