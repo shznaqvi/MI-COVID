@@ -14,6 +14,7 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -21,6 +22,8 @@ import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionCBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 

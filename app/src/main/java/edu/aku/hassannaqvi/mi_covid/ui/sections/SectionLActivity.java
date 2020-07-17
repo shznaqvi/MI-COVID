@@ -26,6 +26,8 @@ import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
+
 public class SectionLActivity extends AppCompatActivity {
 
     ActivitySectionLBinding bi;
@@ -147,7 +149,7 @@ public class SectionLActivity extends AppCompatActivity {
                 : bi.l01003.isChecked() ? "3"
                 : "-1");
 
-        
+
         /*JSONObject json = new JSONObject();
 
         json.put("l01", bi.l0101.isChecked() ? "1"
@@ -211,7 +213,6 @@ public class SectionLActivity extends AppCompatActivity {
         return Validator.emptyCheckingContainer(this, bi.fldGrpSectionL);
 
     }
-
 
     @Override
     public void onBackPressed() {

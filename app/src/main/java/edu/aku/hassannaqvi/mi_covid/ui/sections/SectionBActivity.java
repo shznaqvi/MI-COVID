@@ -25,6 +25,8 @@ import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
+
 public class SectionBActivity extends AppCompatActivity {
     ActivitySectionBBinding bi;
 
@@ -249,7 +251,7 @@ public class SectionBActivity extends AppCompatActivity {
                 : "-1");
 
         form.setB17(bi.b17.getText().toString());
-        
+
         /*JSONObject json = new JSONObject();
 
 
@@ -429,7 +431,6 @@ public class SectionBActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         //ViewGroup viewGroup = findViewById(android.R.id.content);

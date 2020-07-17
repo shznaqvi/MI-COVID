@@ -14,6 +14,7 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -23,6 +24,8 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionHBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
+
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
 public class SectionHActivity extends AppCompatActivity {
 
@@ -49,6 +52,12 @@ public class SectionHActivity extends AppCompatActivity {
         bi.h06.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.h0602.getId()) {
                 Clear.clearAllFields(bi.fldGrpSecH01);
+            }
+        }));
+
+        bi.h10.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.h1002.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecH02);
             }
         }));
 

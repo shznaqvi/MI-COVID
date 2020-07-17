@@ -14,6 +14,7 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -23,6 +24,8 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
+
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
 public class SectionJActivity extends AppCompatActivity {
 
@@ -53,14 +56,14 @@ public class SectionJActivity extends AppCompatActivity {
         }));
 
         bi.j06.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i != bi.j0601.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVj07);
+            if (i == bi.j0602.getId() || i == bi.j0604.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecj01);
             }
         }));
 
         bi.j010.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.j01002.getId()) {
-                Clear.clearAllFields(bi.fldGrpSecj01);
+                Clear.clearAllFields(bi.fldGrpSecj02);
             }
         }));
 
@@ -148,7 +151,7 @@ public class SectionJActivity extends AppCompatActivity {
                 : "-1");
 
         form.setJ012(bi.j012.getText().toString());
-        
+
     /*    JSONObject json = new JSONObject();
 
         json.put("j01", bi.j0101.isChecked() ? "1"
