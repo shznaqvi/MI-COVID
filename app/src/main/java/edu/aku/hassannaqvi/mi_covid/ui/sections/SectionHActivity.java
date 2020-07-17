@@ -50,6 +50,12 @@ public class SectionHActivity extends AppCompatActivity {
             }
         }));
 
+        bi.h10.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.h1002.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecH02);
+            }
+        }));
+
     }
 
 
