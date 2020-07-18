@@ -137,8 +137,6 @@ public class SectionEActivity extends AppCompatActivity {
 
         form.setE04(bi.e0401.isChecked() ? "1"
                 : bi.e0402.isChecked() ? "2"
-                : bi.e0701.isChecked() ? "1"
-                : bi.e0702.isChecked() ? "2"
                 : "-1");
 
         form.setE05(bi.e05.getText().toString());
