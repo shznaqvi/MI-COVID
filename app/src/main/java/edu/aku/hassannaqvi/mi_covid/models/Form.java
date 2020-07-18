@@ -185,11 +185,13 @@ public class Form extends LiveData<Form> {
     private String h02dd;
     private String h02mm;
     private String h02yy;
+    private String h03;
     private String h04;
     private String h05;
     private String h06;
     private String h0701;
     private String h0702;
+    private String h08;
     private String h09;
     private String h10;
     private String h11;
@@ -1497,6 +1499,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getH03() {
+        return h03;
+    }
+
+    public Form setH03(String h03) {
+        this.h03 = h03;
+        return this;
+    }
+
     public String getH04() {
         return h04;
     }
@@ -1539,6 +1550,15 @@ public class Form extends LiveData<Form> {
 
     public Form setH0702(String h0702) {
         this.h0702 = h0702;
+        return this;
+    }
+
+    public String getH08() {
+        return h08;
+    }
+
+    public Form setH08(String h08) {
+        this.h08 = h08;
         return this;
     }
 
@@ -2748,11 +2768,13 @@ public class Form extends LiveData<Form> {
                     .put("h02dd", h02dd)
                     .put("h02mm", h02mm)
                     .put("h02yy", h02yy)
+                    .put("h03", h03)
                     .put("h04", h04)
                     .put("h05", h05)
                     .put("h06", h06)
                     .put("h0701", h0701)
                     .put("h0702", h0702)
+                    .put("h08", h08)
                     .put("h09", h09)
                     .put("h10", h10)
                     .put("h11", h11)
@@ -3256,11 +3278,13 @@ public class Form extends LiveData<Form> {
                 this.h02dd = json.getString("h02dd");
                 this.h02mm = json.getString("h02mm");
                 this.h02yy = json.getString("h02yy");
+                this.h03 = json.getString("h03");
                 this.h04 = json.getString("h04");
                 this.h05 = json.getString("h05");
                 this.h06 = json.getString("h06");
                 this.h0701 = json.getString("h0701");
                 this.h0702 = json.getString("h0702");
+                this.h08 = json.getString("h08");
                 this.h09 = json.getString("h09");
                 this.h10 = json.getString("h10");
                 this.h11 = json.getString("h11");

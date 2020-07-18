@@ -14,7 +14,6 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -24,8 +23,6 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionHBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
-
-import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
 public class SectionHActivity extends AppCompatActivity {
 
@@ -106,6 +103,25 @@ public class SectionHActivity extends AppCompatActivity {
 
         form.setH02yy(bi.h02yy.getText().toString());
 
+        form.setH03(bi.h0301.isChecked() ? "1" : "0");
+        form.setH03(bi.h0302.isChecked() ? "2" : "0");
+        form.setH03(bi.h0303.isChecked() ? "3" : "0");
+        form.setH03(bi.h0304.isChecked() ? "4" : "0");
+        form.setH03(bi.h0305.isChecked() ? "5" : "0");
+        form.setH03(bi.h0306.isChecked() ? "6" : "0");
+        form.setH03(bi.h0307.isChecked() ? "7" : "0");
+        form.setH03(bi.h0308.isChecked() ? "8" : "0");
+        form.setH03(bi.h0309.isChecked() ? "9" : "0");
+        form.setH03(bi.h0310.isChecked() ? "10" : "0");
+        form.setH03(bi.h0311.isChecked() ? "11" : "0");
+        form.setH03(bi.h0312.isChecked() ? "12" : "0");
+        form.setH03(bi.h0313.isChecked() ? "13" : "0");
+        form.setH03(bi.h0314.isChecked() ? "14" : "0");
+        form.setH03(bi.h0315.isChecked() ? "15" : "0");
+        form.setH03(bi.h0316.isChecked() ? "16" : "0");
+        form.setH03(bi.h03096.isChecked() ? "96" : "0");
+        form.setH03(bi.h03096x.getText().toString());
+
         form.setH04(bi.h0401.isChecked() ? "1"
                 : bi.h0402.isChecked() ? "2"
                 : "-1");
@@ -117,8 +133,14 @@ public class SectionHActivity extends AppCompatActivity {
                 : "-1");
 
         form.setH0701(bi.h0701.getText().toString());
-
         form.setH0702(bi.h0702.getText().toString());
+
+        form.setH08(bi.h0801.isChecked() ? "1" : "0");
+        form.setH08(bi.h0802.isChecked() ? "2" : "0");
+        form.setH08(bi.h0803.isChecked() ? "3" : "0");
+        form.setH08(bi.h0804.isChecked() ? "4" : "0");
+        form.setH08(bi.h08096.isChecked() ? "96" : "0");
+        form.setH08(bi.h08096x.getText().toString());
 
         form.setH09(bi.h0901.isChecked() ? "1"
                 : bi.h0902.isChecked() ? "2"
