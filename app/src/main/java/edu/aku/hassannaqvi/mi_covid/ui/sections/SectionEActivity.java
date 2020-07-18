@@ -2,11 +2,8 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -24,6 +21,7 @@ import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
 public class SectionEActivity extends AppCompatActivity {
 
@@ -285,28 +283,7 @@ public class SectionEActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //ViewGroup viewGroup = findViewById(android.R.id.content);
-        View backDialogView = LayoutInflater.from(this).inflate(R.layout.back_dialog, null, false);
-        builder.setView(backDialogView);
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-
-        backDialogView.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SectionEActivity.super.onBackPressed();
-            }
-        });
-        backDialogView.findViewById(R.id.btnNo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                alertDialog.dismiss();
-            }
-        });
-        // Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
-        //backDialogView.findViewById<View>(R.id.btnOk).setOnClickListener
-
+        contextBackActivity(this);
 
     }
 

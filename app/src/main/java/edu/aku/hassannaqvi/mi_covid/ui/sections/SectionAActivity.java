@@ -167,7 +167,7 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a1503.isChecked() ? "3"
                 : "-1");
 
-        String a16 = bi.a1601.isChecked() ? "1"
+        form.setA16(bi.a1601.isChecked() ? "1"
                 : bi.a1602.isChecked() ? "2"
                 : bi.a1603.isChecked() ? "3"
                 : bi.a1604.isChecked() ? "4"
@@ -177,8 +177,7 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a1608.isChecked() ? "8"
                 : bi.a1609.isChecked() ? "9"
                 : bi.a16096.isChecked() ? "96"
-                : "-1";
-        form.setA16(a16);
+                : "-1");
 
         form.setA17(bi.a17.getText().toString());
 
@@ -346,7 +345,7 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setsInfo(json.toString());*/
 
-        form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), a16, bi.a2002.isChecked()));
+        form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), form.getA21(), bi.a2002.isChecked()));
 
     }
 

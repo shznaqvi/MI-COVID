@@ -283,7 +283,7 @@
                             <EditText
                                 android:id="@+id/i04096x"
                                 android:layout_width="match_parent"
-                                android:layout_height="56dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/i04096"
                                 android:tag="i04096"

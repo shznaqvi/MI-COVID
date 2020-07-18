@@ -2,11 +2,8 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -23,8 +20,6 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionBBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
-
-
 import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
 public class SectionBActivity extends AppCompatActivity {
@@ -71,7 +66,7 @@ public class SectionBActivity extends AppCompatActivity {
         if (UpdateDB()) {
             //  finish();
             int a16 = Integer.parseInt(MainApp.form.getSecSelection().getA16());
-            startActivity(new Intent(this, a16 > 6 ? SectionDActivity.class : SectionCActivity.class));
+            startActivity(new Intent(this, a16 == 7 || a16 == 9 ? SectionDActivity.class : a16 >= 1 && a16 <= 6 ? SectionCActivity.class : SectionEActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }
@@ -432,26 +427,7 @@ public class SectionBActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        //ViewGroup viewGroup = findViewById(android.R.id.content);
-        View backDialogView = LayoutInflater.from(this).inflate(R.layout.back_dialog, null, false);
-        builder.setView(backDialogView);
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
-        backDialogView.findViewById(R.id.btnOk).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                SectionBActivity.super.onBackPressed();
-            }
-        });
-        backDialogView.findViewById(R.id.btnNo).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                alertDialog.dismiss();
-            }
-        });
-        // Toast.makeText(getApplicationContext(), "You Can't go back", Toast.LENGTH_LONG).show();
-        //backDialogView.findViewById<View>(R.id.btnOk).setOnClickListener
+        contextBackActivity(this);
 
 
     }

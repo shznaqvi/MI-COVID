@@ -58,14 +58,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h01dd" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h01dd"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h01dd"
                         android:inputType="number"
@@ -76,14 +76,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h01mm" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h01mm"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h01mm"
                         android:inputType="number"
@@ -94,14 +94,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h01yy" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h01yy"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h01yy"
                         android:inputType="number"
@@ -146,14 +146,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h02dd" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h02dd"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h02dd"
                         android:inputType="number"
@@ -164,14 +164,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h02mm" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h02mm"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h02mm"
                         android:inputType="number"
@@ -182,14 +182,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h02yy" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h02yy"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h02yy"
                         android:inputType="number"
@@ -344,7 +344,7 @@
                         <EditText
                             android:id="@+id/h03096x"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h03096"
                             android:tag="h03096"
@@ -442,7 +442,7 @@
                     <EditText
                         android:id="@+id/h05"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h05" />
                 </LinearLayout>
@@ -574,27 +574,27 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/h0701" />
 
                         <EditText
                             android:id="@+id/h0701"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h0701" />
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/h0702" />
 
                         <EditText
                             android:id="@+id/h0702"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h0702" />
                     </LinearLayout>
@@ -672,7 +672,7 @@
                             <EditText
                                 android:id="@+id/h08096x"
                                 android:layout_width="match_parent"
-                                android:layout_height="56dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/h08096"
                                 android:tag="h08096"
@@ -866,7 +866,7 @@
                             <EditText
                                 android:id="@+id/h11096x"
                                 android:layout_width="match_parent"
-                                android:layout_height="56dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/h11096"
                                 android:tag="h11096"
@@ -916,14 +916,14 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/h12dd" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/h12dd"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h12dd"
                             android:inputType="number"
@@ -934,14 +934,14 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/h12mm" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/h12mm"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h12mm"
                             android:inputType="number"
@@ -952,14 +952,14 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/h12yy" />
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/h12yy"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h12yy"
                             android:inputType="number"
@@ -1037,7 +1037,7 @@
                         <EditText
                             android:id="@+id/h13096x"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h13096"
                             android:tag="h13096"
@@ -1111,7 +1111,7 @@
                         <EditText
                             android:id="@+id/h14096x"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h14096"
                             android:tag="h14096"
@@ -1232,7 +1232,7 @@
                     <EditText
                         android:id="@+id/h16"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h16" />
                 </LinearLayout>
@@ -1324,14 +1324,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h1801" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/h1801"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h1801"
                         android:inputType="number"
@@ -1342,14 +1342,14 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/h1802" />
 
                     <EditText
                         android:id="@+id/h1802"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h1802" />
                 </LinearLayout>

@@ -68,8 +68,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:hint="@string/a01"
+                        android:hint="DD/MM/YYYY"
                         android:onTextChanged="@{callback::a01OnTextChanged}"
+                        app:dateFormat="dd-MM-yyyy"
                         app:maxDate="CR_DATE"
                         app:minDate="07/07/2020" />
 
@@ -282,7 +283,6 @@
                         android:id="@+id/a05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:hint="@string/a05" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -323,7 +323,6 @@
                         android:id="@+id/a05a"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
                         android:hint="@string/a05a"
                         android:inputType="number" />
 
@@ -366,18 +365,21 @@
                     <RadioGroup
                         android:id="@+id/a05b"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/a05b1"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/a05b1" />
 
                         <RadioButton
                             android:id="@+id/a05b2"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/a05b2" />
                     </RadioGroup>
                 </LinearLayout>
@@ -516,18 +518,21 @@
                         <RadioGroup
                             android:id="@+id/a07"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/a0701"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/a0701" />
 
                             <RadioButton
                                 android:id="@+id/a0702"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/a0702" />
 
                         </RadioGroup>
@@ -748,18 +753,21 @@
                             <RadioGroup
                                 android:id="@+id/a12"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:id="@+id/a1201"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/a1201" />
 
                                 <RadioButton
                                     android:id="@+id/a1202"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/a1202" />
                             </RadioGroup>
                         </LinearLayout>
@@ -811,14 +819,12 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
                                         android:text="@string/a13dd" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/a13dd"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="12dp"
                                         android:hint="@string/a13dd"
                                         android:inputType="number"
                                         app:defaultValue="98"
@@ -837,14 +843,12 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
                                         android:text="@string/a13mm" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/a13mm"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="12dp"
                                         android:hint="@string/a13mm"
                                         android:inputType="number"
                                         app:defaultValue="98"
@@ -863,14 +867,12 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
                                         android:text="@string/a13yy" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/a13yy"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginBottom="12dp"
                                         android:hint="@string/a13yy"
                                         android:inputType="number"
                                         android:onTextChanged="@{callback::a13yyOnTextChanged}"
@@ -930,7 +932,6 @@
                                     <TextView
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:layout_marginTop="12dp"
                                         android:text="@string/a14yy" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
