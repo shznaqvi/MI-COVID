@@ -406,7 +406,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- j08     -->
+                <!-- j08  checkbox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVj08"
                     style="@style/cardView">

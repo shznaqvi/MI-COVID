@@ -2,8 +2,11 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
@@ -11,6 +14,7 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -20,8 +24,6 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionJBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
-import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
-
 public class SectionJActivity extends AppCompatActivity {
 
     ActivitySectionJBinding bi;
@@ -129,6 +131,15 @@ public class SectionJActivity extends AppCompatActivity {
         form.setJ07(bi.j0701.isChecked() ? "1"
                 : bi.j0702.isChecked() ? "2"
                 : "-1");
+
+        form.setJ08(bi.j0801.isChecked() ? "1" : "0");
+        form.setJ08(bi.j0802.isChecked() ? "2" : "0");
+        form.setJ08(bi.j0803.isChecked() ? "3" : "0");
+        form.setJ08(bi.j0804.isChecked() ? "4" : "0");
+        form.setJ08(bi.j0805.isChecked() ? "5" : "0");
+        form.setJ08(bi.j0806.isChecked() ? "6" : "0");
+        form.setJ08(bi.j08096.isChecked() ? "96" : "0");
+        form.setJ08(bi.j08096x.getText().toString());
 
         form.setJ09(bi.j0901.isChecked() ? "1"
                 : bi.j0902.isChecked() ? "2"

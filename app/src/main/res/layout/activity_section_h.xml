@@ -200,7 +200,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- h03  Title   -->
+            <!-- h03  checkbox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVh03"
                 style="@style/cardView">
@@ -600,7 +600,7 @@
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <!-- h08  Title   -->
+                <!-- h08  checkbox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVh08"
                     style="@style/cardView">
