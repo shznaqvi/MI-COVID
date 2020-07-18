@@ -195,7 +195,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="20"
+                            app:maxValue="500"
                             app:minValue="1"
                             app:type="range"
                             android:id="@+id/c0201"
@@ -241,7 +241,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="20"
+                            app:maxValue="100"
                             app:minValue="1"
                             app:type="range"
                             android:id="@+id/c0202"
