@@ -314,7 +314,7 @@
                     <EditText
                         android:id="@+id/e05"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/e05" />
                 </LinearLayout>
@@ -920,7 +920,7 @@
                     <EditText
                         android:id="@+id/e1401"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/e1401" />
                 </LinearLayout>
@@ -961,7 +961,7 @@
                     <EditText
                         android:id="@+id/e1402"
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/e1402" />
                 </LinearLayout>
@@ -1001,7 +1001,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/e1501" />
 

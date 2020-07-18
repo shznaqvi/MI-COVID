@@ -200,7 +200,7 @@
                             app:type="range"
                             android:id="@+id/c0201"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0201" />
                     </LinearLayout>
@@ -246,7 +246,7 @@
                             app:type="range"
                             android:id="@+id/c0202"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0202" />
                     </LinearLayout>

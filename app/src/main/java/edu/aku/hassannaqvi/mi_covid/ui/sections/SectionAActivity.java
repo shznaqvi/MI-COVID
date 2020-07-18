@@ -346,7 +346,7 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setsInfo(json.toString());*/
 
-        form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), a16, bi.a2002.isChecked()));
+        form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), form.getA21(), bi.a2002.isChecked()));
 
     }
 

@@ -278,7 +278,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="56dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
                         android:text="@string/j0501" />
                 </LinearLayout>
@@ -490,7 +490,7 @@
                             <EditText
                                 android:id="@+id/j08096x"
                                 android:layout_width="match_parent"
-                                android:layout_height="56dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/j08096"
                                 android:tag="j08096"
@@ -567,7 +567,7 @@
                         <EditText
                             android:id="@+id/j09096x"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/j09096"
                             android:tag="j09096"
@@ -722,7 +722,7 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/j012"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/j012"
                             android:inputType="number"

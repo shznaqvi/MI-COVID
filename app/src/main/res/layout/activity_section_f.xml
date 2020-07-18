@@ -344,7 +344,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/f0501" />
 
@@ -390,7 +390,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/f0601" />
 
@@ -589,7 +589,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09dd"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09dd"
@@ -615,7 +615,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09mm"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09mm"
@@ -641,7 +641,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09yy"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09yy"
@@ -771,7 +771,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11dd"
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11dd"
@@ -797,7 +797,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11mm"
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11mm"
@@ -823,7 +823,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11yy"
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11yy"
@@ -946,7 +946,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f1303_t" />
 
@@ -982,7 +982,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f1308_t" />
 

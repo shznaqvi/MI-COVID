@@ -278,7 +278,7 @@
                                 <EditText
                                     android:id="@+id/g04096x"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:hint="@string/g04096"
                                     android:tag="g04096"
@@ -322,7 +322,7 @@
 
                             <TextView
                                 android:layout_width="match_parent"
-                                android:layout_height="56dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginTop="12dp"
                                 android:text="@string/g0501_t" />
 
@@ -347,7 +347,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/g0503_t" />
 
@@ -371,7 +371,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/g0506_t" />
 
@@ -395,7 +395,7 @@
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/g0509_t" />
 
@@ -768,7 +768,7 @@
                             <EditText
                                 android:id="@+id/g10"
                                 android:layout_width="match_parent"
-                                android:layout_height="56dp"
+                                android:layout_height="wrap_content"
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/g10" />
                         </LinearLayout>
