@@ -68,8 +68,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
-                        android:hint="@string/a01"
+                        android:hint="DD/MM/YYYY"
                         android:onTextChanged="@{callback::a01OnTextChanged}"
+                        app:dateFormat="dd-MM-yyyy"
                         app:maxDate="CR_DATE"
                         app:minDate="07/07/2020" />
 
@@ -711,6 +712,7 @@
                                 android:layout_marginBottom="12dp"
                                 android:hint="@string/a11"
                                 android:inputType="number"
+                                app:minValue="1"
                                 android:maxLength="11"
                                 app:pattern="[0-9]{11}" />
                         </LinearLayout>
@@ -757,15 +759,15 @@
                                 <RadioButton
                                     android:id="@+id/a1201"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/a1201" />
 
                                 <RadioButton
                                     android:id="@+id/a1202"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/a1202" />
                             </RadioGroup>
                         </LinearLayout>

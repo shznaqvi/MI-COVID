@@ -213,7 +213,5 @@ public class SectionLActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         contextBackActivity(this);
-
-
     }
 }

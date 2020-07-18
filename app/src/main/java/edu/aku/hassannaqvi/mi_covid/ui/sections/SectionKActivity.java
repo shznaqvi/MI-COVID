@@ -294,7 +294,5 @@ public class SectionKActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         contextBackActivity(this);
-
-
     }
 }
