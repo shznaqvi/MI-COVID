@@ -14,7 +14,6 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -123,14 +122,13 @@ public class SectionEActivity extends AppCompatActivity {
 
         form.setE0202("-1");
 
-        form.setE03(bi.e0301.isChecked() ? "1"
-                : bi.e0302.isChecked() ? "2"
-                : bi.e0303.isChecked() ? "3"
-                : bi.e0304.isChecked() ? "4"
-                : bi.e0305.isChecked() ? "5"
-                : bi.e0306.isChecked() ? "6"
-                : bi.e03096.isChecked() ? "96"
-                : "-1");
+        form.setE03(bi.e0301.isChecked() ? "1" : "0");
+        form.setE03(bi.e0302.isChecked() ? "2" : "0");
+        form.setE03(bi.e0303.isChecked() ? "3" : "0");
+        form.setE03(bi.e0304.isChecked() ? "4" : "0");
+        form.setE03(bi.e0305.isChecked() ? "5" : "0");
+        form.setE03(bi.e0306.isChecked() ? "6" : "0");
+        form.setE03(bi.e03096.isChecked() ? "96" : "0");
 
         form.setE04(bi.e0401.isChecked() ? "1"
                 : bi.e0402.isChecked() ? "2"
@@ -148,15 +146,13 @@ public class SectionEActivity extends AppCompatActivity {
 
         form.setE07("-1");
 
-        form.setE08(bi.e0801.isChecked() ? ""
-                : bi.e0801.isChecked() ? "1"
-                : bi.e0802.isChecked() ? "2"
-                : bi.e0803.isChecked() ? "3"
-                : bi.e0804.isChecked() ? "4"
-                : bi.e0805.isChecked() ? "5"
-                : bi.e0806.isChecked() ? "6"
-                : bi.e08096.isChecked() ? "96"
-                : "-1");
+        form.setE08(bi.e0801.isChecked() ? "1" : "0");
+        form.setE08(bi.e0802.isChecked() ? "2" : "0");
+        form.setE08(bi.e0803.isChecked() ? "3" : "0");
+        form.setE08(bi.e0804.isChecked() ? "4" : "0");
+        form.setE08(bi.e0805.isChecked() ? "5" : "0");
+        form.setE08(bi.e0806.isChecked() ? "6" : "0");
+        form.setE08(bi.e08096.isChecked() ? "96" : "0");
 
         form.setE09(bi.e0901.isChecked() ? "1"
                 : bi.e0902.isChecked() ? "2"
