@@ -284,7 +284,14 @@ public class Form extends LiveData<Form> {
     private String j04;
     private String j06;
     private String j07;
-    private String j08;
+    private String j0801;
+    private String j0802;
+    private String j0803;
+    private String j0804;
+    private String j0805;
+    private String j0806;
+    private String j08096;
+    private String j08096x;
     private String j09;
     private String j09096x;
     private String j010;
@@ -2452,12 +2459,75 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getJ08() {
-        return j08;
+    public String getJ0801() {
+        return j0801;
     }
 
-    public Form setJ08(String j08) {
-        this.j08 = j08;
+    public Form setJ0801(String j0801) {
+        this.j0801 = j0801;
+        return this;
+    }
+
+    public String getJ0802() {
+        return j0802;
+    }
+
+    public Form setJ0802(String j0802) {
+        this.j0802 = j0802;
+        return this;
+    }
+
+    public String getJ0803() {
+        return j0803;
+    }
+
+    public Form setJ0803(String j0803) {
+        this.j0803 = j0803;
+        return this;
+    }
+
+    public String getJ0804() {
+        return j0804;
+    }
+
+    public Form setJ0804(String j0804) {
+        this.j0804 = j0804;
+        return this;
+    }
+
+    public String getJ0805() {
+        return j0805;
+    }
+
+    public Form setJ0805(String j0805) {
+        this.j0805 = j0805;
+        return this;
+    }
+
+    public String getJ0806() {
+        return j0806;
+    }
+
+    public Form setJ0806(String j0806) {
+        this.j0806 = j0806;
+        return this;
+    }
+
+    public String getJ08096() {
+        return j08096;
+    }
+
+    public Form setJ08096(String j08096) {
+        this.j08096 = j08096;
+        return this;
+    }
+
+    public String getJ08096x() {
+        return j08096x;
+    }
+
+    public Form setJ08096x(String j08096x) {
+        this.j08096x = j08096x;
         return this;
     }
 
@@ -3509,7 +3579,14 @@ public class Form extends LiveData<Form> {
                     .put("j04", j04)
                     .put("j06", j06)
                     .put("j07", j07)
-                    .put("j08", j08)
+                    .put("j0801", j0801)
+                    .put("j0802", j0802)
+                    .put("j0803", j0803)
+                    .put("j0804", j0804)
+                    .put("j0805", j0805)
+                    .put("j0806", j0806)
+                    .put("j08096", j08096)
+                    .put("j08096x", j08096x)
                     .put("j09", j09)
                     .put("j09096x", j09096x)
                     .put("j010", j010)
@@ -4089,7 +4166,14 @@ public class Form extends LiveData<Form> {
                 this.j04 = json.getString("j04");
                 this.j06 = json.getString("j06");
                 this.j07 = json.getString("j07");
-                this.j08 = json.getString("j08");
+                this.j0801 = json.getString("j0801");
+                this.j0802 = json.getString("j0802");
+                this.j0803 = json.getString("j0803");
+                this.j0804 = json.getString("j0804");
+                this.j0805 = json.getString("j0805");
+                this.j0806 = json.getString("j0806");
+                this.j08096 = json.getString("j08096");
+                this.j08096x = json.getString("j08096x");
                 this.j09 = json.getString("j09");
                 this.j09096x = json.getString("j09096x");
                 this.j010 = json.getString("j010");
