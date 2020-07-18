@@ -170,7 +170,10 @@ public class Form extends LiveData<Form> {
     private String g02;
     private String g03;
     private String g04;
+    private String g05;
     private String g06;
+    private String g07;
+    private String g08;
     private String g09;
     private String g10;
     private String g11;
@@ -1359,12 +1362,39 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getG05() {
+        return g05;
+    }
+
+    public Form setG05(String g05) {
+        this.g05 = g05;
+        return this;
+    }
+
     public String getG06() {
         return g06;
     }
 
     public Form setG06(String g06) {
         this.g06 = g06;
+        return this;
+    }
+
+    public String getG07() {
+        return g07;
+    }
+
+    public Form setG07(String g07) {
+        this.g07 = g07;
+        return this;
+    }
+
+    public String getG08() {
+        return g08;
+    }
+
+    public Form setG08(String g08) {
+        this.g08 = g08;
         return this;
     }
 
@@ -2692,7 +2722,10 @@ public class Form extends LiveData<Form> {
                     .put("g02", g02)
                     .put("g03", g03)
                     .put("g04", g04)
+                    .put("g05", g05)
                     .put("g06", g06)
+                    .put("g07", g07)
+                    .put("g08", g08)
                     .put("g09", g09)
                     .put("g10", g10)
                     .put("g11", g11)
@@ -3193,7 +3226,10 @@ public class Form extends LiveData<Form> {
                 this.g02 = json.getString("g02");
                 this.g03 = json.getString("g03");
                 this.g04 = json.getString("g04");
+                this.g05 = json.getString("g05");
                 this.g06 = json.getString("g06");
+                this.g07 = json.getString("g07");
+                this.g08 = json.getString("g08");
                 this.g09 = json.getString("g09");
                 this.g10 = json.getString("g10");
                 this.g11 = json.getString("g11");
