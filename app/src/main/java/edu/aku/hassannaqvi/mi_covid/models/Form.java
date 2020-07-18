@@ -224,13 +224,35 @@ public class Form extends LiveData<Form> {
     private String h02dd;
     private String h02mm;
     private String h02yy;
-    private String h03;
+    private String h0301;
+    private String h0302;
+    private String h0303;
+    private String h0304;
+    private String h0305;
+    private String h0306;
+    private String h0307;
+    private String h0308;
+    private String h0309;
+    private String h0310;
+    private String h0311;
+    private String h0312;
+    private String h0313;
+    private String h0314;
+    private String h0315;
+    private String h0316;
+    private String h03096;
+    private String h03096x;
     private String h04;
     private String h05;
     private String h06;
     private String h0701;
     private String h0702;
-    private String h08;
+    private String h0801;
+    private String h0802;
+    private String h0803;
+    private String h0804;
+    private String h08096;
+    private String h08096x;
     private String h09;
     private String h10;
     private String h11;
@@ -1890,12 +1912,165 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getH03() {
-        return h03;
+    public String getH0301() {
+        return h0301;
     }
 
-    public Form setH03(String h03) {
-        this.h03 = h03;
+    public Form setH0301(String h0301) {
+        this.h0301 = h0301;
+        return this;
+    }
+
+    public String getH0302() {
+        return h0302;
+    }
+
+    public Form setH0302(String h0302) {
+        this.h0302 = h0302;
+        return this;
+    }
+
+    public String getH0303() {
+        return h0303;
+    }
+
+    public Form setH0303(String h0303) {
+        this.h0303 = h0303;
+        return this;
+    }
+
+    public String getH0304() {
+        return h0304;
+    }
+
+    public Form setH0304(String h0304) {
+        this.h0304 = h0304;
+        return this;
+    }
+
+    public String getH0305() {
+        return h0305;
+    }
+
+    public Form setH0305(String h0305) {
+        this.h0305 = h0305;
+        return this;
+    }
+
+    public String getH0306() {
+        return h0306;
+    }
+
+    public Form setH0306(String h0306) {
+        this.h0306 = h0306;
+        return this;
+    }
+
+    public String getH0307() {
+        return h0307;
+    }
+
+    public Form setH0307(String h0307) {
+        this.h0307 = h0307;
+        return this;
+    }
+
+    public String getH0308() {
+        return h0308;
+    }
+
+    public Form setH0308(String h0308) {
+        this.h0308 = h0308;
+        return this;
+    }
+
+    public String getH0309() {
+        return h0309;
+    }
+
+    public Form setH0309(String h0309) {
+        this.h0309 = h0309;
+        return this;
+    }
+
+    public String getH0310() {
+        return h0310;
+    }
+
+    public Form setH0310(String h0310) {
+        this.h0310 = h0310;
+        return this;
+    }
+
+    public String getH0311() {
+        return h0311;
+    }
+
+    public Form setH0311(String h0311) {
+        this.h0311 = h0311;
+        return this;
+    }
+
+    public String getH0312() {
+        return h0312;
+    }
+
+    public Form setH0312(String h0312) {
+        this.h0312 = h0312;
+        return this;
+    }
+
+    public String getH0313() {
+        return h0313;
+    }
+
+    public Form setH0313(String h0313) {
+        this.h0313 = h0313;
+        return this;
+    }
+
+    public String getH0314() {
+        return h0314;
+    }
+
+    public Form setH0314(String h0314) {
+        this.h0314 = h0314;
+        return this;
+    }
+
+    public String getH0315() {
+        return h0315;
+    }
+
+    public Form setH0315(String h0315) {
+        this.h0315 = h0315;
+        return this;
+    }
+
+    public String getH0316() {
+        return h0316;
+    }
+
+    public Form setH0316(String h0316) {
+        this.h0316 = h0316;
+        return this;
+    }
+
+    public String getH03096() {
+        return h03096;
+    }
+
+    public Form setH03096(String h03096) {
+        this.h03096 = h03096;
+        return this;
+    }
+
+    public String getH03096x() {
+        return h03096x;
+    }
+
+    public Form setH03096x(String h03096x) {
+        this.h03096x = h03096x;
         return this;
     }
 
@@ -1944,12 +2119,57 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getH08() {
-        return h08;
+    public String getH0801() {
+        return h0801;
     }
 
-    public Form setH08(String h08) {
-        this.h08 = h08;
+    public Form setH0801(String h0801) {
+        this.h0801 = h0801;
+        return this;
+    }
+
+    public String getH0802() {
+        return h0802;
+    }
+
+    public Form setH0802(String h0802) {
+        this.h0802 = h0802;
+        return this;
+    }
+
+    public String getH0803() {
+        return h0803;
+    }
+
+    public Form setH0803(String h0803) {
+        this.h0803 = h0803;
+        return this;
+    }
+
+    public String getH0804() {
+        return h0804;
+    }
+
+    public Form setH0804(String h0804) {
+        this.h0804 = h0804;
+        return this;
+    }
+
+    public String getH08096() {
+        return h08096;
+    }
+
+    public Form setH08096(String h08096) {
+        this.h08096 = h08096;
+        return this;
+    }
+
+    public String getH08096x() {
+        return h08096x;
+    }
+
+    public Form setH08096x(String h08096x) {
+        this.h08096x = h08096x;
         return this;
     }
 
@@ -3207,13 +3427,35 @@ public class Form extends LiveData<Form> {
                     .put("h02dd", h02dd)
                     .put("h02mm", h02mm)
                     .put("h02yy", h02yy)
-                    .put("h03", h03)
+                    .put("h0301", h0301)
+                    .put("h0302", h0302)
+                    .put("h0303", h0303)
+                    .put("h0304", h0304)
+                    .put("h0305", h0305)
+                    .put("h0306", h0306)
+                    .put("h0307", h0307)
+                    .put("h0308", h0308)
+                    .put("h0309", h0309)
+                    .put("h0310", h0310)
+                    .put("h0311", h0311)
+                    .put("h0312", h0312)
+                    .put("h0313", h0313)
+                    .put("h0314", h0314)
+                    .put("h0315", h0315)
+                    .put("h0316", h0316)
+                    .put("h03096", h03096)
+                    .put("h03096x", h03096x)
                     .put("h04", h04)
                     .put("h05", h05)
                     .put("h06", h06)
                     .put("h0701", h0701)
                     .put("h0702", h0702)
-                    .put("h08", h08)
+                    .put("h0801", h0801)
+                    .put("h0802", h0802)
+                    .put("h0803", h0803)
+                    .put("h0804", h0804)
+                    .put("h08096", h08096)
+                    .put("h08096x", h08096x)
                     .put("h09", h09)
                     .put("h10", h10)
                     .put("h11", h11)
@@ -3757,13 +3999,35 @@ public class Form extends LiveData<Form> {
                 this.h02dd = json.getString("h02dd");
                 this.h02mm = json.getString("h02mm");
                 this.h02yy = json.getString("h02yy");
-                this.h03 = json.getString("h03");
+                this.h0301 = json.getString("h0301");
+                this.h0302 = json.getString("h0302");
+                this.h0303 = json.getString("h0303");
+                this.h0304 = json.getString("h0304");
+                this.h0305 = json.getString("h0305");
+                this.h0306 = json.getString("h0306");
+                this.h0307 = json.getString("h0307");
+                this.h0308 = json.getString("h0308");
+                this.h0309 = json.getString("h0309");
+                this.h0310 = json.getString("h0310");
+                this.h0311 = json.getString("h0311");
+                this.h0312 = json.getString("h0312");
+                this.h0313 = json.getString("h0313");
+                this.h0314 = json.getString("h0314");
+                this.h0315 = json.getString("h0315");
+                this.h0316 = json.getString("h0316");
+                this.h03096 = json.getString("h03096");
+                this.h03096x = json.getString("h03096x");
                 this.h04 = json.getString("h04");
                 this.h05 = json.getString("h05");
                 this.h06 = json.getString("h06");
                 this.h0701 = json.getString("h0701");
                 this.h0702 = json.getString("h0702");
-                this.h08 = json.getString("h08");
+                this.h0801 = json.getString("h0801");
+                this.h0802 = json.getString("h0802");
+                this.h0803 = json.getString("h0803");
+                this.h0804 = json.getString("h0804");
+                this.h08096 = json.getString("h08096");
+                this.h08096x = json.getString("h08096x");
                 this.h09 = json.getString("h09");
                 this.h10 = json.getString("h10");
                 this.h11 = json.getString("h11");

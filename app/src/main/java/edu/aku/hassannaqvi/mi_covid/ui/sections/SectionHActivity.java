@@ -101,24 +101,24 @@ public class SectionHActivity extends AppCompatActivity {
 
         form.setH02yy(bi.h02yy.getText().toString());
 
-        form.setH03(bi.h0301.isChecked() ? "1" : "0");
-        form.setH03(bi.h0302.isChecked() ? "2" : "0");
-        form.setH03(bi.h0303.isChecked() ? "3" : "0");
-        form.setH03(bi.h0304.isChecked() ? "4" : "0");
-        form.setH03(bi.h0305.isChecked() ? "5" : "0");
-        form.setH03(bi.h0306.isChecked() ? "6" : "0");
-        form.setH03(bi.h0307.isChecked() ? "7" : "0");
-        form.setH03(bi.h0308.isChecked() ? "8" : "0");
-        form.setH03(bi.h0309.isChecked() ? "9" : "0");
-        form.setH03(bi.h0310.isChecked() ? "10" : "0");
-        form.setH03(bi.h0311.isChecked() ? "11" : "0");
-        form.setH03(bi.h0312.isChecked() ? "12" : "0");
-        form.setH03(bi.h0313.isChecked() ? "13" : "0");
-        form.setH03(bi.h0314.isChecked() ? "14" : "0");
-        form.setH03(bi.h0315.isChecked() ? "15" : "0");
-        form.setH03(bi.h0316.isChecked() ? "16" : "0");
-        form.setH03(bi.h03096.isChecked() ? "96" : "0");
-        form.setH03(bi.h03096x.getText().toString());
+        form.setH0301(bi.h0301.isChecked() ? "1" : "-1");
+        form.setH0302(bi.h0302.isChecked() ? "2" : "-1");
+        form.setH0303(bi.h0303.isChecked() ? "3" : "-1");
+        form.setH0304(bi.h0304.isChecked() ? "4" : "-1");
+        form.setH0305(bi.h0305.isChecked() ? "5" : "-1");
+        form.setH0306(bi.h0306.isChecked() ? "6" : "-1");
+        form.setH0307(bi.h0307.isChecked() ? "7" : "-1");
+        form.setH0308(bi.h0308.isChecked() ? "8" : "-1");
+        form.setH0309(bi.h0309.isChecked() ? "9" : "-1");
+        form.setH0310(bi.h0310.isChecked() ? "10" : "-1");
+        form.setH0311(bi.h0311.isChecked() ? "11" : "-1");
+        form.setH0312(bi.h0312.isChecked() ? "12" : "-1");
+        form.setH0313(bi.h0313.isChecked() ? "13" : "-1");
+        form.setH0314(bi.h0314.isChecked() ? "14" : "-1");
+        form.setH0315(bi.h0315.isChecked() ? "15" : "-1");
+        form.setH0316(bi.h0316.isChecked() ? "16" : "-1");
+        form.setH03096(bi.h03096.isChecked() ? "96" : "-1");
+        form.setH03096x(bi.h03096x.getText().toString());
 
         form.setH04(bi.h0401.isChecked() ? "1"
                 : bi.h0402.isChecked() ? "2"
@@ -133,12 +133,12 @@ public class SectionHActivity extends AppCompatActivity {
         form.setH0701(bi.h0701.getText().toString());
         form.setH0702(bi.h0702.getText().toString());
 
-        form.setH08(bi.h0801.isChecked() ? "1" : "0");
-        form.setH08(bi.h0802.isChecked() ? "2" : "0");
-        form.setH08(bi.h0803.isChecked() ? "3" : "0");
-        form.setH08(bi.h0804.isChecked() ? "4" : "0");
-        form.setH08(bi.h08096.isChecked() ? "96" : "0");
-        form.setH08(bi.h08096x.getText().toString());
+        form.setH0801(bi.h0801.isChecked() ? "1" : "0");
+        form.setH0802(bi.h0802.isChecked() ? "2" : "0");
+        form.setH0803(bi.h0803.isChecked() ? "3" : "0");
+        form.setH0804(bi.h0804.isChecked() ? "4" : "0");
+        form.setH08096(bi.h08096.isChecked() ? "96" : "0");
+        form.setH08096x(bi.h08096x.getText().toString());
 
         form.setH09(bi.h0901.isChecked() ? "1"
                 : bi.h0902.isChecked() ? "2"
