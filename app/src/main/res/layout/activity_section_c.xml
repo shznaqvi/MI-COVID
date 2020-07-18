@@ -195,12 +195,12 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="20"
+                            app:maxValue="500"
                             app:minValue="1"
                             app:type="range"
                             android:id="@+id/c0201"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0201" />
                     </LinearLayout>
@@ -241,12 +241,12 @@
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:inputType="number"
                             app:mask="##"
-                            app:maxValue="20"
+                            app:maxValue="100"
                             app:minValue="1"
                             app:type="range"
                             android:id="@+id/c0202"
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0202" />
                     </LinearLayout>

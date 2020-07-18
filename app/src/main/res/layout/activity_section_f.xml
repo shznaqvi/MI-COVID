@@ -344,7 +344,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/f0501" />
 
@@ -390,7 +390,7 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="56dp"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="12dp"
                             android:text="@string/f0601" />
 
@@ -581,6 +581,8 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    style="@style/sub"
+
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
@@ -589,7 +591,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09dd"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09dd"
@@ -607,6 +609,8 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    style="@style/sub"
+
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
@@ -615,7 +619,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09mm"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09mm"
@@ -633,6 +637,8 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    style="@style/sub"
+
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
@@ -641,7 +647,7 @@
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09yy"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginBottom="12dp"
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09yy"
@@ -763,6 +769,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
+                                        style="@style/sub"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="12dp"
@@ -771,7 +778,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11dd"
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11dd"
@@ -789,6 +796,8 @@
                                     android:orientation="vertical">
 
                                     <TextView
+                                        style="@style/sub"
+
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="12dp"
@@ -797,7 +806,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11mm"
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11mm"
@@ -815,6 +824,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
+                                        style="@style/sub"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:layout_marginTop="12dp"
@@ -823,7 +833,7 @@
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11yy"
                                         android:layout_width="match_parent"
-                                        android:layout_height="56dp"
+                                        android:layout_height="wrap_content"
                                         android:layout_marginBottom="12dp"
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11yy"
@@ -945,8 +955,9 @@
                                     android:text="@string/f1302" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f1303_t" />
 
@@ -981,8 +992,9 @@
                                     android:text="@string/f130196" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
-                                    android:layout_height="56dp"
+                                    android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
                                     android:text="@string/f1308_t" />
 
