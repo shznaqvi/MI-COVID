@@ -66,7 +66,7 @@ public class SectionBActivity extends AppCompatActivity {
         if (UpdateDB()) {
             //  finish();
             int a16 = Integer.parseInt(MainApp.form.getSecSelection().getA16());
-            startActivity(new Intent(this, a16 > 6 ? SectionDActivity.class : SectionCActivity.class));
+            startActivity(new Intent(this, a16 == 7 || a16 == 9 ? SectionDActivity.class : a16 >= 1 && a16 <= 6 ? SectionCActivity.class : SectionEActivity.class));
         } else {
             Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
         }

@@ -20,6 +20,8 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionGBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
+import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
+
 public class SectionGActivity extends AppCompatActivity {
 
     ActivitySectionGBinding bi;
@@ -268,7 +270,6 @@ public class SectionGActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         contextBackActivity(this);
-
     }
 
 }
