@@ -39,7 +39,7 @@ public class SectionJActivity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.j01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.j0104.getId()) {
+            if (i == bi.j0104.getId() || i == bi.j0102.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVj02);
             }
         }));
@@ -130,14 +130,14 @@ public class SectionJActivity extends AppCompatActivity {
                 : bi.j0702.isChecked() ? "2"
                 : "-1");
 
-        form.setJ08(bi.j0801.isChecked() ? "1" : "0");
-        form.setJ08(bi.j0802.isChecked() ? "2" : "0");
-        form.setJ08(bi.j0803.isChecked() ? "3" : "0");
-        form.setJ08(bi.j0804.isChecked() ? "4" : "0");
-        form.setJ08(bi.j0805.isChecked() ? "5" : "0");
-        form.setJ08(bi.j0806.isChecked() ? "6" : "0");
-        form.setJ08(bi.j08096.isChecked() ? "96" : "0");
-        form.setJ08(bi.j08096x.getText().toString());
+        form.setJ0801(bi.j0801.isChecked() ? "1" : "-1");
+        form.setJ0802(bi.j0802.isChecked() ? "2" : "-1");
+        form.setJ0803(bi.j0803.isChecked() ? "3" : "-1");
+        form.setJ0804(bi.j0804.isChecked() ? "4" : "-1");
+        form.setJ0805(bi.j0805.isChecked() ? "5" : "-1");
+        form.setJ0806(bi.j0806.isChecked() ? "6" : "-1");
+        form.setJ08096(bi.j08096.isChecked() ? "96" : "-1");
+        form.setJ08096x(bi.j08096x.getText().toString());
 
         form.setJ09(bi.j0901.isChecked() ? "1"
                 : bi.j0902.isChecked() ? "2"
