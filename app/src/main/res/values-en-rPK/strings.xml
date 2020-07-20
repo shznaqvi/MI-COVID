@@ -1110,6 +1110,6 @@
     <string name='Q_f131096'>f131096</string>
     <string name='Q_f130296'>f130296</string>
     <string name="numeric">0123456789</string>
-    <string name="onlyalphabet">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+    <string name="onlyalphabet">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
 
 </resources>
