@@ -195,6 +195,19 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/d03096" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/d03096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:digits="@string/onlyalphabet"
+                            android:hint="@string/d03096"
+                            android:tag="d03096"
+                            android:text='@{d03096.checked ? d03096x.getText().toString() : ""}'
+                            android:visibility='@{d03096.checked ? View.VISIBLE : View.GONE}' />
+
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
