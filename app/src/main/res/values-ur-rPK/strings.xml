@@ -1109,6 +1109,7 @@
     <string name='Q_l08'>l08</string>
     <string name='Q_l09'>l09</string>
     <string name="numeric">0123456789</string>
+    <string name="onlyalphabet">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
 
 
 </resources>
