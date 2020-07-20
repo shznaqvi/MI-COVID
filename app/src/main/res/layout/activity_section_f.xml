@@ -306,6 +306,17 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/f04096" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/f04096x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:digits="@string/onlyalphabet"
+                                android:hint="@string/f04096"
+                                android:tag="f04096"
+                                android:text='@{f04096.checked ? f04096x.getText().toString() : ""}'
+                                android:visibility='@{f04096.checked ? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -533,6 +544,19 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/f08096" />
+
+                            <com.edittextpicker.aliazaz.EditTextPicker
+                                android:id="@+id/f08096x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:digits="@string/onlyalphabet"
+                                android:hint="@string/f08096"
+                                android:tag="f08096"
+                                android:text='@{f08096.checked ? f08096x.getText().toString() : ""}'
+                                android:visibility='@{f08096.checked ? View.VISIBLE : View.GONE}' />
+
+
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -1016,11 +1040,35 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/f131096" />
 
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/f131096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:digits="@string/onlyalphabet"
+                                    android:hint="@string/f131096"
+                                    android:tag="f131096"
+                                    android:text='@{f131096.checked ? f131096x.getText().toString() : ""}'
+                                    android:visibility='@{f131096.checked ? View.VISIBLE : View.GONE}' />
+
                                 <RadioButton
                                     android:id="@+id/f130296"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/f130296" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/f130296x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:digits="@string/onlyalphabet"
+                                    android:hint="@string/f130296"
+                                    android:tag="f130296"
+                                    android:text='@{f130296.checked ? f130296x.getText().toString() : ""}'
+                                    android:visibility='@{f130296.checked ? View.VISIBLE : View.GONE}' />
+
+
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -1127,6 +1175,17 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/f14096" />
+
+                                <com.edittextpicker.aliazaz.EditTextPicker
+                                    android:id="@+id/f14096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:digits="@string/onlyalphabet"
+                                    android:hint="@string/f14096"
+                                    android:tag="f14096"
+                                    android:text='@{f14096.checked ? f14096x.getText().toString() : ""}'
+                                    android:visibility='@{f14096.checked ? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

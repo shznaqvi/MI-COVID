@@ -4,14 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -25,7 +24,6 @@ import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 public class SectionBActivity extends AppCompatActivity {
     ActivitySectionBBinding bi;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,12 +31,11 @@ public class SectionBActivity extends AppCompatActivity {
         bi.setCallback(this);
         bi.setForm(form);
         setupSkip();
+//        setupTextWatchers();
     }
-
 
     private void setupSkip() {
         //b01
-
         bi.b01.setOnCheckedChangeListener((group, checkedId) -> {
             Clear.clearAllFields(bi.llb0203);
         });
@@ -52,7 +49,6 @@ public class SectionBActivity extends AppCompatActivity {
         bi.b16.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.llb17);
         });
-
     }
 
 
@@ -415,14 +411,28 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     private boolean formValidation() {
-        return Validator.emptyCheckingContainer(this, bi.GrpName);
+        if (!Validator.emptyCheckingContainer(this, bi.GrpName))
+            return false;
+
+        int b08alltotal = Integer.parseInt(bi.b0801.getText().toString().trim())
+                + Integer.parseInt(bi.b0802.getText().toString().trim())
+                + Integer.parseInt(bi.b0803.getText().toString().trim())
+                + Integer.parseInt(bi.b0804.getText().toString().trim())
+                + Integer.parseInt(bi.b0805.getText().toString().trim())
+                + Integer.parseInt(bi.b0806.getText().toString().trim());
+
+        if (b08alltotal == 0) {
+            return Validator.emptyCustomTextBox(this, bi.b0807, "Invalid Total");
+        } else if (b08alltotal != Integer.parseInt(bi.b0807.getText().toString())) {
+            return Validator.emptyCustomTextBox(this, bi.b0807, "Invalid Total");
+        }
+        return true;
     }
 
 
     public void BtnEnd() {
         AppUtilsKt.openEndActivity(this);
     }
-
 
     @Override
     public void onBackPressed() {
@@ -431,5 +441,4 @@ public class SectionBActivity extends AppCompatActivity {
 
 
     }
-
 }

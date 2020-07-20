@@ -266,6 +266,8 @@
     <string name="b130901">Yes</string>
     <string name="b130902">No</string>
     <string name="b13096">Others (specify) </string>
+    <string name="b1309601">Yes</string>
+    <string name="b1309602">No</string>
     <string name="b14">Do you have a domestic help at your household?</string>
     <string name="b1401">Yes</string>
     <string name="b1402">No</string>
@@ -316,7 +318,7 @@
     <string name="c0404">Business</string>
     <string name="c0405">Labour</string>
     <string name="c0406">Hospital/clinic based</string>
-    <string name="c0407">Others (specify) </string>
+    <string name="c04096">Others (specify) </string>
     <string name="c05">What is the work flexibility?</string>
     <string name="c0501">Go to work place every day</string>
     <string name="c0502">Work from home/remotely </string>
@@ -1108,5 +1110,6 @@
     <string name='Q_f131096'>f131096</string>
     <string name='Q_f130296'>f130296</string>
     <string name="numeric">0123456789</string>
+    <string name="onlyalphabet">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
 
 </resources>

@@ -269,6 +269,8 @@
     <string name="b130901">ہاں</string>
     <string name="b130902">نہیں</string>
     <string name="b13096">دیگر(وضاحت کریں)</string>
+    <string name="b1309601">ہاں</string>
+    <string name="b1309602">نہیں</string>
     <string name="b14">کیا آپ کے گھر میں کوئی گھریلو ملازم یا ملازمہ   ہے؟</string>
     <string name="b1401">ہاں</string>
     <string name="b1402">نہیں</string>
@@ -319,7 +321,7 @@
     <string name="c0404">کاروبار </string>
     <string name="c0405">مزدور </string>
     <string name="c0406">ہسپتال/کلینک پر مبنی </string>
-    <string name="c0407">دیگر(وضاحت کریں)</string>
+    <string name="c04096">دیگر(وضاحت کریں)</string>
     <string name="c05">آپ کے کام کا معمول کیا ہے</string>
     <string name="c0501">ہر روز کام کی جگہ پر جاتے ہیں </string>
     <string name="c0502">گھر سے/ دورسے کام کرتے ہیں </string>
@@ -1107,6 +1109,7 @@
     <string name='Q_l08'>l08</string>
     <string name='Q_l09'>l09</string>
     <string name="numeric">0123456789</string>
+    <string name="onlyalphabet">abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
 
 
 </resources>
