@@ -302,6 +302,7 @@ public class Form extends LiveData<Form> {
     private String k03;
     private String k04;
     private String k05;
+    private String k05096x;
     private String k06;
     private String k07;
     private String k08;
@@ -311,6 +312,7 @@ public class Form extends LiveData<Form> {
     private String k12;
     private String k13;
     private String k14;
+    private String k14096x;
     private String k15;
     private String k16;
     private String k17;
@@ -2621,6 +2623,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getk05096x() {
+        return k05096x;
+    }
+
+    public Form setk05096x(String k05096x) {
+        this.k05096x = k05096x;
+        return this;
+    }
+
     public String getK06() {
         return k06;
     }
@@ -2699,6 +2710,15 @@ public class Form extends LiveData<Form> {
 
     public Form setK14(String k14) {
         this.k14 = k14;
+        return this;
+    }
+
+    public String getk14096x() {
+        return k14096x;
+    }
+
+    public Form setk14096x(String k14096x) {
+        this.k14096x = k14096x;
         return this;
     }
 
@@ -3608,6 +3628,7 @@ public class Form extends LiveData<Form> {
                     .put("k03", k03)
                     .put("k04", k04)
                     .put("k05", k05)
+                    .put("k05096x", k05096x)
                     .put("k06", k06)
                     .put("k07", k07)
                     .put("k08", k08)
@@ -3617,6 +3638,7 @@ public class Form extends LiveData<Form> {
                     .put("k12", k12)
                     .put("k13", k13)
                     .put("k14", k14)
+                    .put("k14096x", k14096x)
                     .put("k15", k15)
                     .put("k16", k16)
                     .put("k17", k17);
@@ -4200,6 +4222,7 @@ public class Form extends LiveData<Form> {
                 this.k12 = json.getString("k12");
                 this.k13 = json.getString("k13");
                 this.k14 = json.getString("k14");
+                this.k14096x = json.getString("k14096x");
                 this.k15 = json.getString("k15");
                 this.k16 = json.getString("k16");
                 this.k17 = json.getString("k17");

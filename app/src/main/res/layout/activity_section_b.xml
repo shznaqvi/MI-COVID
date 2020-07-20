@@ -1484,6 +1484,54 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="12dp"
+                            android:layout_weight="1"
+                            android:text="@string/b13096" />
+
+                        <RadioGroup
+                            android:id="@+id/b13096"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/b130961"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/b130901" />
+
+                            <RadioButton
+                                android:id="@+id/b130962"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/b130902" />
+
+                            <!--<EditText
+                                android:id="@+id/b13096x"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="@string/b13096"
+                                android:tag="b130961"
+                                android:text='@{b130961.checked ? b13096x.getText().toString() : ""}'
+                                android:visibility='@{b130961.checked? View.VISIBLE : View.GONE}' />-->
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <!--<LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical">
 
                         <RelativeLayout
@@ -1507,7 +1555,7 @@
                                 android:layout_alignBottom="@id/qtxt_b13096"
                                 android:text="@string/Q_b13096" />
                         </RelativeLayout>
-                    </LinearLayout>
+                    </LinearLayout>-->
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>

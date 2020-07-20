@@ -140,6 +140,7 @@ public class SectionKActivity extends AppCompatActivity {
                 : bi.k0506.isChecked() ? "6"
                 : bi.k05096.isChecked() ? "96"
                 : "-1");
+        form.setk05096x(bi.k05096x.getText().toString());
 
         form.setK06(bi.k0601.isChecked() ? "1"
                 : bi.k0602.isChecked() ? "2"
@@ -180,6 +181,7 @@ public class SectionKActivity extends AppCompatActivity {
                 : bi.k1403.isChecked() ? "3"
                 : bi.k14096.isChecked() ? "96"
                 : "-1");
+        form.setk14096x(bi.k14096x.getText().toString());
 
         form.setK15(bi.k1501.isChecked() ? "1"
                 : bi.k1502.isChecked() ? "2"
