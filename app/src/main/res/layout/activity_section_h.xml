@@ -1,5 +1,4 @@
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
 
@@ -68,11 +67,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h01dd"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="31"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:inputType="number" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -86,11 +81,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h01mm"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="11"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:inputType="number" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -104,11 +95,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h01yy"
-                        android:inputType="number"
-                        app:mask="####"
-                        app:maxValue="2020"
-                        app:minValue="2020"
-                        app:type="range" />
+                        android:inputType="number" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -156,11 +143,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h02dd"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="31"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:inputType="number" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -174,11 +157,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h02mm"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="11"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:inputType="number" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -192,11 +171,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h02yy"
-                        android:inputType="number"
-                        app:mask="####"
-                        app:maxValue="2020"
-                        app:minValue="2020"
-                        app:type="range" />
+                        android:inputType="number" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -926,11 +901,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h12dd"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="31"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -944,11 +915,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h12mm"
-                            android:inputType="number"
-                            app:mask="##"
-                            app:maxValue="12"
-                            app:minValue="1"
-                            app:type="range" />
+                            android:inputType="number" />
 
                         <TextView
                             android:layout_width="match_parent"
@@ -962,11 +929,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="12dp"
                             android:hint="@string/h12yy"
-                            android:inputType="number"
-                            app:mask="####"
-                            app:maxValue="2020"
-                            app:minValue="2020"
-                            app:type="range" />
+                            android:inputType="number" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -1334,11 +1297,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/h1801"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="15"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:inputType="number" />
 
                     <TextView
                         android:layout_width="match_parent"
