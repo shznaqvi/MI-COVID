@@ -106,7 +106,7 @@ public class SectionCActivity extends AppCompatActivity {
                 : bi.c0404.isChecked() ? "4"
                 : bi.c0405.isChecked() ? "5"
                 : bi.c0406.isChecked() ? "6"
-                : bi.c0407.isChecked() ? "96"
+                : bi.c04096.isChecked() ? "96"
                 : "-1");
 
         form.setC05(bi.c0501.isChecked() ? "1"

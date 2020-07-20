@@ -330,6 +330,17 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/c03096" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/c03096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:digits="@string/onlyalphabet"
+                            android:hint="@string/c03096"
+                            android:tag="c03096"
+                            android:text='@{c03096.checked ? c03096x.getText().toString() : ""}'
+                            android:visibility='@{c03096.checked ? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -408,10 +419,21 @@
                             android:text="@string/c0406" />
 
                         <RadioButton
-                            android:id="@+id/c0407"
+                            android:id="@+id/c04096"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/c0407" />
+                            android:text="@string/c04096" />
+
+                        <com.edittextpicker.aliazaz.EditTextPicker
+                            android:id="@+id/c04096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:digits="@string/onlyalphabet"
+                            android:hint="@string/c04096"
+                            android:tag="c04096"
+                            android:text='@{c04096.checked ? c04096x.getText().toString() : ""}'
+                            android:visibility='@{c04096.checked ? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
