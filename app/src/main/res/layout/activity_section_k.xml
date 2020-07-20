@@ -3,9 +3,11 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="form"
             type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionKActivity" />
@@ -22,7 +24,7 @@
             android:orientation="vertical">
 
 
-        <!-- k01  Radio   -->
+            <!-- k01  Radio   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVk01"
                 style="@style/cardView">
@@ -90,7 +92,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVk02"
                 style="@style/cardView"
-                android:visibility='@{k0104.checked? View.GONE : View.VISIBLE}'>
+                android:visibility='@{k0104.checked || k0102.checked ? View.GONE : View.VISIBLE}'>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -207,7 +209,7 @@
             <LinearLayout
                 android:id="@+id/fldGrpSecK01"
                 style="@style/vlinearlayout"
-                android:visibility='@{k0304.checked? View.GONE : View.VISIBLE}'>
+                android:visibility='@{k0304.checked || k0302.checked ? View.GONE : View.VISIBLE}'>
 
                 <!-- k04  Radio   -->
                 <androidx.cardview.widget.CardView

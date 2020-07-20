@@ -39,13 +39,13 @@ public class SectionKActivity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.k01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.k0104.getId()) {
+            if (i == bi.k0104.getId() || i == bi.k0102.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVk02);
             }
         }));
 
         bi.k03.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.k0304.getId()) {
+            if (i == bi.k0304.getId() || i == bi.k0302.getId()) {
                 Clear.clearAllFields(bi.fldGrpSecK01);
             }
         }));
