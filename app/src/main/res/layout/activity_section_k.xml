@@ -970,6 +970,16 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/k16096" />
+
+                        <EditText
+                            android:id="@+id/k16096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:hint="@string/k16096"
+                            android:tag="k16096"
+                            android:text='@{k16096.checked ? k16096x.getText().toString() : ""}'
+                            android:visibility='@{k16096.checked? View.VISIBLE : View.GONE}' />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

@@ -157,6 +157,16 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/l02096" />
+
+                            <EditText
+                                android:id="@+id/l02096x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:hint="@string/l02096"
+                                android:tag="l02096"
+                                android:text='@{l02096.checked ? l02096x.getText().toString() : ""}'
+                                android:visibility='@{l02096.checked? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

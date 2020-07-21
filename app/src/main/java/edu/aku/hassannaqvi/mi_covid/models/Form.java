@@ -315,9 +315,11 @@ public class Form extends LiveData<Form> {
     private String k14096x;
     private String k15;
     private String k16;
+    private String k16096x;
     private String k17;
     private String l01;
     private String l02;
+    private String l02096x;
     private String l03;
     private String l04;
     private String l05;
@@ -2740,6 +2742,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getk16096x() {
+        return k16096x;
+    }
+
+    public Form setk16096x(String k16096x) {
+        this.k16096x = k16096x;
+        return this;
+    }
+
     public String getK17() {
         return k17;
     }
@@ -2764,6 +2775,15 @@ public class Form extends LiveData<Form> {
 
     public Form setL02(String l02) {
         this.l02 = l02;
+        return this;
+    }
+
+    public String getl02096x() {
+        return l02096x;
+    }
+
+    public Form setl02096x(String l02096x) {
+        this.l02096x = l02096x;
         return this;
     }
 
@@ -3641,6 +3661,7 @@ public class Form extends LiveData<Form> {
                     .put("k14096x", k14096x)
                     .put("k15", k15)
                     .put("k16", k16)
+                    .put("k16096x", k16096x)
                     .put("k17", k17);
 
         } catch (JSONException e) {
@@ -3655,6 +3676,7 @@ public class Form extends LiveData<Form> {
         try {
             json.put("l01", l01)
                     .put("l02", l02)
+                    .put("l02096x", l02096x)
                     .put("l03", l03)
                     .put("l04", l04)
                     .put("l05", l05)
@@ -4225,6 +4247,7 @@ public class Form extends LiveData<Form> {
                 this.k14096x = json.getString("k14096x");
                 this.k15 = json.getString("k15");
                 this.k16 = json.getString("k16");
+                this.k16096x = json.getString("k16096x");
                 this.k17 = json.getString("k17");
 
             } catch (JSONException e) {
@@ -4243,6 +4266,7 @@ public class Form extends LiveData<Form> {
 
                 this.l01 = json.getString("l01");
                 this.l02 = json.getString("l02");
+                this.l02096x = json.getString("l02096x");
                 this.l03 = json.getString("l03");
                 this.l04 = json.getString("l04");
                 this.l05 = json.getString("l05");

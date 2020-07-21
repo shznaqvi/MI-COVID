@@ -105,6 +105,7 @@ public class SectionLActivity extends AppCompatActivity {
                 : bi.l0206.isChecked() ? "6"
                 : bi.l02096.isChecked() ? "96"
                 : "-1");
+        form.setl02096x(bi.l02096x.getText().toString());
 
         form.setL03(bi.l0301.isChecked() ? "1"
                 : bi.l0302.isChecked() ? "2"

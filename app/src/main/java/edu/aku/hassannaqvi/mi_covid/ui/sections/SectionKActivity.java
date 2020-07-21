@@ -191,6 +191,7 @@ public class SectionKActivity extends AppCompatActivity {
                 : bi.k1602.isChecked() ? "2"
                 : bi.k16096.isChecked() ? "96"
                 : "-1");
+        form.setk16096x(bi.k16096x.getText().toString());
 
         form.setK17(bi.k1701.isChecked() ? "1"
                 : bi.k1702.isChecked() ? "2"
