@@ -320,18 +320,19 @@
                                     android:text="@string/Q_g05" />
                             </RelativeLayout>
 
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="12dp"
-                                android:text="@string/g0501_t" />
-
                             <LinearLayout
                                 android:id="@+id/g05check"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
                                 android:tag="0">
+
+                                <TextView
+                                    style="@style/sub"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:text="@string/g0501_t" />
 
                                 <CheckBox
                                     android:id="@+id/g0501"
@@ -346,6 +347,7 @@
                                     android:text="@string/g0502" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
@@ -370,6 +372,7 @@
                                     android:text="@string/g0505" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
@@ -394,6 +397,7 @@
                                     android:text="@string/g0508" />
 
                                 <TextView
+                                    style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="12dp"
@@ -428,7 +432,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/g0513" />
+
                             </LinearLayout>
+
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
