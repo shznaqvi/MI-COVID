@@ -45,6 +45,12 @@ public class SectionFActivity extends AppCompatActivity {
             }
         }));
 
+        bi.f03.setOnCheckedChangeListener(((radioGroup, i) -> {
+            if (i == bi.f0302.getId()) {
+                Clear.clearAllFields(bi.fldGrpSecf02);
+            }
+        }));
+
         bi.f07.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.f0702.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVf08);
@@ -56,12 +62,6 @@ public class SectionFActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpTVf11);
             }
         }));
-
-        /*bi.ah2.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.ah2b.getId()) {
-                Clear.clearAllFields(bi.fldGrpCVah3);
-            }
-        }));*/
 
     }
 

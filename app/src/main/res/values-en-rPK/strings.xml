@@ -187,7 +187,7 @@
     <string name="b06">What is the approximate size of the house? (living area) (Sq Feet/Yard)?</string>
     <string name="b06ft">Sq Feet</string>
     <string name="b06yrd">Sq Yards </string>
-    <string name="b06a">Land</string>
+    <string name="b06a">Area</string>
     <string name="b07">Total number of families living in House?</string>
     <string name="b08">What is total number of household members living in the house (physically living since Jan 2020)?</string>
     <string name="b0801">Elderly male (70 and above)</string>
