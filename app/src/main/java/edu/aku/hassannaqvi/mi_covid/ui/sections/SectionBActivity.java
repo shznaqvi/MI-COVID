@@ -51,7 +51,6 @@ public class SectionBActivity extends AppCompatActivity {
         });
     }
 
-
     public void BtnContinue() {
         if (!formValidation()) return;
         try {
@@ -68,7 +67,6 @@ public class SectionBActivity extends AppCompatActivity {
         }
     }
 
-
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
         int updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SB, form.sBtoString());
@@ -79,7 +77,6 @@ public class SectionBActivity extends AppCompatActivity {
             return false;
         }
     }
-
 
     private void SaveDraft() throws JSONException {
 
@@ -409,7 +406,6 @@ public class SectionBActivity extends AppCompatActivity {
 
     }
 
-
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName))
             return false;
@@ -428,7 +424,6 @@ public class SectionBActivity extends AppCompatActivity {
         }
         return true;
     }
-
 
     public void BtnEnd() {
         AppUtilsKt.openEndActivity(this);
