@@ -276,12 +276,20 @@
                             android:text="@string/Q_j05" />
                     </RelativeLayout>
 
-                    <TextView
+                    <com.edittextpicker.aliazaz.EditTextPicker
+                        android:id="@+id/j05"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="12dp"
-                        android:text="@string/j0501" />
+                        android:layout_marginBottom="12dp"
+                        android:hint="@string/j0501"
+                        android:inputType="number"
+                        app:mask="#"
+                        app:maxValue="7"
+                        app:minValue="1"
+                        app:type="range" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- j06  Radio   -->
@@ -730,40 +738,6 @@
                             app:maxValue="100"
                             app:minValue="1"
                             app:type="range" />
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <!-- j01201  Title   -->
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/fldGrpCVj01201"
-                    style="@style/cardView">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:background="@drawable/bottom">
-
-                            <TextView
-                                android:id="@+id/qtxt_j01201"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_toEndOf="@id/q_j01201"
-                                android:text="@string/j01201" />
-
-                            <TextView
-                                android:id="@+id/q_j01201"
-                                style="@style/quesNum"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_alignTop="@id/qtxt_j01201"
-                                android:layout_alignBottom="@id/qtxt_j01201"
-                                android:text="@string/Q_j01201" />
-                        </RelativeLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 

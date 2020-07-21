@@ -59,10 +59,6 @@ public class SectionAActivity extends AppCompatActivity {
 
     private void setupSkip() {
 
-        bi.a06.setOnCheckedChangeListener((group, checkedId) -> {
-            Clear.clearAllFields(bi.lla07);
-        });
-
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.lla08);
         });
@@ -126,7 +122,7 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setA01(bi.a01.getText().toString());
         form.setA02(bi.a02.getText().toString());
-        form.setA06(bi.a0601.isChecked() ? "1"
+        /*form.setA06(bi.a0601.isChecked() ? "1"
                 : bi.a0602.isChecked() ? "2"
                 : bi.a0603.isChecked() ? "3"
                 : bi.a0604.isChecked() ? "4"
@@ -134,7 +130,7 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a0606.isChecked() ? "6"
                 : bi.a0607.isChecked() ? "7"
                 : bi.a0696.isChecked() ? "96"
-                : "-1");
+                : "-1");*/
 
         form.setA07(bi.a0701.isChecked() ? "1"
                 : bi.a0702.isChecked() ? "2"
