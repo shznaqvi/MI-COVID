@@ -349,11 +349,12 @@ public class SectionAActivity extends AppCompatActivity {
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
         if (!dtFlag) {
-//            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
-            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
+            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!", false);
         }
         if (bi.a0702.isChecked()) return true;
-        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;
+        if (Integer.parseInt(bi.a14mm.getText().toString()) == 0 && Integer.parseInt(bi.a14yy.getText().toString()) == 0)
+            return Validator.emptyCustomTextBox(this, bi.a14yy, "Both Month & Year don't be zero!!", false);
+        return true;
     }
 
 
