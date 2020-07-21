@@ -663,7 +663,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- e11  Radio   -->
+            <!-- e11  CheckBox   -->
             <androidx.cardview.widget.CardView
                 android:id="@+id/fldGrpCVe11"
                 style="@style/cardView">
@@ -695,47 +695,49 @@
                             android:text="@string/Q_e11" />
                     </RelativeLayout>
 
-                    <RadioGroup
-                        android:id="@+id/e11"
+                    <LinearLayout
+                        android:id="@+id/e11check"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:tag="0">
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/e1101"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e1101" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/e1102"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e1102" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/e1103"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e1103" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/e1104"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e1104" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/e1105"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e1105" />
 
-                        <RadioButton
+                        <CheckBox
                             android:id="@+id/e1106"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/e1106" />
-                    </RadioGroup>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

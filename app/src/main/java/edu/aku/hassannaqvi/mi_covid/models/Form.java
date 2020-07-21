@@ -154,7 +154,12 @@ public class Form extends LiveData<Form> {
     private String e08096;
     private String e09;
     private String e10;
-    private String e11;
+    private String e1101;
+    private String e1102;
+    private String e1103;
+    private String e1104;
+    private String e1105;
+    private String e1106;
     private String e12;
     private String e13;
     private String e1401;
@@ -1292,12 +1297,57 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getE11() {
-        return e11;
+    public String getE1101() {
+        return e1101;
     }
 
-    public Form setE11(String e11) {
-        this.e11 = e11;
+    public Form setE1101(String e1101) {
+        this.e1101 = e1101;
+        return this;
+    }
+
+    public String getE1102() {
+        return e1102;
+    }
+
+    public Form setE1102(String e1102) {
+        this.e1102 = e1102;
+        return this;
+    }
+
+    public String getE1103() {
+        return e1103;
+    }
+
+    public Form setE1103(String e1103) {
+        this.e1103 = e1103;
+        return this;
+    }
+
+    public String getE1104() {
+        return e1104;
+    }
+
+    public Form setE1104(String e1104) {
+        this.e1104 = e1104;
+        return this;
+    }
+
+    public String getE1105() {
+        return e1105;
+    }
+
+    public Form setE1105(String e1105) {
+        this.e1105 = e1105;
+        return this;
+    }
+
+    public String getE1106() {
+        return e1106;
+    }
+
+    public Form setE1106(String e1106) {
+        this.e1106 = e1106;
         return this;
     }
 
@@ -3433,7 +3483,12 @@ public class Form extends LiveData<Form> {
                     .put("e08096", e08096)
                     .put("e09", e09)
                     .put("e10", e10)
-                    .put("e11", e11)
+                    .put("e1101", e1101)
+                    .put("e1102", e1102)
+                    .put("e1103", e1103)
+                    .put("e1104", e1104)
+                    .put("e1105", e1105)
+                    .put("e1106", e1106)
                     .put("e12", e12)
                     .put("e13", e13)
                     .put("e1401", e1401)
@@ -4004,7 +4059,12 @@ public class Form extends LiveData<Form> {
                 this.e08096 = json.getString("e08096");
                 this.e09 = json.getString("e09");
                 this.e10 = json.getString("e10");
-                this.e11 = json.getString("e11");
+                this.e1101 = json.getString("e1101");
+                this.e1102 = json.getString("e1102");
+                this.e1103 = json.getString("e1103");
+                this.e1104 = json.getString("e1104");
+                this.e1105 = json.getString("e1105");
+                this.e1106 = json.getString("e1106");
                 this.e12 = json.getString("e12");
                 this.e13 = json.getString("e13");
                 this.e1401 = json.getString("e1401");

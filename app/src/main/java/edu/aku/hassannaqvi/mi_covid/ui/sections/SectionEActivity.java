@@ -174,13 +174,13 @@ public class SectionEActivity extends AppCompatActivity {
                 : bi.e1002.isChecked() ? "2"
                 : "-1");
 
-        form.setE11(bi.e1101.isChecked() ? "1"
-                : bi.e1102.isChecked() ? "2"
-                : bi.e1103.isChecked() ? "3"
-                : bi.e1104.isChecked() ? "4"
-                : bi.e1105.isChecked() ? "5"
-                : bi.e1106.isChecked() ? "6"
-                : "-1");
+        // checkbox
+        form.setE1101(bi.e1101.isChecked() ? "1" : "-1");
+        form.setE1102(bi.e1102.isChecked() ? "2" : "-1");
+        form.setE1103(bi.e1103.isChecked() ? "3" : "-1");
+        form.setE1104(bi.e1104.isChecked() ? "4" : "-1");
+        form.setE1105(bi.e1105.isChecked() ? "5" : "-1");
+        form.setE1106(bi.e1106.isChecked() ? "97" : "-1");
 
         form.setE12(bi.e1201.isChecked() ? "1"
                 : bi.e1202.isChecked() ? "2"
