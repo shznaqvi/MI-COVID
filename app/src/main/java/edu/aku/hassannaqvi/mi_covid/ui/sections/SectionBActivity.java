@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -110,7 +111,6 @@ public class SectionBActivity extends AppCompatActivity {
 
         form.setB06(bi.b06ft.isChecked() ? "1"
                 : bi.b06yrd.isChecked() ? "2"
-                : bi.b06a.isChecked() ? ""
                 : "-1");
 
         form.setB06ax(bi.b06ax.getText().toString());
