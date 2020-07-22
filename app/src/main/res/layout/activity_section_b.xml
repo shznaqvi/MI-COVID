@@ -203,7 +203,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/b03096" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <EditText
                                 android:id="@+id/b03096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -282,7 +282,7 @@
 
                     </RadioGroup>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
+                    <EditText
                         android:id="@+id/b04096x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -363,7 +363,7 @@
                             android:text="@string/b05096" />
                     </RadioGroup>
 
-                    <com.edittextpicker.aliazaz.EditTextPicker
+                    <EditText
                         android:id="@+id/b05096x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -1030,7 +1030,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/b11096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/b11096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1165,7 +1165,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/b12096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/b12096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -1566,18 +1566,19 @@
                                 android:layout_weight="1"
                                 android:text="@string/b1309602" />
 
+                            <EditText
+                                android:id="@+id/b13096x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:digits="@string/onlyalphabet"
+                                android:hint="@string/b13096"
+                                android:tag="b1309601"
+                                android:text='@{b1309601.checked ? b13096x.getText().toString() : ""}'
+                                android:visibility='@{b1309601.checked ? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
-                            android:id="@+id/b13096x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
-                            android:digits="@string/onlyalphabet"
-                            android:hint="@string/b13096"
-                            android:tag="b1309601"
-                            android:text='@{b1309601.checked ? b13096x.getText().toString() : ""}'
-                            android:visibility='@{b1309601.checked ? View.VISIBLE : View.GONE}' />
+
 
                     </LinearLayout>
 
