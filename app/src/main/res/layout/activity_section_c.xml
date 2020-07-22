@@ -210,7 +210,7 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0201"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
                             app:maxValue="500"
                             app:minValue="1"
                             app:type="range" />
@@ -256,7 +256,7 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0202"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
                             app:maxValue="100"
                             app:minValue="1"
                             app:type="range" />
