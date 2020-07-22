@@ -196,7 +196,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/d03096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/d03096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

@@ -227,7 +227,7 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/e03096" />
 
-                            <com.edittextpicker.aliazaz.EditTextPicker
+                            <EditText
                                 android:id="@+id/e03096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -540,7 +540,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/e08096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/e08096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -814,7 +814,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/e12096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/e12096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -890,7 +890,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/e13096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/e13096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
