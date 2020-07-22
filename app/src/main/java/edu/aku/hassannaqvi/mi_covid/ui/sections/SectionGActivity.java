@@ -84,7 +84,7 @@ public class SectionGActivity extends AppCompatActivity {
         if (updcount > 0) {
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -101,7 +101,7 @@ public class SectionGActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(this, SectionHActivity.class));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -129,8 +129,7 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.g0407.isChecked() ? "7"
                 : bi.g04096.isChecked() ? "96"
                 : "-1");
-
-        //    form.setG04096x(bi.g04096x.getText().toString());
+        form.setG04096x(bi.g04096x.getText().toString());
 
         form.setG0501(bi.g0501.isChecked() ? "1" : "-1");
         form.setG0502(bi.g0502.isChecked() ? "2" : "-1");
@@ -186,6 +185,7 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.g1205.isChecked() ? "5"
                 : bi.g12096.isChecked() ? "96"
                 : "-1");
+        form.setG12096x(bi.g12096x.getText().toString());
 
         form.setG13(bi.g1301.isChecked() ? "1"
                 : bi.g1302.isChecked() ? "2"
@@ -195,6 +195,7 @@ public class SectionGActivity extends AppCompatActivity {
                 : bi.g1306.isChecked() ? "6"
                 : bi.g13096.isChecked() ? "96"
                 : "-1");
+        form.setG13096x(bi.g13096x.getText().toString());
 
         /*JSONObject json = new JSONObject();
 

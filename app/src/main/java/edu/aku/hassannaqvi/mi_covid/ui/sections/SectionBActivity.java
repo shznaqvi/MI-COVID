@@ -4,13 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -63,7 +64,7 @@ public class SectionBActivity extends AppCompatActivity {
             int a16 = Integer.parseInt(MainApp.form.getSecSelection().getA16());
             startActivity(new Intent(this, a16 == 7 || a16 == 9 ? SectionDActivity.class : a16 >= 1 && a16 <= 6 ? SectionCActivity.class : SectionEActivity.class));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -73,7 +74,7 @@ public class SectionBActivity extends AppCompatActivity {
         if (updcount > 0) {
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
@@ -110,7 +111,6 @@ public class SectionBActivity extends AppCompatActivity {
 
         form.setB06(bi.b06ft.isChecked() ? "1"
                 : bi.b06yrd.isChecked() ? "2"
-                : bi.b06a.isChecked() ? ""
                 : "-1");
 
         form.setB06ax(bi.b06ax.getText().toString());

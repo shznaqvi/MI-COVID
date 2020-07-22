@@ -27,7 +27,6 @@ import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
 import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivityInfoSectionBinding;
-import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.mi_covid.datecollection.AgeModel;
 import edu.aku.hassannaqvi.mi_covid.datecollection.DateRepository;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
@@ -82,7 +81,7 @@ public class InfoSectionActivity extends AppCompatActivity {
             //finish();
             startActivity(new Intent(this, bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -97,7 +96,7 @@ public class InfoSectionActivity extends AppCompatActivity {
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }

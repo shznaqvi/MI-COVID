@@ -77,7 +77,7 @@
     <string name="a05b">کیا گھر اور فرد کی شناخت ہو گئی</string>
     <string name="a05b1">ہاں</string>
     <string name="a05b2">نہیں</string>
-    <string name="a06"> گھرانے کے انٹرویو کا نتیجہ: </string>
+    <string name="a06">  گھرانے کے انٹرویوکا نتیجہ: نوٹ: انٹرویو مکمل نہ ہونے کی صورت میں سپروائزر سے رابطہ کریں۔ </string>
     <string name="a06_info"> انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں ۔ </string>
     <string name="a0601">گھر اور فرد کی شناخت ہو گئی</string>
     <string name="a0602">فرد کی شناخت نہیں ہو سکی</string>
@@ -108,7 +108,7 @@
     <string name="a1501">مرد(لڑکا) </string>
     <string name="a1502">عورت(لڑکی) </string>
     <string name="a1503">تیسری جنس </string>
-    <string name="a16">آپ کون سی نسل سے تعلق رکھتے ہیں؟</string>
+    <string name="a16">آپ کون سی قومیت سے تعلق رکھتے ہیں؟</string>
     <string name="a1601">سندھی</string>
     <string name="a1602">اردو</string>
     <string name="a1603">پنجابی</string>
@@ -126,7 +126,7 @@
     <string name="a1803">ہندو </string>
     <string name="a1804">سکھ </string>
     <string name="a18096">دیگر(وضاحت کریں)</string>
-    <string name="a19">آپ کی اعلیٰ ترین تعلیم کیا ہے؟</string>
+    <string name="a19">آپ کی زیادہ سے زیادہ تعلیم کیا ہے؟</string>
     <string name="a1901">کوئی تعلیم نہیں </string>
     <string name="a1902">صرف قرآنی تعلیم </string>
     <string name="a1903">پرائمری اسکول (1-4 سال) </string>
@@ -145,7 +145,7 @@
     <string name="a2003">طلاق یافتہ </string>
     <string name="a2004">الگ ہونا </string>
     <string name="a2005">بیوہ/رنڈوا</string>
-    <string name="a21">آپ کا اہم پیشہ تجارت کونسا ہے؟</string>
+    <string name="a21"> آپ کا بنیادی پیشہ تجارت کونسا ہے؟</string>
     <string name="a2101">پیشہ ور (اکاؤنٹنٹ، انجینئر، ڈاکٹر) </string>
     <string name="a2102">انتظامی اور تکنیکی/انٹرمیڈیٹ مارکیٹنگ اور سیلز مینیجرز، اساتذہ، صحافی، نرسیں) </string>
     <string name="a2103">غیر دستی ہنر مند (کلرکس ، دکان کے معاونین ، کیشیئر) </string>
@@ -410,8 +410,7 @@
     <string name="e10">کیا آپ  کے بازو پر تپ دق (TB) کے حفاظتی ٹیکےکا نشان موجود ہے؟ براہ کرم نشان دیکھ کرجواب  پرنشان لگائیں۔</string>
     <string name="e1001">ہاں</string>
     <string name="e1002">نہیں</string>
-    <string name="e11">کیا آپ مندرجہ ذیل میں سے کوئی چیز کثرت سے استعمال کرتے ہیں؟
-(ایک سے زیادہ جوابات آسکتے ہیں)</string>
+    <string name="e11">کیا آپ مندرجہ ذیل میں سے کوئی چیز کثرت سے استعمال کرتے ہیں؟(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="e1101">چھالیہ </string>
     <string name="e1102">تمباکو/ گُٹکا چبانا </string>
     <string name="e1103">پان </string>

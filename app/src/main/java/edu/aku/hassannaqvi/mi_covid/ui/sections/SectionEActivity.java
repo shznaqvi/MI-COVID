@@ -92,7 +92,7 @@ public class SectionEActivity extends AppCompatActivity {
             boolean routeFlag = (Integer.parseInt(routeSection.getA14()) >= 15 && Integer.parseInt(routeSection.getA14()) <= 49) && routeSection.getA15() && routeSection.getA20();
             startActivity(new Intent(this, routeFlag ? SectionFActivity.class : Integer.parseInt(routeSection.getA14()) < 10 ? SectionGActivity.class : SectionHActivity.class));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -108,7 +108,7 @@ public class SectionEActivity extends AppCompatActivity {
         if (updcount > 0) {
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }

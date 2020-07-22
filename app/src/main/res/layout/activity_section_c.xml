@@ -115,7 +115,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/c01096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/c01096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -210,7 +210,7 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0201"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
                             app:maxValue="500"
                             app:minValue="1"
                             app:type="range" />
@@ -256,7 +256,7 @@
                             android:layout_marginBottom="12dp"
                             android:hint="@string/c0202"
                             android:inputType="number"
-                            app:mask="##"
+                            app:mask="###"
                             app:maxValue="100"
                             app:minValue="1"
                             app:type="range" />
@@ -331,7 +331,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/c03096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/c03096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -424,7 +424,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/c04096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/c04096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -499,7 +499,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/c05096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/c05096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -586,7 +586,7 @@
                             android:layout_height="wrap_content"
                             android:text="@string/c06096" />
 
-                        <com.edittextpicker.aliazaz.EditTextPicker
+                        <EditText
                             android:id="@+id/c06096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"

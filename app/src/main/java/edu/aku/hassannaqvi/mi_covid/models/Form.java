@@ -187,6 +187,7 @@ public class Form extends LiveData<Form> {
     private String g02;
     private String g03;
     private String g04;
+    private String g04096x;
     private String g0501;
     private String g0502;
     private String g0503;
@@ -222,7 +223,9 @@ public class Form extends LiveData<Form> {
     private String g10;
     private String g11;
     private String g12;
+    private String g12096x;
     private String g13;
+    private String g13096x;
     private String h01dd;
     private String h01mm;
     private String h01yy;
@@ -1595,6 +1598,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getG04096x() {
+        return g04096x;
+    }
+
+    public Form setG04096x(String g04096x) {
+        this.g04096x = g04096x;
+        return this;
+    }
+
     public String getG0501() {
         return g0501;
     }
@@ -1910,12 +1922,30 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getG12096x() {
+        return g12096x;
+    }
+
+    public Form setG12096x(String g12096x) {
+        this.g12096x = g12096x;
+        return this;
+    }
+
     public String getG13() {
         return g13;
     }
 
     public Form setG13(String g13) {
         this.g13 = g13;
+        return this;
+    }
+
+    public String getG13096x() {
+        return g13096x;
+    }
+
+    public Form setG13096x(String g13096x) {
+        this.g13096x = g13096x;
         return this;
     }
 
@@ -3539,6 +3569,7 @@ public class Form extends LiveData<Form> {
                     .put("g02", g02)
                     .put("g03", g03)
                     .put("g04", g04)
+                    .put("g04096x", g04096x)
                     .put("g0501", g0501)
                     .put("g0502", g0502)
                     .put("g0503", g0503)
@@ -3574,7 +3605,9 @@ public class Form extends LiveData<Form> {
                     .put("g10", g10)
                     .put("g11", g11)
                     .put("g12", g12)
-                    .put("g13", g13);
+                    .put("g12096x", g12096x)
+                    .put("g13", g13)
+                    .put("g13096x", g13096x);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4123,6 +4156,7 @@ public class Form extends LiveData<Form> {
                 this.g02 = json.getString("g02");
                 this.g03 = json.getString("g03");
                 this.g04 = json.getString("g04");
+                this.g04096x = json.getString("g04096x");
                 this.g0501 = json.getString("g0501");
                 this.g0502 = json.getString("g0502");
                 this.g0503 = json.getString("g0503");
@@ -4158,7 +4192,9 @@ public class Form extends LiveData<Form> {
                 this.g10 = json.getString("g10");
                 this.g11 = json.getString("g11");
                 this.g12 = json.getString("g12");
+                this.g12096x = json.getString("g12096x");
                 this.g13 = json.getString("g13");
+                this.g13096x = json.getString("g13096x");
 
             } catch (JSONException e) {
                 e.printStackTrace();

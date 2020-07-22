@@ -45,7 +45,7 @@ public class SectionKActivity extends AppCompatActivity {
         }));
 
         bi.k03.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.k0304.getId() || i == bi.k0302.getId()) {
+            if (i == bi.k0301.getId()) {
                 Clear.clearAllFields(bi.fldGrpSecK01);
             }
         }));
@@ -88,7 +88,7 @@ public class SectionKActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(this, SectionLActivity.class));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -104,7 +104,7 @@ public class SectionKActivity extends AppCompatActivity {
         if (updcount > 0) {
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }

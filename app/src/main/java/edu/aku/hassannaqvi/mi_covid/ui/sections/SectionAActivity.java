@@ -32,7 +32,6 @@ import edu.aku.hassannaqvi.mi_covid.datecollection.DateRepository;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
@@ -56,12 +55,7 @@ public class SectionAActivity extends AppCompatActivity {
         setupSkip();
     }
 
-
     private void setupSkip() {
-
-        bi.a06.setOnCheckedChangeListener((group, checkedId) -> {
-            Clear.clearAllFields(bi.lla07);
-        });
 
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.lla08);
@@ -70,8 +64,11 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
+        btnForwardPressed();
+    }
+
+    private void btnForwardPressed() {
         if (!formValidation()) return;
         try {
             SaveDraft();
@@ -79,13 +76,11 @@ public class SectionAActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            //finish();
-            startActivity(new Intent(this, bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class));
+            startActivity(new Intent(this, bi.a05b1.isChecked() || bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class).putExtra("complete", true));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private boolean UpdateDB() {
 
@@ -97,11 +92,10 @@ public class SectionAActivity extends AppCompatActivity {
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
-
 
     private void SaveDraft() throws JSONException {
 
@@ -126,7 +120,7 @@ public class SectionAActivity extends AppCompatActivity {
 
         form.setA01(bi.a01.getText().toString());
         form.setA02(bi.a02.getText().toString());
-        form.setA06(bi.a0601.isChecked() ? "1"
+        /*form.setA06(bi.a0601.isChecked() ? "1"
                 : bi.a0602.isChecked() ? "2"
                 : bi.a0603.isChecked() ? "3"
                 : bi.a0604.isChecked() ? "4"
@@ -134,7 +128,7 @@ public class SectionAActivity extends AppCompatActivity {
                 : bi.a0606.isChecked() ? "6"
                 : bi.a0607.isChecked() ? "7"
                 : bi.a0696.isChecked() ? "96"
-                : "-1");
+                : "-1");*/
 
         form.setA07(bi.a0701.isChecked() ? "1"
                 : bi.a0702.isChecked() ? "2"
@@ -349,22 +343,20 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
-
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
         if (!dtFlag) {
-//            Toast.makeText(this, "Invalid date!", Toast.LENGTH_SHORT).show();
-            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!");
+            return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!", false);
         }
         if (bi.a0702.isChecked()) return true;
-        return Integer.parseInt(bi.a14mm.getText().toString()) != 0 || Integer.parseInt(bi.a14yy.getText().toString()) != 0;
+        if (Integer.parseInt(bi.a14mm.getText().toString()) == 0 && Integer.parseInt(bi.a14yy.getText().toString()) == 0)
+            return Validator.emptyCustomTextBox(this, bi.a14yy, "Both Month & Year don't be zero!!", false);
+        return true;
     }
-
 
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        btnForwardPressed();
     }
-
 
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
@@ -446,7 +438,6 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });*/
     }
-
 
     public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
         //Setting Date
