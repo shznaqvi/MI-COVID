@@ -1126,6 +1126,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/a16096" />
+
+                                <EditText
+                                    android:id="@+id/a16096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="56dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="@string/a16096"
+                                    android:tag="a16096"
+                                    android:text='@{a16096.checked ? a16096x.getText().toString() : ""}'
+                                    android:visibility='@{a16096.checked? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -1237,6 +1247,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/a18096" />
+
+                                <EditText
+                                    android:id="@+id/a18096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="56dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="@string/a18096"
+                                    android:tag="a18096"
+                                    android:text='@{a18096.checked ? a18096x.getText().toString() : ""}'
+                                    android:visibility='@{a18096.checked? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -1349,6 +1369,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/a19096" />
+
+                                <EditText
+                                    android:id="@+id/a19096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="56dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="@string/a19096"
+                                    android:tag="a19096"
+                                    android:text='@{a19096.checked ? a19096x.getText().toString() : ""}'
+                                    android:visibility='@{a19096.checked? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -1531,6 +1561,16 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/a21096" />
+
+                                <EditText
+                                    android:id="@+id/a21096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="56dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:hint="@string/a21096"
+                                    android:tag="a21096"
+                                    android:text='@{a21096.checked ? a21096x.getText().toString() : ""}'
+                                    android:visibility='@{a21096.checked? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>

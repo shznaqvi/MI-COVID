@@ -1557,14 +1557,13 @@
 
                             <EditText
                                 android:id="@+id/b13096x"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
-                                android:digits="@string/onlyalphabet"
+                                android:layout_weight="1"
                                 android:hint="@string/b13096"
                                 android:tag="b1309601"
                                 android:text='@{b1309601.checked ? b13096x.getText().toString() : ""}'
-                                android:visibility='@{b1309601.checked ? View.VISIBLE : View.GONE}' />
+                                android:visibility='@{b1309601.checked? View.VISIBLE : View.GONE}' />
                         </RadioGroup>
 
 
@@ -1841,6 +1840,52 @@
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:text="@string/b150502" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <RadioGroup
+                                android:id="@+id/b1596"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_weight="2"
+                                    android:text="@string/b15096" />
+
+                                <RadioButton
+                                    android:id="@+id/b1509601"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b1509601" />
+
+                                <RadioButton
+                                    android:id="@+id/b1509602"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@string/b1509602" />
+
+                                <EditText
+                                    android:id="@+id/b15096x"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginBottom="12dp"
+                                    android:digits="@string/onlyalphabet"
+                                    android:hint="@string/b15096"
+                                    android:tag="b1509601"
+                                    android:text='@{b1509601.checked ? b15096x.getText().toString() : ""}'
+                                    android:visibility='@{b1509601.checked ? View.VISIBLE : View.GONE}' />
                             </RadioGroup>
                         </LinearLayout>
                     </LinearLayout>
