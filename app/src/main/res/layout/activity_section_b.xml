@@ -705,11 +705,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0807"
-                        android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="20"
-                        app:minValue="1"
-                        app:type="range" />
+                        android:inputType="number" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
