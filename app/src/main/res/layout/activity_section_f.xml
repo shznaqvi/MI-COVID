@@ -683,7 +683,7 @@
                                     android:inputType="number"
                                     app:mask="####"
                                     app:maxValue="2020"
-                                    app:minValue="2020"
+                                    app:minValue="1930"
                                     app:type="range" />
                             </LinearLayout>
                         </LinearLayout>
