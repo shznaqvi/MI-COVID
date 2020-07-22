@@ -32,7 +32,6 @@ import edu.aku.hassannaqvi.mi_covid.datecollection.DateRepository;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
-import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
@@ -56,7 +55,6 @@ public class SectionAActivity extends AppCompatActivity {
         setupSkip();
     }
 
-
     private void setupSkip() {
 
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
@@ -66,8 +64,11 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnContinue() {
+        btnForwardPressed();
+    }
+
+    private void btnForwardPressed() {
         if (!formValidation()) return;
         try {
             SaveDraft();
@@ -75,13 +76,11 @@ public class SectionAActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            //finish();
-            startActivity(new Intent(this, bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class));
+            startActivity(new Intent(this, bi.a05b1.isChecked() || bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class).putExtra("complete", true));
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private boolean UpdateDB() {
 
@@ -93,11 +92,10 @@ public class SectionAActivity extends AppCompatActivity {
             db.updatesFormColumn(FormsContract.FormsTable.COLUMN_UID, form.get_UID());
             return true;
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
-
 
     private void SaveDraft() throws JSONException {
 
@@ -345,7 +343,6 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
-
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
         if (!dtFlag) {
@@ -357,11 +354,9 @@ public class SectionAActivity extends AppCompatActivity {
         return true;
     }
 
-
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        btnForwardPressed();
     }
-
 
     public void populateSpinner(final Context context) {
         // Spinner Drop down elements
@@ -443,7 +438,6 @@ public class SectionAActivity extends AppCompatActivity {
             }
         });*/
     }
-
 
     public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
         //Setting Date

@@ -108,7 +108,7 @@ class SectionDActivity : AppCompatActivity() {
         return if (updcount > 0) {
             true
         } else {
-            Toast.makeText(this, "Updating Database... ERROR!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show()
             false
         }
     }
@@ -125,7 +125,7 @@ class SectionDActivity : AppCompatActivity() {
             finish()
             startActivity(Intent(this, SectionEActivity::class.java))
         } else {
-            Toast.makeText(this, "Failed to Update Database!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show()
         }
     }
 
