@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -59,6 +60,10 @@ public class SectionAActivity extends AppCompatActivity {
 
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.lla08);
+        });
+
+        bi.a21.setOnCheckedChangeListener((group, checkId) -> {
+            Clear.clearAllFields(bi.fldGrpSecA03);
         });
 
 
@@ -447,6 +452,16 @@ public class SectionAActivity extends AppCompatActivity {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+    public void a14yyOnTextChanged(CharSequence s, int start, int before, int count) {
+        if (TextUtils.isEmpty(bi.a14yy.getText())) return;
+        if (Integer.parseInt(bi.a14yy.getText().toString()) < 15)
+            bi.fldGrpCVa20.setVisibility(View.GONE);
+        if (Integer.parseInt(bi.a14yy.getText().toString()) < 5)
+            bi.fldGrpSecA02.setVisibility(View.GONE);
+        else bi.fldGrpCVa20.setVisibility(View.VISIBLE);
+        bi.fldGrpSecA02.setVisibility(View.VISIBLE);
     }
 
     public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
