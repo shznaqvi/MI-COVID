@@ -456,12 +456,14 @@ public class SectionAActivity extends AppCompatActivity {
 
     public void a14yyOnTextChanged(CharSequence s, int start, int before, int count) {
         if (TextUtils.isEmpty(bi.a14yy.getText())) return;
-        if (Integer.parseInt(bi.a14yy.getText().toString()) < 15)
+        if (Integer.parseInt(bi.a14yy.getText().toString()) < 15) {
             bi.fldGrpCVa20.setVisibility(View.GONE);
-        if (Integer.parseInt(bi.a14yy.getText().toString()) < 5)
-            bi.fldGrpSecA02.setVisibility(View.GONE);
-        else bi.fldGrpCVa20.setVisibility(View.VISIBLE);
-        bi.fldGrpSecA02.setVisibility(View.VISIBLE);
+            if (Integer.parseInt(bi.a14yy.getText().toString()) < 5)
+                bi.fldGrpSecA02.setVisibility(View.GONE);
+        } else {
+            bi.fldGrpCVa20.setVisibility(View.VISIBLE);
+            bi.fldGrpSecA02.setVisibility(View.VISIBLE);
+        }
     }
 
     public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
