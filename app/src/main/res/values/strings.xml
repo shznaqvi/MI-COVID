@@ -351,7 +351,8 @@
     <string name="ch06a7">گھر میں مطلوبہ عمر کا کوئی فرد نہیں  </string>
     <string name="ch06a8">دیگر وضاحت کریں</string>
     <string name="ch06ax">دیگر وضاحت کریں</string>
-    <string name="d1">آپ کے اسکول/کالج/یونیورسٹی کا نام کیا ہے؟(شہر کا نام   ساتھ لکھیں)</string>
+    <string name="d1">آپ کے اسکول/کالج/یونیورسٹی کا نام کیا ہے؟</string>
+    <string name="d1_info">(شہر کا نام   ساتھ لکھیں)</string>
     <string name="d02">کیا آپ مارچ 2020 کے بعد اسکول/کالج/یونیورسٹی جاتے ہیں؟</string>
     <string name="d0201">ہاں</string>
     <string name="d0202">نہیں</string>
@@ -376,7 +377,8 @@
     <string name="e02">کیا آپ کو کوئی دائمی مرض ہے؟</string>
     <string name="e0201">ہاں</string>
     <string name="e0202">نہیں</string>
-    <string name="e03">اگر ہاں تو، دائمی مرض کی قسم (اگر  ایک سے زیادہ  ہوں تو،سب پر نشان لگائیں)</string>
+    <string name="e03">اگر ہاں تو، دائمی مرض کی قسم </string>
+    <string name="e03_info">(اگر  ایک سے زیادہ  ہوں تو،سب پر نشان لگائیں)</string>
     <string name="e0301">ذیابیطس </string>
     <string name="e0302">پھیپھڑوں/سینے کی بیماری </string>
     <string name="e0303">دل کی بیماری </string>

@@ -16,6 +16,7 @@ import edu.aku.hassannaqvi.mi_covid.core.MainApp.form
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionDBinding
 import edu.aku.hassannaqvi.mi_covid.utils.contextBackActivity
 import edu.aku.hassannaqvi.mi_covid.utils.openEndActivity
+import edu.aku.hassannaqvi.mi_covid.utils.showTooltip
 import org.json.JSONException
 
 class SectionDActivity : AppCompatActivity() {
@@ -139,4 +140,7 @@ class SectionDActivity : AppCompatActivity() {
         contextBackActivity(this)
     }
 
+    fun showTooltipView(view: View?) {
+        showTooltip(this, view!!)
+    }
 }
