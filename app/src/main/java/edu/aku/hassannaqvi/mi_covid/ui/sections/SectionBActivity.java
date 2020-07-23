@@ -418,9 +418,9 @@ public class SectionBActivity extends AppCompatActivity {
                 + Integer.parseInt(bi.b0806.getText().toString().trim());
 
         if (b08alltotal == 0) {
-            return Validator.emptyCustomTextBox(this, bi.b0807, "Invalid Total");
+            return Validator.emptyCustomTextBox(this, bi.b0807, "Invalid Total Count Please check again");
         } else if (b08alltotal != Integer.parseInt(bi.b0807.getText().toString())) {
-            return Validator.emptyCustomTextBox(this, bi.b0807, "Invalid Total");
+            return Validator.emptyCustomTextBox(this, bi.b0807, "Invalid Total Count Please check again");
         }
         return true;
     }

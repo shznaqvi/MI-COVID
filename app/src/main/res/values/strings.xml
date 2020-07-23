@@ -192,8 +192,8 @@
     <string name="b06yrd">مربع گز</string>
     <string name="b06a">رقبہ</string>
     <string name="b07">آپ کے گھرمیں  کل کتنے خاندان رہتے ہیں؟</string>
-    <string name="b08">آپ کے گھرمیں رہنے والے  افرادکی  مجموعئی تعداد کیا ہے ؟
-(جنوری 2020 سے مستقل رہائش پزیر افراد)</string>
+    <string name="b08">آپ کے گھرمیں رہنے والے  افرادکی  مجموعئی تعداد کیا ہے ؟</string>
+    <string name="b08_info">(جنوری 2020 سے مستقل رہائش پزیر افراد)</string>
     <string name="b0801">بزرگ مرد (70 سال اور اس سے اوپر) </string>
     <string name="b0802">بزرگ خواتین (70 سال اور اس سے اوپر) </string>
     <string name="b0803">بالغ مرد (18 سے 69 سال) </string>
@@ -240,8 +240,8 @@
     <string name="b1210">بالٹی والا ٹوائلٹ </string>
     <string name="b1211">کوئی سہولت نہیں/جھاڑیوں/کھیتوں/کھلے میں</string>
     <string name="b12096">دیگر(وضاحت کریں</string>
-    <string name="b13">کیا آپ  کی ملکیت میں مندرجہ ذیل اشیاء  میں سے کوئی چیزہے؟
-(ایک سے زیادہ جوابات آسکتے ہیں)</string>
+    <string name="b13">کیا آپ  کی ملکیت میں مندرجہ ذیل اشیاء  میں سے کوئی چیزہے؟</string>
+    <string name="b13_info">(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="b1301">گھڑی </string>
     <string name="b130101">ہاں</string>
     <string name="b130102">نہیں</string>
@@ -275,8 +275,8 @@
     <string name="b14">کیا آپ کے گھر میں کوئی گھریلو ملازم یا ملازمہ   ہے؟</string>
     <string name="b1401">ہاں</string>
     <string name="b1402">نہیں</string>
-    <string name="b15">اگر ہاں توکس قسم کا/کی گھریلو ملازم/ملازمہ ہے؟
-(ایک سے زیادہ جوابات آسکتے ہیں)</string>
+    <string name="b15">اگر ہاں توکس قسم کا/کی گھریلو ملازم/ملازمہ ہے؟</string>
+    <string name="b15_info">(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="b1501">نوکر/نوکرانی </string>
     <string name="b150101">ہاں</string>
     <string name="b150102">نہیں</string>

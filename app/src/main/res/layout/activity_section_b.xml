@@ -511,6 +511,9 @@
                             android:text="@string/b08" />
 
                         <TextView
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_b08"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
@@ -701,7 +704,8 @@
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="12dp"
                         android:hint="@string/b0807"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        app:mask="###" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1194,6 +1198,9 @@
                             android:text="@string/b13" />
 
                         <TextView
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_b13"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
@@ -1654,6 +1661,9 @@
                                 android:text="@string/b15" />
 
                             <TextView
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_b15"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
