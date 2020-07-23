@@ -410,10 +410,12 @@
     <string name="e09">کیا آپ کو کبھی تپ دق (TB)  سے بچائو کا حفاظتی ٹیکہ لگا ہے؟</string>
     <string name="e0901">ہاں</string>
     <string name="e0902">نہیں</string>
-    <string name="e10">کیا آپ  کے بازو پر تپ دق (TB) کے حفاظتی ٹیکےکا نشان موجود ہے؟ براہ کرم نشان دیکھ کرجواب  پرنشان لگائیں۔</string>
+    <string name="e10">کیا آپ  کے بازو پر تپ دق (TB) کے حفاظتی ٹیکےکا نشان موجود ہے؟ براہ کرم نشان دیکھ کرجواب  پرنشان لگائیں</string>
+    <string name="e10_info"> براہ کرم نشان دیکھ کرجواب  پرنشان لگائیں۔</string>
     <string name="e1001">ہاں</string>
     <string name="e1002">نہیں</string>
-    <string name="e11">کیا آپ مندرجہ ذیل میں سے کوئی چیز کثرت سے استعمال کرتے ہیں؟(ایک سے زیادہ جوابات آسکتے ہیں)</string>
+    <string name="e11">کیا آپ مندرجہ ذیل میں سے کوئی چیز کثرت سے استعمال کرتے ہیں؟</string>
+    <string name="e11_info">(ایک سے زیادہ جوابات آسکتے ہیں)</string>
     <string name="e1101">چھالیہ </string>
     <string name="e1102">تمباکو/ گُٹکا چبانا </string>
     <string name="e1103">پان </string>
@@ -432,12 +434,12 @@
     <string name="e1302">نجی سہولت </string>
     <string name="e1303">مقامی ڈسپنسری </string>
     <string name="e13096">دیگر(وضاحت کریں) </string>
-    <string name="e14">بیماری کی صورت میں آپ کون سی کلینک/سہولت پر جاتے ہیں؟
-(جگہ کے ساتھ سہولت کا نام)</string>
+    <string name="e14">بیماری کی صورت میں آپ کون سی کلینک/سہولت پر جاتے ہیں؟</string>
+    <string name="e14_info">(جگہ کے ساتھ سہولت کا نام)</string>
     <string name="e1401">نام </string>
     <string name="e1402">جگہ </string>
-    <string name="e15">وہ سہولت کتنی دور ہے؟
-(محقق گوگل کے نقشے پر فاصلہ دیکھ سکتا ہے)</string>
+    <string name="e15">وہ سہولت کتنی دور ہے؟</string>
+    <string name="e15_info">(محقق گوگل کے نقشے پر فاصلہ دیکھ سکتا ہے)</string>
     <string name="e1501">کلومیٹر </string>
     <string name="f01">کیا آپ جنوری 2020 کو یا اس کے بعد حاملہ تھیں؟</string>
     <string name="f0101">ہاں</string>

@@ -169,6 +169,9 @@
                                 android:text="@string/e03" />
 
                             <TextView
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_e03"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
@@ -634,6 +637,9 @@
                             android:text="@string/e10" />
 
                         <TextView
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e10"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
@@ -686,6 +692,9 @@
                             android:text="@string/e11" />
 
                         <TextView
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e11"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
@@ -927,6 +936,9 @@
                             android:text="@string/e14" />
 
                         <TextView
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e14"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
@@ -1043,6 +1055,9 @@
                             android:text="@string/e15" />
 
                         <TextView
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e15"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
