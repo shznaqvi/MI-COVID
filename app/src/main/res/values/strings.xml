@@ -186,7 +186,8 @@
     <string name="b0503">فلیٹ/اپارٹمنٹ </string>
     <string name="b0504">جھوپڑی </string>
     <string name="b05096">دیگر(وضاحت کریں</string>
-    <string name="b06">گھر کے رہائشی حصے کا رقبہ اندازً کتنا(مربع فٹ/گز) ہے؟</string>
+    <string name="b06">گھر کے رہائشی حصے کا رقبہ اندازً کتناہے؟</string>
+    <string name="b06_info">(مربع فٹ/گز)</string>
     <string name="b06ft">اسکوائر  فٹ</string>
     <string name="b06yrd">مربع گز</string>
     <string name="b06a">رقبہ</string>
