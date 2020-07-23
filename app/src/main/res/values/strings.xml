@@ -79,7 +79,7 @@
     <string name="a05b2">نہیں</string>
     <string name="a06">  گھرانے کے انٹرویوکا نتیجہ: نوٹ: انٹرویو مکمل نہ ہونے کی صورت میں سپروائزر سے رابطہ کریں۔ </string>
     <string name="a06_info"> انٹرویو مکمل نہ ہونے  کی صورت میں سپروائزر سے رابطہ کریں ۔ </string>
-    <string name="a0601">گھر اور فرد کی شناخت ہو گئی</string>
+    <string name="a0601">مکمل</string>
     <string name="a0602">فرد کی شناخت نہیں ہو سکی</string>
     <string name="a0603">گھر کی شناخت نہیں ہو سکی </string>
     <string name="a0604">گھر بند ہے</string>
@@ -645,6 +645,12 @@
     <string name="h07">آپ نے کس شہر/علاقے میں سفر کیا؟</string>
     <string name="h0701">شہر/قصبہ/گائوں </string>
     <string name="h0702">صوبہ  </string>
+    <string name="h07021">خیبر پختونخوا </string>
+    <string name="h07022">پنجاب </string>
+    <string name="h07023">سندھ </string>
+    <string name="h07024">بلوچستان </string>
+    <string name="h07025">آزاد جموں کشمیر </string>
+    <string name="h07026">گلگت بلتستان </string>
     <string name="h08">اندرون ملک سفر کے لئے آپ نے سفر کے کون سے ذرائع استعمال  کئے تھے؟</string>
     <string name="h0801">پبلک ٹرانسپورٹ بس / کوچ / وین) </string>
     <string name="h0802">اپنی گاڑی </string>
@@ -654,7 +660,7 @@
     <string name="h09">کیا ان میں سے آپ کسی کے ساتھ جسمانی رابطے میں آئے؟</string>
     <string name="h0901">کووڈ ۔19 کے علامات والا شخص </string>
     <string name="h0902">کوئویڈ 19 والا شخص </string>
-    <string name="h0903">نا معلوم شخص </string>
+    <string name="h0903">رابطہ نہیں ہوا </string>
     <string name="h10">کیا مریض کو کورونا ا  ٹیسٹ کے لئے مشورہ دیا گیا تھا؟</string>
     <string name="h1001">ہاں</string>
     <string name="h1002">نہیں</string>

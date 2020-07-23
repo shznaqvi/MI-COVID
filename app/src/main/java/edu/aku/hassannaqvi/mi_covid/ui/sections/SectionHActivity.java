@@ -131,7 +131,14 @@ public class SectionHActivity extends AppCompatActivity {
                 : "-1");
 
         form.setH0701(bi.h0701.getText().toString());
-        form.setH0702(bi.h0702.getText().toString());
+
+        form.setH0702(bi.h07021.isChecked() ? "1"
+                : bi.h07022.isChecked() ? "2"
+                : bi.h07023.isChecked() ? "3"
+                : bi.h07024.isChecked() ? "4"
+                : bi.h07025.isChecked() ? "5"
+                : bi.h07026.isChecked() ? "6"
+                : "-1");
 
         form.setH0801(bi.h0801.isChecked() ? "1" : "-1");
         form.setH0802(bi.h0802.isChecked() ? "2" : "-1");
