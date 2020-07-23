@@ -643,7 +643,8 @@
     <string name="h04">کیا آپ نے سال 2020 میں ملک سے باہر کا سفر کیا ہے؟</string>
     <string name="h0401">ہاں</string>
     <string name="h0402">نہیں</string>
-    <string name="h05">اگر ہاں تو کہاں کا سفر کیا؟        (ملک کا نام)</string>
+    <string name="h05">اگر ہاں تو کہاں کا سفر کیا؟        </string>
+    <string name="h05_info">(ملک کا نام)</string>
     <string name="h0501">ملک </string>
     <string name="h06">کیا آپ نے جنوری 2020 کے بعد اندرون ملک سفر کیا ہے؟</string>
     <string name="h0601">ہاں</string>
