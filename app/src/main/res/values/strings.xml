@@ -444,8 +444,8 @@
     <string name="f01">کیا آپ جنوری 2020 کو یا اس کے بعد حاملہ تھیں؟</string>
     <string name="f0101">ہاں</string>
     <string name="f0102">نہیں</string>
-    <string name="f02">جنوری 2020 میں آپ  کے حمل کی مدت کیا تھی؟
-مکمل مہینے درج کریں اگر 1 ماہ سے کم ہو تو 0 درج کریں</string>
+    <string name="f02">جنوری 2020 میں آپ  کے حمل کی مدت کیا تھی؟</string>
+    <string name="f02_info">مکمل مہینے درج کریں اگر 1 ماہ سے کم ہو تو 0 درج کریں</string>
     <string name="f0201">مہینے</string>
     <string name="f03">کیا آپ نے اپنے آخری حمل کے دوران حمل کا معائنہ کرایا؟</string>
     <string name="f0301">ہاں</string>
