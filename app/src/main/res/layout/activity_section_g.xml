@@ -311,6 +311,9 @@
                                     android:text="@string/g05" />
 
                                 <TextView
+                                    android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                    android:drawablePadding="16dp"
+                                    android:onClick="@{callback::showTooltipView}"
                                     android:id="@+id/q_g05"
                                     style="@style/quesNum"
                                     android:layout_width="wrap_content"
@@ -517,6 +520,9 @@
                                 android:text="@string/g07" />
 
                             <TextView
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_g07"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
@@ -602,6 +608,9 @@
                                 android:text="@string/g08" />
 
                             <TextView
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_g08"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
