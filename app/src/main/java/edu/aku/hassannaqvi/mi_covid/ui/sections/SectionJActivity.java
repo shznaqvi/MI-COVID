@@ -39,7 +39,7 @@ public class SectionJActivity extends AppCompatActivity {
     private void setupSkips() {
 
         bi.j01.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.j0104.getId() || i == bi.j0102.getId()) {
+            if (i == bi.j0104.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVj02);
             }
         }));
