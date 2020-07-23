@@ -45,7 +45,7 @@ public class SectionKActivity extends AppCompatActivity {
         }));
 
         bi.k03.setOnCheckedChangeListener(((radioGroup, i) -> {
-            if (i == bi.k0301.getId()) {
+            if (i == bi.k0302.getId() || i == bi.k0304.getId()) {
                 Clear.clearAllFields(bi.fldGrpSecK01);
             }
         }));

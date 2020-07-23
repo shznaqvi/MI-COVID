@@ -435,10 +435,10 @@
                     <EditText
                         android:id="@+id/b06ax"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="56dp"
                         android:layout_marginBottom="12dp"
-                        android:hint="@string/b06a"
-                        android:inputType="number" />
+                        android:hint="@string/b06a" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1866,17 +1866,17 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/b150502" />
 
-                                <EditText
-                                    android:id="@+id/b15096x"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="12dp"
-                                    android:digits="@string/onlyalphabet"
-                                    android:hint="@string/b13096"
-                                    android:tag="b1509601"
-                                    android:text='@{b1509601.checked ? b15096x.getText().toString() : ""}'
-                                    android:visibility='@{b1509601.checked ? View.VISIBLE : View.GONE}' />
-                            </RadioGroup>
+                            <EditText
+                                android:id="@+id/b15096x"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="12dp"
+                                android:digits="@string/onlyalphabet"
+                                android:hint="@string/b13096"
+                                android:tag="b1509601"
+                                android:text='@{b1509601.checked ? b15096x.getText().toString() : ""}'
+                                android:visibility='@{b1509601.checked ? View.VISIBLE : View.GONE}' />
+                        </RadioGroup>
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

@@ -3339,7 +3339,7 @@ public class Form extends LiveData<Form> {
         sEHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SE)));
         sFHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SF)));
         sGHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SG)));
-        sGHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SH)));
+        sHHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SH)));
         sIHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SI)));
         sJHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SJ)));
         sKHydrate(cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_SK)));

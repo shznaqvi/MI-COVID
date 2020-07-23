@@ -444,16 +444,6 @@ public class SectionAActivity extends AppCompatActivity {
         });*/
     }
 
-    public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
-        //Setting Date
-        try {
-            Instant instant = org.threeten.bp.Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.a01.getText().toString())) + "T06:24:01Z");
-            localDate = org.threeten.bp.LocalDateTime.ofInstant(instant, org.threeten.bp.ZoneId.systemDefault()).toLocalDate();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-    }
-
     public void a14yyOnTextChanged(CharSequence s, int start, int before, int count) {
         if (TextUtils.isEmpty(bi.a14yy.getText())) return;
         if (Integer.parseInt(bi.a14yy.getText().toString()) < 15) {
@@ -463,6 +453,16 @@ public class SectionAActivity extends AppCompatActivity {
         } else {
             bi.fldGrpCVa20.setVisibility(View.VISIBLE);
             bi.fldGrpSecA02.setVisibility(View.VISIBLE);
+        }
+    }
+
+    public void a01OnTextChanged(CharSequence s, int start, int before, int count) {
+        //Setting Date
+        try {
+            Instant instant = org.threeten.bp.Instant.parse(new SimpleDateFormat("yyyy-MM-dd").format(new SimpleDateFormat("dd-MM-yyyy").parse(bi.a01.getText().toString())) + "T06:24:01Z");
+            localDate = org.threeten.bp.LocalDateTime.ofInstant(instant, org.threeten.bp.ZoneId.systemDefault()).toLocalDate();
+        } catch (ParseException e) {
+            e.printStackTrace();
         }
     }
 
