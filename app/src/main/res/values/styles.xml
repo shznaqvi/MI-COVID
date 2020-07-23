@@ -15,6 +15,7 @@
 
     <style name="AppThemeUrdu" parent="Theme.AppCompat.Light.DarkActionBar">
 
+        <item name="android:textSize">18sp</item>
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -37,10 +38,9 @@
     </style>
 
 
-
     <style name="BackgroundStyle" parent="android:Widget.ScrollView">
         <item name="android:background">@drawable/app_bg_gray</item>
-        <item name="android:padding">18dp</item>
+        <item name="android:padding">24dp</item>
     </style>
 
     <style name="topBarStyle" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -55,8 +55,12 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">24dp</item>
         <item name="android:textColor">@color/colorPrimary</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textStyle">bold</item>
         <!--
@@ -70,14 +74,20 @@
         <item name="android:layout_marginBottom">4dp</item>
         <item name="android:elevation">1dp</item>
         <item name="android:background">@color/white</item>
-        <item name="android:textColor">@android:color/black</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:textColor">@color/black_overlay</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
         <item name="android:imeOptions">actionDone</item>
         <item name="android:singleLine">true</item>
         <item name="android:focusable">true</item>
         <item name="android:clickable">true</item>
-        <item name="android:textStyle">bold</item>
+        <!--
+                <item name="android:textStyle">bold</item>
+        -->
         <!--        <item name="android:textDirection">ltr</item>-->
         <item name="android:focusableInTouchMode">true</item>
     </style>
@@ -87,11 +97,16 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">1dp</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:clickable">true</item>
-        <!--
-                <item name="android:background">@drawable/bottom_options</item>
-        -->
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:elevation">1dp</item>
+        <item name="android:radius">2dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:background">@drawable/bottom_options</item>
         <item name="android:padding">16dp</item>
     </style>
 
@@ -99,11 +114,17 @@
         <item name="android:layout_gravity">start</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">52dp</item>
         <item name="android:clickable">true</item>
-        <!--
-                <item name="android:background">@drawable/bottom_options</item>
-        -->
+
+        <item name="android:background">@drawable/bottom_options</item>
+
         <item name="android:padding">16dp</item>
     </style>
 
@@ -111,11 +132,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:minHeight">36dp</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:padding">16dp</item>
         <item name="android:radius">2dp</item>
         <item name="android:elevation">1dp</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:typeface">sans</item>
         <item name="android:textColor">@color/gray</item>
         <!--        <item name="android:background">@drawable/background_grad</item>-->
     </style>
@@ -181,6 +201,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">8dp</item>
+        <item name="android:background">@color/gray_overlay</item>
 
         <!--<item name="android:layout_marginRight">10dp</item>-->
         <!--<item name="android:layout_marginLeft">10dp</item>-->
