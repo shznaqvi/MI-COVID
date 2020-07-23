@@ -20,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fadeScrollbars="false"
+        android:scrollbarStyle="insideInset"
         android:fillViewport="true"
         android:scrollbarSize="10dip"
         tools:context=".ui.sections.SectionCActivity">
@@ -28,6 +29,8 @@
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+
             android:orientation="vertical">
 
             <!--c01  Radio-->
@@ -119,7 +122,7 @@
                             android:id="@+id/c01096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/c01096"
                             android:tag="c01096"
@@ -204,10 +207,12 @@
                         </RelativeLayout>
 
                         <com.edittextpicker.aliazaz.EditTextPicker
+                            style="@style/textInput"
+
                             android:id="@+id/c0201"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:hint="@string/c0201"
                             android:inputType="number"
                             app:mask="###"
@@ -250,10 +255,12 @@
                         </RelativeLayout>
 
                         <com.edittextpicker.aliazaz.EditTextPicker
+                            style="@style/textInput"
+
                             android:id="@+id/c0202"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:hint="@string/c0202"
                             android:inputType="number"
                             app:mask="###"
@@ -335,7 +342,7 @@
                             android:id="@+id/c03096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/c03096"
                             android:tag="c03096"
@@ -428,7 +435,7 @@
                             android:id="@+id/c04096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/c04096"
                             android:tag="c04096"
@@ -503,7 +510,7 @@
                             android:id="@+id/c05096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/c05096"
                             android:tag="c05096"
@@ -590,7 +597,7 @@
                             android:id="@+id/c06096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/c06096"
                             android:tag="c06096"
@@ -636,17 +643,20 @@
                     <RadioGroup
                         android:id="@+id/c07"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/c0701"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/c0701" />
 
                         <RadioButton
                             android:id="@+id/c0702"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/c0702" />
                     </RadioGroup>
@@ -696,17 +706,20 @@
                         <RadioGroup
                             android:id="@+id/c08"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/c0801"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:text="@string/c0801" />
 
                             <RadioButton
                                 android:id="@+id/c0802"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:text="@string/c0802" />
                         </RadioGroup>

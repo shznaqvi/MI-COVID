@@ -21,6 +21,7 @@
             android:id="@+id/fldGrpSectionL"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <!-- l01  Radio   -->
@@ -121,6 +122,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content">
 
+
                             <RadioButton
                                 android:id="@+id/l0201"
                                 android:layout_width="match_parent"
@@ -150,6 +152,7 @@
 
                                 android:text="@string/l0204" />
 
+
                             <RadioButton
                                 android:id="@+id/l0205"
                                 android:layout_width="match_parent"
@@ -172,11 +175,12 @@
                                 android:id="@+id/l02096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
+
                                 android:hint="@string/l02096"
                                 android:tag="l02096"
                                 android:text='@{l02096.checked ? l02096x.getText().toString() : ""}'
                                 android:visibility='@{l02096.checked? View.VISIBLE : View.GONE}' />
+
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>

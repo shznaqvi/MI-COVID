@@ -22,6 +22,9 @@
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:scrollbarStyle="outsideInset"
+
             android:orientation="vertical">
 
             <!-- e01  Radio   -->
@@ -123,17 +126,20 @@
                     <RadioGroup
                         android:id="@+id/e02"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/e0201"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e0201" />
 
                         <RadioButton
                             android:id="@+id/e0202"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e0202" />
                     </RadioGroup>
@@ -234,7 +240,7 @@
                                 android:id="@+id/e03096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
+
                                 android:digits="@string/onlyalphabet"
                                 android:hint="@string/e03096"
                                 android:tag="e03096"
@@ -279,17 +285,20 @@
                         <RadioGroup
                             android:id="@+id/e04"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/e0401"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:text="@string/e0401" />
 
                             <RadioButton
                                 android:id="@+id/e0402"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
                                 android:text="@string/e0402" />
                         </RadioGroup>
@@ -333,7 +342,7 @@
                             android:id="@+id/e05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:hint="@string/e05" />
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -438,17 +447,20 @@
                     <RadioGroup
                         android:id="@+id/e07"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/e0701"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e0701" />
 
                         <RadioButton
                             android:id="@+id/e0702"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e0702" />
                     </RadioGroup>
@@ -547,7 +559,7 @@
                             android:id="@+id/e08096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/e08096"
                             android:tag="e08096"
@@ -592,18 +604,21 @@
                     <RadioGroup
                         android:id="@+id/e09"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/e0901"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e0901" />
 
 
                         <RadioButton
                             android:id="@+id/e0902"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e0902" />
 
@@ -652,17 +667,20 @@
                     <RadioGroup
                         android:id="@+id/e10"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/e1001"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e1001" />
 
                         <RadioButton
                             android:id="@+id/e1002"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/e1002" />
                     </RadioGroup>
@@ -827,7 +845,7 @@
                             android:id="@+id/e12096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/e12096"
                             android:tag="e12096"
@@ -903,7 +921,7 @@
                             android:id="@+id/e13096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/e13096"
                             android:tag="e13096"
@@ -986,7 +1004,7 @@
                         android:id="@+id/e1401"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
+
                         android:hint="@string/e1401" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1027,7 +1045,7 @@
                         android:id="@+id/e1402"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
+
                         android:hint="@string/e1402" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1069,9 +1087,11 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/e15"
+
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
+
                         android:hint="@string/e1501"
                         android:inputType="number"
                         app:mask="##"

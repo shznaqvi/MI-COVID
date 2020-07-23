@@ -20,6 +20,7 @@
             android:id="@+id/fldGrpSectionJ"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
             android:orientation="vertical">
 
             <!-- j01  Radio   -->
@@ -122,18 +123,21 @@
                     <RadioGroup
                         android:id="@+id/j02"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/j0201"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j0201" />
 
                         <RadioButton
                             android:id="@+id/j0202"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j0202" />
                     </RadioGroup>
                 </LinearLayout>
@@ -174,18 +178,21 @@
                     <RadioGroup
                         android:id="@+id/j03"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/j0301"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j0301" />
 
                         <RadioButton
                             android:id="@+id/j0302"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j0302" />
                     </RadioGroup>
                 </LinearLayout>
@@ -227,18 +234,21 @@
                     <RadioGroup
                         android:id="@+id/j04"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/j0401"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j0401" />
 
                         <RadioButton
                             android:id="@+id/j0402"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j0402" />
                     </RadioGroup>
                 </LinearLayout>
@@ -277,10 +287,12 @@
                     </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
+
                         android:id="@+id/j05"
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="12dp"
+
                         android:hint="@string/j0501"
                         android:inputType="number"
                         app:mask="#"
@@ -397,18 +409,21 @@
                         <RadioGroup
                             android:id="@+id/j07"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/j0701"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/j0701" />
 
                             <RadioButton
                                 android:id="@+id/j0702"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/j0702" />
                         </RadioGroup>
                     </LinearLayout>
@@ -499,7 +514,7 @@
                                 android:id="@+id/j08096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
+
                                 android:hint="@string/j08096"
                                 android:tag="j08096"
                                 android:text='@{j08096.checked ? j08096x.getText().toString() : ""}'
@@ -546,42 +561,45 @@
                     <RadioGroup
                         android:id="@+id/j09"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/j0901"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/j0901" />
 
                         <RadioButton
                             android:id="@+id/j0902"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/j0902" />
 
                         <RadioButton
                             android:id="@+id/j0903"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/j0903" />
 
                         <RadioButton
                             android:id="@+id/j09096"
-                            android:layout_width="match_parent"
+                            android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/j09096" />
 
-                        <EditText
-                            android:id="@+id/j09096x"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
-                            android:hint="@string/j09096"
-                            android:tag="j09096"
-                            android:text='@{j09096.checked ? j09096x.getText().toString() : ""}'
-                            android:visibility='@{j09096.checked? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
+
+                    <EditText
+                        android:id="@+id/j09096x"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:hint="@string/j09096"
+                        android:tag="j09096"
+                        android:text='@{j09096.checked ? j09096x.getText().toString() : ""}'
+                        android:visibility='@{j09096.checked? View.VISIBLE : View.GONE}' />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -620,18 +638,21 @@
                     <RadioGroup
                         android:id="@+id/j010"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/j01001"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j01001" />
 
                         <RadioButton
                             android:id="@+id/j01002"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/j01002" />
                     </RadioGroup>
                 </LinearLayout>
@@ -678,18 +699,21 @@
                         <RadioGroup
                             android:id="@+id/j011"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/j01101"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/j01101" />
 
                             <RadioButton
                                 android:id="@+id/j01102"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/j01102" />
                         </RadioGroup>
                     </LinearLayout>
@@ -728,10 +752,12 @@
                         </RelativeLayout>
 
                         <com.edittextpicker.aliazaz.EditTextPicker
+                            style="@style/textInput"
+
                             android:id="@+id/j012"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="12dp"
+
                             android:hint="@string/j012"
                             android:inputType="number"
                             app:mask="###"

@@ -19,6 +19,8 @@
             android:id="@+id/GrpName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+
             android:orientation="vertical">
 
             <!-- g01  Radio   -->
@@ -56,18 +58,21 @@
                     <RadioGroup
                         android:id="@+id/g01"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
 
                         <RadioButton
                             android:id="@+id/g0101"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
                             android:layout_height="wrap_content"
                             android:text="@string/g0101" />
 
                         <RadioButton
                             android:id="@+id/g0102"
-                            android:layout_width="match_parent"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/g0102" />
                     </RadioGroup>
                 </LinearLayout>
@@ -114,18 +119,21 @@
                         <RadioGroup
                             android:id="@+id/g02"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/g0201"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/g0201" />
 
                             <RadioButton
                                 android:id="@+id/g0202"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/g0202" />
                         </RadioGroup>
                     </LinearLayout>
@@ -172,18 +180,21 @@
                             <RadioGroup
                                 android:id="@+id/g03"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:id="@+id/g0301"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/g0301" />
 
                                 <RadioButton
                                     android:id="@+id/g0302"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/g0302" />
                             </RadioGroup>
                         </LinearLayout>
@@ -279,7 +290,7 @@
                                     android:id="@+id/g04096x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="12dp"
+
                                     android:hint="@string/g04096"
                                     android:tag="g04096"
                                     android:text='@{g04096.checked ? g04096x.getText().toString() : ""}'
@@ -325,6 +336,8 @@
 
                             <LinearLayout
                                 android:id="@+id/g05check"
+                                android:layout_margin="8dp"
+                                android:background="@drawable/boader"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
@@ -334,7 +347,7 @@
                                     style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="12dp"
+
                                     android:text="@string/g0501_t" />
 
                                 <CheckBox
@@ -353,7 +366,7 @@
                                     style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="12dp"
+
                                     android:text="@string/g0503_t" />
 
                                 <CheckBox
@@ -378,7 +391,7 @@
                                     style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="12dp"
+
                                     android:text="@string/g0506_t" />
 
                                 <CheckBox
@@ -403,7 +416,7 @@
                                     style="@style/sub"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="12dp"
+
                                     android:text="@string/g0509_t" />
 
                                 <CheckBox
@@ -479,18 +492,21 @@
                         <RadioGroup
                             android:id="@+id/g06"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/g0601"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/g0601" />
 
                             <RadioButton
                                 android:id="@+id/g0602"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/g0602" />
                         </RadioGroup>
                     </LinearLayout>
@@ -691,7 +707,7 @@
                                 android:id="@+id/g08096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
+
                                 android:hint="@string/g08096"
                                 android:tag="g08096"
                                 android:text='@{g08096.checked ? g08096x.getText().toString() : ""}'
@@ -735,18 +751,21 @@
                         <RadioGroup
                             android:id="@+id/g09"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
 
                             <RadioButton
                                 android:id="@+id/g0901"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/g0901" />
 
                             <RadioButton
                                 android:id="@+id/g0902"
-                                android:layout_width="match_parent"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/g0902" />
                         </RadioGroup>
                     </LinearLayout>
@@ -794,7 +813,7 @@
                                 android:id="@+id/g10"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginBottom="12dp"
+
                                 android:hint="@string/g10" />
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -834,18 +853,21 @@
                             <RadioGroup
                                 android:id="@+id/g11"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
 
                                 <RadioButton
                                     android:id="@+id/g1101"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/g1101" />
 
                                 <RadioButton
                                     android:id="@+id/g1102"
-                                    android:layout_width="match_parent"
+                                    android:layout_width="0dp"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/g1102" />
                             </RadioGroup>
                         </LinearLayout>
@@ -929,7 +951,7 @@
                                     android:id="@+id/g12096x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="12dp"
+
                                     android:hint="@string/g12096"
                                     android:tag="g12096"
                                     android:text='@{g12096.checked ? g12096x.getText().toString() : ""}'
@@ -1021,7 +1043,7 @@
                                     android:id="@+id/g13096x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginBottom="12dp"
+
                                     android:hint="@string/g13096"
                                     android:tag="g13096"
                                     android:text='@{g13096.checked ? g13096x.getText().toString() : ""}'
