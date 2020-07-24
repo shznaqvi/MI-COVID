@@ -446,10 +446,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
                         android:hint="####.##"
+                        android:inputType="number"
                         app:mask="####.##"
                         app:maxValue="1000.00"
                         app:minValue="1.00"
-                        app:pattern="^(\\d{1,4}\\.\\d{2,2})$" />
+                        app:pattern="^(\\d{4,4}\\.\\d{2,2})$" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
