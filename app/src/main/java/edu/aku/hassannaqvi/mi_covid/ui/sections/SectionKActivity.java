@@ -112,26 +112,31 @@ public class SectionKActivity extends AppCompatActivity {
 
     private void SaveDraft() throws JSONException {
 
+        // Checked
         form.setK01(bi.k0101.isChecked() ? "1"
                 : bi.k0102.isChecked() ? "2"
                 : bi.k0103.isChecked() ? "3"
                 : bi.k0104.isChecked() ? "4"
                 : "-1");
 
+        // Checked
         form.setK02(bi.k0201.isChecked() ? "1"
                 : bi.k0202.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setK03(bi.k0301.isChecked() ? "1"
                 : bi.k0302.isChecked() ? "2"
                 : bi.k0303.isChecked() ? "3"
                 : bi.k0304.isChecked() ? "4"
                 : "-1");
 
+        // Checked
         form.setK04(bi.k0401.isChecked() ? "1"
                 : bi.k0402.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setK05(bi.k0501.isChecked() ? "1"
                 : bi.k0502.isChecked() ? "2"
                 : bi.k0503.isChecked() ? "3"
@@ -140,6 +145,7 @@ public class SectionKActivity extends AppCompatActivity {
                 : bi.k0506.isChecked() ? "6"
                 : bi.k05096.isChecked() ? "96"
                 : "-1");
+        // Checked
         form.setk05096x(bi.k05096x.getText().toString());
 
         form.setK06(bi.k0601.isChecked() ? "1"

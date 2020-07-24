@@ -93,10 +93,12 @@ public class SectionLActivity extends AppCompatActivity {
 
         JSONObject json = new JSONObject();
 
+        // Checked
         form.setL01(bi.l0101.isChecked() ? "1"
                 : bi.l0102.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setL02(bi.l0201.isChecked() ? "1"
                 : bi.l0202.isChecked() ? "2"
                 : bi.l0203.isChecked() ? "3"
@@ -105,8 +107,10 @@ public class SectionLActivity extends AppCompatActivity {
                 : bi.l0206.isChecked() ? "6"
                 : bi.l02096.isChecked() ? "96"
                 : "-1");
+        // Checked
         form.setl02096x(bi.l02096x.getText().toString());
 
+        // Checked
         form.setL03(bi.l0301.isChecked() ? "1"
                 : bi.l0302.isChecked() ? "2"
                 : bi.l0303.isChecked() ? "3"
@@ -114,6 +118,7 @@ public class SectionLActivity extends AppCompatActivity {
                 : bi.l0305.isChecked() ? "5"
                 : "-1");
 
+        // Checked
         form.setL04(bi.l0401.isChecked() ? "1"
                 : bi.l0402.isChecked() ? "2"
                 : bi.l0403.isChecked() ? "3"
@@ -121,26 +126,32 @@ public class SectionLActivity extends AppCompatActivity {
                 : bi.l0405.isChecked() ? "5"
                 : "-1");
 
+        // Checked
         form.setL05(bi.l0501.isChecked() ? "1"
                 : bi.l0502.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setL06(bi.l0601.isChecked() ? "1"
                 : bi.l0602.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setL07(bi.l0701.isChecked() ? "1"
                 : bi.l0702.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setL08(bi.l0801.isChecked() ? "1"
                 : bi.l0802.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setL09(bi.l0901.isChecked() ? "1"
                 : bi.l0902.isChecked() ? "2"
                 : "-1");
 
+        // Checked
         form.setL010(bi.l01001.isChecked() ? "1"
                 : bi.l01002.isChecked() ? "2"
                 : bi.l01003.isChecked() ? "3"

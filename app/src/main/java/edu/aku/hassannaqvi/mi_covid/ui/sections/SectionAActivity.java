@@ -122,7 +122,10 @@ public class SectionAActivity extends AppCompatActivity {
         form.setA05(bi.a05.getText().toString().trim().isEmpty() ? "-1" : bi.a05.getText().toString());
 
         form.setRefno(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
-
+        form.setA05a(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
+        form.setA05b(bi.a05b1.isChecked() ? "1"
+                : bi.a05b2.isChecked() ? "2"
+                : "-1");
         form.setA01(bi.a01.getText().toString());
         form.setA02(bi.a02.getText().toString());
         /*form.setA06(bi.a0601.isChecked() ? "1"

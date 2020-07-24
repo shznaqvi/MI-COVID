@@ -52,6 +52,9 @@ public class Form extends LiveData<Form> {
     private String sK = "";
     private String sL = "";
 
+
+    private String a05a = "";
+    private String a05b = "";
     private String a06;
     private String a07;
     private String a08;
@@ -265,7 +268,6 @@ public class Form extends LiveData<Form> {
     private String h10;
     private String h11;
     private String h11096x;
-    private String h12;
     private String h12dd;
     private String h12mm;
     private String h12yy;
@@ -2300,14 +2302,6 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getH12() {
-        return h12;
-    }
-
-    public Form setH12(String h12) {
-        this.h12 = h12;
-        return this;
-    }
 
     public String getH12dd() {
         return h12dd;
@@ -2709,11 +2703,6 @@ public class Form extends LiveData<Form> {
         return k05096x;
     }
 
-    public Form setk05096x(String k05096x) {
-        this.k05096x = k05096x;
-        return this;
-    }
-
     public String getK06() {
         return k06;
     }
@@ -2799,11 +2788,6 @@ public class Form extends LiveData<Form> {
         return k14096x;
     }
 
-    public Form setk14096x(String k14096x) {
-        this.k14096x = k14096x;
-        return this;
-    }
-
     public String getK15() {
         return k15;
     }
@@ -2824,11 +2808,6 @@ public class Form extends LiveData<Form> {
 
     public String getk16096x() {
         return k16096x;
-    }
-
-    public Form setk16096x(String k16096x) {
-        this.k16096x = k16096x;
-        return this;
     }
 
     public String getK17() {
@@ -2860,11 +2839,6 @@ public class Form extends LiveData<Form> {
 
     public String getl02096x() {
         return l02096x;
-    }
-
-    public Form setl02096x(String l02096x) {
-        this.l02096x = l02096x;
-        return this;
     }
 
     public String getL03() {
@@ -3001,6 +2975,83 @@ public class Form extends LiveData<Form> {
         this.a05 = a05;
     }
 
+    public String getA05a() {
+        return a05a;
+    }
+
+    public Form setA05a(String a05a) {
+        this.a05a = a05a;
+        return this;
+    }
+
+    public String getA05b() {
+        return a05b;
+    }
+
+    public Form setA05b(String a05b) {
+        this.a05b = a05b;
+        return this;
+    }
+//======================
+
+    public String getK05096x() {
+        return k05096x;
+    }
+
+    public Form setk05096x(String k05096x) {
+        this.k05096x = k05096x;
+        return this;
+    }
+
+    public Form setK05096x(String k05096x) {
+        this.k05096x = k05096x;
+        return this;
+    }
+
+    public String getK14096x() {
+        return k14096x;
+    }
+
+    public Form setk14096x(String k14096x) {
+        this.k14096x = k14096x;
+        return this;
+    }
+
+    public Form setK14096x(String k14096x) {
+        this.k14096x = k14096x;
+        return this;
+    }
+
+    public String getK16096x() {
+        return k16096x;
+    }
+
+    public Form setk16096x(String k16096x) {
+        this.k16096x = k16096x;
+        return this;
+    }
+
+    public Form setK16096x(String k16096x) {
+        this.k16096x = k16096x;
+        return this;
+    }
+
+    public String getL02096x() {
+        return l02096x;
+    }
+
+    public Form setl02096x(String l02096x) {
+        this.l02096x = l02096x;
+        return this;
+    }
+
+    public Form setL02096x(String l02096x) {
+        this.l02096x = l02096x;
+        return this;
+    }
+
+
+    //====================
 
     public String getsB() {
         return sB;
@@ -3360,11 +3411,9 @@ public class Form extends LiveData<Form> {
         JSONObject json = new JSONObject();
 
         try {
-            json.put("a01", a01)
-                    .put("a02", a02)
-                    .put("a03", a03)
-                    .put("a04", a04)
-                    .put("a05", a05)
+            json
+                    .put("a05a", a05a)
+                    .put("a05b", a05b)
                     .put("refno", refno)
                     .put("istatus", istatus)
                     .put("istatus96x", istatus96x)
@@ -3658,7 +3707,6 @@ public class Form extends LiveData<Form> {
                     .put("h10", h10)
                     .put("h11", h11)
                     .put("h11096x", h11096x)
-                    .put("h12", h12)
                     .put("h12dd", h12dd)
                     .put("h12mm", h12mm)
                     .put("h12yy", h12yy)
@@ -3931,6 +3979,8 @@ public class Form extends LiveData<Form> {
             JSONObject json = null;
             json = new JSONObject(string);
 
+            this.a05a = json.getString("a05a");
+            this.a05b = json.getString("a05b");
             this.a06 = json.getString("a06");
             this.a07 = json.getString("a07");
             this.a08 = json.getString("a08");
@@ -4249,7 +4299,6 @@ public class Form extends LiveData<Form> {
                 this.h10 = json.getString("h10");
                 this.h11 = json.getString("h11");
                 this.h11096x = json.getString("h11096x");
-                this.h12 = json.getString("h12");
                 this.h12dd = json.getString("h12dd");
                 this.h12mm = json.getString("h12mm");
                 this.h12yy = json.getString("h12yy");
