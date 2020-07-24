@@ -433,6 +433,7 @@
                         android:id="@+id/h0316"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:tag="-1"
                         android:text="@string/h0316" />
 
                 </LinearLayout>
