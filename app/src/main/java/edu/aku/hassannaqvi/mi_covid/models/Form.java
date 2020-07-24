@@ -290,6 +290,7 @@ public class Form extends LiveData<Form> {
     private String j02;
     private String j03;
     private String j04;
+    private String j05;
     private String j06;
     private String j07;
     private String j0801;
@@ -2525,6 +2526,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getJ05() {
+        return j05;
+    }
+
+    public Form setJ05(String j05) {
+        this.j05 = j05;
+        return this;
+    }
+
     public String getJ06() {
         return j06;
     }
@@ -3705,6 +3715,7 @@ public class Form extends LiveData<Form> {
                     .put("j02", j02)
                     .put("j03", j03)
                     .put("j04", j04)
+                    .put("j05", j05)
                     .put("j06", j06)
                     .put("j07", j07)
                     .put("j0801", j0801)
@@ -4304,6 +4315,7 @@ public class Form extends LiveData<Form> {
                 this.j02 = json.getString("j02");
                 this.j03 = json.getString("j03");
                 this.j04 = json.getString("j04");
+                this.j05 = json.getString("j05");
                 this.j06 = json.getString("j06");
                 this.j07 = json.getString("j07");
                 this.j0801 = json.getString("j0801");
