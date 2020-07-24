@@ -123,11 +123,9 @@ public class SectionEActivity extends AppCompatActivity {
                 : bi.e0104.isChecked() ? "4"
                 : "-1");
 
-        form.setE02("-1");
-
-        form.setE0201("-1");
-
-        form.setE0202("-1");
+        form.setE02(bi.e0201.isChecked() ? "1"
+                : bi.e0202.isChecked() ? "2"
+                : "-1");
 
         //checkbox
         form.setE0301(bi.e0301.isChecked() ? "1" : "-1");
