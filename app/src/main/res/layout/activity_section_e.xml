@@ -1087,18 +1087,15 @@
 
                     <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/e15"
-
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/e1501"
                         android:inputType="number"
                         app:mask="##"
                         app:maxValue="10"
                         app:minValue="1"
                         app:type="range" />
-
 
                 </LinearLayout>
 

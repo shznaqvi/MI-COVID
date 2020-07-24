@@ -164,6 +164,7 @@ public class Form extends LiveData<Form> {
     private String e13;
     private String e1401;
     private String e1402;
+    private String e15;
     private String f01;
     private String f02;
     private String f03;
@@ -1390,6 +1391,15 @@ public class Form extends LiveData<Form> {
 
     public Form setE1402(String e1402) {
         this.e1402 = e1402;
+        return this;
+    }
+
+    public String getE15() {
+        return e15;
+    }
+
+    public Form setE15(String e15) {
+        this.e15 = e15;
         return this;
     }
 
@@ -3552,7 +3562,8 @@ public class Form extends LiveData<Form> {
                     .put("e12", e12)
                     .put("e13", e13)
                     .put("e1401", e1401)
-                    .put("e1402", e1402);
+                    .put("e1402", e1402)
+                    .put("e15", e15);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -4135,6 +4146,7 @@ public class Form extends LiveData<Form> {
                 this.e13 = json.getString("e13");
                 this.e1401 = json.getString("e1401");
                 this.e1402 = json.getString("e1402");
+                this.e15 = json.getString("e15");
 
             } catch (JSONException e) {
                 e.printStackTrace();

@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -115,6 +116,7 @@ public class SectionEActivity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
+
         form.setE01(bi.e0101.isChecked() ? "1"
                 : bi.e0102.isChecked() ? "2"
                 : bi.e0103.isChecked() ? "3"
@@ -200,7 +202,8 @@ public class SectionEActivity extends AppCompatActivity {
 
         form.setE1402(bi.e1402.getText().toString());
 
-        //json.put("e15", bi.e15.getText().toString());
+        form.setE15(bi.e15.getText().toString());
+
        /* JSONObject json = new JSONObject();
         json.put("e01", bi.e0101.isChecked() ? "1"
                 : bi.e0102.isChecked() ? "2"
