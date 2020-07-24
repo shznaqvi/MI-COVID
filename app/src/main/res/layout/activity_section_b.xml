@@ -72,15 +72,15 @@
                         <RadioButton
                             android:id="@+id/b0101"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/b0101" />
 
                         <RadioButton
                             android:id="@+id/b0102"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/b0102" />
                     </RadioGroup>
                 </LinearLayout>
@@ -208,16 +208,17 @@
                                 android:layout_height="wrap_content"
                                 android:text="@string/b03096" />
                         </RadioGroup>
-                            <EditText
-                                android:id="@+id/b03096x"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
 
-                                android:digits="@string/onlyalphabet"
-                                android:hint="@string/b03096"
-                                android:tag="b03096"
-                                android:text='@{b03096.checked ? b03096x.getText().toString() : ""}'
-                                android:visibility='@{b03096.checked ? View.VISIBLE : View.GONE}' />
+                        <EditText
+                            android:id="@+id/b03096x"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+
+                            android:digits="@string/onlyalphabet"
+                            android:hint="@string/b03096"
+                            android:tag="b03096"
+                            android:text='@{b03096.checked ? b03096x.getText().toString() : ""}'
+                            android:visibility='@{b03096.checked ? View.VISIBLE : View.GONE}' />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -406,15 +407,15 @@
                             android:text="@string/b06" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_b06"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_b06"
                             android:layout_alignBottom="@id/qtxt_b06"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_b06" />
                     </RelativeLayout>
 
@@ -427,26 +428,28 @@
                         <RadioButton
                             android:id="@+id/b06ft"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/b06ft" />
 
                         <RadioButton
                             android:id="@+id/b06yrd"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/b06yrd" />
 
                     </RadioGroup>
 
-                    <EditText
+                    <com.edittextpicker.aliazaz.EditTextPicker
                         android:id="@+id/b06ax"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
-                        android:inputType="number"
-
-                        android:hint="@string/b06a" />
+                        android:hint="####.##"
+                        app:mask="####.##"
+                        app:maxValue="1000.00"
+                        app:minValue="1.00"
+                        app:pattern="^(\\d{1,4}\\.\\d{2,2})$" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -483,9 +486,9 @@
                     </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        style="@style/textInput"
-
                         android:id="@+id/b07"
+
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -521,15 +524,15 @@
                             android:text="@string/b08" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_b08"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_b08"
                             android:layout_alignBottom="@id/qtxt_b08"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_b08" />
                     </RelativeLayout>
 
@@ -545,15 +548,15 @@
                             android:orientation="vertical">
 
                             <TextView
+                                style="@style/sub"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                style="@style/sub"
                                 android:text="@string/b0801" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b0801"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b0801"
@@ -571,15 +574,15 @@
                             android:orientation="vertical">
 
                             <TextView
+                                style="@style/sub"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                style="@style/sub"
                                 android:text="@string/b0802" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b0802"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b0802"
@@ -610,9 +613,9 @@
                                 android:text="@string/b0803" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b0803"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b0803"
@@ -638,9 +641,9 @@
                                 android:text="@string/b0804" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b0804"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b0804"
@@ -671,9 +674,9 @@
                                 android:text="@string/b0805" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b0805"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b0805"
@@ -698,9 +701,9 @@
                                 android:text="@string/b0806" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b0806"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:hint="@string/b0806"
@@ -720,9 +723,9 @@
                         android:text="@string/b0807" />
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        style="@style/textInput"
-
                         android:id="@+id/b0807"
+
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="@string/b0807"
@@ -764,9 +767,9 @@
                     </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        style="@style/textInput"
-
                         android:id="@+id/b9"
+
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -812,9 +815,9 @@
                     </RelativeLayout>
 
                     <com.edittextpicker.aliazaz.EditTextPicker
-                        style="@style/textInput"
-
                         android:id="@+id/b10"
+
+                        style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
 
@@ -902,15 +905,15 @@
                         <RadioButton
                             android:id="@+id/b011t01"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/b011t01" />
 
                         <RadioButton
                             android:id="@+id/b011t02"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/b011t02" />
                     </RadioGroup>
                 </LinearLayout>
@@ -1231,15 +1234,15 @@
                             android:text="@string/b13" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_b13"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_b13"
                             android:layout_alignBottom="@id/qtxt_b13"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_b13" />
                     </RelativeLayout>
 
@@ -1708,15 +1711,15 @@
                                 android:text="@string/b15" />
 
                             <TextView
-                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                                android:drawablePadding="16dp"
-                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_b15"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_b15"
                                 android:layout_alignBottom="@id/qtxt_b15"
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:text="@string/Q_b15" />
                         </RelativeLayout>
 
@@ -1764,9 +1767,9 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                style="@style/sub"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                style="@style/sub"
                                 android:layout_weight="1"
                                 android:text="@string/b1502" />
 
@@ -1800,9 +1803,9 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                style="@style/sub"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                style="@style/sub"
                                 android:layout_weight="1"
                                 android:text="@string/b1503" />
 
@@ -1835,9 +1838,9 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                style="@style/sub"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                style="@style/sub"
                                 android:layout_weight="1"
                                 android:text="@string/b1504" />
 
@@ -1871,9 +1874,9 @@
                             android:orientation="horizontal">
 
                             <TextView
+                                style="@style/sub"
                                 android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-                                style="@style/sub"
                                 android:layout_weight="1"
                                 android:text="@string/b1505" />
 
@@ -1993,15 +1996,15 @@
                             <RadioButton
                                 android:id="@+id/b1601"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/b1601" />
 
                             <RadioButton
                                 android:id="@+id/b1602"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/b1602" />
                         </RadioGroup>
                     </LinearLayout>
@@ -2047,9 +2050,9 @@
                             </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/b17"
+
+                                style="@style/textInput"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
 

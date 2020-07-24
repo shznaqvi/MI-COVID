@@ -489,7 +489,7 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void a13ddmmOnTextChanged(CharSequence s, int start, int before, int count) {
-        bi.a14yy.setText(null);
+        bi.a13yy.setText(null);
     }
 
     public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {
