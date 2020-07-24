@@ -375,7 +375,7 @@ public class SectionAActivity extends AppCompatActivity {
         if (!dtFlag) {
             return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!", false);
         }
-        if (bi.a0702.isChecked()) return true;
+        if (bi.a05b2.isChecked() || bi.a0702.isChecked()) return true;
         if (Integer.parseInt(bi.a14mm.getText().toString()) == 0 && Integer.parseInt(bi.a14yy.getText().toString()) == 0)
             return Validator.emptyCustomTextBox(this, bi.a14yy, "Both Month & Year don't be zero!!", false);
         return true;
