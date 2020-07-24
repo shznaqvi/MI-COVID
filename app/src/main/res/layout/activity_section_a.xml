@@ -829,6 +829,7 @@
                                         android:hint="@string/a13dd"
                                         android:inputType="number"
                                         app:defaultValue="98"
+                                        android:onTextChanged="@{callback::a13ddmmOnTextChanged}"
                                         app:mask="##"
                                         app:maxValue="31"
                                         app:minValue="1"
@@ -857,6 +858,7 @@
                                         android:inputType="number"
                                         app:defaultValue="98"
                                         app:mask="##"
+                                        android:onTextChanged="@{callback::a13ddmmOnTextChanged}"
                                         app:maxValue="11"
                                         app:minValue="1"
                                         app:type="range" />
@@ -1820,7 +1822,8 @@
                     android:background="@color/red_overlay"
                     android:onClick="@{() -> callback.BtnEnd()}"
                     android:text="Cancel"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_Continue"
@@ -1830,7 +1833,8 @@
                     android:background="@color/green_overlay"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
-                    android:textColor="@color/white" />
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
             </LinearLayout>
 
         </LinearLayout>

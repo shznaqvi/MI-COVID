@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -19,6 +20,7 @@ import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionBBinding;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
+import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
@@ -426,7 +428,7 @@ public class SectionBActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
     @Override

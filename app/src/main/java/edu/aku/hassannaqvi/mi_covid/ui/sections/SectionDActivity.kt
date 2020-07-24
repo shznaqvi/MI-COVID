@@ -9,13 +9,14 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.validatorcrawler.aliazaz.Clear
 import com.validatorcrawler.aliazaz.Validator.Companion.emptyCheckingContainer
+import edu.aku.hassannaqvi.mi_covid.CONSTANTS
 import edu.aku.hassannaqvi.mi_covid.R
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract
 import edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo
 import edu.aku.hassannaqvi.mi_covid.core.MainApp.form
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionDBinding
 import edu.aku.hassannaqvi.mi_covid.utils.contextBackActivity
-import edu.aku.hassannaqvi.mi_covid.utils.openEndActivity
+import edu.aku.hassannaqvi.mi_covid.utils.openFormEndActivity
 import edu.aku.hassannaqvi.mi_covid.utils.showTooltip
 import org.json.JSONException
 
@@ -132,7 +133,7 @@ class SectionDActivity : AppCompatActivity() {
 
 
     fun BtnEnd(v: View) {
-        openEndActivity(this)
+        openFormEndActivity(this, CONSTANTS.FSTATUS_END_FLAG, 2)
     }
 
 

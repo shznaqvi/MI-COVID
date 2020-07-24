@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.validatorcrawler.aliazaz.Validator
+import edu.aku.hassannaqvi.mi_covid.CONSTANTS.Companion.FSTATUS_END_FLAG
 import edu.aku.hassannaqvi.mi_covid.R
 import edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo
 import edu.aku.hassannaqvi.mi_covid.core.MainApp.form
@@ -31,14 +32,15 @@ class EndingActivity : AppCompatActivity() {
             bi.a0607.isEnabled = false
             bi.a0696.isEnabled = false
         } else {
+            val bool = intent.getIntExtra(FSTATUS_END_FLAG, 0)
             bi.a0601.isEnabled = false
-            bi.a0602.isEnabled = true
-            bi.a0603.isEnabled = true
-            bi.a0604.isEnabled = true
-            bi.a0605.isEnabled = true
-            bi.a0606.isEnabled = true
-            bi.a0607.isEnabled = true
-            bi.a0696.isEnabled = true
+            bi.a0602.isEnabled = bool == 1
+            bi.a0603.isEnabled = bool == 1
+            bi.a0604.isEnabled = bool == 1
+            bi.a0605.isEnabled = bool == 1
+            bi.a0606.isEnabled = bool == 1
+            bi.a0607.isEnabled = bool == 2
+            bi.a0696.isEnabled = bool == 2
         }
     }
 

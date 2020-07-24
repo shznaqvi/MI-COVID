@@ -34,6 +34,7 @@ import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 
+import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class SectionAActivity extends AppCompatActivity {
@@ -99,7 +100,7 @@ public class SectionAActivity extends AppCompatActivity {
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            startActivity(new Intent(this, bi.a05b1.isChecked() || bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class).putExtra("complete", true));
+            startActivity(new Intent(this, bi.a05b2.isChecked() || bi.a0702.isChecked() ? EndingActivity.class : SectionBActivity.class).putExtra(FSTATUS_END_FLAG, bi.a05b2.isChecked() ? 1 : 2));
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
@@ -485,6 +486,10 @@ public class SectionAActivity extends AppCompatActivity {
         } catch (ParseException e) {
             e.printStackTrace();
         }
+    }
+
+    public void a13ddmmOnTextChanged(CharSequence s, int start, int before, int count) {
+        bi.a14yy.setText(null);
     }
 
     public void a13yyOnTextChanged(CharSequence s, int start, int before, int count) {

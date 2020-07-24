@@ -21,6 +21,7 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionLBinding;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
+import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
 
@@ -73,7 +74,7 @@ public class SectionLActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
 

@@ -20,6 +20,7 @@ import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionEBinding;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
+import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.appInfo;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 import static edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt.contextBackActivity;
@@ -99,7 +100,7 @@ public class SectionEActivity extends AppCompatActivity {
 
 
     public void BtnEnd() {
-        AppUtilsKt.openEndActivity(this);
+        AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
 
