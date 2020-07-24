@@ -444,6 +444,7 @@
                         android:id="@+id/b06ax"
                         android:layout_width="match_parent"
                         android:layout_height="56dp"
+                        android:inputType="number"
 
                         android:hint="@string/b06a" />
                 </LinearLayout>
