@@ -167,10 +167,13 @@ public class Form extends LiveData<Form> {
     private String e13;
     private String e1401;
     private String e1402;
+    private String e15;
     private String f01;
     private String f02;
     private String f03;
     private String f04;
+    private String f05;
+    private String f06;
     private String f07;
     private String f08;
     private String f09dd;
@@ -292,6 +295,7 @@ public class Form extends LiveData<Form> {
     private String j02;
     private String j03;
     private String j04;
+    private String j05;
     private String j06;
     private String j07;
     private String j0801;
@@ -1392,6 +1396,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getE15() {
+        return e15;
+    }
+
+    public Form setE15(String e15) {
+        this.e15 = e15;
+        return this;
+    }
+
     public String getF01() {
         return f01;
     }
@@ -1425,6 +1438,24 @@ public class Form extends LiveData<Form> {
 
     public Form setF04(String f04) {
         this.f04 = f04;
+        return this;
+    }
+
+    public String getF05() {
+        return f05;
+    }
+
+    public Form setF05(String f05) {
+        this.f05 = f05;
+        return this;
+    }
+
+    public String getF06() {
+        return f06;
+    }
+
+    public Form setF06(String f06) {
+        this.f06 = f06;
         return this;
     }
 
@@ -2519,6 +2550,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getJ05() {
+        return j05;
+    }
+
+    public Form setJ05(String j05) {
+        this.j05 = j05;
+        return this;
+    }
+
     public String getJ06() {
         return j06;
     }
@@ -3571,7 +3611,8 @@ public class Form extends LiveData<Form> {
                     .put("e12", e12)
                     .put("e13", e13)
                     .put("e1401", e1401)
-                    .put("e1402", e1402);
+                    .put("e1402", e1402)
+                    .put("e15", e15);
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -3587,6 +3628,8 @@ public class Form extends LiveData<Form> {
                     .put("f02", f02)
                     .put("f03", f03)
                     .put("f04", f04)
+                    .put("f05", f05)
+                    .put("f06", f06)
                     .put("f07", f07)
                     .put("f08", f08)
                     .put("f09dd", f09dd)
@@ -3753,6 +3796,7 @@ public class Form extends LiveData<Form> {
                     .put("j02", j02)
                     .put("j03", j03)
                     .put("j04", j04)
+                    .put("j05", j05)
                     .put("j06", j06)
                     .put("j07", j07)
                     .put("j0801", j0801)
@@ -4152,6 +4196,7 @@ public class Form extends LiveData<Form> {
                 this.e13 = json.getString("e13");
                 this.e1401 = json.getString("e1401");
                 this.e1402 = json.getString("e1402");
+                this.e15 = json.getString("e15");
 
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -4172,6 +4217,8 @@ public class Form extends LiveData<Form> {
                 this.f02 = json.getString("f02");
                 this.f03 = json.getString("f03");
                 this.f04 = json.getString("f04");
+                this.f05 = json.getString("f05");
+                this.f06 = json.getString("f06");
                 this.f07 = json.getString("f07");
                 this.f08 = json.getString("f08");
                 this.f09dd = json.getString("f09dd");
@@ -4353,6 +4400,7 @@ public class Form extends LiveData<Form> {
                 this.j02 = json.getString("j02");
                 this.j03 = json.getString("j03");
                 this.j04 = json.getString("j04");
+                this.j05 = json.getString("j05");
                 this.j06 = json.getString("j06");
                 this.j07 = json.getString("j07");
                 this.j0801 = json.getString("j0801");

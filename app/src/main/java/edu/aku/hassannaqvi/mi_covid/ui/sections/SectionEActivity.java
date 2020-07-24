@@ -116,17 +116,16 @@ public class SectionEActivity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
+
         form.setE01(bi.e0101.isChecked() ? "1"
                 : bi.e0102.isChecked() ? "2"
                 : bi.e0103.isChecked() ? "3"
                 : bi.e0104.isChecked() ? "4"
                 : "-1");
 
-        form.setE02("-1");
-
-        form.setE0201("-1");
-
-        form.setE0202("-1");
+        form.setE02(bi.e0201.isChecked() ? "1"
+                : bi.e0202.isChecked() ? "2"
+                : "-1");
 
         //checkbox
         form.setE0301(bi.e0301.isChecked() ? "1" : "-1");
@@ -201,7 +200,7 @@ public class SectionEActivity extends AppCompatActivity {
 
         form.setE1402(bi.e1402.getText().toString());
 
-        // form.setE15(bi.e15.getText().toString());
+        form.setE15(bi.e15.getText().toString());
 
        /* JSONObject json = new JSONObject();
         json.put("e01", bi.e0101.isChecked() ? "1"
