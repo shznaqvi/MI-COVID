@@ -464,7 +464,7 @@ public class InfoSectionActivity extends AppCompatActivity {
         bi.a14yy.setEnabled(false);
         bi.a14yy.setText(null);
         calculatedDOB = null;
-        dtFlag = false;
+        dtFlag = true;
         if (TextUtils.isEmpty(bi.a13dd.getText()) || TextUtils.isEmpty(bi.a13mm.getText()) || TextUtils.isEmpty(bi.a13yy.getText()))
             return;
         if (!bi.a13dd.isRangeTextValidate() || !bi.a13mm.isRangeTextValidate() || !bi.a13yy.isRangeTextValidate())

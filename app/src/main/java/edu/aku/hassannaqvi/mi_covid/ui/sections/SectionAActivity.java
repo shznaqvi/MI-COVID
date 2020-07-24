@@ -45,7 +45,7 @@ public class SectionAActivity extends AppCompatActivity {
     ActivitySectionABinding bi;
     boolean dtFlag = false;
     LocalDate localDate = null;
-    LocalDate calculatedDOB;
+    LocalDate calculatedDOB = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +59,25 @@ public class SectionAActivity extends AppCompatActivity {
     private void setupSkip() {
 
         bi.a07.setOnCheckedChangeListener((group, checkId) -> {
-            Clear.clearAllFields(bi.lla08);
+            if (bi.a0701.isChecked()) {
+                bi.btnContinue.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
+            } else {
+                bi.btnContinue.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
+                Clear.clearAllFields(bi.lla08);
+            }
+        });
+
+        bi.a05b.setOnCheckedChangeListener((group, checkId) -> {
+            if (bi.a05b1.isChecked()) {
+                bi.btnContinue.setVisibility(View.VISIBLE);
+                bi.btnEnd.setVisibility(View.GONE);
+            } else {
+                bi.btnContinue.setVisibility(View.GONE);
+                bi.btnEnd.setVisibility(View.VISIBLE);
+                bi.a07.clearCheck();
+            }
         });
 
         bi.a21.setOnCheckedChangeListener((group, checkId) -> {
@@ -475,7 +493,7 @@ public class SectionAActivity extends AppCompatActivity {
         bi.a14yy.setEnabled(false);
         bi.a14yy.setText(null);
         calculatedDOB = null;
-        dtFlag = false;
+        dtFlag = true;
         if (TextUtils.isEmpty(bi.a13dd.getText()) || TextUtils.isEmpty(bi.a13mm.getText()) || TextUtils.isEmpty(bi.a13yy.getText()))
             return;
         if (!bi.a13dd.isRangeTextValidate() || !bi.a13mm.isRangeTextValidate() || !bi.a13yy.isRangeTextValidate())
