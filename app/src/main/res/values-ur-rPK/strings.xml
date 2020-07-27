@@ -614,6 +614,9 @@
     <string name="g1305">پی پی ای (دستانے، ماسک) گھر پر دستیاب نہیں تھے </string>
     <string name="g1306">سہولت فراہم کنندہ ایس او پیز کی پیروی نہیں کر رہے تھے(دستانے اور ماسک نہیں پہنے ہوئے تھے) </string>
     <string name="g13096">دیگر(وضاحت کریں) </string>
+    <string name="h01a">کیا آپ نے کورونا کی دجہ سے صحت کی سہولت/لیبارٹری/دیگر سہولت کا دورہ کیا؟</string>
+    <string name="h01a1">ہاں</string>
+    <string name="h01a2">نہیں</string>
     <string name="h01">آپ کورونا کی وجہ سے صحت کی سہولت/لیبارٹری/دیگرسہولت پر کب گئے؟</string>
     <string name="h01dd">دن</string>
     <string name="h01mm">مہینے</string>
@@ -1043,6 +1046,7 @@
     <string name='Q_g11'>g11</string>
     <string name='Q_g12'>g12</string>
     <string name='Q_g13'>g13</string>
+    <string name='Q_h01a'>h01A</string>
     <string name='Q_h01'>h01</string>
     <string name='Q_h01dd'>h01dd</string>
     <string name='Q_h01mm'>h01mm</string>

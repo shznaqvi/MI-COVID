@@ -232,6 +232,7 @@ public class Form extends LiveData<Form> {
     private String g12096x;
     private String g13;
     private String g13096x;
+    private String h01a;
     private String h01dd;
     private String h01mm;
     private String h01yy;
@@ -1982,6 +1983,14 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getH01a() {
+        return h01a;
+    }
+
+    public void setH01a(String h01a) {
+        this.h01a = h01a;
+    }
+
     public String getH01dd() {
         return h01dd;
     }
@@ -3711,7 +3720,8 @@ public class Form extends LiveData<Form> {
         JSONObject json = new JSONObject();
 
         try {
-            json.put("h01dd", h01dd)
+            json.put("h01a", h01a)
+                    .put("h01dd", h01dd)
                     .put("h01mm", h01mm)
                     .put("h01yy", h01yy)
                     .put("h02dd", h02dd)
@@ -4307,6 +4317,7 @@ public class Form extends LiveData<Form> {
                 JSONObject json = null;
                 json = new JSONObject(string);
 
+                this.h01a = json.getString("h01a");
                 this.h01dd = json.getString("h01dd");
                 this.h01mm = json.getString("h01mm");
                 this.h01yy = json.getString("h01yy");
