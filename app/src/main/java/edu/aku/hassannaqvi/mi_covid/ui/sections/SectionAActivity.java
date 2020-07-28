@@ -382,7 +382,16 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        btnForwardPressed();
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
+        } else {
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void populateSpinner(final Context context) {
