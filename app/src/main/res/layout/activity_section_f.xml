@@ -1013,8 +1013,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_margin="8dp"
                                 android:background="@drawable/boader"
-                                android:orientation="vertical"
-                                android:tag="0">
+                                android:orientation="vertical">
 
                                 <RadioGroup
                                     android:id="@+id/f13"
@@ -1116,14 +1115,11 @@
                                         android:id="@+id/f130296x"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-
                                         android:digits="@string/onlyalphabet"
                                         android:hint="@string/f130296"
                                         android:tag="f130296"
                                         android:text='@{f130296.checked ? f130296x.getText().toString() : ""}'
                                         android:visibility='@{f130296.checked ? View.VISIBLE : View.GONE}' />
-
-
                                 </RadioGroup>
                             </LinearLayout>
                         </LinearLayout>
