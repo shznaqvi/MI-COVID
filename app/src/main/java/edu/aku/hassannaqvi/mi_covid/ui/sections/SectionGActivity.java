@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -36,7 +35,6 @@ public class SectionGActivity extends AppCompatActivity {
         bi.setForm(form);
         setupSkips();
     }
-
 
     private void setupSkips() {
 
@@ -75,10 +73,11 @@ public class SectionGActivity extends AppCompatActivity {
         bi.g11.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g1102.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVg12);
+            } else {
+                Clear.clearAllFields(bi.fldGrpCVg13);
             }
         }));
     }
-
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -90,7 +89,6 @@ public class SectionGActivity extends AppCompatActivity {
             return false;
         }
     }
-
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -106,7 +104,6 @@ public class SectionGActivity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private void SaveDraft() throws JSONException {
 
@@ -264,16 +261,13 @@ public class SectionGActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnEnd() {
         AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
-
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
-
 
     @Override
     public void onBackPressed() {
