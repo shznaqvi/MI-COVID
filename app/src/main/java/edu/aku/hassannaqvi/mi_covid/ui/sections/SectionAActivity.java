@@ -32,6 +32,7 @@ import edu.aku.hassannaqvi.mi_covid.datecollection.DateRepository;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
+import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 
 import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
@@ -379,16 +380,7 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        try {
-            SaveDraft();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        if (UpdateDB()) {
-            startActivity(new Intent(this, EndingActivity.class).putExtra("complete", false));
-        } else {
-            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
-        }
+        AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
     public void populateSpinner(final Context context) {
