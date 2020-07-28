@@ -759,13 +759,17 @@
                             android:layout_height="wrap_content"
                             android:text="@string/e1105" />
 
-                        <CheckBox
-                            android:id="@+id/e1106"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="@string/e1106" />
                     </LinearLayout>
+
+                    <CheckBox
+                        android:id="@+id/e1106"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:tag="-1"
+                        android:text="@string/e1106" />
+
                 </LinearLayout>
+
             </androidx.cardview.widget.CardView>
 
             <!-- e12  Radio   -->

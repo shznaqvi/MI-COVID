@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
-
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -64,12 +63,20 @@ public class SectionEActivity extends AppCompatActivity {
                 Clear.clearAllFields(bi.fldGrpCVe08);
             }
         }));
+
         bi.e09.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i != bi.e0901.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVe10);
             }
         }));
 
+        bi.e1106.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Clear.clearAllFields(bi.e11check, false);
+            } else {
+                Clear.clearAllFields(bi.e11check, true);
+            }
+        });
 
         //e09
         /*bi.e09.setOnCheckedChangeListener((group, checkId) -> {
