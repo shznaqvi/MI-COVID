@@ -180,26 +180,30 @@
 
                             <RadioButton
                                 android:id="@+id/i0301"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/i0301" />
 
                             <RadioButton
                                 android:id="@+id/i0302"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/i0302" />
 
                             <RadioButton
                                 android:id="@+id/i0303"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/i0303" />
 
                             <RadioButton
                                 android:id="@+id/i03098"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/i03098" />
                         </RadioGroup>
                     </LinearLayout>
