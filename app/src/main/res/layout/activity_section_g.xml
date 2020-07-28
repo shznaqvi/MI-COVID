@@ -3,9 +3,11 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="form"
             type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionGActivity" />
@@ -64,8 +66,8 @@
                         <RadioButton
                             android:id="@+id/g0101"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/g0101" />
 
                         <RadioButton
@@ -322,9 +324,6 @@
                                     android:text="@string/g05" />
 
                                 <TextView
-                                    android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                                    android:drawablePadding="16dp"
-                                    android:onClick="@{callback::showTooltipView}"
                                     android:id="@+id/q_g05"
                                     style="@style/quesNum"
                                     android:layout_width="wrap_content"
@@ -336,18 +335,15 @@
 
                             <LinearLayout
                                 android:id="@+id/g05check"
-                                android:layout_margin="8dp"
-                                android:background="@drawable/boader"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
                                 android:tag="0">
 
                                 <TextView
-                                    style="@style/sub"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-
+                                    android:layout_height="56dp"
+                                    android:layout_marginTop="12dp"
                                     android:text="@string/g0501_t" />
 
                                 <CheckBox
@@ -363,10 +359,9 @@
                                     android:text="@string/g0502" />
 
                                 <TextView
-                                    style="@style/sub"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-
+                                    android:layout_height="56dp"
+                                    android:layout_marginTop="12dp"
                                     android:text="@string/g0503_t" />
 
                                 <CheckBox
@@ -382,16 +377,21 @@
                                     android:text="@string/g0504" />
 
                                 <CheckBox
+                                    android:id="@+id/g0503a"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/g0503a" />
+
+                                <CheckBox
                                     android:id="@+id/g0505"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/g0505" />
 
                                 <TextView
-                                    style="@style/sub"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-
+                                    android:layout_height="56dp"
+                                    android:layout_marginTop="12dp"
                                     android:text="@string/g0506_t" />
 
                                 <CheckBox
@@ -407,16 +407,21 @@
                                     android:text="@string/g0507" />
 
                                 <CheckBox
+                                    android:id="@+id/g0506a"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/g0506a" />
+
+                                <CheckBox
                                     android:id="@+id/g0508"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/g0508" />
 
                                 <TextView
-                                    style="@style/sub"
                                     android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-
+                                    android:layout_height="56dp"
+                                    android:layout_marginTop="12dp"
                                     android:text="@string/g0509_t" />
 
                                 <CheckBox
@@ -426,16 +431,22 @@
                                     android:text="@string/g0509" />
 
                                 <CheckBox
-                                    android:id="@+id/g0510"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:text="@string/g0510" />
-
-                                <CheckBox
                                     android:id="@+id/g0511"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:text="@string/g0511" />
+
+                                <CheckBox
+                                    android:id="@+id/g0509a"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/g0509a" />
+
+                                <CheckBox
+                                    android:id="@+id/g0510"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/g0510" />
 
                                 <CheckBox
                                     android:id="@+id/g0512"
@@ -449,8 +460,12 @@
                                     android:layout_height="wrap_content"
                                     android:text="@string/g0513" />
 
+                                <CheckBox
+                                    android:id="@+id/g0514"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/g0514" />
                             </LinearLayout>
-
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
@@ -536,15 +551,15 @@
                                 android:text="@string/g07" />
 
                             <TextView
-                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                                android:drawablePadding="16dp"
-                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_g07"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_g07"
                                 android:layout_alignBottom="@id/qtxt_g07"
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:text="@string/Q_g07" />
                         </RelativeLayout>
 
@@ -624,15 +639,15 @@
                                 android:text="@string/g08" />
 
                             <TextView
-                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                                android:drawablePadding="16dp"
-                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_g08"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_g08"
                                 android:layout_alignBottom="@id/qtxt_g08"
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:text="@string/Q_g08" />
                         </RelativeLayout>
 
@@ -1067,16 +1082,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:background="@color/red_overlay"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel"
-                    android:textColor="@color/white" />
-
-                <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -1084,6 +1089,16 @@
                     android:background="@color/green_overlay"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/red_overlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="Cancel"
                     android:textColor="@color/white" />
             </LinearLayout>
 

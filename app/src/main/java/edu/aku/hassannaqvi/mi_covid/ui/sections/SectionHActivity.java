@@ -69,6 +69,11 @@ public class SectionHActivity extends AppCompatActivity {
             }
         });
 
+        bi.h01a.setOnCheckedChangeListener((radioButton, i) -> {
+            if (i == bi.h01a2.getId())
+                Clear.clearAllFields(bi.fldGrpCVh01);
+        });
+
     }
 
 
@@ -101,6 +106,8 @@ public class SectionHActivity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
+
+        form.setH01a(bi.h01a1.isChecked() ? "1" : bi.h01a2.isChecked() ? "2" : "-1");
 
         form.setH01dd(bi.h01dd.getText().toString());
 

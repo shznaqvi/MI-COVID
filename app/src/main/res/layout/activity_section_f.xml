@@ -6,12 +6,12 @@
         <import type="android.view.View" />
 
         <variable
-            name="callback"
-            type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionFActivity" />
-
-        <variable
             name="form"
             type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
+        <variable
+            name="callback"
+            type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionFActivity" />
     </data>
 
     <ScrollView
@@ -23,8 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
-            android:scrollbarStyle="outsideOverlay"
-
             android:orientation="vertical">
 
             <!-- f01  Radio   -->
@@ -68,15 +66,15 @@
                         <RadioButton
                             android:id="@+id/f0101"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/f0101" />
 
                         <RadioButton
                             android:id="@+id/f0102"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/f0102" />
                     </RadioGroup>
                 </LinearLayout>
@@ -112,30 +110,30 @@
                                 android:text="@string/f02" />
 
                             <TextView
-                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                                android:drawablePadding="16dp"
-                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_f02"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_f02"
                                 android:layout_alignBottom="@id/qtxt_f02"
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:text="@string/Q_f02" />
                         </RelativeLayout>
 
                         <com.edittextpicker.aliazaz.EditTextPicker
-                            style="@style/textInput"
-
                             android:id="@+id/f02"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
 
-                            android:hint="@string/f0201"
+                            style="@style/textInput"
                             android:inputType="number"
                             app:mask="#"
+
                             app:maxValue="9"
                             app:minValue="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/f0201"
                             app:type="range" />
 
                     </LinearLayout>
@@ -183,15 +181,15 @@
                             <RadioButton
                                 android:id="@+id/f0301"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f0301" />
 
                             <RadioButton
                                 android:id="@+id/f0302"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f0302" />
                         </RadioGroup>
                     </LinearLayout>
@@ -349,19 +347,19 @@
                             </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
-
                                 android:id="@+id/f05"
+
+                                style="@style/textInput"
+                                android:text='@{f05098.checked? "" : f05.getText().toString()}'
+                                app:mask="#"
+
+                                app:maxValue="9"
+                                app:minValue="1"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:enabled='@{f05098.checked? false : true}'
                                 android:hint="@string/f05"
                                 android:inputType="number"
-                                android:text='@{f05098.checked? "" : f05.getText().toString()}'
-                                app:mask="#"
-                                app:maxValue="9"
-                                app:minValue="1"
                                 app:type="range" />
 
                             <CheckBox
@@ -408,17 +406,17 @@
                             </RelativeLayout>
 
                             <com.edittextpicker.aliazaz.EditTextPicker
-                                style="@style/textInput"
                                 android:id="@+id/f06"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-
-                                android:enabled='@{f06098.checked? false : true}'
-                                android:inputType="number"
+                                style="@style/textInput"
                                 android:text='@{f06098.checked? "" : f06.getText().toString()}'
                                 app:mask="##"
+
                                 app:maxValue="20"
                                 app:minValue="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled='@{f06098.checked? false : true}'
+                                android:inputType="number"
                                 app:type="range" />
 
                             <CheckBox
@@ -476,15 +474,15 @@
                             <RadioButton
                                 android:id="@+id/f0701"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f0701" />
 
                             <RadioButton
                                 android:id="@+id/f0702"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f0702" />
                         </RadioGroup>
                     </LinearLayout>
@@ -638,19 +636,19 @@
                                     android:text="@string/f09dd" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    style="@style/textInput"
-
-
                                     android:id="@+id/f09dd"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
 
-                                    android:digits="@string/numeric"
-                                    android:hint="@string/f09dd"
+
+                                    style="@style/textInput"
                                     android:inputType="number"
                                     app:mask="##"
+
                                     app:maxValue="31"
                                     app:minValue="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="@string/numeric"
+                                    android:hint="@string/f09dd"
                                     app:type="range" />
                             </LinearLayout>
 
@@ -669,19 +667,19 @@
                                     android:text="@string/f09mm" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    style="@style/textInput"
-
-
                                     android:id="@+id/f09mm"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
 
-                                    android:digits="@string/numeric"
-                                    android:hint="@string/f09mm"
+
+                                    style="@style/textInput"
                                     android:inputType="number"
                                     app:mask="##"
+
                                     app:maxValue="11"
                                     app:minValue="1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="@string/numeric"
+                                    android:hint="@string/f09mm"
                                     app:type="range" />
                             </LinearLayout>
 
@@ -700,19 +698,19 @@
                                     android:text="@string/f09yy" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
-                                    style="@style/textInput"
-
-
                                     android:id="@+id/f09yy"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
 
-                                    android:digits="@string/numeric"
-                                    android:hint="@string/f09yy"
+
+                                    style="@style/textInput"
                                     android:inputType="number"
                                     app:mask="####"
+
                                     app:maxValue="2020"
                                     app:minValue="1930"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="@string/numeric"
+                                    android:hint="@string/f09yy"
                                     app:type="range" />
                             </LinearLayout>
                         </LinearLayout>
@@ -760,22 +758,22 @@
                             <RadioButton
                                 android:id="@+id/f1001"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f1001" />
 
                             <RadioButton
                                 android:id="@+id/f1002"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f1002" />
 
                             <RadioButton
                                 android:id="@+id/f1003"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/f1003" />
                         </RadioGroup>
                     </LinearLayout>
@@ -839,18 +837,18 @@
                                         android:text="@string/f11dd" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
-                                        style="@style/textInput"
-
                                         android:id="@+id/f11dd"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
 
-                                        android:digits="@string/numeric"
-                                        android:hint="@string/f11dd"
+                                        style="@style/textInput"
                                         android:inputType="number"
                                         app:mask="##"
+
                                         app:maxValue="31"
                                         app:minValue="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="@string/numeric"
+                                        android:hint="@string/f11dd"
                                         app:type="range" />
                                 </LinearLayout>
 
@@ -869,18 +867,18 @@
                                         android:text="@string/f11mm" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
-                                        style="@style/textInput"
-
                                         android:id="@+id/f11mm"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
 
-                                        android:digits="@string/numeric"
-                                        android:hint="@string/f11mm"
+                                        style="@style/textInput"
                                         android:inputType="number"
                                         app:mask="##"
+
                                         app:maxValue="11"
                                         app:minValue="1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="@string/numeric"
+                                        android:hint="@string/f11mm"
                                         app:type="range" />
                                 </LinearLayout>
 
@@ -898,18 +896,18 @@
                                         android:text="@string/f11yy" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
-                                        style="@style/textInput"
-
                                         android:id="@+id/f11yy"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
 
-                                        android:digits="@string/numeric"
-                                        android:hint="@string/f11yy"
+                                        style="@style/textInput"
                                         android:inputType="number"
                                         app:mask="####"
+
                                         app:maxValue="2020"
                                         app:minValue="2020"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="@string/numeric"
+                                        android:hint="@string/f11yy"
                                         app:type="range" />
                                 </LinearLayout>
                             </LinearLayout>
@@ -957,15 +955,15 @@
                                 <RadioButton
                                     android:id="@+id/f1201"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/f1201" />
 
                                 <RadioButton
                                     android:id="@+id/f1202"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/f1202" />
 
                                 <RadioButton
@@ -1347,15 +1345,15 @@
                                 <RadioButton
                                     android:id="@+id/f1601"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/f1601" />
 
                                 <RadioButton
                                     android:id="@+id/f1602"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/f1602" />
                             </RadioGroup>
                         </LinearLayout>
@@ -1402,15 +1400,15 @@
                                 <RadioButton
                                     android:id="@+id/f1701"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/f1701" />
 
                                 <RadioButton
                                     android:id="@+id/f1702"
                                     android:layout_width="0dp"
-                                    android:layout_weight="1"
                                     android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:text="@string/f1702" />
                             </RadioGroup>
                         </LinearLayout>
@@ -1418,7 +1416,6 @@
 
 
                 </LinearLayout>
-
 
             </LinearLayout>
 
@@ -1432,16 +1429,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:background="@color/red_overlay"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel"
-                    android:textColor="@color/white" />
-
-                <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -1450,9 +1437,17 @@
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
                     android:textColor="@color/white" />
-            </LinearLayout>
-            <!--EndButton LinearLayout-->
 
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/red_overlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="Cancel"
+                    android:textColor="@color/white" />
+            </LinearLayout>
 
         </LinearLayout>
 

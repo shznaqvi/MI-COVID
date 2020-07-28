@@ -292,12 +292,11 @@
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/j0501"
                         android:inputType="number"
                         app:mask="#"
                         app:maxValue="7"
-                        app:minValue="1"
+                        app:minValue="0"
                         app:type="range" />
 
                 </LinearLayout>
@@ -561,33 +560,31 @@
                     <RadioGroup
                         android:id="@+id/j09"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/j0901"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j0901" />
 
                         <RadioButton
                             android:id="@+id/j0902"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j0902" />
 
                         <RadioButton
                             android:id="@+id/j0903"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j0903" />
 
                         <RadioButton
                             android:id="@+id/j09096"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j09096" />
-
 
                     </RadioGroup>
 
@@ -595,7 +592,6 @@
                         android:id="@+id/j09096x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/j09096"
                         android:tag="j09096"
                         android:text='@{j09096.checked ? j09096x.getText().toString() : ""}'
@@ -779,16 +775,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:background="@color/red_overlay"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel"
-                    android:textColor="@color/white" />
-
-                <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -796,6 +782,16 @@
                     android:background="@color/green_overlay"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/red_overlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="Cancel"
                     android:textColor="@color/white" />
             </LinearLayout>
 

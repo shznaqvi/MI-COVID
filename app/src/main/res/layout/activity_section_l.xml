@@ -225,34 +225,37 @@
 
                             <RadioButton
                                 android:id="@+id/l0301"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-
+                                android:layout_weight="1"
                                 android:text="@string/l0301" />
 
                             <RadioButton
                                 android:id="@+id/l0302"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0302" />
 
                             <RadioButton
                                 android:id="@+id/l0303"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0303" />
 
                             <RadioButton
                                 android:id="@+id/l0304"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
-
+                                android:layout_weight="1"
                                 android:text="@string/l0304" />
 
                             <RadioButton
                                 android:id="@+id/l0305"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0305" />
                         </RadioGroup>
                     </LinearLayout>
@@ -298,32 +301,37 @@
 
                             <RadioButton
                                 android:id="@+id/l0401"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0401" />
 
                             <RadioButton
                                 android:id="@+id/l0402"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0402" />
 
                             <RadioButton
                                 android:id="@+id/l0403"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0403" />
 
                             <RadioButton
                                 android:id="@+id/l0404"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0404" />
 
                             <RadioButton
                                 android:id="@+id/l0405"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l0405" />
                         </RadioGroup>
                     </LinearLayout>
@@ -647,20 +655,23 @@
 
                             <RadioButton
                                 android:id="@+id/l01001"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l01001" />
 
                             <RadioButton
                                 android:id="@+id/l01002"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l01002" />
 
                             <RadioButton
                                 android:id="@+id/l01003"
-                                android:layout_width="wrap_content"
+                                android:layout_width="0dp"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/l01003" />
                         </RadioGroup>
                     </LinearLayout>
@@ -678,16 +689,6 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btn_End"
-                    android:layout_width="wrap_content"
-                    android:layout_height="36dp"
-                    android:layout_marginStart="12dp"
-                    android:background="@color/red_overlay"
-                    android:onClick="@{() -> callback.BtnEnd()}"
-                    android:text="Cancel"
-                    android:textColor="@color/white" />
-
-                <Button
                     android:id="@+id/btn_Continue"
                     android:layout_width="wrap_content"
                     android:layout_height="36dp"
@@ -695,6 +696,16 @@
                     android:background="@color/green_overlay"
                     android:onClick="@{() -> callback.BtnContinue()}"
                     android:text="Save"
+                    android:textColor="@color/white" />
+
+                <Button
+                    android:id="@+id/btn_End"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:layout_marginStart="12dp"
+                    android:background="@color/red_overlay"
+                    android:onClick="@{() -> callback.BtnEnd()}"
+                    android:text="Cancel"
                     android:textColor="@color/white" />
             </LinearLayout>
 
