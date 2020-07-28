@@ -84,7 +84,7 @@ fun openFormEndActivity(activity: Activity, extraKey: String, extraValue: Int) {
 }
 
 @JvmOverloads
-fun openWarningActivity(activity: Activity, message: String, defaultFlag: Boolean = true) {
+fun contextEndActivity(activity: Activity, defaultFlag: Boolean = true, message: String) {
     val dialog = Dialog(activity)
     dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
     val bi: ChildEndDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(activity), R.layout.child_end_dialog, null, false)

@@ -34,11 +34,12 @@ import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
+import edu.aku.hassannaqvi.mi_covid.utils.EndSectionActivity;
 
 import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
-public class SectionAActivity extends AppCompatActivity {
+public class SectionAActivity extends AppCompatActivity implements EndSectionActivity {
 
     /*private static final String TAG = "";
     public static FormsContract fc;
@@ -90,10 +91,6 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnContinue() {
-        btnForwardPressed();
-    }
-
-    private void btnForwardPressed() {
         if (!formValidation()) return;
         try {
             SaveDraft();
@@ -383,7 +380,7 @@ public class SectionAActivity extends AppCompatActivity {
     }
 
     public void BtnEnd() {
-        AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
+        AppUtilsKt.contextEndActivity(this, false);
     }
 
     public void populateSpinner(final Context context) {
@@ -540,4 +537,19 @@ public class SectionAActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void endSecActivity(boolean flag) {
+
+        if (!Validator.emptyCheckingContainer(this, bi.fldGrpSecA00)) return;
+        try {
+            SaveDraft();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        if (UpdateDB()) {
+            startActivity(new Intent(this, EndingActivity.class));
+        } else {
+            Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
+        }
+    }
 }
