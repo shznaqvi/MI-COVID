@@ -544,7 +544,7 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
             e.printStackTrace();
         }
         if (UpdateDB()) {
-            startActivity(new Intent(this, EndingActivity.class));
+            startActivity(new Intent(this, EndingActivity.class).putExtra(FSTATUS_END_FLAG, 2));
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }

@@ -26,7 +26,6 @@
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
             android:scrollbarStyle="insideOverlay"
-
             android:orientation="vertical">
 
 
@@ -70,7 +69,6 @@
                         android:id="@+id/d1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/d1" />
 
                 </LinearLayout>
@@ -206,13 +204,11 @@
                             android:id="@+id/d03096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/d03096"
                             android:tag="d03096"
                             android:text='@{d03096.checked ? d03096x.getText().toString() : ""}'
                             android:visibility='@{d03096.checked ? View.VISIBLE : View.GONE}' />
-
 
                     </RadioGroup>
                 </LinearLayout>

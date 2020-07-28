@@ -124,11 +124,9 @@
 
                         <com.edittextpicker.aliazaz.EditTextPicker
                             android:id="@+id/f02"
-
                             style="@style/textInput"
                             android:inputType="number"
                             app:mask="#"
-
                             app:maxValue="9"
                             app:minValue="0"
                             android:layout_width="match_parent"
@@ -304,12 +302,12 @@
                                     android:id="@+id/f04096x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
                                     android:digits="@string/onlyalphabet"
                                     android:hint="@string/f04096"
                                     android:tag="f04096"
                                     android:text='@{f04096.checked ? f04096x.getText().toString() : ""}'
                                     android:visibility='@{f04096.checked ? View.VISIBLE : View.GONE}' />
+
                             </RadioGroup>
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
@@ -348,11 +346,9 @@
 
                             <com.edittextpicker.aliazaz.EditTextPicker
                                 android:id="@+id/f05"
-
                                 style="@style/textInput"
                                 android:text='@{f05098.checked? "" : f05.getText().toString()}'
                                 app:mask="#"
-
                                 app:maxValue="9"
                                 app:minValue="1"
                                 android:layout_width="match_parent"
@@ -410,7 +406,6 @@
                                 style="@style/textInput"
                                 android:text='@{f06098.checked? "" : f06.getText().toString()}'
                                 app:mask="##"
-
                                 app:maxValue="20"
                                 app:minValue="1"
                                 android:layout_width="match_parent"
@@ -572,13 +567,11 @@
                                 android:id="@+id/f08096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:digits="@string/onlyalphabet"
                                 android:hint="@string/f08096"
                                 android:tag="f08096"
                                 android:text='@{f08096.checked ? f08096x.getText().toString() : ""}'
                                 android:visibility='@{f08096.checked ? View.VISIBLE : View.GONE}' />
-
 
                         </RadioGroup>
                     </LinearLayout>
@@ -629,20 +622,15 @@
 
                                 <TextView
                                     style="@style/sub"
-
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
                                     android:text="@string/f09dd" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09dd"
-
-
                                     style="@style/textInput"
                                     android:inputType="number"
                                     app:mask="##"
-
                                     app:maxValue="31"
                                     app:minValue="1"
                                     android:layout_width="match_parent"
@@ -650,6 +638,7 @@
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09dd"
                                     app:type="range" />
+
                             </LinearLayout>
 
                             <LinearLayout
@@ -660,20 +649,15 @@
 
                                 <TextView
                                     style="@style/sub"
-
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
                                     android:text="@string/f09mm" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09mm"
-
-
                                     style="@style/textInput"
                                     android:inputType="number"
                                     app:mask="##"
-
                                     app:maxValue="11"
                                     app:minValue="1"
                                     android:layout_width="match_parent"
@@ -681,6 +665,7 @@
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09mm"
                                     app:type="range" />
+
                             </LinearLayout>
 
                             <LinearLayout
@@ -691,20 +676,15 @@
 
                                 <TextView
                                     style="@style/sub"
-
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
                                     android:text="@string/f09yy" />
 
                                 <com.edittextpicker.aliazaz.EditTextPicker
                                     android:id="@+id/f09yy"
-
-
                                     style="@style/textInput"
                                     android:inputType="number"
                                     app:mask="####"
-
                                     app:maxValue="2020"
                                     app:minValue="1930"
                                     android:layout_width="match_parent"
@@ -712,6 +692,7 @@
                                     android:digits="@string/numeric"
                                     android:hint="@string/f09yy"
                                     app:type="range" />
+
                             </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
@@ -786,6 +767,7 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:visibility='@{f1003.checked? View.GONE : View.VISIBLE}'>
+
                     <!-- f11  Title   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVf11"
@@ -833,16 +815,13 @@
                                         style="@style/sub"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-
                                         android:text="@string/f11dd" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11dd"
-
                                         style="@style/textInput"
                                         android:inputType="number"
                                         app:mask="##"
-
                                         app:maxValue="31"
                                         app:minValue="1"
                                         android:layout_width="match_parent"
@@ -850,6 +829,7 @@
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11dd"
                                         app:type="range" />
+
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -860,19 +840,15 @@
 
                                     <TextView
                                         style="@style/sub"
-
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-
                                         android:text="@string/f11mm" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11mm"
-
                                         style="@style/textInput"
                                         android:inputType="number"
                                         app:mask="##"
-
                                         app:maxValue="11"
                                         app:minValue="1"
                                         android:layout_width="match_parent"
@@ -880,6 +856,7 @@
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11mm"
                                         app:type="range" />
+
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -892,16 +869,13 @@
                                         style="@style/sub"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-
                                         android:text="@string/f11yy" />
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/f11yy"
-
                                         style="@style/textInput"
                                         android:inputType="number"
                                         app:mask="####"
-
                                         app:maxValue="2020"
                                         app:minValue="2020"
                                         android:layout_width="match_parent"
@@ -909,6 +883,7 @@
                                         android:digits="@string/numeric"
                                         android:hint="@string/f11yy"
                                         app:type="range" />
+
                                 </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>

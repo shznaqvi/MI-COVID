@@ -24,7 +24,6 @@
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
             android:orientation="vertical"
-
             android:scrollbarStyle="outsideInset">
 
             <!-- e01  Radio   -->
@@ -152,6 +151,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:visibility='@{e0201.checked? View.VISIBLE : View.GONE}'>
+
                 <!-- e03  checkbox   -->
                 <androidx.cardview.widget.CardView
                     android:id="@+id/fldGrpCVe03"
@@ -240,12 +240,12 @@
                                 android:id="@+id/e03096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:digits="@string/onlyalphabet"
                                 android:hint="@string/e03096"
                                 android:tag="e03096"
                                 android:text='@{e03096.checked ? e03096x.getText().toString() : ""}'
                                 android:visibility='@{e03096.checked ? View.VISIBLE : View.GONE}' />
+
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -342,8 +342,8 @@
                             android:id="@+id/e05"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:hint="@string/e05" />
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -559,12 +559,12 @@
                             android:id="@+id/e08096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/e08096"
                             android:tag="e08096"
                             android:text='@{e08096.checked ? e08096x.getText().toString() : ""}'
                             android:visibility='@{e08096.checked ? View.VISIBLE : View.GONE}' />
+
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -613,7 +613,6 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/e0901" />
-
 
                         <RadioButton
                             android:id="@+id/e0902"
@@ -849,7 +848,6 @@
                             android:id="@+id/e12096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/e12096"
                             android:tag="e12096"
@@ -925,12 +923,12 @@
                             android:id="@+id/e13096x"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-
                             android:digits="@string/onlyalphabet"
                             android:hint="@string/e13096"
                             android:tag="e13096"
                             android:text='@{e13096.checked ? e13096x.getText().toString() : ""}'
                             android:visibility='@{e13096.checked ? View.VISIBLE : View.GONE}' />
+
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -1008,8 +1006,8 @@
                         android:id="@+id/e1401"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/e1401" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -1049,8 +1047,8 @@
                         android:id="@+id/e1402"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/e1402" />
+
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
