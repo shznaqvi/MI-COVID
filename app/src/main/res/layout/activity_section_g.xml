@@ -892,7 +892,7 @@
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVg12"
                         style="@style/cardView"
-                        android:visibility='@{g1102.checked? View.GONE : View.VISIBLE}'>
+                        android:visibility='@{g1101.checked? View.VISIBLE : View.GONE}'>
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -978,6 +978,7 @@
                     <!-- g13  Radio   -->
                     <androidx.cardview.widget.CardView
                         android:id="@+id/fldGrpCVg13"
+                        android:visibility='@{g1102.checked? View.VISIBLE : View.GONE}'
                         style="@style/cardView">
 
                         <LinearLayout
