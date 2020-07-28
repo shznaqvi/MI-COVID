@@ -197,16 +197,20 @@ public class Form extends LiveData<Form> {
     private String g0501;
     private String g0502;
     private String g0503;
+    private String g0503a;
     private String g0504;
     private String g0505;
     private String g0506;
+    private String g0506a;
     private String g0507;
     private String g0508;
     private String g0509;
+    private String g0509a;
     private String g0510;
     private String g0511;
     private String g0512;
     private String g0513;
+    private String g0514;
     private String g06;
     private String g0701;
     private String g0702;
@@ -287,7 +291,14 @@ public class Form extends LiveData<Form> {
     private String i01;
     private String i02;
     private String i03;
-    private String i04;
+    private String i0401;
+    private String i0402;
+    private String i0403;
+    private String i0404;
+    private String i0405;
+    private String i0406;
+    private String i0407;
+    private String i04096;
     private String i04096x;
     private String i05;
     private String i06;
@@ -355,6 +366,102 @@ public class Form extends LiveData<Form> {
 
 
     public Form() {
+    }
+
+    public String getI0401() {
+        return i0401;
+    }
+
+    public void setI0401(String i0401) {
+        this.i0401 = i0401;
+    }
+
+    public String getI0402() {
+        return i0402;
+    }
+
+    public void setI0402(String i0402) {
+        this.i0402 = i0402;
+    }
+
+    public String getI0403() {
+        return i0403;
+    }
+
+    public void setI0403(String i0403) {
+        this.i0403 = i0403;
+    }
+
+    public String getI0404() {
+        return i0404;
+    }
+
+    public void setI0404(String i0404) {
+        this.i0404 = i0404;
+    }
+
+    public String getI0405() {
+        return i0405;
+    }
+
+    public void setI0405(String i0405) {
+        this.i0405 = i0405;
+    }
+
+    public String getI0406() {
+        return i0406;
+    }
+
+    public void setI0406(String i0406) {
+        this.i0406 = i0406;
+    }
+
+    public String getI0407() {
+        return i0407;
+    }
+
+    public void setI0407(String i0407) {
+        this.i0407 = i0407;
+    }
+
+    public String getI04096() {
+        return i04096;
+    }
+
+    public void setI04096(String i04096) {
+        this.i04096 = i04096;
+    }
+
+    public String getG0503a() {
+        return g0503a;
+    }
+
+    public void setG0503a(String g0503a) {
+        this.g0503a = g0503a;
+    }
+
+    public String getG0506a() {
+        return g0506a;
+    }
+
+    public void setG0506a(String g0506a) {
+        this.g0506a = g0506a;
+    }
+
+    public String getG0509a() {
+        return g0509a;
+    }
+
+    public void setG0509a(String g0509a) {
+        this.g0509a = g0509a;
+    }
+
+    public String getG0514() {
+        return g0514;
+    }
+
+    public void setG0514(String g0514) {
+        this.g0514 = g0514;
     }
 
     public SectionSelection getSecSelection() {
@@ -2478,15 +2585,6 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getI04() {
-        return i04;
-    }
-
-    public Form setI04(String i04) {
-        this.i04 = i04;
-        return this;
-    }
-
     public String getI04096x() {
         return i04096x;
     }
@@ -3786,7 +3884,14 @@ public class Form extends LiveData<Form> {
             json.put("i01", i01)
                     .put("i02", i02)
                     .put("i03", i03)
-                    .put("i04", i04)
+                    .put("i0401", i0401)
+                    .put("i0402", i0402)
+                    .put("i0403", i0403)
+                    .put("i0404", i0404)
+                    .put("i0405", i0405)
+                    .put("i0406", i0406)
+                    .put("i0407", i0407)
+                    .put("i04096", i04096)
                     .put("i04096x", i04096x)
                     .put("i05", i05)
                     .put("i06", i06)
@@ -4387,7 +4492,14 @@ public class Form extends LiveData<Form> {
                 this.i01 = json.getString("i01");
                 this.i02 = json.getString("i02");
                 this.i03 = json.getString("i03");
-                this.i04 = json.getString("i04");
+                this.i0401 = json.getString("i0401");
+                this.i0402 = json.getString("i0402");
+                this.i0403 = json.getString("i0403");
+                this.i0404 = json.getString("i0404");
+                this.i0405 = json.getString("i0405");
+                this.i0406 = json.getString("i0406");
+                this.i0407 = json.getString("i0407");
+                this.i04096 = json.getString("i04096");
                 this.i04096x = json.getString("i04096x");
                 this.i05 = json.getString("i05");
                 this.i06 = json.getString("i06");

@@ -843,7 +843,7 @@
                                 android:id="@+id/h08096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:hint="@string/h08096"
                                 android:tag="h08096"
                                 android:text='@{h08096.checked ? h08096x.getText().toString() : ""}'

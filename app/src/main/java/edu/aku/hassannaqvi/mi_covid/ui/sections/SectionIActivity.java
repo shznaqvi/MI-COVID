@@ -96,7 +96,7 @@ public class SectionIActivity extends AppCompatActivity {
                 : bi.i03098.isChecked() ? "98"
                 : "-1");
 
-        form.setI04(bi.i0401.isChecked() ? "1"
+/*        form.setI04(bi.i0401.isChecked() ? "1"
                 : bi.i0402.isChecked() ? "2"
                 : bi.i0403.isChecked() ? "3"
                 : bi.i0404.isChecked() ? "4"
@@ -105,7 +105,17 @@ public class SectionIActivity extends AppCompatActivity {
                 : bi.i0407.isChecked() ? "7"
                 : bi.i04096.isChecked() ? "96"
                 : "-1");
-        form.setI04096x(bi.i04096x.getText().toString());
+        form.setI04096x(bi.i04096x.getText().toString());*/
+
+        form.setI0401(bi.i0401.isChecked() ? "1" : "-1");
+        form.setI0402(bi.i0402.isChecked() ? "2" : "-1");
+        form.setI0403(bi.i0403.isChecked() ? "3" : "-1");
+        form.setI0404(bi.i0404.isChecked() ? "4" : "-1");
+        form.setI0405(bi.i0405.isChecked() ? "5" : "-1");
+        form.setI0406(bi.i0406.isChecked() ? "6" : "-1");
+        form.setI0407(bi.i0407.isChecked() ? "7" : "-1");
+        form.setI04096(bi.i04096.isChecked() ? "96" : "-1");
+        form.setI04096x(bi.i04096x.getText().toString().trim().isEmpty() ? "-1" : bi.i04096x.getText().toString());
 
         form.setI05(bi.i0501.isChecked() ? "1"
                 : bi.i0502.isChecked() ? "2"

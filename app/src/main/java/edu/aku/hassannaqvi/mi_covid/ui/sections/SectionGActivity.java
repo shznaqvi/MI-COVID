@@ -136,16 +136,21 @@ public class SectionGActivity extends AppCompatActivity {
         form.setG0501(bi.g0501.isChecked() ? "1" : "-1");
         form.setG0502(bi.g0502.isChecked() ? "2" : "-1");
         form.setG0503(bi.g0503.isChecked() ? "3" : "-1");
+        form.setG0503a(bi.g0503a.isChecked() ? "3a" : "-1");
         form.setG0504(bi.g0504.isChecked() ? "4" : "-1");
         form.setG0505(bi.g0505.isChecked() ? "5" : "-1");
         form.setG0506(bi.g0506.isChecked() ? "6" : "-1");
+        form.setG0506a(bi.g0506a.isChecked() ? "6a" : "-1");
         form.setG0507(bi.g0507.isChecked() ? "7" : "-1");
         form.setG0508(bi.g0508.isChecked() ? "8" : "-1");
         form.setG0509(bi.g0509.isChecked() ? "9" : "-1");
+        form.setG0509a(bi.g0509a.isChecked() ? "9a" : "-1");
         form.setG0510(bi.g0510.isChecked() ? "10" : "-1");
         form.setG0511(bi.g0511.isChecked() ? "11" : "-1");
         form.setG0512(bi.g0512.isChecked() ? "12" : "-1");
         form.setG0513(bi.g0513.isChecked() ? "13" : "-1");
+        form.setG0514(bi.g0514.isChecked() ? "14" : "-1");
+
 
         form.setG06(bi.g0601.isChecked() ? "1"
                 : bi.g0602.isChecked() ? "2"

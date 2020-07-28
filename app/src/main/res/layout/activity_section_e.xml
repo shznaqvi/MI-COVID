@@ -23,9 +23,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:animateLayoutChanges="true"
-            android:scrollbarStyle="outsideInset"
+            android:orientation="vertical"
 
-            android:orientation="vertical">
+            android:scrollbarStyle="outsideInset">
 
             <!-- e01  Radio   -->
             <androidx.cardview.widget.CardView
@@ -132,15 +132,15 @@
                         <RadioButton
                             android:id="@+id/e0201"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e0201" />
 
                         <RadioButton
                             android:id="@+id/e0202"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e0202" />
                     </RadioGroup>
                 </LinearLayout>
@@ -175,15 +175,15 @@
                                 android:text="@string/e03" />
 
                             <TextView
-                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                                android:drawablePadding="16dp"
-                                android:onClick="@{callback::showTooltipView}"
                                 android:id="@+id/q_e03"
                                 style="@style/quesNum"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignTop="@id/qtxt_e03"
                                 android:layout_alignBottom="@id/qtxt_e03"
+                                android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                                android:drawablePadding="16dp"
+                                android:onClick="@{callback::showTooltipView}"
                                 android:text="@string/Q_e03" />
                         </RelativeLayout>
 
@@ -291,15 +291,15 @@
                             <RadioButton
                                 android:id="@+id/e0401"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/e0401" />
 
                             <RadioButton
                                 android:id="@+id/e0402"
                                 android:layout_width="0dp"
-                                android:layout_weight="1"
                                 android:layout_height="wrap_content"
+                                android:layout_weight="1"
                                 android:text="@string/e0402" />
                         </RadioGroup>
                     </LinearLayout>
@@ -453,15 +453,15 @@
                         <RadioButton
                             android:id="@+id/e0701"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e0701" />
 
                         <RadioButton
                             android:id="@+id/e0702"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e0702" />
                     </RadioGroup>
                 </LinearLayout>
@@ -610,16 +610,16 @@
                         <RadioButton
                             android:id="@+id/e0901"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e0901" />
 
 
                         <RadioButton
                             android:id="@+id/e0902"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e0902" />
 
                     </RadioGroup>
@@ -652,15 +652,15 @@
                             android:text="@string/e10" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e10"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_e10"
                             android:layout_alignBottom="@id/qtxt_e10"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_e10" />
                     </RelativeLayout>
 
@@ -673,15 +673,15 @@
                         <RadioButton
                             android:id="@+id/e1001"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e1001" />
 
                         <RadioButton
                             android:id="@+id/e1002"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/e1002" />
                     </RadioGroup>
                 </LinearLayout>
@@ -710,15 +710,15 @@
                             android:text="@string/e11" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e11"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_e11"
                             android:layout_alignBottom="@id/qtxt_e11"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_e11" />
                     </RelativeLayout>
 
@@ -954,15 +954,15 @@
                             android:text="@string/e14" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e14"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_e14"
                             android:layout_alignBottom="@id/qtxt_e14"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_e14" />
                     </RelativeLayout>
                 </LinearLayout>
@@ -1073,15 +1073,15 @@
                             android:text="@string/e15" />
 
                         <TextView
-                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
-                            android:drawablePadding="16dp"
-                            android:onClick="@{callback::showTooltipView}"
                             android:id="@+id/q_e15"
                             style="@style/quesNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignTop="@id/qtxt_e15"
                             android:layout_alignBottom="@id/qtxt_e15"
+                            android:drawableStart="@drawable/ic_info_outline_black_24dp"
+                            android:drawablePadding="16dp"
+                            android:onClick="@{callback::showTooltipView}"
                             android:text="@string/Q_e15" />
                     </RelativeLayout>
 
@@ -1090,11 +1090,12 @@
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="@string/e1501"
+                        android:hint="##.##"
                         android:inputType="number"
-                        app:mask="##"
-                        app:maxValue="10"
-                        app:minValue="1"
+                        app:mask="##.##"
+                        app:maxValue="10.00"
+                        app:minValue="1.00"
+                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
                         app:type="range" />
 
                 </LinearLayout>

@@ -3,9 +3,11 @@
     <data>
 
         <import type="android.view.View" />
+
         <variable
             name="form"
             type="edu.aku.hassannaqvi.mi_covid.models.Form" />
+
         <variable
             name="callback"
             type="edu.aku.hassannaqvi.mi_covid.ui.sections.SectionIActivity" />
@@ -63,15 +65,15 @@
                         <RadioButton
                             android:id="@+id/i0101"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0101" />
 
                         <RadioButton
                             android:id="@+id/i0102"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0102" />
                     </RadioGroup>
                 </LinearLayout>
@@ -118,15 +120,15 @@
                         <RadioButton
                             android:id="@+id/i0201"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0201" />
 
                         <RadioButton
                             android:id="@+id/i0202"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0202" />
                     </RadioGroup>
                 </LinearLayout>
@@ -235,54 +237,56 @@
                                 android:text="@string/Q_i04" />
                         </RelativeLayout>
 
-                        <RadioGroup
-                            android:id="@+id/i04"
+                        <LinearLayout
+                            android:id="@+id/i04check"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:tag="0">
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0401"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0401" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0402"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0402" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0403"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0403" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0404"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0404" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0405"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0405" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0406"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0406" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i0407"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:text="@string/i0407" />
 
-                            <RadioButton
+                            <CheckBox
                                 android:id="@+id/i04096"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
@@ -292,12 +296,12 @@
                                 android:id="@+id/i04096x"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:hint="@string/i04096"
+                                android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz"
                                 android:tag="i04096"
                                 android:text='@{i04096.checked ? i04096x.getText().toString() : ""}'
                                 android:visibility='@{i04096.checked? View.VISIBLE : View.GONE}' />
-                        </RadioGroup>
+                        </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
@@ -415,22 +419,22 @@
                         <RadioButton
                             android:id="@+id/i0601"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0601" />
 
                         <RadioButton
                             android:id="@+id/i0602"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0602" />
 
                         <RadioButton
                             android:id="@+id/i0603"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0603" />
                     </RadioGroup>
                 </LinearLayout>
@@ -477,15 +481,15 @@
                         <RadioButton
                             android:id="@+id/i0701"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0701" />
 
                         <RadioButton
                             android:id="@+id/i0702"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/i0702" />
                     </RadioGroup>
                 </LinearLayout>
