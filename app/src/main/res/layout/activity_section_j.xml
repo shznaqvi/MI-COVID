@@ -560,33 +560,31 @@
                     <RadioGroup
                         android:id="@+id/j09"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_height="wrap_content">
 
                         <RadioButton
                             android:id="@+id/j0901"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j0901" />
 
                         <RadioButton
                             android:id="@+id/j0902"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j0902" />
 
                         <RadioButton
                             android:id="@+id/j0903"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j0903" />
 
                         <RadioButton
                             android:id="@+id/j09096"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="@string/j09096" />
-
 
                     </RadioGroup>
 
@@ -594,7 +592,6 @@
                         android:id="@+id/j09096x"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/j09096"
                         android:tag="j09096"
                         android:text='@{j09096.checked ? j09096x.getText().toString() : ""}'
