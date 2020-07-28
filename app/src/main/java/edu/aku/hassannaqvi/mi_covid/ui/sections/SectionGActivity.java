@@ -36,7 +36,6 @@ public class SectionGActivity extends AppCompatActivity {
         setupSkips();
     }
 
-
     private void setupSkips() {
 
         bi.g01.setOnCheckedChangeListener(((radioGroup, i) -> {
@@ -74,12 +73,11 @@ public class SectionGActivity extends AppCompatActivity {
         bi.g11.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.g1102.getId()) {
                 Clear.clearAllFields(bi.fldGrpCVg12);
-            } else if (i == bi.g1101.getId()) {
+            } else {
                 Clear.clearAllFields(bi.fldGrpCVg13);
             }
         }));
     }
-
 
     private boolean UpdateDB() {
         DatabaseHelper db = MainApp.appInfo.getDbHelper();
@@ -91,7 +89,6 @@ public class SectionGActivity extends AppCompatActivity {
             return false;
         }
     }
-
 
     public void BtnContinue() {
         if (!formValidation()) return;
@@ -107,7 +104,6 @@ public class SectionGActivity extends AppCompatActivity {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private void SaveDraft() throws JSONException {
 
@@ -265,16 +261,13 @@ public class SectionGActivity extends AppCompatActivity {
 
     }
 
-
     public void BtnEnd() {
         AppUtilsKt.openFormEndActivity(this, FSTATUS_END_FLAG, 2);
     }
 
-
     private boolean formValidation() {
         return Validator.emptyCheckingContainer(this, bi.GrpName);
     }
-
 
     @Override
     public void onBackPressed() {
