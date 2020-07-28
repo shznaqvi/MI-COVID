@@ -1094,12 +1094,12 @@
                         style="@style/textInput"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="##.##"
+                        android:hint="#.##"
                         android:inputType="number"
-                        app:mask="##.##"
-                        app:maxValue="10.00"
-                        app:minValue="1.00"
-                        app:pattern="^(\\d{2,2}\\.\\d{2,2})$"
+                        app:mask="##.#"
+                        app:maxValue="10.0"
+                        app:minValue="0.1"
+                        app:pattern="^(\\d{2,2}\\.\\d{1,1})$"
                         app:type="range" />
 
                 </LinearLayout>
