@@ -144,6 +144,8 @@ public class SectionEActivity extends AppCompatActivity {
         form.setE0306(bi.e0306.isChecked() ? "6" : "-1");
         form.setE03096(bi.e03096.isChecked() ? "96" : "-1");
 
+        form.setE03096x(bi.e03096x.getText().toString());
+
         //radiobutton
         form.setE04(bi.e0401.isChecked() ? "1"
                 : bi.e0402.isChecked() ? "2"
@@ -173,6 +175,7 @@ public class SectionEActivity extends AppCompatActivity {
         form.setE0805(bi.e0805.isChecked() ? "5" : "-1");
         form.setE0806(bi.e0806.isChecked() ? "6" : "-1");
         form.setE08096(bi.e08096.isChecked() ? "96" : "-1");
+        form.setE08096x(bi.e08096x.getText().toString());
 
         form.setE09(bi.e0901.isChecked() ? "1"
                 : bi.e0902.isChecked() ? "2"
@@ -197,12 +200,14 @@ public class SectionEActivity extends AppCompatActivity {
                 : bi.e1205.isChecked() ? "5"
                 : bi.e12096.isChecked() ? "96"
                 : "-1");
+        form.setE12096x(bi.e12096x.getText().toString());
 
         form.setE13(bi.e1301.isChecked() ? "1"
                 : bi.e1302.isChecked() ? "2"
                 : bi.e1303.isChecked() ? "3"
                 : bi.e13096.isChecked() ? "96"
                 : "-1");
+        form.setE13096x(bi.e13096x.getText().toString());
 
         form.setE1401(bi.e1401.getText().toString());
 
