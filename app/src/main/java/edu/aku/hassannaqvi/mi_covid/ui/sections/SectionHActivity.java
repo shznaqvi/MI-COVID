@@ -180,26 +180,27 @@ public class SectionHActivity extends AppCompatActivity {
                 : bi.h1102.isChecked() ? "2"
                 : bi.h1103.isChecked() ? "3"
                 : bi.h11096.isChecked() ? "96"
-                : bi.h11098.isChecked() ? "98"
                 : "-1");
+        form.setH11096x(bi.h11096x.getText().toString());
 
-        form.setH12dd(bi.h12dd.getText().toString());
-
-        form.setH12mm(bi.h12mm.getText().toString());
-
-        form.setH12yy(bi.h12yy.getText().toString());
-
-        form.setH13(bi.h1301.isChecked() ? "1"
-                : bi.h1302.isChecked() ? "2"
-                : bi.h1303.isChecked() ? "3"
-                : bi.h13096.isChecked() ? "96"
+        form.setH12(bi.h1201.isChecked() ? "1"
+                : bi.h1202.isChecked() ? "2"
+                : bi.h1203.isChecked() ? "3"
+                : bi.h12096.isChecked() ? "96"
+                : bi.h12098.isChecked() ? "98"
                 : "-1");
+        form.setH12096x(bi.h12096x.getText().toString());
+
+        form.setH13dd(bi.h13dd.getText().toString());
+        form.setH13mm(bi.h13mm.getText().toString());
+        form.setH13yy(bi.h13yy.getText().toString());
 
         form.setH14(bi.h1401.isChecked() ? "1"
                 : bi.h1402.isChecked() ? "2"
                 : bi.h1403.isChecked() ? "3"
                 : bi.h14096.isChecked() ? "96"
                 : "-1");
+        form.setH14096x(bi.h14096x.getText().toString());
 
         form.setH15(bi.h1501.isChecked() ? "1"
                 : bi.h1502.isChecked() ? "2"
@@ -216,7 +217,6 @@ public class SectionHActivity extends AppCompatActivity {
                 : "-1");
 
         form.setH1801(bi.h1801.getText().toString());
-
         form.setH1802(bi.h1802.getText().toString());
 
         /*JSONObject json = new JSONObject();

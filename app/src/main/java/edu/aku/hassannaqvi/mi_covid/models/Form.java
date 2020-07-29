@@ -2,12 +2,13 @@ package edu.aku.hassannaqvi.mi_covid.models;
 
 import android.database.Cursor;
 
+import androidx.lifecycle.LiveData;
+
 import com.google.gson.GsonBuilder;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import androidx.lifecycle.LiveData;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract.FormsTable;
 
 /**
@@ -282,9 +283,11 @@ public class Form extends LiveData<Form> {
     private String h10;
     private String h11;
     private String h11096x;
-    private String h12dd;
-    private String h12mm;
-    private String h12yy;
+    private String h12;
+    private String h12096x;
+    private String h13dd;
+    private String h13mm;
+    private String h13yy;
     private String h13;
     private String h13096x;
     private String h14;
@@ -2517,31 +2520,49 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-
-    public String getH12dd() {
-        return h12dd;
+    public String getH12() {
+        return h12;
     }
 
-    public Form setH12dd(String h12dd) {
-        this.h12dd = h12dd;
+    public Form setH12(String h12) {
+        this.h12 = h12;
         return this;
     }
 
-    public String getH12mm() {
-        return h12mm;
+    public String getH12096x() {
+        return h12096x;
     }
 
-    public Form setH12mm(String h12mm) {
-        this.h12mm = h12mm;
+    public Form setH12096x(String h12096x) {
+        this.h12096x = h12096x;
         return this;
     }
 
-    public String getH12yy() {
-        return h12yy;
+
+    public String getH13dd() {
+        return h13dd;
     }
 
-    public Form setH12yy(String h12yy) {
-        this.h12yy = h12yy;
+    public Form setH13dd(String h13dd) {
+        this.h13dd = h13dd;
+        return this;
+    }
+
+    public String getH13mm() {
+        return h13mm;
+    }
+
+    public Form setH13mm(String h13mm) {
+        this.h13mm = h13mm;
+        return this;
+    }
+
+    public String getH13yy() {
+        return h13yy;
+    }
+
+    public Form setH13yy(String h13yy) {
+        this.h13yy = h13yy;
         return this;
     }
 
@@ -3932,9 +3953,11 @@ public class Form extends LiveData<Form> {
                     .put("h10", h10)
                     .put("h11", h11)
                     .put("h11096x", h11096x)
-                    .put("h12dd", h12dd)
-                    .put("h12mm", h12mm)
-                    .put("h12yy", h12yy)
+                    .put("h12", h12)
+                    .put("h12096x", h12096x)
+                    .put("h13dd", h13dd)
+                    .put("h13mm", h13mm)
+                    .put("h13yy", h13yy)
                     .put("h13", h13)
                     .put("h13096x", h13096x)
                     .put("h14", h14)
@@ -4542,9 +4565,11 @@ public class Form extends LiveData<Form> {
                 this.h10 = json.getString("h10");
                 this.h11 = json.getString("h11");
                 this.h11096x = json.getString("h11096x");
-                this.h12dd = json.getString("h12dd");
-                this.h12mm = json.getString("h12mm");
-                this.h12yy = json.getString("h12yy");
+                this.h12 = json.getString("h12");
+                this.h12096x = json.getString("h12096x");
+                this.h13dd = json.getString("h13dd");
+                this.h13mm = json.getString("h13mm");
+                this.h13yy = json.getString("h13yy");
                 this.h13 = json.getString("h13");
                 this.h13096x = json.getString("h13096x");
                 this.h14 = json.getString("h14");
