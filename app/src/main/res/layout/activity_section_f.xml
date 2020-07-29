@@ -1044,11 +1044,20 @@
                                         android:layout_height="wrap_content"
                                         android:text="@string/f130196" />
 
+                                    <EditText
+                                        android:id="@+id/f130196x"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:digits="@string/onlyalphabet"
+                                        android:hint="@string/f130196"
+                                        android:tag="f130196"
+                                        android:text='@{f130196.checked ? f130196x.getText().toString() : ""}'
+                                        android:visibility='@{f130196.checked ? View.VISIBLE : View.GONE}' />
+
                                     <TextView
                                         style="@style/sub"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-
                                         android:text="@string/f1308_t" />
 
                                     <RadioButton
@@ -1073,7 +1082,6 @@
                                         android:id="@+id/f131096x"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-
                                         android:digits="@string/onlyalphabet"
                                         android:hint="@string/f131096"
                                         android:tag="f131096"
