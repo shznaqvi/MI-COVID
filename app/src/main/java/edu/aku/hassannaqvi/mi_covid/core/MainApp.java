@@ -24,13 +24,10 @@ import androidx.lifecycle.MutableLiveData;
 
 import com.jakewharton.threetenabp.AndroidThreeTen;
 
-import java.util.List;
-
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract;
 import edu.aku.hassannaqvi.mi_covid.location.LocationLiveData;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
-import kotlin.Pair;
 
 
 /**
@@ -81,13 +78,10 @@ public class MainApp extends Application {
     public static String userName = "0000";
     public static UsersContract user;
     public static Form form;
-    public static int deathCount = 0;
     public static String DeviceURL = "devices.php";
     public static String IMEI;
-    public static String G102;
     public static SharedPreferences sharedPref;
     public static String DIST_ID;
-    public static Pair<List<Integer>, List<String>> selectedChildren;
     protected static LocationManager locationManager;
     private LocationLiveData locationlivedata;
 
@@ -155,7 +149,6 @@ public class MainApp extends Application {
         AlertDialog alert = alertDialogBuilder.create();
         alert.show();
     }
-
 
     @Override
     public void onCreate() {
