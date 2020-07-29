@@ -47,7 +47,7 @@ import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DB_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.PROJECT_NAME;
 
-public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDevicInterface {
+public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDeviceInterface {
     SharedPreferences.Editor editor;
     SharedPreferences sharedPref;
     String DirectoryName;

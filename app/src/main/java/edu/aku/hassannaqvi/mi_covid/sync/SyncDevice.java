@@ -26,7 +26,7 @@ import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import static android.content.Context.MODE_PRIVATE;
 
 public class SyncDevice extends AsyncTask<Void, Integer, String> {
-    private SyncDevicInterface delegate;
+    private SyncDeviceInterface delegate;
     private Context context;
     private boolean flag;
     private String TAG = SyncDevice.class.getName();
@@ -34,8 +34,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
     public SyncDevice(Context context, boolean flag) {
         this.context = context;
         this.flag = flag;
-
-        delegate = (SyncDevicInterface) context;
+        delegate = (SyncDeviceInterface) context;
         delegate.processFinish(false);
     }
 
@@ -52,7 +51,6 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
     @Override
     protected String doInBackground(Void... voids) {
         Log.d(TAG, "doInBackground: URL " + MainApp.DeviceURL);
-
         return downloadUrl();
     }
 
@@ -81,7 +79,6 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
                 DataOutputStream wr = new DataOutputStream(connection.getOutputStream());
 
                 try {
-                    jsonObject.addProperty("dist_id", MainApp.DIST_ID);
                     jsonObject.addProperty("imei", MainApp.IMEI);
                     jsonObject.addProperty("appversion", MainApp.appInfo.getAppVersion());
                     jsonObject.addProperty("appname", context.getString(R.string.app_name));
@@ -120,9 +117,8 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
     @Override
     protected void onPostExecute(String result) {
         super.onPostExecute(result);
-        int sSynced = 0;
         StringBuilder sSyncedError = new StringBuilder();
-        JSONArray json = null;
+        JSONArray json;
         try {
             json = new JSONArray(result);
             if (json.length() > 0) {
@@ -134,12 +130,9 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
                         SharedPreferences.Editor editor = sharedPref.edit();
                         editor.putString("tagName", tag);
                         editor.apply();
-
                         if (flag) {
                             delegate.processFinish(true);
                         }
-
-                    } else if (jsonObject.getString("status").equals("0") && jsonObject.getString("error").equals("1")) {
                     } else {
                         sSyncedError.append("\nError:This device is not found on server.");
                     }
@@ -159,7 +152,7 @@ public class SyncDevice extends AsyncTask<Void, Integer, String> {
         }
     }
 
-    public interface SyncDevicInterface {
+    public interface SyncDeviceInterface {
         void processFinish(boolean flag);
     }
 
