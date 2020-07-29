@@ -292,7 +292,6 @@
                                     android:id="@+id/g04096x"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-
                                     android:hint="@string/g04096"
                                     android:tag="g04096"
                                     android:text='@{g04096.checked ? g04096x.getText().toString() : ""}'

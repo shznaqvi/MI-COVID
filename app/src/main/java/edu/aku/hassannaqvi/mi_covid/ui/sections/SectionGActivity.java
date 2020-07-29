@@ -5,13 +5,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
 import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.databinding.DataBindingUtil;
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -171,6 +172,7 @@ public class SectionGActivity extends AppCompatActivity {
         form.setG0808(bi.g0808.isChecked() ? "8" : "-1");
         form.setG0809(bi.g0809.isChecked() ? "9" : "-1");
         form.setG08096(bi.g08096.isChecked() ? "96" : "-1");
+        form.setG08096x(bi.g08096x.getText().toString());
 
         form.setG09(bi.g0901.isChecked() ? "1"
                 : bi.g0902.isChecked() ? "2"
