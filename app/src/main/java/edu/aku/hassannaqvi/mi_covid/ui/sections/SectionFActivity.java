@@ -118,7 +118,7 @@ public class SectionFActivity extends AppCompatActivity {
                 : bi.f0409.isChecked() ? "9"
                 : bi.f04096.isChecked() ? "96"
                 : "-1");
-        form.setF0496x(bi.f04096x.getText().toString());
+        form.setF04096x(bi.f04096x.getText().toString());
 
         form.setF05(bi.f05.getText().toString());
 
@@ -136,7 +136,7 @@ public class SectionFActivity extends AppCompatActivity {
                 : bi.f0806.isChecked() ? "6"
                 : bi.f08096.isChecked() ? "96"
                 : "-1");
-        form.setF0896x(bi.f08096x.getText().toString());
+        form.setF08096x(bi.f08096x.getText().toString());
 
         form.setF09dd(bi.f09dd.getText().toString());
 
@@ -172,7 +172,7 @@ public class SectionFActivity extends AppCompatActivity {
                 : bi.f131096.isChecked() ? "10"
                 : bi.f130296.isChecked() ? "96"
                 : "-1");
-        form.setF1396x(bi.f130296x.getText().toString());
+        form.setF130296x(bi.f130296x.getText().toString());
         form.setF131096x(bi.f131096x.getText().toString());
         form.setF130196x(bi.f130196x.getText().toString());
 
@@ -188,7 +188,7 @@ public class SectionFActivity extends AppCompatActivity {
                 : bi.f1410.isChecked() ? "10"
                 : bi.f14096.isChecked() ? "96"
                 : "-1");
-        form.setF1496x(bi.f14096x.getText().toString());
+        form.setF14096x(bi.f14096x.getText().toString());
 
         form.setF15(bi.f1501.isChecked() ? "1"
                 : bi.f1502.isChecked() ? "2"
