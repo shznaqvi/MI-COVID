@@ -143,6 +143,7 @@ public class Form extends LiveData<Form> {
     private String e0305;
     private String e0306;
     private String e03096;
+    private String e03096x;
     private String e04;
     private String e05;
     private String e06;
@@ -154,6 +155,7 @@ public class Form extends LiveData<Form> {
     private String e0805;
     private String e0806;
     private String e08096;
+    private String e08096x;
     private String e09;
     private String e10;
     private String e1101;
@@ -163,7 +165,9 @@ public class Form extends LiveData<Form> {
     private String e1105;
     private String e1106;
     private String e12;
+    private String e12096x;
     private String e13;
+    private String e13096x;
     private String e1401;
     private String e1402;
     private String e15;
@@ -1303,6 +1307,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getE03096x() {
+        return e03096x;
+    }
+
+    public Form setE03096x(String e03096x) {
+        this.e03096x = e03096x;
+        return this;
+    }
+
     public String getE04() {
         return e04;
     }
@@ -1402,6 +1415,15 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getE08096x() {
+        return e08096x;
+    }
+
+    public Form setE08096x(String e08096x) {
+        this.e08096x = e08096x;
+        return this;
+    }
+
     public String getE09() {
         return e09;
     }
@@ -1483,12 +1505,30 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
+    public String getE12096x() {
+        return e12096x;
+    }
+
+    public Form setE12096x(String e12096x) {
+        this.e12096x = e12096x;
+        return this;
+    }
+
     public String getE13() {
         return e13;
     }
 
     public Form setE13(String e13) {
         this.e13 = e13;
+        return this;
+    }
+
+    public String getE13096x() {
+        return e13096x;
+    }
+
+    public Form setE13096x(String e13096x) {
+        this.e13096x = e13096x;
         return this;
     }
 
@@ -3764,6 +3804,7 @@ public class Form extends LiveData<Form> {
                     .put("e0305", e0305)
                     .put("e0306", e0306)
                     .put("e03096", e03096)
+                    .put("e03096x", e03096x)
                     .put("e04", e04)
                     .put("e05", e05)
                     .put("e06", e06)
@@ -3775,6 +3816,7 @@ public class Form extends LiveData<Form> {
                     .put("e0805", e0805)
                     .put("e0806", e0806)
                     .put("e08096", e08096)
+                    .put("e08096x", e08096x)
                     .put("e09", e09)
                     .put("e10", e10)
                     .put("e1101", e1101)
@@ -3784,7 +3826,9 @@ public class Form extends LiveData<Form> {
                     .put("e1105", e1105)
                     .put("e1106", e1106)
                     .put("e12", e12)
+                    .put("e12096x", e12096x)
                     .put("e13", e13)
+                    .put("e13096x", e13096x)
                     .put("e1401", e1401)
                     .put("e1402", e1402)
                     .put("e15", e15);
@@ -4322,7 +4366,6 @@ public class Form extends LiveData<Form> {
         }
     }
 
-
     private void sDHydrate(String string) {
 
         if (string != null) {
@@ -4392,7 +4435,6 @@ public class Form extends LiveData<Form> {
             }
         }
     }
-
 
     private void sFHydrate(String string) {
 
@@ -4625,7 +4667,6 @@ public class Form extends LiveData<Form> {
             }
         }
     }
-
 
     private void sKHydrate(String string) {
 
