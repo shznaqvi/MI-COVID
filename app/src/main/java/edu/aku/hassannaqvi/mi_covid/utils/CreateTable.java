@@ -1,6 +1,7 @@
 package edu.aku.hassannaqvi.mi_covid.utils;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.BLRandomContract.BLRandomTable;
+import edu.aku.hassannaqvi.mi_covid.contracts.DistrictsContract.DistrictsTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract.UsersTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract.VersionAppTable;
@@ -10,7 +11,7 @@ public final class CreateTable {
     public static final String DATABASE_NAME = "mi_covid.db";
     public static final String DB_NAME = "mi_covid_copy.db";
     public static final String PROJECT_NAME = "mi_covid";
-    public static final int DATABASE_VERSION = 1;
+    public static final int DATABASE_VERSION = 2;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
@@ -55,6 +56,13 @@ public final class CreateTable {
             + UsersTable.COLUMN_USERNAME + " TEXT,"
             + UsersTable.COLUMN_PASSWORD + " TEXT,"
             + UsersTable.DIST_ID + " TEXT"
+            + " );";
+
+    public static final String SQL_CREATE_DISTRICTS = "CREATE TABLE " + DistrictsTable.TABLE_NAME + "("
+            + DistrictsTable._ID + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+            + DistrictsTable.COLUMN_DIST_ID + " TEXT,"
+            + DistrictsTable.COLUMN_ADMIN_UNIT + " TEXT,"
+            + DistrictsTable.COLUMN_PROV + " TEXT"
             + " );";
 
     public static final String SQL_CREATE_VERSIONAPP = "CREATE TABLE " + VersionAppTable.TABLE_NAME + " (" +

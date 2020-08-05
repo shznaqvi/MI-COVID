@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -21,7 +23,12 @@ import org.threeten.bp.ZoneId;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -30,25 +37,28 @@ import edu.aku.hassannaqvi.mi_covid.core.MainApp;
 import edu.aku.hassannaqvi.mi_covid.databinding.ActivitySectionABinding;
 import edu.aku.hassannaqvi.mi_covid.datecollection.AgeModel;
 import edu.aku.hassannaqvi.mi_covid.datecollection.DateRepository;
+import edu.aku.hassannaqvi.mi_covid.models.Districts;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.SectionSelection;
 import edu.aku.hassannaqvi.mi_covid.ui.other.EndingActivity;
 import edu.aku.hassannaqvi.mi_covid.utils.AppUtilsKt;
 import edu.aku.hassannaqvi.mi_covid.utils.EndSectionActivity;
+import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers;
+import io.reactivex.rxjava3.core.Observable;
+import io.reactivex.rxjava3.schedulers.Schedulers;
 
 import static edu.aku.hassannaqvi.mi_covid.CONSTANTS.FSTATUS_END_FLAG;
 import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class SectionAActivity extends AppCompatActivity implements EndSectionActivity {
 
-    /*private static final String TAG = "";
-    public static FormsContract fc;
-    public List<String> talukaName, ucName, villageName, usersName, teamLeadName, healthFacilityCode;
-    public List<String> talukaCode, ucCode, villageCode, usersCode, teamLeadCode, healthFacilityName;*/
     ActivitySectionABinding bi;
     boolean dtFlag = false;
     LocalDate localDate = null;
     LocalDate calculatedDOB = null;
+    Map<String, Districts> districtLst;
+    ArrayList<String> districtName;
+    ArrayAdapter<String> distAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +67,41 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
         bi.setCallback(this);
         bi.setForm(form);
         setupSkip();
+        setupContent();
+    }
+
+    private void setupContent() {
+        clearSpinners();
+        distAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, districtName);
+        bi.a05.setAdapter(distAdapter);
+
+        bi.a04.setOnCheckedChangeListener((radiogroup, i) -> {
+            RadioButton rd = (RadioButton) findViewById(radiogroup.getCheckedRadioButtonId());
+            int id = Integer.parseInt(rd.getTag().toString().substring(2));
+            if (id <= 0) return;
+            getDistrictsBlock(String.valueOf(id))
+                    .subscribeOn(Schedulers.io())
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribe(items -> {
+                        districtName.clear();
+                        districtName.add("....");
+                        bi.a05.setSelection(0);
+                        for (Districts item : items) {
+                            districtLst.put(item.getAdmin_unit(), item);
+                            districtName.add(item.getAdmin_unit());
+                        }
+                        distAdapter.notifyDataSetChanged();
+                    });
+
+        });
+
+    }
+
+    private void clearSpinners() {
+        districtLst = new HashMap<>();
+        districtName = new ArrayList<>(
+                Collections.singletonList("....")
+        );
     }
 
     private void setupSkip() {
@@ -132,9 +177,14 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
                 : bi.a0404.isChecked() ? "4"
                 : bi.a0405.isChecked() ? "5"
                 : bi.a0406.isChecked() ? "6"
+                : bi.a0407.isChecked() ? "7"
                 : "-1");
 
-        form.setA05(bi.a05.getText().toString().trim().isEmpty() ? "-1" : bi.a05.getText().toString());
+        Districts dist = districtLst.get(bi.a05.getSelectedItem().toString());
+        if (dist != null) {
+            form.setA05(dist.getAdmin_unit());
+            form.setA05code(dist.getDist_id());
+        }
 
         form.setRefno(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
         form.setA05a(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
@@ -548,5 +598,12 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
         } else {
             Toast.makeText(this, "Sorry. You can't go further.\n Please contact IT Team (Failed to update DB)", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    private Observable<List<Districts>> getDistrictsBlock(String firstChar) {
+        return Observable.create(emitter -> {
+            emitter.onNext(MainApp.appInfo.getDbHelper().getAllDistricts(firstChar));
+            emitter.onComplete();
+        });
     }
 }

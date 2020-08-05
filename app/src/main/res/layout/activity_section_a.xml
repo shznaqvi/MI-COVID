@@ -208,44 +208,51 @@
                                 android:id="@+id/a0401"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:elevation="2dp"
+                                android:tag="101"
                                 android:text="@string/a0401" />
 
                             <RadioButton
                                 android:id="@+id/a0402"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:tag="102"
                                 android:text="@string/a0402" />
 
                             <RadioButton
                                 android:id="@+id/a0403"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:tag="103"
                                 android:text="@string/a0403" />
 
                             <RadioButton
                                 android:id="@+id/a0404"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:tag="104"
                                 android:text="@string/a0404" />
 
                             <RadioButton
                                 android:id="@+id/a0405"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
-
+                                android:tag="105"
                                 android:text="@string/a0405" />
 
                             <RadioButton
                                 android:id="@+id/a0406"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
+                                android:tag="106"
                                 android:text="@string/a0406" />
+
+                            <RadioButton
+                                android:id="@+id/a0407"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:tag="106"
+                                android:text="@string/a0407" />
                         </RadioGroup>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -282,8 +289,9 @@
                                 android:text="@string/Q_a05" />
                         </RelativeLayout>
 
-                        <EditText
+                        <Spinner
                             android:id="@+id/a05"
+                            style="@style/spinner"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/a05" />

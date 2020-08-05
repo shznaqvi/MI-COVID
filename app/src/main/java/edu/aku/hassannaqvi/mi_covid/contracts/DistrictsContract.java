@@ -6,25 +6,20 @@ import android.content.ContentUris;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-public class UCsContract {
-
-    private static final String TAG = "UCs_CONTRACT";
-
+public class DistrictsContract {
+    private static final String TAG = "Districts_CONTRACT";
     public static String CONTENT_AUTHORITY = "edu.aku.hassannaqvi.mi_covid";
 
+    public static abstract class DistrictsTable implements BaseColumns {
 
-    public static abstract class UCsTable implements BaseColumns {
-
-        public static final String TABLE_NAME = "ucs";
+        public static final String TABLE_NAME = "districts";
 
         public static final String _ID = "_id";
-        public static final String COLUMN_UCCODE = "uc_code";
-        public static final String COLUMN_UCS = "uc_name";
-        public static final String COLUMN_TALUKA_CODE = "taluka_code";
+        public static final String COLUMN_PROV = "prov";
+        public static final String COLUMN_DIST_ID = "dist_id";
+        public static final String COLUMN_ADMIN_UNIT = "admin_unit";
 
-        public static final String SERVER_URI = "ucs.php";
-
-        public static String PATH = "ucs";
+        public static String PATH = "districts";
 
         public static final String CONTENT_TYPE = ContentResolver.CURSOR_DIR_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH;
         public static final String CONTENT_ITEM_TYPE = ContentResolver.CURSOR_ITEM_BASE_TYPE + "/" + CONTENT_AUTHORITY + "/" + PATH;

@@ -16,13 +16,17 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
+import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.contracts.BLRandomContract.BLRandomTable;
+import edu.aku.hassannaqvi.mi_covid.contracts.DistrictsContract;
+import edu.aku.hassannaqvi.mi_covid.contracts.DistrictsContract.DistrictsTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract.FormsTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract.UsersTable;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract.VersionAppTable;
 import edu.aku.hassannaqvi.mi_covid.models.BLRandom;
+import edu.aku.hassannaqvi.mi_covid.models.Districts;
 import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.Users;
 import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
@@ -30,6 +34,7 @@ import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_VERSION;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_BL_RANDOM;
+import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_DISTRICTS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_FORMS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_USERS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_VERSIONAPP;
@@ -52,12 +57,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(SQL_CREATE_USERS);
         db.execSQL(SQL_CREATE_FORMS);
         db.execSQL(SQL_CREATE_BL_RANDOM);
+        db.execSQL(SQL_CREATE_DISTRICTS);
         db.execSQL(SQL_CREATE_VERSIONAPP);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+        if (oldVersion == 1)
+            db.execSQL(SQL_CREATE_DISTRICTS);
     }
 
     public int syncBLRandom(JSONArray blList) {
@@ -184,6 +191,35 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 values.put(UsersTable.COLUMN_PASSWORD, user.getPassword());
                 values.put(UsersTable.DIST_ID, user.getDistId());
                 long rowID = db.insert(UsersTable.TABLE_NAME, null, values);
+                if (rowID != -1) insertCount++;
+            }
+
+        } catch (Exception e) {
+            Log.d(TAG, "syncUser(e): " + e);
+            db.close();
+        } finally {
+            db.close();
+        }
+        return insertCount;
+    }
+
+    public int syncDistricts(JSONArray userList) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(DistrictsContract.DistrictsTable.TABLE_NAME, null, null);
+        int insertCount = 0;
+        try {
+            for (int i = 0; i < userList.length(); i++) {
+
+                JSONObject jsonObjectUser = userList.getJSONObject(i);
+
+                Districts dist = new Districts();
+                dist.Sync(jsonObjectUser);
+                ContentValues values = new ContentValues();
+
+                values.put(DistrictsContract.DistrictsTable.COLUMN_PROV, dist.getProv());
+                values.put(DistrictsContract.DistrictsTable.COLUMN_ADMIN_UNIT, dist.getAdmin_unit());
+                values.put(DistrictsContract.DistrictsTable.COLUMN_DIST_ID, dist.getDist_id());
+                long rowID = db.insert(DistrictsTable.TABLE_NAME, null, values);
                 if (rowID != -1) insertCount++;
             }
 
@@ -334,6 +370,47 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             }
         }
         return allForms;
+    }
+
+    public List<Districts> getAllDistricts(String firstChar) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor c = null;
+        String[] columns = {
+                DistrictsTable._ID,
+                DistrictsTable.COLUMN_PROV,
+                DistrictsTable.COLUMN_ADMIN_UNIT,
+                DistrictsTable.COLUMN_DIST_ID,
+        };
+        String whereClause = "substr(" + DistrictsTable.COLUMN_DIST_ID + ",1,1)=?";
+        String[] whereArgs = {firstChar};
+        String groupBy = null;
+        String having = null;
+
+        String orderBy = DistrictsTable.COLUMN_ADMIN_UNIT + " ASC";
+
+        List<Districts> allDist = new ArrayList<>();
+        try {
+            c = db.query(
+                    DistrictsTable.TABLE_NAME,  // The table to query
+                    columns,                   // The columns to return
+                    whereClause,               // The columns for the WHERE clause
+                    whereArgs,                 // The values for the WHERE clause
+                    groupBy,                   // don't group the rows
+                    having,                    // don't filter by row groups
+                    orderBy                    // The sort order
+            );
+            while (c.moveToNext()) {
+                allDist.add(new Districts().HydrateDist(c));
+            }
+        } finally {
+            if (c != null) {
+                c.close();
+            }
+            if (db != null) {
+                db.close();
+            }
+        }
+        return allDist;
     }
 
     public Collection<Form> checkFormExist() {
