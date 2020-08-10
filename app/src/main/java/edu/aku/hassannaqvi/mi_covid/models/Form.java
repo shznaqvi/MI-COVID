@@ -3697,13 +3697,13 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-                    .put("a05a", a05a)
+/*                    .put("a05a", a05a)
                     .put("a05b", a05b)
                     .put("a05code", a05code)
                     .put("refno", refno)
                     .put("istatus", istatus)
                     .put("istatus96x", istatus96x)
-                    .put("endingdatetime", endingdatetime)
+                    .put("endingdatetime", endingdatetime)*/
                     .put("a06", a06)
                     .put("a07", a07)
                     .put("a08", a08)
@@ -3781,6 +3781,7 @@ public class Form extends LiveData<Form> {
                     .put("b17", b17);
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
         }
         return json.toString();
     }
@@ -3801,6 +3802,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -3817,6 +3820,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -3867,6 +3872,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -3905,6 +3912,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -3960,6 +3969,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4025,6 +4036,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4051,6 +4064,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4082,6 +4097,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4113,6 +4130,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4142,6 +4161,8 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4318,6 +4339,7 @@ public class Form extends LiveData<Form> {
 
         } catch (JSONException e) {
             e.printStackTrace();
+
         }
     }
 
