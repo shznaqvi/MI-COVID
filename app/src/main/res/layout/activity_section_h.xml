@@ -896,20 +896,23 @@
 
                         <RadioButton
                             android:id="@+id/h0901"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/h0901" />
 
                         <RadioButton
                             android:id="@+id/h0902"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/h0902" />
 
                         <RadioButton
                             android:id="@+id/h0903"
-                            android:layout_width="wrap_content"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
+                            android:layout_weight="1"
                             android:text="@string/h0903" />
                     </RadioGroup>
                 </LinearLayout>

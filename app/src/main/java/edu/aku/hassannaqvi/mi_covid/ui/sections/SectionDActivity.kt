@@ -42,7 +42,7 @@ class SectionDActivity : AppCompatActivity() {
     @Throws(JSONException::class)
     private fun saveDraft() {
 
-        form.d1 = bi.d1.text.toString()
+        form.d01 = bi.d01.text.toString()
         form.d02 = when {
             bi.d0201.isChecked -> "1"
             bi.d0202.isChecked -> "2"

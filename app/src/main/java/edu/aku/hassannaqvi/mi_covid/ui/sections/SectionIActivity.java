@@ -82,6 +82,7 @@ public class SectionIActivity extends AppCompatActivity {
 
 
     private void SaveDraft() throws JSONException {
+
         form.setI01(bi.i0101.isChecked() ? "1"
                 : bi.i0102.isChecked() ? "2"
                 : "-1");
