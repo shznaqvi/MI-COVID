@@ -4744,6 +4744,16 @@ public class Form extends LiveData<Form> {
                 JSONObject json = null;
                 json = new JSONObject(string);
 
+                this.k01 = json.getString("k01");
+                this.k02 = json.getString("k02");
+                this.k03 = json.getString("k03");
+                this.k04 = json.getString("k04");
+                this.k05 = json.getString("k05");
+                this.k05096x = json.getString("k05096x");
+                this.k06 = json.getString("k06");
+                this.k07 = json.getString("k07");
+                this.k08 = json.getString("k08");
+                this.k09 = json.getString("k09");
                 this.k10 = json.getString("k10");
                 this.k11 = json.getString("k11");
                 this.k12 = json.getString("k12");
