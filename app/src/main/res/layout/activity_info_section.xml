@@ -226,14 +226,14 @@
                             android:layout_height="wrap_content"
 
 
-                            android:text="@string/a0405" />
+                            android:text="@string/a0406" />
 
                         <RadioButton
                             android:id="@+id/a0406"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
 
-                            android:text="@string/a0406" />
+                            android:text="@string/a0407" />
                     </RadioGroup>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -270,11 +270,11 @@
                             android:text="@string/Q_a05" />
                     </RelativeLayout>
 
-                    <EditText
+                    <Spinner
                         android:id="@+id/a05"
+                        style="@style/spinner"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-
                         android:hint="@string/a05" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

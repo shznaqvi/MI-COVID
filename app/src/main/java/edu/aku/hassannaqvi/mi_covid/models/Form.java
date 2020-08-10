@@ -26,6 +26,7 @@ public class Form extends LiveData<Form> {
     private String a03 = ""; // Interviewer
     private String a04 = ""; // Province
     private String a05 = ""; // District
+    private String a05code = ""; // District Code
     private String refno = ""; // Reference Number
     private String istatus = ""; // Interview Status
     private String istatus96x = ""; // Interview Status
@@ -507,6 +508,14 @@ public class Form extends LiveData<Form> {
 
     public void setA04(String a04) {
         this.a04 = a04;
+    }
+
+    public String getA05code() {
+        return a05code;
+    }
+
+    public void setA05code(String a05code) {
+        this.a05code = a05code;
     }
 
     public String getA06() {
@@ -3690,6 +3699,7 @@ public class Form extends LiveData<Form> {
             json
                     .put("a05a", a05a)
                     .put("a05b", a05b)
+                    .put("a05code", a05code)
                     .put("refno", refno)
                     .put("istatus", istatus)
                     .put("istatus96x", istatus96x)
@@ -4281,6 +4291,7 @@ public class Form extends LiveData<Form> {
 
             this.a05a = json.getString("a05a");
             this.a05b = json.getString("a05b");
+            this.a05code = json.getString("a05code");
             this.a06 = json.getString("a06");
             this.a07 = json.getString("a07");
             this.a08 = json.getString("a08");

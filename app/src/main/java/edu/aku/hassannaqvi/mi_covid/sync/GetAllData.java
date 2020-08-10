@@ -20,6 +20,7 @@ import java.net.URL;
 import java.util.List;
 
 import edu.aku.hassannaqvi.mi_covid.adapter.SyncListAdapter;
+import edu.aku.hassannaqvi.mi_covid.contracts.DistrictsContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.UsersContract;
 import edu.aku.hassannaqvi.mi_covid.contracts.VersionAppContract;
 import edu.aku.hassannaqvi.mi_covid.core.DatabaseHelper;
@@ -59,6 +60,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
+            case "Districts":
+                position = 2;
+                break;
         }
         list.get(position).settableName(syncClass);
     }
@@ -87,6 +91,9 @@ public class GetAllData extends AsyncTask<String, String, String> {
             case "VersionApp":
                 position = 1;
                 break;
+            case "Districts":
+                position = 2;
+                break;
         }
         list.get(position).setstatus("Syncing");
         list.get(position).setstatusID(2);
@@ -112,6 +119,11 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     url = new URL(MainApp._UPDATE_URL + VersionAppContract.VersionAppTable.SERVER_URI);
                     position = 1;
                     break;
+                case "Districts":
+                    url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
+                    tableName = DistrictsContract.DistrictsTable.TABLE_NAME;
+                    position = 2;
+                    break;
             }
 
             urlConnection = (HttpURLConnection) url.openConnection();
@@ -120,6 +132,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
 
             switch (syncClass) {
                 case "User":
+                case "Districts":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
                     urlConnection.setDoInput(true);
@@ -180,16 +193,23 @@ public class GetAllData extends AsyncTask<String, String, String> {
             if (result.length() > 0) {
                 DatabaseHelper db = new DatabaseHelper(mContext);
                 try {
-                    JSONArray jsonArray = new JSONArray(result);
+                    JSONArray jsonArray = new JSONArray();
                     int insertCount = 0;
                     switch (syncClass) {
                         case "User":
+                            jsonArray = new JSONArray(result);
                             insertCount = db.syncUser(jsonArray);
                             position = 0;
                             break;
                         case "VersionApp":
                             insertCount = db.syncVersionApp(new JSONObject(result));
+                            if (insertCount == 1) jsonArray.put("1");
                             position = 1;
+                            break;
+                        case "Districts":
+                            jsonArray = new JSONArray(result);
+                            insertCount = db.syncDistricts(jsonArray);
+                            position = 2;
                             break;
                     }
 

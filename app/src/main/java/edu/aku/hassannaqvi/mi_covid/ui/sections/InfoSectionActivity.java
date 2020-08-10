@@ -38,15 +38,10 @@ import static edu.aku.hassannaqvi.mi_covid.core.MainApp.form;
 
 public class InfoSectionActivity extends AppCompatActivity {
 
-    /*private static final String TAG = "";
-    public static FormsContract fc;
-    public List<String> talukaName, ucName, villageName, usersName, teamLeadName, healthFacilityCode;
-    public List<String> talukaCode, ucCode, villageCode, usersCode, teamLeadCode, healthFacilityName;*/
     ActivityInfoSectionBinding bi;
     boolean dtFlag = false;
     LocalDate localDate = null;
     LocalDate calculatedDOB;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,7 +114,7 @@ public class InfoSectionActivity extends AppCompatActivity {
                 : bi.a0406.isChecked() ? "6"
                 : "-1");
 
-        form.setA05(bi.a05.getText().toString().trim().isEmpty() ? "-1" : bi.a05.getText().toString());
+//        form.setA05(bi.a05.getText().toString().trim().isEmpty() ? "-1" : bi.a05.getText().toString());
 
         form.setRefno(bi.a05a.getText().toString().trim().isEmpty() ? "-1" : bi.a05a.getText().toString());
 
