@@ -3697,10 +3697,10 @@ public class Form extends LiveData<Form> {
 
         try {
             json
-/*                    .put("a05a", a05a)
+                    .put("a05a", a05a)
                     .put("a05b", a05b)
                     .put("a05code", a05code)
-                    .put("refno", refno)
+/*                      .put("refno", refno)
                     .put("istatus", istatus)
                     .put("istatus96x", istatus96x)
                     .put("endingdatetime", endingdatetime)*/
@@ -3728,6 +3728,8 @@ public class Form extends LiveData<Form> {
                     .put("a23", a23);
         } catch (JSONException e) {
             e.printStackTrace();
+            return "\"error\":, \"" + e.getMessage() + "\"";
+
         }
         return json.toString();
     }
@@ -4789,6 +4791,7 @@ public class Form extends LiveData<Form> {
                 this.l06 = json.getString("l06");
                 this.l07 = json.getString("l07");
                 this.l08 = json.getString("l08");
+                this.l09 = json.getString("l09");
                 this.l09 = json.getString("l09");
                 this.l010 = json.getString("l010");
 

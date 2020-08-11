@@ -106,7 +106,7 @@ class SectionDActivity : AppCompatActivity() {
 
     private fun updateDB(): Boolean {
         val db = appInfo.dbHelper
-        val updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, form.sBtoString())
+        val updcount = db.updatesFormColumn(FormsContract.FormsTable.COLUMN_SD, form.sDtoString())
         return if (updcount > 0) {
             true
         } else {

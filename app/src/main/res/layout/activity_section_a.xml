@@ -1670,88 +1670,53 @@
                                             android:text="@string/Q_a22" />
                                     </RelativeLayout>
 
-                                </LinearLayout>
-                            </androidx.cardview.widget.CardView>
 
-                            <!--a22pos  Input-->
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/fldGrpCVa22pos"
-                                style="@style/cardView">
 
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="vertical">
+                                    android:orientation="horizontal">
 
-                                    <RelativeLayout
-                                        android:layout_width="match_parent"
+
+                                    <TextView
+                                        style="@style/sub"
+                                        android:id="@+id/qtxt_a22pos"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:background="@drawable/bottom">
+                                        android:text="@string/a22pos" />
 
-                                        <TextView
-                                            android:id="@+id/qtxt_a22pos"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_toEndOf="@id/q_a22pos"
-                                            android:text="@string/a22pos" />
-
-                                        <TextView
-                                            android:id="@+id/q_a22pos"
-                                            style="@style/quesNum"
-                                            android:layout_width="wrap_content"
-                                            android:layout_height="wrap_content"
-                                            android:layout_alignTop="@id/qtxt_a22pos"
-                                            android:layout_alignBottom="@id/qtxt_a22pos"
-                                            android:text="@string/Q_a22pos" />
-                                    </RelativeLayout>
 
                                     <EditText
                                         android:id="@+id/a22pos"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="1"
                                         android:layout_height="wrap_content"
 
                                         android:hint="@string/a22pos" />
                                 </LinearLayout>
-                            </androidx.cardview.widget.CardView>
 
-                            <!--a22org  Input-->
-                            <androidx.cardview.widget.CardView
-                                android:id="@+id/fldGrpCVa22org"
-                                style="@style/cardView">
-
-                                <LinearLayout
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:orientation="vertical">
-
-                                    <RelativeLayout
+                                    <LinearLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:background="@drawable/bottom">
+                                        android:orientation="horizontal">
+
 
                                         <TextView
+                                            style="@style/sub"
                                             android:id="@+id/qtxt_a22org"
-                                            android:layout_width="match_parent"
-                                            android:layout_height="wrap_content"
-                                            android:layout_toEndOf="@id/q_a22org"
-                                            android:text="@string/a22org" />
-
-                                        <TextView
-                                            android:id="@+id/q_a22org"
-                                            style="@style/quesNum"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
-                                            android:layout_alignTop="@id/qtxt_a22org"
-                                            android:layout_alignBottom="@id/qtxt_a22org"
-                                            android:text="@string/Q_a22org" />
-                                    </RelativeLayout>
+                                            android:text="@string/a22org" />
 
-                                    <EditText
-                                        android:id="@+id/a22org"
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
 
-                                        android:hint="@string/a22org" />
+                                        <EditText
+                                            android:id="@+id/a22org"
+                                            android:layout_width="0dp"
+                                            android:layout_weight="1"
+                                            android:layout_height="wrap_content"
+
+                                            android:hint="@string/a22org" />
+                                    </LinearLayout>
                                 </LinearLayout>
                             </androidx.cardview.widget.CardView>
 
