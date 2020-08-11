@@ -96,10 +96,10 @@ public class Form extends LiveData<Form> {
     private String b9;
     private String b10;
     private String b11;
-    private String b11096;
+ //   private String b11096;
     private String b11096x;
     private String b11mc;
-    private String b11ws;
+    //   private String b11ws;
     private String b12;
     private String b1301;
     private String b1302;
@@ -136,8 +136,8 @@ public class Form extends LiveData<Form> {
     private String d05;
     private String e01;
     private String e02;
-    private String e0201;
-    private String e0202;
+    //  private String e0201;
+    //  private String e0202;
     private String e0301;
     private String e0302;
     private String e0303;
@@ -293,8 +293,8 @@ public class Form extends LiveData<Form> {
     private String h13dd;
     private String h13mm;
     private String h13yy;
-    private String h13;
-    private String h13096x;
+    //    private String h13;
+//    private String h13096x;
     private String h14;
     private String h14096x;
     private String h15;
@@ -878,14 +878,14 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getB11096() {
+    /*public String getB11096() {
         return b11096;
     }
 
     public Form setB11096(String b11096) {
         this.b11096 = b11096;
         return this;
-    }
+    }*/
 
     public String getB11096x() {
         return b11096x;
@@ -905,14 +905,14 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getB11ws() {
+   /* public String getB11ws() {
         return b11ws;
     }
 
     public Form setB11ws(String b11ws) {
         this.b11ws = b11ws;
         return this;
-    }
+    }*/
 
     public String getB12() {
         return b12;
@@ -1238,7 +1238,7 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getE0201() {
+   /* public String getE0201() {
         return e0201;
     }
 
@@ -1254,7 +1254,7 @@ public class Form extends LiveData<Form> {
     public Form setE0202(String e0202) {
         this.e0202 = e0202;
         return this;
-    }
+    }*/
 
     public String getE0301() {
         return e0301;
@@ -2615,7 +2615,7 @@ public class Form extends LiveData<Form> {
         return this;
     }
 
-    public String getH13() {
+  /*  public String getH13() {
         return h13;
     }
 
@@ -2631,7 +2631,7 @@ public class Form extends LiveData<Form> {
     public Form setH13096x(String h13096x) {
         this.h13096x = h13096x;
         return this;
-    }
+    }*/
 
     public String getH14() {
         return h14;
@@ -3757,10 +3757,10 @@ public class Form extends LiveData<Form> {
                     .put("b10", b10)
                     .put("b11", b11)
                     .put("b11mc", b11mc)
-                    .put("b11096", b11096)
+                    //        .put("b11096", b11096)
                     .put("b11096x", b11096x)
                     .put("b11mc", b11mc)
-                    .put("b11ws", b11ws)
+                    //        .put("b11ws", b11ws)
                     .put("b12", b12)
                     .put("b1301", b1301)
                     .put("b1302", b1302)
@@ -3834,8 +3834,8 @@ public class Form extends LiveData<Form> {
         try {
             json.put("e01", e01)
                     .put("e02", e02)
-                    .put("e0201", e0201)
-                    .put("e0202", e0202)
+                    //        .put("e0201", e0201)
+                    //        .put("e0202", e0202)
                     .put("e0301", e0301)
                     .put("e0302", e0302)
                     .put("e0303", e0303)
@@ -3951,6 +3951,7 @@ public class Form extends LiveData<Form> {
                     .put("g0706", g0706)
                     .put("g0707", g0707)
                     .put("g0501", g0501)
+                    .put("g0801", g0801)
                     .put("g0802", g0802)
                     .put("g0803", g0803)
                     .put("g0804", g0804)
@@ -4026,8 +4027,8 @@ public class Form extends LiveData<Form> {
                     .put("h13dd", h13dd)
                     .put("h13mm", h13mm)
                     .put("h13yy", h13yy)
-                    .put("h13", h13)
-                    .put("h13096x", h13096x)
+                    //       .put("h13", h13)
+                    //       .put("h13096x", h13096x)
                     .put("h14", h14)
                     .put("h14096x", h14096x)
                     .put("h15", h15)
@@ -4370,10 +4371,10 @@ public class Form extends LiveData<Form> {
                 this.b9 = json.getString("b9");
                 this.b10 = json.getString("b10");
                 this.b11 = json.getString("b11");
-                this.b11096 = json.getString("b11096");
+                //            this.b11096 = json.getString("b11096");
                 this.b11096x = json.getString("b11096x");
                 this.b11mc = json.getString("b11mc");
-                this.b11ws = json.getString("b11ws");
+                //            this.b11ws = json.getString("b11ws");
                 this.b12 = json.getString("b12");
                 this.b1301 = json.getString("b1301");
                 this.b1302 = json.getString("b1302");
@@ -4458,8 +4459,8 @@ public class Form extends LiveData<Form> {
 
                 this.e01 = json.getString("e01");
                 this.e02 = json.getString("e02");
-                this.e0201 = json.getString("e0201");
-                this.e0202 = json.getString("e0202");
+                //        this.e0201 = json.getString("e0201");
+                //        this.e0202 = json.getString("e0202");
                 this.e0301 = json.getString("e0301");
                 this.e0302 = json.getString("e0302");
                 this.e0303 = json.getString("e0303");
@@ -4654,8 +4655,8 @@ public class Form extends LiveData<Form> {
                 this.h13dd = json.getString("h13dd");
                 this.h13mm = json.getString("h13mm");
                 this.h13yy = json.getString("h13yy");
-                this.h13 = json.getString("h13");
-                this.h13096x = json.getString("h13096x");
+                //        this.h13 = json.getString("h13");
+                //        this.h13096x = json.getString("h13096x");
                 this.h14 = json.getString("h14");
                 this.h14096x = json.getString("h14096x");
                 this.h15 = json.getString("h15");
