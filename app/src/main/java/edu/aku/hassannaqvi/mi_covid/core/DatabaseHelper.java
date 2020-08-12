@@ -239,7 +239,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (mCursor != null) {
             if (mCursor.getCount() > 0) {
 
-                if (mCursor.moveToFirst()) {
+                if (mCursor.moveToNext()) {
 //                    MainApp.DIST_ID = mCursor.getString(mCursor.getColumnIndex(Users.UsersTable.ROW_USERNAME));
                 }
                 return true;
