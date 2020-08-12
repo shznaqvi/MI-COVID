@@ -25,6 +25,8 @@ public class FormsContract {
         public static final String COLUMN_A03 = "a03";
         public static final String COLUMN_A04 = "a04";
         public static final String COLUMN_A05 = "a05";
+        public static final String COLUMN_A05CODE = "a05code";
+        public static final String COLUMN_A08 = "a08";
         public static final String COLUMN_REFNO = "refno";
         public static final String COLUMN_ISTATUS = "istatus";
         public static final String COLUMN_ISTATUS96x = "istatus96x";

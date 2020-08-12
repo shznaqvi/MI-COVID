@@ -26,6 +26,8 @@ public final class CreateTable {
             + FormsTable.COLUMN_A03 + " TEXT,"
             + FormsTable.COLUMN_A04 + " TEXT,"
             + FormsTable.COLUMN_A05 + " TEXT,"
+            + FormsTable.COLUMN_A05CODE + " TEXT,"
+            + FormsTable.COLUMN_A08 + " TEXT,"
             + FormsTable.COLUMN_REFNO + " TEXT,"
             + FormsTable.COLUMN_GPSLAT + " TEXT,"
             + FormsTable.COLUMN_GPSLNG + " TEXT,"

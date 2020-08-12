@@ -38,7 +38,6 @@ import edu.aku.hassannaqvi.mi_covid.models.Form;
 import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 import edu.aku.hassannaqvi.mi_covid.ui.list_activity.FormsReportCluster;
 import edu.aku.hassannaqvi.mi_covid.ui.list_activity.FormsReportDate;
-import edu.aku.hassannaqvi.mi_covid.ui.list_activity.PendingFormsActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionAActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionBActivity;
 import edu.aku.hassannaqvi.mi_covid.ui.sections.SectionCActivity;
@@ -124,46 +123,52 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         if (todaysForms.size() > 0) {
             String iStatus;
             rSumText.append("---------------------------------------------------------\r\n")
-                    .append("[District][Ref. No][Form Status][Sync Status]\r\n")
+                    .append("[District   ][Ref. No][Name   ][Form Status][Sync Status]\r\n")
                     .append("---------------------------------------------------------\r\n");
 
             for (Form form : todaysForms) {
                 Log.d(TAG, "onCreate: '" + form.getIstatus() + "'");
                 switch (form.getIstatus()) {
                     case "1":
-                        iStatus = "Complete ";
+                        iStatus = " Complete                                          ";
                         break;
                     case "2":
-                        iStatus = "No Resp  ";
+                        iStatus = " Individual not identified                         ";
                         break;
                     case "3":
-                        iStatus = "Empty    ";
+                        iStatus = " Household not identified                          ";
                         break;
                     case "4":
-                        iStatus = "Refused  ";
+                        iStatus = " Locked                                            ";
                         break;
                     case "5":
-                        iStatus = "Non Res. ";
+                        iStatus = " No competentrespondent at home                    ";
                         break;
                     case "6":
-                        iStatus = "Not Found";
+                        iStatus = " Entire household absent for extended period of time";
+                        break;
+                    case "7":
+                        iStatus = " Refused                                           ";
+                        break;
+                    case "8":
+                        iStatus = " Phone could not be contacted                      ";
                         break;
                     case "96":
-                        iStatus = "Other    ";
+                        iStatus = " Other                                             ";
                         break;
-                    case "":
-                        iStatus = "Open     ";
-                        break;
+                   /* case "":
+                        iStatus = " Open                                              ";
+                        break;*/
                     default:
-                        iStatus = "\t\tN/A" + form.getIstatus();
+                        iStatus = " - N/A -                                           " + form.getIstatus();
                 }
 
                 rSumText
-                        .append(form.getA05() + "       ".substring(0, 7))
-                        .append(form.getRefno() + "      ".substring(0, 6))
-                        .append("  \t\t")
-                        .append(iStatus)
-                        .append("\t\t\t\t")
+                        .append(" ")
+                        .append((form.getA05() + "       ").substring(0, 13))
+                        .append((form.getRefno() + "      ").substring(0, 9))
+                        .append((form.getA08() + "      ").substring(0, 9))
+                        .append(iStatus.substring(0, 13))
                         .append(form.getSynced() == null ? "Not Synced" : "Synced    ")
                         .append("\r\n")
                         .append("---------------------------------------------------------\r\n");
@@ -172,16 +177,16 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
         SharedPreferences syncPref = getSharedPreferences("src", Context.MODE_PRIVATE);
         rSumText.append("\r\nDEVICE INFORMATION\r\n")
                 .append("  ========================================================\r\n")
-                .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format("%02d", unclosedForms.size()))
-                .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
+                /* .append("\t|| Open Forms: \t\t\t\t\t\t").append(String.format("%02d", unclosedForms.size()))
+                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")*/
                 .append("\t|| Unsynced Forms: \t\t\t\t").append(String.format("%02d", unsyncedForms.size()))
                 .append("\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t||\r\n")
                 .append("\t|| Last Data Download: \t\t").append(syncPref.getString("LastDataDownload", "Never Downloaded   "))
                 .append("\t\t\t\t\t\t||\r\n")
                 .append("\t|| Last Data Upload: \t\t\t").append(syncPref.getString("LastDataUpload", "Never Uploaded     "))
                 .append("\t\t\t\t\t\t||\r\n")
-                .append("\t|| Last Photo Upload: \t\t").append(syncPref.getString("LastPhotoUpload", "Never Uploaded     "))
-                .append("\t\t\t\t\t\t||\r\n")
+                /*  .append("\t|| Last Photo Upload: \t\t").append(syncPref.getString("LastPhotoUpload", "Never Uploaded     "))
+                  .append("\t\t\t\t\t\t||\r\n")*/
                 .append("\t========================================================\r\n");
         bi.recordSummary.setText(rSumText);
 
@@ -254,9 +259,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
             case R.id.onSync:
                 intent = new Intent(MainActivity.this, SyncActivity.class);
                 break;
-            case R.id.checkOpenForms:
+          /*  case R.id.checkOpenForms:
                 intent = new Intent(MainActivity.this, PendingFormsActivity.class);
-                break;
+                break;*/
             case R.id.formsReportDate:
                 intent = new Intent(MainActivity.this, FormsReportDate.class);
                 break;

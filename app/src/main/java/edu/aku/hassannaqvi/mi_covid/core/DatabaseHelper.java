@@ -263,6 +263,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         values.put(FormsTable.COLUMN_A03, form.getA03());
         values.put(FormsTable.COLUMN_A04, form.getA04());
         values.put(FormsTable.COLUMN_A05, form.getA05());
+        values.put(FormsTable.COLUMN_A05CODE, form.getA05code());
+        values.put(FormsTable.COLUMN_A08, form.getA08());
         values.put(FormsTable.COLUMN_REFNO, form.getRefno());
         values.put(FormsTable.COLUMN_ISTATUS, form.getIstatus());
         values.put(FormsTable.COLUMN_ISTATUS96x, form.getIstatus96x());
@@ -315,6 +317,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_A03,
                 FormsTable.COLUMN_A04,
                 FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SINFO,
@@ -425,6 +429,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_A03,
                 FormsTable.COLUMN_A04,
                 FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SINFO,
@@ -494,6 +500,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_A03,
                 FormsTable.COLUMN_A04,
                 FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS96x,
@@ -566,6 +574,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_A01,
                 FormsTable.COLUMN_A02,
                 FormsTable.COLUMN_A04,
+                FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SYNCED,
@@ -598,6 +609,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSysdate(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYSDATE)));
                 form.setA01(c.getString(c.getColumnIndex(FormsTable.COLUMN_A01)));
                 form.setA02(c.getString(c.getColumnIndex(FormsTable.COLUMN_A02)));
+                form.setA05(c.getString(c.getColumnIndex(FormsTable.COLUMN_A05)));
+                form.setA05code(c.getString(c.getColumnIndex(FormsTable.COLUMN_A05CODE)));
+                form.setA08(c.getString(c.getColumnIndex(FormsTable.COLUMN_A08)));
                 form.setRefno(c.getString(c.getColumnIndex(FormsTable.COLUMN_REFNO)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
@@ -625,6 +639,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SYSDATE,
                 FormsTable.COLUMN_A01,
                 FormsTable.COLUMN_A02,
+                FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SYNCED,
@@ -657,6 +674,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSysdate(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYSDATE)));
                 form.setA01(c.getString(c.getColumnIndex(FormsTable.COLUMN_A01)));
                 form.setA02(c.getString(c.getColumnIndex(FormsTable.COLUMN_A02)));
+                form.setA05(c.getString(c.getColumnIndex(FormsTable.COLUMN_A05)));
+                form.setA05code(c.getString(c.getColumnIndex(FormsTable.COLUMN_A05CODE)));
+                form.setA08(c.getString(c.getColumnIndex(FormsTable.COLUMN_A08)));
                 form.setRefno(c.getString(c.getColumnIndex(FormsTable.COLUMN_REFNO)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
@@ -682,6 +702,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_SYSDATE,
                 FormsTable.COLUMN_A01,
                 FormsTable.COLUMN_A02,
+                FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_SYNCED,
@@ -710,6 +733,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSysdate(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYSDATE)));
                 form.setA01(c.getString(c.getColumnIndex(FormsTable.COLUMN_A01)));
                 form.setA02(c.getString(c.getColumnIndex(FormsTable.COLUMN_A02)));
+                form.setA05(c.getString(c.getColumnIndex(FormsTable.COLUMN_A05)));
+                form.setA05code(c.getString(c.getColumnIndex(FormsTable.COLUMN_A05CODE)));
+                form.setA08(c.getString(c.getColumnIndex(FormsTable.COLUMN_A08)));
                 form.setRefno(c.getString(c.getColumnIndex(FormsTable.COLUMN_REFNO)));
                 form.setIstatus(c.getString(c.getColumnIndex(FormsTable.COLUMN_ISTATUS)));
                 form.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
@@ -811,6 +837,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 FormsTable.COLUMN_A03,
                 FormsTable.COLUMN_A04,
                 FormsTable.COLUMN_A05,
+                FormsTable.COLUMN_A05CODE,
+                FormsTable.COLUMN_A08,
                 FormsTable.COLUMN_REFNO,
                 FormsTable.COLUMN_ISTATUS,
                 FormsTable.COLUMN_ISTATUS96x,

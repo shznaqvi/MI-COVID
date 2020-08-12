@@ -68,23 +68,31 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
                 iColor = Color.GREEN;
                 break;
             case "2":
-                iStatus = "No Respondent";
+                iStatus = "Individual not identified";
                 iColor = Color.RED;
                 break;
             case "3":
-                iStatus = "Memebers Absent";
+                iStatus = "Household not identified";
                 iColor = Color.RED;
                 break;
             case "4":
-                iStatus = "Refused";
+                iStatus = "Locked";
                 iColor = Color.RED;
                 break;
             case "5":
-                iStatus = "Empty";
+                iStatus = "No competentrespondent at home";
                 iColor = Color.RED;
                 break;
             case "6":
-                iStatus = "Not Found";
+                iStatus = "Entire household absent";
+                iColor = Color.RED;
+                break;
+            case "7":
+                iStatus = "Refused";
+                iColor = Color.RED;
+                break;
+            case "8":
+                iStatus = "Phone could not be contacted";
                 iColor = Color.RED;
                 break;
             case "96":
@@ -103,7 +111,7 @@ public class FormsAdapter extends RecyclerView.Adapter<FormsAdapter.ViewHolder> 
         holder.istatus.setText(iStatus);
         holder.sysdate.setText(form.get(position).getSysdate());
         holder.istatus.setTextColor(iColor);
-        holder.cluster.setText(form.get(position).getRefno());
+        holder.cluster.setText(form.get(position).getA08() + " (" + form.get(position).getRefno() + ")");
 
 
     }

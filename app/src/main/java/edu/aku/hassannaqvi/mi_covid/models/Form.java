@@ -3607,6 +3607,8 @@ public class Form extends LiveData<Form> {
         this.a03 = jsonObject.getString(FormsTable.COLUMN_A03);
         this.a04 = jsonObject.getString(FormsTable.COLUMN_A04);
         this.a05 = jsonObject.getString(FormsTable.COLUMN_A05);
+        this.a05code = jsonObject.getString(FormsTable.COLUMN_A05CODE);
+        this.a08 = jsonObject.getString(FormsTable.COLUMN_A08);
         this.refno = jsonObject.getString(FormsTable.COLUMN_REFNO);
         this.istatus = jsonObject.getString(FormsTable.COLUMN_ISTATUS);
         this.istatus96x = jsonObject.getString(FormsTable.COLUMN_ISTATUS96x);
@@ -3646,6 +3648,8 @@ public class Form extends LiveData<Form> {
         this.a03 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A03));
         this.a04 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A04));
         this.a05 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A05));
+        this.a05code = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A05CODE));
+        this.a08 = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_A08));
         this.refno = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_REFNO));
         this.istatus = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS));
         this.istatus96x = cursor.getString(cursor.getColumnIndex(FormsTable.COLUMN_ISTATUS96x));
@@ -3699,14 +3703,14 @@ public class Form extends LiveData<Form> {
             json
                     .put("a05a", a05a)
                     .put("a05b", a05b)
-                    .put("a05code", a05code)
-/*                      .put("refno", refno)
-                    .put("istatus", istatus)
-                    .put("istatus96x", istatus96x)
-                    .put("endingdatetime", endingdatetime)*/
+                    /*                    .put("a05code", a05code)
+                                    .put("refno", refno)
+                                       .put("istatus", istatus)
+                                       .put("istatus96x", istatus96x)
+                                       .put("endingdatetime", endingdatetime)*/
                     .put("a06", a06)
                     .put("a07", a07)
-                    .put("a08", a08)
+                    //.put("a08", a08)
                     .put("a09", a09)
                     .put("a10", a10)
                     .put("a11", a11)
@@ -4184,6 +4188,8 @@ public class Form extends LiveData<Form> {
             json.put(FormsTable.COLUMN_A03, this.a03 == null ? JSONObject.NULL : this.a03);
             json.put(FormsTable.COLUMN_A04, this.a04 == null ? JSONObject.NULL : this.a04);
             json.put(FormsTable.COLUMN_A05, this.a05 == null ? JSONObject.NULL : this.a05);
+            json.put(FormsTable.COLUMN_A05CODE, this.a05code == null ? JSONObject.NULL : this.a05code);
+            json.put(FormsTable.COLUMN_A08, this.a08 == null ? JSONObject.NULL : this.a08);
             json.put(FormsTable.COLUMN_REFNO, this.refno == null ? JSONObject.NULL : this.refno);
             json.put(FormsTable.COLUMN_ISTATUS, this.istatus == null ? JSONObject.NULL : this.istatus);
             json.put(FormsTable.COLUMN_ISTATUS96x, this.istatus96x == null ? JSONObject.NULL : this.istatus96x);
@@ -4316,10 +4322,10 @@ public class Form extends LiveData<Form> {
 
             this.a05a = json.getString("a05a");
             this.a05b = json.getString("a05b");
-            this.a05code = json.getString("a05code");
+            //this.a05code = json.getString("a05code");
             this.a06 = json.getString("a06");
             this.a07 = json.getString("a07");
-            this.a08 = json.getString("a08");
+            //this.a08 = json.getString("a08");
             this.a09 = json.getString("a09");
             this.a10 = json.getString("a10");
             this.a11 = json.getString("a11");
