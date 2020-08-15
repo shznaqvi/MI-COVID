@@ -165,9 +165,9 @@ public class MainActivity extends AppCompatActivity implements WarningActivityIn
 
                 rSumText
                         .append(" ")
-                        .append((form.getA05() + "       ").substring(0, 13))
-                        .append((form.getRefno() + "      ").substring(0, 9))
-                        .append((form.getA08() + "      ").substring(0, 9))
+                        .append((form.getA05() + "             ").substring(0, 12))
+                        .append((form.getRefno() + "         ").substring(0, 9))
+                        .append((form.getA08() + "         ").substring(0, 9))
                         .append(iStatus.substring(0, 13))
                         .append(form.getSynced() == null ? "Not Synced" : "Synced    ")
                         .append("\r\n")

@@ -106,27 +106,27 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
 
     private void setupSkip() {
 
-        bi.a07.setOnCheckedChangeListener((group, checkId) -> {
-            if (bi.a0701.isChecked()) {
-                bi.btnContinue.setVisibility(View.VISIBLE);
-                bi.btnEnd.setVisibility(View.GONE);
-            } else {
-                bi.btnContinue.setVisibility(View.GONE);
-                bi.btnEnd.setVisibility(View.VISIBLE);
-                Clear.clearAllFields(bi.lla08);
-            }
-        });
-
-        bi.a05b.setOnCheckedChangeListener((group, checkId) -> {
-            if (bi.a05b1.isChecked()) {
-                bi.btnContinue.setVisibility(View.VISIBLE);
-                bi.btnEnd.setVisibility(View.GONE);
-            } else {
-                bi.btnContinue.setVisibility(View.GONE);
-                bi.btnEnd.setVisibility(View.VISIBLE);
-                bi.a07.clearCheck();
-            }
-        });
+//        bi.a07.setOnCheckedChangeListener((group, checkId) -> {
+//            if (bi.a0701.isChecked()) {
+//                bi.btnContinue.setVisibility(View.VISIBLE);
+//                bi.btnEnd.setVisibility(View.GONE);
+//            } else {
+//                bi.btnContinue.setVisibility(View.GONE);
+//                bi.btnEnd.setVisibility(View.VISIBLE);
+//                Clear.clearAllFields(bi.lla08);
+//            }
+//        });
+//
+//        bi.a05b.setOnCheckedChangeListener((group, checkId) -> {
+//            if (bi.a05b1.isChecked()) {
+//                bi.btnContinue.setVisibility(View.VISIBLE);
+//                bi.btnEnd.setVisibility(View.GONE);
+//            } else {
+//                bi.btnContinue.setVisibility(View.GONE);
+//                bi.btnEnd.setVisibility(View.VISIBLE);
+//                bi.a07.clearCheck();
+//            }
+//        });
 
         bi.a21.setOnCheckedChangeListener((group, checkId) -> {
             Clear.clearAllFields(bi.fldGrpSecA03);
@@ -418,12 +418,15 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
 
     private boolean formValidation() {
         if (!Validator.emptyCheckingContainer(this, bi.GrpName)) return false;
+        if (bi.a05b2.isChecked() || bi.a0702.isChecked()) return true;
+
         if (!dtFlag) {
             return Validator.emptyCustomTextBox(this, bi.a13yy, "Invalid date!", false);
         }
-        if (bi.a05b2.isChecked() || bi.a0702.isChecked()) return true;
+
         if (Integer.parseInt(bi.a14mm.getText().toString()) == 0 && Integer.parseInt(bi.a14yy.getText().toString()) == 0)
             return Validator.emptyCustomTextBox(this, bi.a14yy, "Both Month & Year don't be zero!!", false);
+
         return true;
     }
 
