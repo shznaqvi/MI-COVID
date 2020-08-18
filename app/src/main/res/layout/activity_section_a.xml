@@ -835,7 +835,6 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/a13dd"
-
                                         style="@style/textInput"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -863,7 +862,6 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/a13mm"
-
                                         style="@style/textInput"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -891,7 +889,6 @@
 
                                     <com.edittextpicker.aliazaz.EditTextPicker
                                         android:id="@+id/a13yy"
-
                                         style="@style/textInput"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
@@ -903,9 +900,13 @@
                                         app:maxValue="2020"
                                         app:minValue="1930"
                                         app:type="range" />
+
                                 </LinearLayout>
+
                             </LinearLayout>
+
                         </LinearLayout>
+
                     </androidx.cardview.widget.CardView>
 
                     <!--a14  Title-->

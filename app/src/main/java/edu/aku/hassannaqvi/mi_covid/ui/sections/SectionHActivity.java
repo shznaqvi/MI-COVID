@@ -2,6 +2,9 @@ package edu.aku.hassannaqvi.mi_covid.ui.sections;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Toast;
 
@@ -12,6 +15,9 @@ import com.validatorcrawler.aliazaz.Clear;
 import com.validatorcrawler.aliazaz.Validator;
 
 import org.json.JSONException;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import edu.aku.hassannaqvi.mi_covid.R;
 import edu.aku.hassannaqvi.mi_covid.contracts.FormsContract;
@@ -35,10 +41,39 @@ public class SectionHActivity extends AppCompatActivity {
         bi.setCallback(this);
         bi.setForm(form);
         setupSkips();
+        bi.h02yy.setMaxvalue(Float.parseFloat(new SimpleDateFormat("yyyy").format(new Date().getTime())));
+
     }
 
 
     private void setupSkips() {
+
+        bi.h02yy.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (TextUtils.isEmpty(bi.h02yy.getText()))
+                    return;
+                if (bi.h02yy.getText().toString().equals("9998")) {
+                    bi.h02dd.setText("");
+                    bi.h02dd.setEnabled(false);
+                    bi.h02mm.setText("");
+                    bi.h02mm.setEnabled(false);
+                } else {
+                    bi.h02dd.setEnabled(true);
+                    bi.h02mm.setEnabled(true);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+            }
+        });
+
 
         bi.h04.setOnCheckedChangeListener(((radioGroup, i) -> {
             if (i == bi.h0402.getId()) {
