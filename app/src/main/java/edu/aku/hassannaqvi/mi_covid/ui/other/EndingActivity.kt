@@ -41,8 +41,8 @@ class EndingActivity : AppCompatActivity() {
             bi.a0605.isEnabled = bool == 1
             bi.a0606.isEnabled = bool == 1
             bi.a0607.isEnabled = bool == 2
-            bi.a0608.isEnabled = bool == 2
-            bi.a0696.isEnabled = bool == 2
+            bi.a0608.isEnabled = bool == 1
+            bi.a0696.isEnabled = bool == 1
         }
     }
 
