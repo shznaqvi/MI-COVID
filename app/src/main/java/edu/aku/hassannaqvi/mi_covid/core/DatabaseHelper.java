@@ -35,7 +35,6 @@ import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_VERSION;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_ALTER_FORMS_A05CODE;
-import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_ALTER_FORMS_A08;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_BL_RANDOM;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_DISTRICTS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_FORMS;
@@ -70,8 +69,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             case 1:
                 db.execSQL(SQL_CREATE_DISTRICTS);
             case 2:
-                db.execSQL(SQL_ALTER_FORMS_A05CODE);
-                db.execSQL(SQL_ALTER_FORMS_A08);
+//                db.execSQL(SQL_ALTER_FORMS_A05CODE);
+                //               db.execSQL(SQL_ALTER_FORMS_A08);
         }
     }
 

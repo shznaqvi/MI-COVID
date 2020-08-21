@@ -24,6 +24,7 @@ public class Form extends LiveData<Form> {
     private String a01 = ""; // Date
     private String a02 = ""; // Time
     private String a03 = ""; // Interviewer
+    private String username = ""; // Interviewer
     private String a04 = ""; // Province
     private String a05 = ""; // District
     private String a05code = ""; // District Code
@@ -526,6 +527,15 @@ public class Form extends LiveData<Form> {
         this.a06 = a06;
         return this;
     }*/
+
+    public String getUsername() {
+        return username;
+    }
+
+    public Form setUsername(String username) {
+        this.username = username;
+        return this;
+    }
 
     public String getA07() {
         return a07;
@@ -3709,6 +3719,7 @@ public class Form extends LiveData<Form> {
                                        .put("istatus96x", istatus96x)
                                        .put("endingdatetime", endingdatetime)*/
                     //      .put("a06", a06)
+                    .put("username", username)
                     .put("a07", a07)
                     //.put("a08", a08)
                     .put("a09", a09)
@@ -4324,6 +4335,7 @@ public class Form extends LiveData<Form> {
             this.a05b = json.getString("a05b");
             //this.a05code = json.getString("a05code");
 //            this.a06 = json.getString("a06");
+            this.username = json.getString("username");
             this.a07 = json.getString("a07");
             //this.a08 = json.getString("a08");
             this.a09 = json.getString("a09");
