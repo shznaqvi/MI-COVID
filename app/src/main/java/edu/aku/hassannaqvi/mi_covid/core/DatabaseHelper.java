@@ -6,6 +6,7 @@ import android.database.Cursor;
 import android.database.MatrixCursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
@@ -33,6 +34,7 @@ import edu.aku.hassannaqvi.mi_covid.models.VersionApp;
 
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_NAME;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.DATABASE_VERSION;
+import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_ALTER_FORMS_A05CODE;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_BL_RANDOM;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_DISTRICTS;
 import static edu.aku.hassannaqvi.mi_covid.utils.CreateTable.SQL_CREATE_FORMS;
@@ -63,8 +65,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if (oldVersion == 1)
-            db.execSQL(SQL_CREATE_DISTRICTS);
+        switch (oldVersion) {
+            case 1:
+                db.execSQL(SQL_CREATE_DISTRICTS);
+            case 2:
+//                db.execSQL(SQL_ALTER_FORMS_A05CODE);
+                //               db.execSQL(SQL_ALTER_FORMS_A08);
+        }
     }
 
     public int syncBLRandom(JSONArray blList) {
@@ -551,6 +558,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 Form form = new Form();
                 allForms.add(form.Hydrate(c));
             }
+        } catch (SQLiteException e) {
+
+            db.rawQuery(SQL_ALTER_FORMS_A05CODE, null);
+            db.rawQuery(SQL_ALTER_FORMS_A05CODE, null);
+
         } finally {
             if (c != null) {
                 c.close();
@@ -617,6 +629,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
                 allForms.add(form);
             }
+        } catch (SQLiteException e) {
+
+            db.rawQuery(SQL_ALTER_FORMS_A05CODE, null);
+
         } finally {
             if (c != null) {
                 c.close();
@@ -741,6 +757,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 form.setSynced(c.getString(c.getColumnIndex(FormsTable.COLUMN_SYNCED)));
                 allForms.add(form);
             }
+        } catch (SQLiteException e) {
+
+            db.rawQuery(SQL_ALTER_FORMS_A05CODE, null);
+
         } finally {
             if (c != null) {
                 c.close();

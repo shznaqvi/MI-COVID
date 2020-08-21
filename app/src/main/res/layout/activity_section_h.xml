@@ -164,6 +164,7 @@
                                 app:maxValue="11"
                                 app:minValue="1"
                                 app:type="range" />
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -229,6 +230,7 @@
                             android:layout_alignTop="@id/qtxt_h02"
                             android:layout_alignBottom="@id/qtxt_h02"
                             android:text="@string/Q_h02" />
+
                     </RelativeLayout>
 
                     <LinearLayout
@@ -247,7 +249,6 @@
                                 style="@style/sub"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:text="@string/h02dd" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -257,6 +258,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/h02dd"
                                 android:inputType="number"
+                                app:defaultValue="98"
                                 android:maxLength="2"
                                 app:maxValue="31"
                                 app:minValue="1"
@@ -274,7 +276,6 @@
                                 style="@style/sub"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:text="@string/h02mm" />
 
                             <com.edittextpicker.aliazaz.EditTextPicker
@@ -284,8 +285,9 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/h02mm"
                                 android:inputType="number"
+                                app:defaultValue="98"
                                 android:maxLength="2"
-                                app:maxValue="11"
+                                app:maxValue="12"
                                 app:minValue="1"
                                 app:type="range" />
 
@@ -310,6 +312,7 @@
                                 android:layout_height="wrap_content"
                                 android:hint="@string/h02yy"
                                 android:inputType="number"
+                                app:defaultValue="9998"
                                 android:maxLength="4"
                                 app:maxValue="2020"
                                 app:minValue="2020"

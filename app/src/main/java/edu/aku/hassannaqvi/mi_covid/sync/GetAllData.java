@@ -110,7 +110,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
         URL url = null;
         try {
             switch (syncClass) {
-                case "User":
+                case "Users":
                     url = new URL(MainApp._HOST_URL + MainApp._SERVER_GET_URL);
                     tableName = UsersContract.UsersTable.TABLE_NAME;
                     position = 0;
@@ -131,7 +131,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
             urlConnection.setConnectTimeout(150000 /* milliseconds */);
 
             switch (syncClass) {
-                case "User":
+                case "Users":
                 case "Districts":
                     urlConnection.setRequestMethod("POST");
                     urlConnection.setDoOutput(true);
@@ -196,7 +196,7 @@ public class GetAllData extends AsyncTask<String, String, String> {
                     JSONArray jsonArray = new JSONArray();
                     int insertCount = 0;
                     switch (syncClass) {
-                        case "User":
+                        case "Users":
                             jsonArray = new JSONArray(result);
                             insertCount = db.syncUser(jsonArray);
                             position = 0;

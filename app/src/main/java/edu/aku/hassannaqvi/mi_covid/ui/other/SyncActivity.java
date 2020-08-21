@@ -318,7 +318,7 @@ public class SyncActivity extends AppCompatActivity implements SyncDevice.SyncDe
                         model.setstatusID(0);
                         list.add(model);
                     }
-                    new GetAllData(mContext, "User", syncListAdapter, list).execute();
+                    new GetAllData(mContext, "Users", syncListAdapter, list).execute();
 
 //                    Getting App Version
                     if (listActivityCreated) {

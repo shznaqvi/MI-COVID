@@ -11,7 +11,7 @@ public final class CreateTable {
     public static final String DATABASE_NAME = "mi_covid.db";
     public static final String DB_NAME = "mi_covid_copy.db";
     public static final String PROJECT_NAME = "mi_covid";
-    public static final int DATABASE_VERSION = 2;
+    public static final int DATABASE_VERSION = 3;
 
     public static final String SQL_CREATE_FORMS = "CREATE TABLE "
             + FormsTable.TABLE_NAME + "("
@@ -89,10 +89,13 @@ public final class CreateTable {
             + BLRandomTable.COLUMN_SNO_HH + " TEXT );";
 
 
-/*    public static final String SQL_ALTER_FORMS = "ALTER TABLE " +
+    public static final String SQL_ALTER_FORMS_A05CODE = "ALTER TABLE " +
             FormsTable.TABLE_NAME + " ADD COLUMN " +
-            FormsTable.COLUMN_SYSDATE + " TEXT";
-    public static final String SQL_ALTER_CHILD_TABLE = "ALTER TABLE " +
+            FormsTable.COLUMN_A05CODE + " TEXT";
+    public static final String SQL_ALTER_FORMS_A08 = "ALTER TABLE " +
+            FormsTable.TABLE_NAME + " ADD COLUMN " +
+            FormsTable.COLUMN_A08 + " TEXT";
+/*    public static final String SQL_ALTER_CHILD_TABLE = "ALTER TABLE " +
             ChildTable.TABLE_NAME + " ADD COLUMN " +
             ChildTable.COLUMN_SYSDATE + " TEXT";*/
 }
