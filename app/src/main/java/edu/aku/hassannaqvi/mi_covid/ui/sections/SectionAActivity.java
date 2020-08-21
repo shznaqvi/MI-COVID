@@ -412,6 +412,8 @@ public class SectionAActivity extends AppCompatActivity implements EndSectionAct
 
         form.setsInfo(json.toString());*/
 
+        MainApp.setGPS(this);
+
         form.setSecSelection(new SectionSelection(calculatedDOB, bi.a14yy.getText().toString(), bi.a1502.isChecked(), form.getA21(), bi.a2002.isChecked()));
 
     }
