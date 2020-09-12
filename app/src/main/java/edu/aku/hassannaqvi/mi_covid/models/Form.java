@@ -3947,12 +3947,15 @@ public class Form extends LiveData<Form> {
                     .put("g0501", g0501)
                     .put("g0502", g0502)
                     .put("g0503", g0503)
+                    .put("g0503a", g0503a)
                     .put("g0504", g0504)
                     .put("g0505", g0505)
                     .put("g0506", g0506)
+                    .put("g0506a", g0506a)
                     .put("g0507", g0507)
                     .put("g0508", g0508)
                     .put("g0509", g0509)
+                    .put("g0509a", g0509a)
                     .put("g0510", g0510)
                     .put("g0511", g0511)
                     .put("g0512", g0512)
@@ -4576,12 +4579,15 @@ public class Form extends LiveData<Form> {
                 this.g0501 = json.getString("g0501");
                 this.g0502 = json.getString("g0502");
                 this.g0503 = json.getString("g0503");
+                this.g0503a = json.getString("g0503a");
                 this.g0504 = json.getString("g0504");
                 this.g0505 = json.getString("g0505");
                 this.g0506 = json.getString("g0506");
+                this.g0506a = json.getString("g0506a");
                 this.g0507 = json.getString("g0507");
                 this.g0508 = json.getString("g0508");
                 this.g0509 = json.getString("g0509");
+                this.g0509a = json.getString("g0509a");
                 this.g0510 = json.getString("g0510");
                 this.g0511 = json.getString("g0511");
                 this.g0512 = json.getString("g0512");

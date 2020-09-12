@@ -535,8 +535,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         };
 
 
-        //    String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " == '' ";
-        String whereClause = null;
+        String whereClause = FormsTable.COLUMN_SYNCED + " is null OR " + FormsTable.COLUMN_SYNCED + " == '' ";
+        // String whereClause = null;
         String[] whereArgs = null;
         String groupBy = null;
         String having = null;
